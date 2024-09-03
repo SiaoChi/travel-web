@@ -1,5 +1,5 @@
 // src/pages/HomePage/HomePage.jsx
-import Menu from "../../components/Menu/Menu";
+// import Menu from "../../components/Menu/Menu";
 
 function HomePage() {
   return (
@@ -7,9 +7,7 @@ function HomePage() {
     <div className="relative bg-bg-yellow">
         {/* 背景圖像 */}
         <img src="/home/Polygon.svg" className="absolute top-[23%]" alt="background triangle"></img>
-    
-    {/* 固定在頂部的 Menu */}
-    <Menu />  
+  
 
     {/* 主內容區域，設定 margin-top 以避開 Menu */}
      <section className=" bg-bg-yellow flex items-center justify-center pt-[78px]" >
