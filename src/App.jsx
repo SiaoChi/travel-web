@@ -4,9 +4,8 @@ import HomePage from './pages/HomePage/HomePage';
 // import PolicyPage from './pages/PolicyPage/PolicyPage';
 
 function App() {
-  const basename = process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'production' ? '/' : '/travel-web';
   return (
-    <Router basename={basename}>
+    <Router basename={window.location.hostname.indexOf('github') > 0 ? 'travel-web' : ''}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         {/* <Route path="/mgm" element={<MgmPage />} />
