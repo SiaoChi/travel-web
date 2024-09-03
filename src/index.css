@@ -1,0 +1,167 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* 定義 fade-in-from-right 動畫 */
+@keyframes fadeInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(80%);
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 使用動畫的 class */
+.fade-in-from-right {
+  animation: fadeInFromRight 1s ease-out forwards;
+}
+
+/* 定義 fade-in-from-bottom 動畫 */
+@keyframes fadeInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-30%);
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 使用動畫的 class */
+.fade-in-from-top {
+  animation: fadeInFromTop 1s ease-out forwards;
+  opacity: 0; /* 初始透明度設為 0 */
+  transform: translateY(-100%); /* 初始位置設為動畫開始的狀態 */
+}
+
+
+/* 定義 fade-in-from-bottom 動畫 */
+@keyframes fadeInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 使用動畫的 class */
+.fade-in-from-bottom {
+  animation: fadeInFromBottom 1.5s ease-out forwards;
+  opacity: 0; /* 初始透明度設為 0 */
+  transform: translateY(-100%); /* 初始位置設為動畫開始的狀態 */
+}
+
+/* 定義從左往右 fade in 的動畫 */
+@keyframes fadeInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 應用 fade in 從左往右的動畫 */
+.fade-in-from-left {
+  animation: fadeInFromLeft 1s ease-out forwards;
+}
+
+
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
