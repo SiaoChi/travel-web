@@ -5,8 +5,10 @@ import HomePage from './pages/HomePage/HomePage';
 import Menu from "./components/Menu/Menu";
 
 function App() {
+  const isGithubPages = window.location.hostname === 'siaochi.github.io';
+  const basename = isGithubPages ? '/travel-web' : '/'; 
   return (
-    <Router basename={window.location.hostname.indexOf('github') > 0 ? '/travel-web' : ''}>
+    <Router basename={basename}>
       <Menu />  
       <Routes>
         <Route path="/" element={<HomePage />} />
