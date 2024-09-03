@@ -5,7 +5,7 @@ import HomePage from './pages/HomePage/HomePage';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/travel-web">
       <Routes>
         <Route path="/" element={<HomePage />} />
         {/* <Route path="/mgm" element={<MgmPage />} />
