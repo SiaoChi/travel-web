@@ -1,0 +1,39 @@
+
+/* 網頁版menu */
+.menu{
+    /* 網頁版 */
+    @apply hidden lg:flex;
+    @apply items-center justify-between;
+    @apply w-full min-w-[1280px];
+    @apply fixed top-0 left-1/2 transform -translate-x-1/2;
+    @apply p-4 bg-bg-yellow z-50;
+}
+
+.menu-text {
+    @apply  hover:bg-c-orange rounded-full;
+    @apply  py-2 px-4;
+    @apply  font-serif lg:text-xl text-black font-extrabold tracking-wider;
+}
+
+/* 手機版menu */
+.mobile-menu {
+    @apply fixed top-0 left-0 right-0;
+    @apply flex items-center justify-between;
+    @apply p-4 bg-bg-yellow z-50;
+    @apply w-full h-auto; /* 隨螢幕調整寬高 */
+}
+
+.mobile-text {
+    @apply  hover:bg-c-orange rounded-full ;
+    @apply  py-2 px-4;
+    @apply  font-serif text-center text-2xl text-black font-extrabold tracking-wider;
+}
+
+
+
+
+
+
+
+
+
