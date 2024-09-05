@@ -8,8 +8,6 @@ function HomePage() {
       
           {/* 背景三角形 */}
           <img src="./home/Polygon.svg" className="w-[35vw] absolute top-[13%] z-0" alt="background triangle"></img>
-           {/* 背景紙花 */}
-          <div className="flex absolute w-[40%] h-[560px] right-[18%] top-[4%] fade-in-from-top z-0" style={{ backgroundImage: "url('./home/flower.png')", animationDelay: '800ms' }}></div>
                   
 
       <div className=" bg-bg-yellow  mx-auto container">
@@ -17,8 +15,12 @@ function HomePage() {
       {/* Hero-section 有設定 padding-top 以避開 Menu */}
         <section className="flex-col md:flex items-center justify-center pt-[10vh] container lg:h-[720px] mx-auto" >
             <div className="relative flex w-full max-w-screen-xl ">
+
+             {/* 背景紙花 因跟著主視覺需要對位清楚 */}
+            <div className="flex absolute w-[59%] h-[560px] right-[6%] top-[8%] fade-in-from-top z-0" style={{ backgroundImage: "url('./home/flower.png')", animationDelay: '800ms' }}></div>
             
             {/* 左下角固定英文字 */}
+            
               <div className="absolute left-[3vw]  md:left-[1vw] bottom-[2vw] w-full fade-in-from-left z-10 " style={{ animationDelay: '400ms' }}>
                   <p className="leading-none  text-c-blue font-extrabold text-[30px] md:text-[40px] lg:text-[60px] whitespace-nowrap tracking-wider">TRAVEL</p>
                   <p className="leading-none text-c-blue font-extrabold text-[30px]  md:text-[40px] lg:text-[60px] whitespace-nowrap tracking-wider">A TRANSGLOBE JOURNEY</p>
