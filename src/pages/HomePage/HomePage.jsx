@@ -1,4 +1,5 @@
-
+// src/pages./homePage./homePage.jsx
+// import Menu from "../../components/Menu/Menu";
 
 function HomePage() {
   return (
@@ -40,9 +41,10 @@ function HomePage() {
                     <div className="flex-[6] md:w-[800px] ">
                         <img src='./home/shadow.png' className="absolute bottom-[14%] left-[25%]  fade-in-from-bottom" ></img>
                         <div className="kv-right relative h-[300px] md:h-[430px] lg:h-[720px]">
-                                <img src='./home/luggage.png' className="w-[63%] absolute bottom-[12%] left-[18%] fade-in-from-bottom"  ></img>
-                                <img src='./home/god.png' className="w-[22%] absolute bottom-[29%] left-[67%] fade-in-from-bottom" style={{ animationDelay: '500ms' }}></img>
-                                <img src='./home/tower.png' className="w-[21%] absolute bottom-[39%] left-[19%] fade-in-from-bottom" style={{ animationDelay: '500ms' }}></img>
+                                <img src='./home/luggage.png' className="w-[62%] absolute bottom-[12%] left-[18%] fade-in-from-bottom"  ></img>
+                                <img src='./home/godness2.png' className="w-[22%] absolute bottom-[29%] left-[65%] fade-in-from-bottom" style={{ animationDelay: '500ms' }}></img>
+                                <img src='./home/building.png' className="w-[30%] absolute bottom-[23%] left-[44%] fade-in-from-bottom" style={{ animationDelay: '500ms' }}></img>
+                                <img src='./home/tower2.png' className="w-[21%] absolute bottom-[39%] left-[19%] fade-in-from-bottom" style={{ animationDelay: '500ms' }}></img>
                                 <img src='./home/flight.png' className="w-[45%] absolute bottom-[46%] left-[27%] fade-in-from-right"style={{ animationDelay: '300ms' }} ></img>
                                 <img src='./home/coupon.png' className="w-[16%] absolute bottom-[75%] left-[4%] fade-in-from-bottom" ></img>
                                 <img src='./home/camera.png' className="w-[14%] absolute bottom-[18%] left-[5%] fade-in-from-bottom" ></img>
