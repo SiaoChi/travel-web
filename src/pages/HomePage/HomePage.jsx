@@ -39,8 +39,8 @@ function HomePage() {
 
                   {/* Hero-section 右側 */}
                     <div className="flex-[6] md:w-[800px] ">
-                        <img src='./home/shadow.png' className="absolute bottom-[14%] left-[25%]  fade-in-from-bottom" ></img>
-                        <div className="kv-right relative h-[300px] md:h-[430px] lg:h-[720px]">
+                        {/* <img src='./home/shadow.png' className="absolute w-100  bottom-[14%] left-[25%]  fade-in-from-bottom" ></img> */}
+                        <div className="kv-right relative h-[320px] md:h-[420px] lg:h-[600px] xl:h-[720px]">
                                 <img src='./home/luggage.png' className="w-[62%] absolute bottom-[12%] left-[18%] fade-in-from-bottom"  ></img>
                                 <img src='./home/godness2.png' className="w-[22%] absolute bottom-[29%] left-[65%] fade-in-from-bottom" style={{ animationDelay: '500ms' }}></img>
                                 <img src='./home/building.png' className="w-[30%] absolute bottom-[23%] left-[44%] fade-in-from-bottom" style={{ animationDelay: '500ms' }}></img>

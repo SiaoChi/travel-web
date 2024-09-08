@@ -67,7 +67,7 @@ function Menu() {
                   <a href="./#sec1" className="relative mobile-text">
               跨年出國抽
                     <img src="./menu/new.svg" alt="New" className="absolute top-[-20%] right-[-5%] w-8 h-6" />
-                </a>        
+                  </a>        
                 <a href="./#sec2" className="mobile-text">滿保滿額抽</a>
                 <a href="./#sec3" className="mobile-text">首次投保抽</a>
                 <a href="./mgm" className="mobile-text">分享全球抽</a>
