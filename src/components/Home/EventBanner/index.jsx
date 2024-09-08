@@ -16,9 +16,10 @@ const TitleText = styled.img`
 `
 
 const TitleAirplaine = styled.img`
-    width: 486px;
+    width: 520px;
     position: absolute;
-    top: 0;
+    top: 58px;
+    left: -10px;
 `
 
 const Desc = styled.div`
@@ -68,15 +69,13 @@ const LineTwo = styled.img`
     transform:rotate(-5deg)
 `
 
-
-
 const EventBanner = () => {
 
     return (
         <Section>
             <BgFlowers src="./home/event-banner-flower.png" />
-            <LineOne src="./home/event-banner-line1.svg" />
-            <LineTwo src="./home/event-banner-line2.svg" />           
+            <LineOne src="./home/shadow-line1.svg" />
+            <LineTwo src="./home/shadow-line2.svg" />           
 
             <BannerTitle>
                 <TitleText src="./home/event-banner-title.png" />
@@ -89,8 +88,6 @@ const EventBanner = () => {
             <EnglishTitle>
                 TRAVEL<br/>A TRANSGLOBE JOURNEY
             </EnglishTitle>
-
-            
         </Section>
     )
   
