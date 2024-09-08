@@ -18,7 +18,6 @@ const Title = styled.div`
 `
 
 const Desc = styled.div`
-    width: 486px;
     margin-left: 192px;
     margin-top: 155px;
     line-height: 35px;
@@ -52,7 +51,7 @@ const LineTwo = styled.img`
     transform:rotate(-5deg)
 `
 
-const HappyNewYearText = styled.div`
+const EnglishText = styled.div`
     position: absolute;
     top: 129px;
     right: 41px;
@@ -79,15 +78,15 @@ const NewYearEvent = () => {
             <LineTwo src="./home/shadow-line2.svg" />  
 
             <Title>
-                <img src='./home/new-year-event-title1.svg' />
-                <img src='./home/new-year-event-title2.svg' />
+                <img src='./home/new-year-event-title.svg' />
+                <img src='./home/common-title-lottery.svg' />
             </Title>
             <Desc>
                 <span>2024/12/15-2025/1/20</span>期間，<br/>
                 成功網路投保<span>「國外旅平險」</span>
             </Desc>
 
-            <HappyNewYearText>HAPPY<br/>NEW YEAR<br/>2025</HappyNewYearText>
+            <EnglishText>HAPPY<br/>NEW YEAR<br/>2025</EnglishText>
             <EventImg src="./home/new-year-event.svg" />
 
         </Section>
