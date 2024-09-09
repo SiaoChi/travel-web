@@ -32,6 +32,14 @@ const Desc = styled.div`
     }
 `
 
+const Flowers = styled.img`
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    width: 1500px;
+    height: 800px;
+`
+
 const Fireworks = styled.img`
     position: absolute;
     top: 72px;
@@ -75,6 +83,7 @@ const NewYearEvent = () => {
 
     return (
         <Section>
+            <Flowers src="./home/new-year-event-flower.svg" />
             <Fireworks src="./home/new-year-event-fire.png" />
             <LineOne src="./home/shadow-line1.svg" />
             <LineTwo src="./home/shadow-line2.svg" />  
