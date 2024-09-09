@@ -5,6 +5,13 @@ const Section = styled.section`
     height: 660px;
 `
 
+const YellowPolygon = styled.img`
+    position: absolute;
+    top: 380px;
+    left: 0;
+    width: 755px;
+`
+
 const BannerTitle = styled.div`
     position: relative;
     margin: 20px 0px 20px 91px;
@@ -39,6 +46,8 @@ const Desc = styled.div`
 `
 
 const EnglishTitle = styled.p`
+    position: relative;
+    z-index: 1;
     font-size: 65px;
     line-height: 65px;
     margin-left: 74px;
@@ -73,6 +82,7 @@ const EventBanner = () => {
 
     return (
         <Section>
+            <YellowPolygon src="./home/home-polygon.svg" />
             <BgFlowers src="./home/event-banner-flower.png" />
             <LineOne src="./home/shadow-line1.svg" />
             <LineTwo src="./home/shadow-line2.svg" />           

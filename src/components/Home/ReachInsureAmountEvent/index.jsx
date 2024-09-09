@@ -5,16 +5,23 @@ const Section = styled.section`
     height: 1127px;
 `
 
+const YellowTrapezoid = styled.img`
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+`
+
 const Temple = styled.img`
     position: absolute;
-    top: -36px;
+    top: 170px;
     left: 62px;
     width: 678px;
 `
 
 const Mountain = styled.img`
     position: absolute;
-    top: 20px;
+    top: 220px;
     right: -40px;
     width: 678px;
 `
@@ -24,7 +31,9 @@ const Title = styled.div`
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    margin: 100px 0px 0px 182px;
+    position: absolute;
+    top: 210px;
+    left: 182px;
     > img {
         height: 60px;
     }
@@ -33,8 +42,8 @@ const Title = styled.div`
 const Desc = styled.div`
     position: absolute;
     z-index: 1;
-    margin-left: 192px;
-    margin-top: 60px;
+    top: 400px;
+    left: 182px;
     line-height: 35px;
     letter-spacing: 4px;
     font-size: 25px;
@@ -46,8 +55,8 @@ const Desc = styled.div`
 
 const EnglishText = styled.div`
     position: absolute;
-    top: 0;
-    right: 41px;
+    top: 200px;
+    right: 80px;
     font-size: 65px;
     line-height: 65px;
     font-weight: bold;
@@ -58,13 +67,13 @@ const EnglishText = styled.div`
 
 const EventImgOne = styled.img`
     position: absolute;
-    bottom: 340px;
+    bottom: 170px;
     left: 122px;
 `
 
 const EventImgTwo = styled.img`
     position: absolute;
-    bottom: 340px;
+    bottom: 170px;
     right: 10px;
 `
 
@@ -73,10 +82,11 @@ const ReachInsureAmountEvent = () => {
     return (
     
         <Section>
+             <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
             <Temple src="./home/reach-insure-amount-event-temple.svg" />
             <Mountain src="./home/reach-insure-amount-event-mountain.svg" />
 
-             <Title>
+            <Title>
                 <img src='./home/reach-insure-amount-event-title.svg' />
                 <img src='./home/common-title-lottery.svg' />
             </Title>

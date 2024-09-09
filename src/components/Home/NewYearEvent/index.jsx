@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const Section = styled.section`
     position: relative;
-    height: 899px;
+    height: 730px;
     overflow: hidden;
 `
 
@@ -11,15 +11,18 @@ const Title = styled.div`
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    margin: 152px 0px 0px 182px;
+    position: absolute;
+    left: 182px;
+    top: 160px;
     > img {
         height: 60px;
     }
 `
 
 const Desc = styled.div`
-    margin-left: 192px;
-    margin-top: 155px;
+   position: absolute;
+    left: 182px;
+    top: 450px;
     line-height: 35px;
     letter-spacing: 4px;
     font-size: 25px;
@@ -31,7 +34,7 @@ const Desc = styled.div`
 
 const Fireworks = styled.img`
     position: absolute;
-    top: 66px;
+    top: 72px;
     left: 62px;
     width: 584px;
 `
@@ -39,21 +42,21 @@ const Fireworks = styled.img`
 const LineOne = styled.img`
     position: absolute;
     left: -65px;
-    bottom: 156px;
+    bottom: 20px;
     width: 343px;
 `
 
 const LineTwo = styled.img`
     position: absolute;
     left: 269px;
-    bottom: 156px;
+    bottom: 20px;
     width: 383px;
     transform:rotate(-5deg)
 `
 
 const EnglishText = styled.div`
     position: absolute;
-    top: 129px;
+    top: 100px;
     right: 41px;
     font-size: 65px;
     line-height: 65px;
@@ -64,10 +67,9 @@ const EnglishText = styled.div`
 
 const EventImg = styled.img`
     position: absolute;
-    bottom: 156px;
+    bottom: 20px;
     right: 48px;
 `
-
 
 const NewYearEvent = () => {
 

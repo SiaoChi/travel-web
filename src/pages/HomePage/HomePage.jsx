@@ -18,31 +18,13 @@ const Container = styled.div`
   width: 1366px;
 `
 
-const YellowPolygon = styled.img`
-  position: absolute;
-  top: 500px;
-  left: 0;
-  width: 755px;
-`
-
-const YellowTrapezoid = styled.img`
-  position: absolute;
-  top: 1580px;
-  left: 0;
-  width: 100%;
-`
-
 function HomePage() {
   return (
     <Wrap>
       <Container>
-        <YellowPolygon src="./home/home-polygon.svg" />
-        <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
-
         <EventBanner/>
         <NewYearEvent />
         <ReachInsureAmountEvent />
-
       </Container>
    </Wrap>
   );
