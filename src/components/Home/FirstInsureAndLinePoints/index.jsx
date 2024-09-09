@@ -35,6 +35,24 @@ const People = styled.img`
     translate: -50% 0;
 `
 
+const MoreRewardTitle = styled.img`
+    position: absolute;
+    left: 50%;
+    bottom: 450px;
+    translate: -50% 0;
+    height: 50px;
+`
+
+const MoreRewardDesc = styled.p`
+    position: absolute;
+    left: 50%;
+    bottom: 380px;
+    translate: -50% 0;
+    height: 35px;
+    font-size: 20px;
+    font-weight: bold;
+`
+
 const Flower = styled.img`
     position: absolute;
     top: 50px;
@@ -88,19 +106,15 @@ const EnglishTextTwo = styled(EnglishText)`
     text-align: left;
 `
 
+
+
 const FirstInsureAndLinePoints = () => {
 
     return (
         <Section>
             <Flower src="./home/first-insure-line-points-flower.svg"/>
-            <BlueBackground src="./home/line-points-blue-background.svg" />
-            <People src="./home/line-points-people.svg" />
-
-            <Italy src="./home/first-insure-event-italy.svg" />
             <Tower src="./home/first-insure-event-tower.svg" />
             <EventImg src="./home/first-insure-event.svg" />
-            
-
             <Title>
                 <img src='./home/reach-insure-amount-event-title.svg' />
                 <img src='./home/common-title-lottery.svg' />
@@ -110,10 +124,14 @@ const FirstInsureAndLinePoints = () => {
                 <strong><span>首次</span>成功網路投保<span>「國內外旅平險」</span></strong><br/>
                 （限從未投保全球人壽任一險種者）
             </Desc>
-
             <EnglishTextOne>PX MART<br/>COUPON</EnglishTextOne>
+            
+            <Italy src="./home/first-insure-event-italy.svg" />
+            <BlueBackground src="./home/line-points-blue-background.svg" />
+            <People src="./home/line-points-people.svg" />
             <EnglishTextTwo>LINE<br/>POINTS</EnglishTextTwo>
-
+            <MoreRewardTitle src="./home/line-points-event-title.svg" />
+            <MoreRewardDesc>快推薦好友，就有機會獲得 LINE POINTS 喔！</MoreRewardDesc>
         </Section>
     )
 }
