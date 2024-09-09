@@ -75,7 +75,7 @@ const LineTwo = styled.img`
     top: 300px;
     right: 0;
     width: 383px;
-    transform:rotate(-5deg)
+    transform:rotate(-5deg);
 `
 
 const EventBanner = () => {
