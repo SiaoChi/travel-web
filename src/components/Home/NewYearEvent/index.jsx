@@ -25,7 +25,7 @@ const Desc = styled.div`
     top: 450px;
     line-height: 35px;
     letter-spacing: 4px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     > span {
         color: #2496F0;

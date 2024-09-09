@@ -55,7 +55,7 @@ const Desc = styled.div`
     left: 182px;
     line-height: 35px;
     letter-spacing: 4px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     > span {
         color: #2496F0;
@@ -83,7 +83,7 @@ const EventImgOne = styled.img`
 const EventImgTwo = styled.img`
     position: absolute;
     bottom: 170px;
-    right: 10px;
+    right: 60px;
 `
 
 const ReachInsureAmountEvent = () => {

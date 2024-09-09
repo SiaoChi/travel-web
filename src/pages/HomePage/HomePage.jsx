@@ -1,10 +1,8 @@
-// src/pages./homePage./homePage.jsx
-// import Menu from "../../components/Menu/Menu";
-
 import styled from "styled-components";
 import EventBanner from "../../components/Home/EventBanner";
 import NewYearEvent from "../../components/Home/NewYearEvent";
 import ReachInsureAmountEvent from "../../components/Home/ReachInsureAmountEvent";
+import FirstInsureAndLinePoints from "../../components/Home/FirstInsureAndLinePoints";
 
 const Wrap = styled.div`
   padding-top: 121px;
@@ -12,10 +10,12 @@ const Wrap = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 `
 
 const Container = styled.div`
-  width: 1366px;
+  width: 100%;
+  max-width: 1500px;
 `
 
 function HomePage() {
@@ -25,6 +25,7 @@ function HomePage() {
         <EventBanner/>
         <NewYearEvent />
         <ReachInsureAmountEvent />
+        <FirstInsureAndLinePoints />
       </Container>
    </Wrap>
   );
