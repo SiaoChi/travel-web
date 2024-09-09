@@ -89,7 +89,7 @@ function PolicyPage() {
       <Container>
         <Title>活動辦法</Title>
         <Buttons>
-          <Button>旅行全球抽獎去</Button>
+          <Button>旅行全球抽獎趣</Button>
           <Button>分享全球樂透抽</Button>
         </Buttons>
         <Border />
