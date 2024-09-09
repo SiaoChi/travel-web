@@ -12,6 +12,15 @@ const YellowTrapezoid = styled.img`
   width: 100%;
 `
 
+const Flowers = styled.img`
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    left: 100px;
+    width: 95%;
+    height: 940px;
+`
+
 const Temple = styled.img`
     position: absolute;
     top: 170px;
@@ -82,7 +91,8 @@ const ReachInsureAmountEvent = () => {
     return (
     
         <Section>
-             <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
+            <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
+            <Flowers src="./home/reach-insure-amount-event-flower.svg" />
             <Temple src="./home/reach-insure-amount-event-temple.svg" />
             <Mountain src="./home/reach-insure-amount-event-mountain.svg" />
 
