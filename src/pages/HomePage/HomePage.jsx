@@ -11,6 +11,7 @@ const Wrap = styled.div`
   justify-content: center;
   position: relative;
   overflow: hidden;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 `
 
 const Container = styled.div`

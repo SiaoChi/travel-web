@@ -11,10 +11,17 @@ const Wrap = styled.div`
 
 const Container = styled.div`
   width: 1366px;
+  position: relative;
+  overflow: hidden;
   padding: 62px 166px 49px;
   display: flex;
   flex-direction: column;
   align-items: center;
+`
+
+const Flower = styled.img`
+  width: 100%;
+  position: absolute;
 `
 
 const Title = styled.div`
@@ -87,6 +94,7 @@ function PolicyPage() {
   return (
     <Wrap>
       <Container>
+        <Flower src="./policy/flower.svg" alt="" />
         <Title>活動辦法</Title>
         <Buttons>
           <Button>旅行全球抽獎趣</Button>
@@ -112,6 +120,25 @@ function PolicyPage() {
             並達指定活動條件，即符合該項抽獎資格。
           </Text>
         </Description>
+        <Spacer height={83} />
+        <img alt="rule 1" src="./policy/rule1.png" />
+        <Spacer height={40} />
+        <img alt="rule 1" src="./policy/rule2.png" />
+        <Border />
+        <Spacer height={53} />
+        <Description>
+          <Label>得獎公告</Label>
+          <Text>得獎者將於2025/4/30前於本網站統一公告。</Text>
+        </Description>
+        <Spacer height={44} />
+        <Border />
+        <Spacer height={53} />
+        <Description>
+          <Label>獎項說明</Label>
+        </Description>
+        <Spacer height={25} />
+        <img alt="rule 1" src="./policy/award.png" />
+        <Spacer height={58} />
       </Container>
     </Wrap>
   )
