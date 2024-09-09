@@ -28,7 +28,7 @@ function HomePage() {
         <ReachInsureAmountEvent />
         <FirstInsureAndLinePoints />
       </Container>
-   </Wrap>
+    </Wrap>
   );
 }
 
