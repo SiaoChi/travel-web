@@ -11,6 +11,10 @@
     5. 客製化高度/寬度使用：h-[calc(100vh-100px)]  or  h-[90vh)]
   */
 
+* {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;;
+}
+
 
 @keyframes fadeIn {
   0% {
