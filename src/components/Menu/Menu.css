@@ -4,7 +4,7 @@
     /* 網頁版 */
     @apply hidden lg:flex;
     @apply items-center justify-between;
-    @apply w-full min-w-[1280px] max-w-[1366px];
+    @apply w-full min-w-[1280px] max-w-[1500px];
     @apply fixed top-0 left-1/2 transform -translate-x-1/2;
     @apply p-4 bg-bg-yellow z-50;
     @apply h-[121px]
