@@ -43,7 +43,7 @@ function Menu() {
 
 
     if (!isOnHomePage) {
-      navigate(`/${targetId}`);
+      navigate(`./${targetId}`);
       setTimeout(() => {
       window.history.pushState(null, '', targetId);
       navigateToTarget()
