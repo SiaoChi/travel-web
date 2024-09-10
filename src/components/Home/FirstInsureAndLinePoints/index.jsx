@@ -111,7 +111,7 @@ const EnglishTextTwo = styled(EnglishText)`
 const FirstInsureAndLinePoints = () => {
 
     return (
-        <Section>
+        <Section id="sec3">
             <Flower src="./home/first-insure-line-points-flower.svg"/>
             <Tower src="./home/first-insure-event-tower.svg" />
             <EventImg src="./home/first-insure-event.svg" />

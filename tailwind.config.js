@@ -11,6 +11,12 @@ export default {
         'bg-yellow':'#FFFAF1',
         'c-blue':'#2496F0',
         'c-orange':'#FED430'
+      },
+      fontFamily: {
+        'roboto': ['Roboto', 'sans-serif'],
+      },
+      rotate: {
+        '30': '30deg',
       }
     },
   },

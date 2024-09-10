@@ -82,7 +82,7 @@ const EventImg = styled.img`
 const NewYearEvent = () => {
 
     return (
-        <Section>
+        <Section id="sec1">
             <Flowers src="./home/new-year-event-flower.svg" />
             <Fireworks src="./home/new-year-event-fire.png" />
             <LineOne src="./home/shadow-line1.svg" />

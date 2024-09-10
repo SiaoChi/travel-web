@@ -5,7 +5,7 @@ import ReachInsureAmountEvent from "../../components/Home/ReachInsureAmountEvent
 import FirstInsureAndLinePoints from "../../components/Home/FirstInsureAndLinePoints";
 
 const Wrap = styled.div`
-  padding-top: 121px;
+  padding-top: 90px;
   background-color: #FFFAF1;
   display: flex;
   justify-content: center;
