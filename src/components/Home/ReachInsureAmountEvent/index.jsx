@@ -90,7 +90,7 @@ const ReachInsureAmountEvent = () => {
 
     return (
     
-        <Section>
+        <Section id="sec2">
             <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
             <Flowers src="./home/reach-insure-amount-event-flower.svg" />
             <Temple src="./home/reach-insure-amount-event-temple.svg" />

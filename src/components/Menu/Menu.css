@@ -7,7 +7,7 @@
     @apply w-full min-w-[1280px] max-w-[1500px];
     @apply fixed top-0 left-1/2 transform -translate-x-1/2;
     @apply p-4 bg-bg-yellow z-50;
-    @apply h-[121px]
+    @apply h-[90px]
 }
 
 .menu-text {
@@ -31,7 +31,21 @@
 }
 
 
+@keyframes colorChange {
+  0% {
+    color: ##2496F0; 
+  }
+  50% {
+    color: #FF837E; 
+  }
+  100% {
+    color: #2496F0; 
+  }
+}
 
+.color-changing-text {
+  animation: colorChange 1s infinite;
+}
 
 
 
