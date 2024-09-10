@@ -39,7 +39,7 @@ const Border = styled.div`
   font-size: 25px;
   font-weight: bold;
   border: solid 2px black;
-  border-radius: 8px;
+  border-radius: ${(props) => (props.$isAccordion ? "0" : "8px")};
   color: ${(props) => textColorMapping[props.$color]};
   display: flex;
   justify-content: center;
@@ -55,7 +55,7 @@ const Wrapper = styled.button`
   font-weight: bold;
   color: black;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   position: relative;
   cursor: pointer;
@@ -76,13 +76,19 @@ const Wrapper = styled.button`
   }
 `;
 
-const Button = ({ color = "yellow", children }) => {
+const IconWrapper = styled.div`
+  position: relative;
+  right: 50px;
+`;
+
+const Button = ({ color = "yellow", children, onClick, icon }) => {
 	return (
-		<Wrapper>
+		<Wrapper onClick={onClick}>
 			<Layer $color={color} />
-			<Border $color={color}>
+			<Border $color={color} $isAccordion={!!icon}>
 				<div style={{ zIndex: 5 }}>{children}</div>
 			</Border>
+			{icon && <IconWrapper>{icon}</IconWrapper>}
 		</Wrapper>
 	);
 };
@@ -90,6 +96,8 @@ const Button = ({ color = "yellow", children }) => {
 Button.propTypes = {
 	color: PropTypes.string,
 	children: PropTypes.node.isRequired,
+	onClick: PropTypes.func,
+	icon: PropTypes.node,
 };
 
 export default Button;
