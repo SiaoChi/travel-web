@@ -6,8 +6,8 @@ import Details from "./Details";
 
 const Wrap = styled.div`
   padding-top: 121px;
-  background-color: #FFF5CD;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   position: relative;
 `;
@@ -20,6 +20,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: ${(props) => props.bg || "#FFF5CD"};
 `;
 
 const Flower = styled.img`
@@ -115,7 +116,6 @@ function PolicyPage() {
 	return (
 		<Wrap>
 			<Container>
-				<Flower src="./policy/flower.svg" alt="" />
 				<Title>活動辦法</Title>
 				<Buttons>
 					<Button>旅行全球抽獎趣</Button>
@@ -174,6 +174,30 @@ function PolicyPage() {
 				>
 					<Details />
 				</Accordion>
+				<Container bg="#FED430">
+					<img src="./policy/event2-banner.svg" alt="event2-banner" />
+					<Spacer height={66} />
+					<Description>
+						<Label>活動期間</Label>
+						<Text>2024/10/1-2025/1/31</Text>
+					</Description>
+					<Spacer height={32} />
+					<Border />
+					<Spacer height={32} />
+					<Description>
+						<Label>活動辦法</Label>
+						<Text>
+							活動期間邀請親友成功投保國內外旅平險達指定筆數，
+							<br />
+							即符合LINE POINTS抽獎資格。
+						</Text>
+					</Description>
+					<Spacer height={42} />
+					<img src="./policy/invitor.svg" alt="invitor rule" />
+					<Spacer height={42} />
+					<img src="./policy/receiver.svg" alt="invitor rule" />
+				</Container>
+				<Flower src="./policy/flower.svg" alt="" />
 			</Container>
 		</Wrap>
 	);
