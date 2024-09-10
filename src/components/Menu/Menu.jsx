@@ -31,7 +31,7 @@ function Menu() {
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         const menuHeight = document.querySelector('.menu').offsetHeight;
-        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - menuHeight;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - menuHeight;
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth'
@@ -43,7 +43,7 @@ function Menu() {
 
 
     if (!isOnHomePage) {
-      navigate(`./${targetId}`);
+      navigate(`/${targetId}`);
       setTimeout(() => {
       window.history.pushState(null, '', targetId);
       navigateToTarget()
