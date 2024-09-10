@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 function Footer(){
       const [isActive, setIsActive] = useState(false);
 
-    // 處理 SVG 點擊事件，切換 active2 狀態
     const handleSvgClick = () => {
         setIsActive(!isActive);
     };
@@ -34,7 +33,7 @@ function Footer(){
                   <div className="footer_title btn_footer_more">
                     更多相關連結
                     <svg className="icon-footer-arrow" onClick={handleSvgClick}>
-                      <use xlink:href="images/icon-re.svg?svg=#ico-accor"></use>
+                      <use xlinkHref="images/icon-re.svg?svg=#ico-accor"></use>
                     </svg>
                   </div>
                   <div className={`footer_more_content ${isActive ? 'active2' : ''}`}>
