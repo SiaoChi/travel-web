@@ -136,7 +136,6 @@ const FirstInsureAndLinePoints = () => {
 
     return (
         <Section id="sec3">
-            <Flower src="./home/first-insure-line-points-flower.svg"/>
             <Tower src="./home/first-insure-event-tower.svg" />
 
             <EventImg src="./home/first-insure-event.svg" />
@@ -169,6 +168,8 @@ const FirstInsureAndLinePoints = () => {
             <ButtonWrapperThree>
                 <Button color="white" width="289px" height="60px" hoverBgColor="#FF837E">活動辦法</Button>
             </ButtonWrapperThree>
+
+            <Flower src="./home/first-insure-line-points-flower.svg"/>
         </Section>
     )
 }
