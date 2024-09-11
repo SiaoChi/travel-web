@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Button from "../../Button"
 
 const Section = styled.section`
     position: relative;
@@ -80,11 +81,26 @@ const EventImgOne = styled.img`
     left: 122px;
 `
 
+const ButtonWrapperOne = styled.div`
+    position: absolute;
+    bottom: 150px;
+    left: 280px;
+    z-index: 10;
+`
+
 const EventImgTwo = styled.img`
     position: absolute;
     bottom: 170px;
     right: 60px;
 `
+
+const ButtonWrapperTwo = styled.div`
+    position: absolute;
+    bottom: 150px;
+    right: 320px;
+    z-index: 10;
+`
+
 
 const ReachInsureAmountEvent = () => {
 
@@ -108,7 +124,14 @@ const ReachInsureAmountEvent = () => {
             <EnglishText>TRAVEL<br/>JAPAN<br/>TOKYO</EnglishText>
 
             <EventImgOne src="./home/reach-insure-amount-event1.svg" />
+            <ButtonWrapperOne>
+                <Button color="blue" width="289px" height="60px">投保立即抽</Button>
+            </ButtonWrapperOne>
+
             <EventImgTwo src="./home/reach-insure-amount-event2.svg" />
+            <ButtonWrapperTwo>
+                <Button color="blue" width="289px" height="60px">投保立即抽</Button>
+            </ButtonWrapperTwo>
             
 
         </Section>

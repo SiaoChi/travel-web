@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const colorMapping = {
 	white: "#FFFFFF",
 	yellow: "#FED430",
-	red: "#FF0000",
+	red: "#FF837E",
 	blue: "#2496F0",
 };
 
@@ -18,13 +18,13 @@ const textColorMapping = {
 const hoverTextColorMapping = {
 	white: "#000000",
 	yellow: "#000000",
-	red: "#FF0000",
+	red: "#FF837E",
 	blue: "#2496F0",
 };
 
 const Layer = styled.div`
-  width: 100%;
-  height: 65px;
+  width: ${(props) => props.$width || "100%"};
+  height: ${(props) => props.$height || "65px"};
   background-color: ${(props) => colorMapping[props.$color]};
   border-radius: 8px;
   position: absolute;
@@ -34,8 +34,8 @@ const Layer = styled.div`
 `;
 
 const Border = styled.div`
-  width: 100%;
-  height: 65px;
+  width: ${(props) => props.$width || "100%"};
+  height: ${(props) => props.$height || "65px"};
   font-size: 25px;
   font-weight: bold;
   border: solid 2px black;
@@ -49,29 +49,27 @@ const Border = styled.div`
 `;
 
 const Wrapper = styled.button`
-  width: 100%;
-  height: 65px;
+  width: ${(props) => props.$width || "100%"};
+  height: ${(props) => props.$height || "65px"};
   font-size: 25px;
   font-weight: bold;
+  border-radius: 8px;
+  background-color: #FFFFFF;
   color: black;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   position: relative;
   cursor: pointer;
-  background: none;
   border: none;
   padding: 0;
 
   &:hover {
     ${Layer} {
-      top: 0;
-      left: 0;
-      background-color: white;
+      background-color: ${(props) =>  props.$hoverBgColor || '#FFFFFF'};
     }
     ${Border} {
       color: ${(props) => hoverTextColorMapping[props.$color]};
-      background-color: ${(props) => colorMapping[props.$color]};
     }
   }
 `;
@@ -81,11 +79,11 @@ const IconWrapper = styled.div`
   right: 50px;
 `;
 
-const Button = ({ color = "yellow", children, onClick, icon }) => {
+const Button = ({ color = "yellow", hoverBgColor, children, onClick, icon, width, height}) => {
 	return (
-		<Wrapper onClick={onClick}>
-			<Layer $color={color} />
-			<Border $color={color} $isAccordion={!!icon}>
+		<Wrapper $color={color} $hoverBgColor={hoverBgColor} onClick={onClick} $width={width} $height={height}>
+			<Layer $color={color} $width={width} $height={height}/>
+			<Border $color={color} $isAccordion={!!icon} $width={width} $height={height}>
 				<div style={{ zIndex: 5 }}>{children}</div>
 			</Border>
 			{icon && <IconWrapper>{icon}</IconWrapper>}

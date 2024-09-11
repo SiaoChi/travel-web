@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Button from "/Users/mac/Developer/travel-web/src/components/Button/Button.jsx"
 
 const Section = styled.section`
     position: relative;
@@ -79,8 +80,14 @@ const EventImg = styled.img`
     right: 48px;
 `
 
-const NewYearEvent = () => {
+const ButtonWrapper = styled.div`
+    position: absolute;
+    bottom: 80px;
+    right: 250px;
+    z-index: 10;
+`
 
+const NewYearEvent = () => {
     return (
         <Section id="sec1">
             <Flowers src="./home/new-year-event-flower.svg" />
@@ -99,7 +106,9 @@ const NewYearEvent = () => {
 
             <EnglishText>HAPPY<br/>NEW YEAR<br/>2025</EnglishText>
             <EventImg src="./home/new-year-event.svg" />
-
+            <ButtonWrapper>
+                <Button color="blue" width="289px" height="60px">投保立即抽</Button>
+            </ButtonWrapper>
         </Section>
 
     )

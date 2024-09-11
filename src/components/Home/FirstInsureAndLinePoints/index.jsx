@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Button from "../../Button"
 
 const Section = styled.section`
     position: relative;
@@ -28,11 +29,34 @@ const EventImg = styled.img`
     right: 35px;
 `
 
+const ButtonWrapperOne = styled.div`
+    position: absolute;
+    top: 480px;
+    right: 275px;
+    z-index: 10;
+`
+
 const People = styled.img`
     position: absolute;
     left: 50%;
     bottom: 244px;
     translate: -50% 0;
+`
+
+const ButtonWrapperTwo = styled.div`
+    position: absolute;
+    left: 50%;
+    bottom: 295px;
+    translate: -50% 0;
+    z-index: 10;
+`
+
+const ButtonWrapperThree = styled.div`
+    position: absolute;
+    left: 50%;
+    bottom: 105px;
+    translate: -50% 0;
+    z-index: 10;
 `
 
 const MoreRewardTitle = styled.img`
@@ -114,9 +138,15 @@ const FirstInsureAndLinePoints = () => {
         <Section id="sec3">
             <Flower src="./home/first-insure-line-points-flower.svg"/>
             <Tower src="./home/first-insure-event-tower.svg" />
+
             <EventImg src="./home/first-insure-event.svg" />
+            <ButtonWrapperOne>
+                <Button color="blue" width="289px" height="60px">投保立即抽</Button>
+            </ButtonWrapperOne>
+            <EnglishTextOne>PX MART<br/>COUPON</EnglishTextOne>
+
             <Title>
-                <img src='./home/reach-insure-amount-event-title.svg' />
+                <img src='./home/first-insure-event-title.svg' />
                 <img src='./home/common-title-lottery.svg' />
             </Title>
             <Desc>
@@ -124,14 +154,21 @@ const FirstInsureAndLinePoints = () => {
                 <strong><span>首次</span>成功網路投保<span>「國內外旅平險」</span></strong><br/>
                 （限從未投保全球人壽任一險種者）
             </Desc>
-            <EnglishTextOne>PX MART<br/>COUPON</EnglishTextOne>
             
             <Italy src="./home/first-insure-event-italy.svg" />
             <BlueBackground src="./home/line-points-blue-background.svg" />
+
             <People src="./home/line-points-people.svg" />
             <EnglishTextTwo>LINE<br/>POINTS</EnglishTextTwo>
+
             <MoreRewardTitle src="./home/line-points-event-title.svg" />
             <MoreRewardDesc>快推薦好友，就有機會獲得 LINE POINTS 喔！</MoreRewardDesc>
+            <ButtonWrapperTwo>
+                <Button color="red" width="289px" height="60px">立即前往</Button>
+            </ButtonWrapperTwo>
+            <ButtonWrapperThree>
+                <Button color="white" width="289px" height="60px" hoverBgColor="#FF837E">活動辦法</Button>
+            </ButtonWrapperThree>
         </Section>
     )
 }
