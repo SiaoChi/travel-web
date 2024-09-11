@@ -10,7 +10,6 @@ const Wrap = styled.div`
   display: flex;
   justify-content: center;
   overflow: hidden;
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 `
 
 const Container = styled.div`

@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { useEffect, useState } from "react"
 
 const Section = styled.section`
     position: relative;
@@ -20,6 +21,7 @@ const BannerTitle = styled.div`
 const TitleText = styled.img`
     padding-top: 70px;
     width: 486px;
+    animation: fadeIn 1s ease-in-out backwards;
 `
 
 const TitleAirplaine = styled.img`
@@ -27,6 +29,8 @@ const TitleAirplaine = styled.img`
     position: absolute;
     top: 58px;
     left: -10px;
+    animation: fadeIn 1s ease-in-out backwards;
+    animation-delay: .5s;
 `
 
 const Desc = styled.div`
@@ -41,7 +45,7 @@ const Desc = styled.div`
     font-size: 25px;
     font-weight: bold;
     > p > span {
-        color: #2496F0;
+        color: ${props => props.isBlue ? "#2496F0" : "#FF837E" };
     }
 `
 
@@ -79,6 +83,15 @@ const LineTwo = styled.img`
 `
 
 const EventBanner = () => {
+    const [isBlue, setIsBlue] = useState(true)
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIsBlue(!isBlue)
+        }, 1000)
+
+        return () => clearInterval(interval)
+    },[isBlue])
 
     return (
         <Section>
@@ -91,7 +104,7 @@ const EventBanner = () => {
                 <TitleText src="./home/event-banner-title.png" />
                 <TitleAirplaine src="./home/event-banner-airplane.png" />
             </BannerTitle>
-            <Desc>
+            <Desc isBlue={isBlue}>
                 <p>保全球旅平險</p>
                 <p>驚喜<span>多多多多多多</span>到滿出來！</p>
             </Desc>
