@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Button from "../../components/Button";
 import Accordion from "../../components/Accordion";
 import Details from "./Details";
+import ActionList from "./ActionList";
 
 const Wrap = styled.div`
   padding-top: 121px;
@@ -13,7 +14,8 @@ const Wrap = styled.div`
 `;
 
 const Container = styled.div`
-  width: 1366px;
+  width: 100%;
+  max-width: 1366px;
   position: relative;
   overflow: hidden;
   padding: 62px 166px 49px;
@@ -142,9 +144,8 @@ function PolicyPage() {
 					</Text>
 				</Description>
 				<Spacer height={83} />
-				<img alt="rule 1" src="./policy/rule1.png" />
+				<ActionList />
 				<Spacer height={40} />
-				<img alt="rule 1" src="./policy/rule2.png" />
 				<Border />
 				<Spacer height={53} />
 				<Description>
