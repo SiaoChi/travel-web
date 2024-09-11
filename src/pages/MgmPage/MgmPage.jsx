@@ -63,6 +63,7 @@ const BannerTitle = styled.img`
     top: 50px;
     left: 100px;
     width: 500px;
+    animation: fadeIn 1s ease-in-out backwards;
 `
 
 const BannerTitlePoint = styled.img`
@@ -70,6 +71,8 @@ const BannerTitlePoint = styled.img`
     top: 50px;
     left: 100px;
     width: 500px;
+    animation: fadeIn 1s ease-in-out backwards;
+    animation-delay: .5s;
 `
 
 const Desc = styled.div`

@@ -21,6 +21,7 @@ const BannerTitle = styled.div`
 const TitleText = styled.img`
     padding-top: 70px;
     width: 486px;
+    animation: fadeIn 1s ease-in-out backwards;
 `
 
 const TitleAirplaine = styled.img`
@@ -28,6 +29,8 @@ const TitleAirplaine = styled.img`
     position: absolute;
     top: 58px;
     left: -10px;
+    animation: fadeIn 1s ease-in-out backwards;
+    animation-delay: .5s;
 `
 
 const Desc = styled.div`
