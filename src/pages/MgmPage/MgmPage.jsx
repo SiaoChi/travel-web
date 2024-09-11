@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useEffect, useState } from "react"
 
 const Wrap = styled.div`
   padding-top: 90px;
@@ -84,7 +85,7 @@ const Desc = styled.div`
     font-size: 25px;
     font-weight: bold;
     > p > span {
-        color: #408CC9;
+        color:  ${props => props.isBlue ? "#2496F0" : "#FF837E" };
     }
 `
 
@@ -174,6 +175,16 @@ const  BottomDesc = styled(Desc)`
 
 
 const MgmPage = () => {
+    const [isBlue, setIsBlue] = useState(true)
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIsBlue(!isBlue)
+        }, 1000)
+
+        return () => clearInterval(interval)
+    },[isBlue])
+
     return (
         <Wrap>
             <Container>
@@ -186,7 +197,7 @@ const MgmPage = () => {
                 
                 <BannerTitle src="./mgm/mgm-title.png" />
                 <BannerTitlePoint src="./mgm/mgm-title-p.png" />
-                <Desc>
+                <Desc isBlue={isBlue}>
                     <p>推薦好友全球旅平險</p>
                     <p>快樂<span>+1+1+1+1+1+1+1+1+1</span></p>
                 </Desc>
