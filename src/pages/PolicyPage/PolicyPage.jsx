@@ -10,19 +10,28 @@ const Wrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   position: relative;
+  overflow: hidden;
+`;
+
+const Background = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: ${(props) => props.bg || "#FFF5CD"};
+  display: flex;
+  justify-content: center;
+  z-index: ${(props) => props.zIndex || 0};
 `;
 
 const Container = styled.div`
   width: 100%;
   max-width: 1366px;
   position: relative;
-  overflow: hidden;
   padding: 62px 166px 49px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${(props) => props.bg || "#FFF5CD"};
 `;
 
 const Flower = styled.img`
@@ -117,65 +126,74 @@ function PolicyPage() {
 	const [isOpenDetails, setIsOpenDetails] = useState(false);
 	return (
 		<Wrap>
-			<Container>
-				<Title>活動辦法</Title>
-				<Buttons>
-					<Button>旅行全球抽獎趣</Button>
-					<Button>分享全球樂透抽</Button>
-				</Buttons>
-				<Border />
-				<BannerWrapper>
-					<TitleText src="./home/event-banner-title.png" />
-					<TitleAirplaine src="./home/event-banner-airplane.png" />
-				</BannerWrapper>
-				<Description>
-					<Label>活動期間</Label>
-					<Text>2024/10/1-2025/1/31</Text>
-				</Description>
-				<Spacer height={32} />
-				<Border />
-				<Spacer height={32} />
-				<Description>
-					<Label>活動辦法</Label>
-					<Text>
-						凡於活動期間內成功網路投保「國內外旅行平安險」，
-						<br />
-						並達指定活動條件，即符合該項抽獎資格。
-					</Text>
-				</Description>
-				<Spacer height={83} />
-				<ActionList />
-				<Spacer height={40} />
-				<Border />
-				<Spacer height={53} />
-				<Description>
-					<Label>得獎公告</Label>
-					<Text>得獎者將於2025/4/30前於本網站統一公告。</Text>
-				</Description>
-				<Spacer height={44} />
-				<Border />
-				<Spacer height={53} />
-				<Description>
-					<Label>獎項說明</Label>
-				</Description>
-				<Spacer height={25} />
-				<img alt="rule 1" src="./policy/award.svg" style={{ width: "100%" }} />
-				<Spacer height={40} />
-				<Notice>
-					<div className="title">活動獎項發放說明</div>
-					<div className="text">
-						本活動獎項採電子票券形式，將以Edenred之LINE「好禮即享券領券通知」的官方帳號發送通知型訊息予中獎者。若您無法接收到通知型訊息，活動小組將另發送好禮即享券簡訊通知。
-					</div>
-				</Notice>
-				<Spacer height={58} />
-				<Accordion
-					title="注意事項"
-					isOpen={isOpenDetails}
-					onClick={() => setIsOpenDetails(!isOpenDetails)}
-				>
-					<Details />
-				</Accordion>
-				<Container bg="#FED430">
+			<Background>
+				<Container>
+					<Title>活動辦法</Title>
+					<Buttons>
+						<Button>旅行全球抽獎趣</Button>
+						<Button>分享全球樂透抽</Button>
+					</Buttons>
+					<Border />
+					<BannerWrapper>
+						<TitleText src="./home/event-banner-title.png" />
+						<TitleAirplaine src="./home/event-banner-airplane.png" />
+					</BannerWrapper>
+					<Description>
+						<Label>活動期間</Label>
+						<Text>2024/10/1-2025/1/31</Text>
+					</Description>
+					<Spacer height={32} />
+					<Border />
+					<Spacer height={32} />
+					<Description>
+						<Label>活動辦法</Label>
+						<Text>
+							凡於活動期間內成功網路投保「國內外旅行平安險」，
+							<br />
+							並達指定活動條件，即符合該項抽獎資格。
+						</Text>
+					</Description>
+					<Spacer height={83} />
+					<ActionList />
+					<Spacer height={40} />
+					<Border />
+					<Spacer height={53} />
+					<Description>
+						<Label>得獎公告</Label>
+						<Text>得獎者將於2025/4/30前於本網站統一公告。</Text>
+					</Description>
+					<Spacer height={44} />
+					<Border />
+					<Spacer height={53} />
+					<Description>
+						<Label>獎項說明</Label>
+					</Description>
+					<Spacer height={25} />
+					<img
+						alt="rule 1"
+						src="./policy/award.svg"
+						style={{ width: "100%" }}
+					/>
+					<Spacer height={40} />
+					<Notice>
+						<div className="title">活動獎項發放說明</div>
+						<div className="text">
+							本活動獎項採電子票券形式，將以Edenred之LINE「好禮即享券領券通知」的官方帳號發送通知型訊息予中獎者。若您無法接收到通知型訊息，活動小組將另發送好禮即享券簡訊通知。
+						</div>
+					</Notice>
+					<Spacer height={58} />
+					<Accordion
+						title="注意事項"
+						isOpen={isOpenDetails}
+						onClick={() => setIsOpenDetails(!isOpenDetails)}
+					>
+						<Details />
+					</Accordion>
+					<Flower src="./policy/flower.svg" alt="" />
+				</Container>
+			</Background>
+			<Background bg="#FED430" zIndex={-10}>
+				<Container>
 					<img src="./policy/event2-banner.svg" alt="event2-banner" />
 					<Spacer height={66} />
 					<Description>
@@ -198,8 +216,7 @@ function PolicyPage() {
 					<Spacer height={42} />
 					<img src="./policy/receiver.svg" alt="invitor rule" />
 				</Container>
-				<Flower src="./policy/flower.svg" alt="" />
-			</Container>
+			</Background>
 		</Wrap>
 	);
 }
