@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Button from "../../components/Button";
 import Accordion from "../../components/Accordion";
 import Details from "./Details";
-import ActionList from "./ActionList";
+import ActionList, { AwardList } from "./ActionList";
 
 const Wrap = styled.div`
   padding-top: 121px;
@@ -169,11 +169,7 @@ function PolicyPage() {
 						<Label>獎項說明</Label>
 					</Description>
 					<Spacer height={25} />
-					<img
-						alt="rule 1"
-						src="./policy/award.svg"
-						style={{ width: "100%" }}
-					/>
+					<AwardList />
 					<Spacer height={40} />
 					<Notice>
 						<div className="title">活動獎項發放說明</div>
