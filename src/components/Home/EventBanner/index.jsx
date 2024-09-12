@@ -5,7 +5,7 @@ const Section = styled.section`
     position: relative;
     height: 660px;
     @media (max-width: 1301px) {
-        height: 951px;
+        height: 900px;
     }
 `;
 

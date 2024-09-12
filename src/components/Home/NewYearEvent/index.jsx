@@ -18,10 +18,19 @@ const Title = styled.div`
     > img {
         height: 60px;
     }
+    @media (max-width: 1301px) {
+        top: 0px;
+        left: 50%;
+        transform: translateX(-46%);
+        width: 320px;
+         > img {
+            height: 40px;
+        }
+    }
 `;
 
 const Desc = styled.div`
-   position: absolute;
+    position: absolute;
     left: 182px;
     top: 450px;
     line-height: 35px;
@@ -31,6 +40,15 @@ const Desc = styled.div`
     > span {
         color: #2496F0;
     }
+    @media (max-width: 1301px) {
+        top: 160px;
+        left: 50%;
+        transform: translateX(-46%);
+        font-size: 20px;
+        line-height: 40px;
+        letter-spacing: 2px;
+        width: 320px;
+    }
 `;
 
 const Flowers = styled.img`
@@ -39,6 +57,20 @@ const Flowers = styled.img`
     left: 40px;
     width: 1500px;
     height: 800px;
+    @media (max-width: 1301px) {
+        display: none;
+    }
+`;
+
+const MobileFlowers = styled.img`
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-40%);
+    width: 299px;
+    @media (min-width: 1301px) {
+        display: none;
+    }
 `;
 
 const Fireworks = styled.img`
@@ -46,6 +78,12 @@ const Fireworks = styled.img`
     top: 72px;
     left: 62px;
     width: 584px;
+    @media (max-width: 1301px) {
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 400px;
+    }
 `;
 
 const LineOne = styled.img`
@@ -53,6 +91,11 @@ const LineOne = styled.img`
     left: -65px;
     bottom: 20px;
     width: 343px;
+    @media (max-width: 1301px) {
+        bottom: 200px;
+        left: 50%;
+        transform: translateX(-90%);
+    }
 `;
 
 const LineTwo = styled.img`
@@ -61,6 +104,11 @@ const LineTwo = styled.img`
     bottom: 20px;
     width: 383px;
     transform:rotate(-5deg);
+    @media (max-width: 1301px) {
+        bottom: 200px;
+        left: 50%;
+        transform: translateX(-10%);
+    }
 `;
 
 const EnglishText = styled.div`
@@ -72,12 +120,31 @@ const EnglishText = styled.div`
     font-weight: bold;
     color: #FED430;
     text-align: right;
+    @media (max-width: 1301px) {
+        top: 260px;
+        font-size: 40px;
+        line-height: 40px;
+    }
 `;
 
 const EventImg = styled.img`
     position: absolute;
     bottom: 20px;
     right: 48px;
+    @media (max-width: 1301px) {
+        display: none;
+    }
+`;
+
+const MobileEventImg = styled.img`
+    position: absolute;
+    top: 330px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 414px;
+    @media (min-width: 1301px) {
+        display: none;
+    }
 `;
 
 const ButtonWrapper = styled.div`
@@ -85,12 +152,18 @@ const ButtonWrapper = styled.div`
     bottom: 80px;
     right: 250px;
     z-index: 10;
+    width: 289px;
+    @media (max-width: 1301px) {
+        width: 220px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
 `;
 
 const NewYearEvent = () => {
 	return (
 		<Section id="sec1">
-			<Flowers src="./home/new-year-event-flower.svg" />
 			<Fireworks src="./home/new-year-event-fire.png" />
 			<LineOne src="./home/shadow-line1.svg" />
 			<LineTwo src="./home/shadow-line2.svg" />
@@ -113,11 +186,15 @@ const NewYearEvent = () => {
 				2025
 			</EnglishText>
 			<EventImg src="./home/new-year-event.svg" />
+			<MobileEventImg src="./home/new-year-event-mobile.svg" />
 			<ButtonWrapper>
-				<Button color="blue" width="289px" height="60px">
+				<Button color="blue" height="60px">
 					投保立即抽
 				</Button>
 			</ButtonWrapper>
+
+			<Flowers src="./home/new-year-event-flower.svg" />
+			<MobileFlowers src="./home/new-year-event-flower-mobile.svg" />
 		</Section>
 	);
 };
