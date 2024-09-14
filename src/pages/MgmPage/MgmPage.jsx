@@ -7,6 +7,9 @@ const Wrap = styled.div`
   display: flex;
   justify-content: center;
   overflow: hidden;
+  @media (max-width: 480px) {
+    padding-top: 65px;
+  }
 `;
 
 const Container = styled.div`
@@ -28,6 +31,9 @@ const BannerFlower = styled.img`
   top: 0;
   right: 20px;
   width: 900px;
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
 
 const ContentFlower = styled.img`
@@ -57,12 +63,26 @@ const BlueBackground = styled.img`
   width: 100%;
 `;
 
+const Video = styled.video`
+  position: absolute;
+  top: 0;
+  right: 50px;
+  @media (max-width: 480px) {
+    position: static;
+  }
+`;
+
 const BannerTitle = styled.img`
     position: absolute;
     top: 50px;
     left: 100px;
     width: 500px;
     animation: fadeIn 1s ease-in-out backwards;
+    @media (max-width: 480px) {
+        width: 100%;
+        top: 330px;
+        left: 15px;
+    }
 `;
 
 const BannerTitlePoint = styled.img`
@@ -72,6 +92,11 @@ const BannerTitlePoint = styled.img`
     width: 500px;
     animation: fadeIn 1s ease-in-out backwards;
     animation-delay: .5s;
+    @media (max-width: 480px) {
+        width: 100%;
+        top: 330px;
+        left: 15px;
+    }
 `;
 
 const Desc = styled.div`
@@ -89,6 +114,13 @@ const Desc = styled.div`
     > p > span {
         color:  ${(props) => (props.isBlue ? "#2496F0" : "#FF837E")};
     }
+    @media (max-width: 480px) {
+        top: 550px;
+        left: 0px;
+        font-size: 20px;
+        line-height: 20px;
+        width: 100%;
+    }
 `;
 
 const EnglishTitle = styled.p`
@@ -100,6 +132,19 @@ const EnglishTitle = styled.p`
     font-weight: bold;
     letter-spacing: 2px;
     color: #2496F0;
+    @media (max-width: 480px) {
+      font-size: 40px;
+      line-height: 40px;
+      top: 660px;
+      left: 20px;
+    }
+`;
+
+const Br = styled.br`
+  display: ${(props) => (props.reverse ? "block" : "none")};
+  @media (max-width: 480px) {
+    display: ${(props) => (props.reverse ? "none" : "block")};
+  }
 `;
 
 const ContentDesc = styled(Desc)`
@@ -107,6 +152,15 @@ const ContentDesc = styled(Desc)`
     top: 730px;
     left: 50%;
     transform: translateX(-50%);
+    @media (max-width: 480px) {
+      top: 800px;
+      font-size: 16px;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
 `;
 
 const LinePointsText = styled.img`
@@ -115,6 +169,9 @@ const LinePointsText = styled.img`
     left: 50%;
     transform: translateX(-50%);
     width: 387px;
+    @media (max-width: 480px) {
+      top: 850px;
+    }
 `;
 
 const MgmContentOne = styled.img`
@@ -175,6 +232,12 @@ const BottomDesc = styled(Desc)`
     letter-spacing: 1px;
 `;
 
+const DesktopPart = styled.div`
+  @media (max-width: 480px) {
+      display: none;
+  }
+`;
+
 const MgmPage = () => {
 	const [isBlue, setIsBlue] = useState(true);
 
@@ -189,13 +252,17 @@ const MgmPage = () => {
 	return (
 		<Wrap>
 			<Container>
-				<YellowBackground src="./mgm/mgm-trapezoid.svg" />
-				<BannerFlower src="./mgm/mgm-banner-flower.svg" />
-				<ContentFlower src="./mgm/mgm-info-flower.svg" />
-				<ContentPoint src="./mgm/mgm-content-p-point.svg" />
-				<BackgroundBuilding src="./mgm/mgm-building.svg" />
-				<BlueBackground src="./mgm/mgm-blue-building.svg" />
-
+				<DesktopPart>
+					<YellowBackground src="./mgm/mgm-trapezoid.svg" />
+					<BannerFlower src="./mgm/mgm-banner-flower.svg" />
+					<ContentFlower src="./mgm/mgm-info-flower.svg" />
+					<ContentPoint src="./mgm/mgm-content-p-point.svg" />
+					<BackgroundBuilding src="./mgm/mgm-building.svg" />
+					<BlueBackground src="./mgm/mgm-blue-building.svg" />
+					<BannerTitle src="./mgm/mgm-title.png" />
+					<BannerTitlePoint src="./mgm/mgm-title-p.png" />
+				</DesktopPart>
+				<Video src="./mgm/mgm-banner-video-mobile.mp4" autoPlay muted />
 				<BannerTitle src="./mgm/mgm-title.png" />
 				<BannerTitlePoint src="./mgm/mgm-title-p.png" />
 				<Desc isBlue={isBlue}>
@@ -206,7 +273,7 @@ const MgmPage = () => {
 				</Desc>
 				<EnglishTitle>
 					COLLECT
-					<br />A LOT OF LINE POINTS
+					<Br reverse /> A LOT OF LINE POINTS
 				</EnglishTitle>
 
 				<ContentDesc>
