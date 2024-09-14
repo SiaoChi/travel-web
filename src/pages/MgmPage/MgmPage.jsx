@@ -7,7 +7,7 @@ const Wrap = styled.div`
   display: flex;
   justify-content: center;
   overflow: hidden;
-  @media (max-width: 480px) {
+  @media (max-width: 1300px) {
     padding-top: 65px;
   }
 `;
@@ -17,6 +17,9 @@ const Container = styled.div`
   max-width: 1500px;
   position: relative;
   height: 2780px;
+  @media (max-width: 1300px) {
+    width: 414px;
+  }
 `;
 
 const YellowBackground = styled.img`
@@ -31,7 +34,7 @@ const BannerFlower = styled.img`
   top: 0;
   right: 20px;
   width: 900px;
-  @media (max-width: 480px) {
+  @media (max-width: 1300px) {
     display: none;
   }
 `;
@@ -67,7 +70,8 @@ const Video = styled.video`
   position: absolute;
   top: 0;
   right: 50px;
-  @media (max-width: 480px) {
+  @media (max-width: 1300px) {
+    align-self: center;
     position: static;
   }
 `;
@@ -78,7 +82,7 @@ const BannerTitle = styled.img`
     left: 100px;
     width: 500px;
     animation: fadeIn 1s ease-in-out backwards;
-    @media (max-width: 480px) {
+    @media (max-width: 1300px) {
         width: 100%;
         top: 330px;
         left: 15px;
@@ -92,7 +96,7 @@ const BannerTitlePoint = styled.img`
     width: 500px;
     animation: fadeIn 1s ease-in-out backwards;
     animation-delay: .5s;
-    @media (max-width: 480px) {
+    @media (max-width: 1300px) {
         width: 100%;
         top: 330px;
         left: 15px;
@@ -114,7 +118,7 @@ const Desc = styled.div`
     > p > span {
         color:  ${(props) => (props.isBlue ? "#2496F0" : "#FF837E")};
     }
-    @media (max-width: 480px) {
+    @media (max-width: 1300px) {
         top: 550px;
         left: 0px;
         font-size: 20px;
@@ -132,7 +136,7 @@ const EnglishTitle = styled.p`
     font-weight: bold;
     letter-spacing: 2px;
     color: #2496F0;
-    @media (max-width: 480px) {
+    @media (max-width: 1300px) {
       font-size: 40px;
       line-height: 40px;
       top: 660px;
@@ -142,7 +146,7 @@ const EnglishTitle = styled.p`
 
 const Br = styled.br`
   display: ${(props) => (props.reverse ? "block" : "none")};
-  @media (max-width: 480px) {
+  @media (max-width: 1300px) {
     display: ${(props) => (props.reverse ? "none" : "block")};
   }
 `;
@@ -152,7 +156,7 @@ const ContentDesc = styled(Desc)`
     top: 730px;
     left: 50%;
     transform: translateX(-50%);
-    @media (max-width: 480px) {
+    @media (max-width: 1300px) {
       top: 800px;
       font-size: 16px;
       height: fit-content;
@@ -169,33 +173,60 @@ const LinePointsText = styled.img`
     left: 50%;
     transform: translateX(-50%);
     width: 387px;
-    @media (max-width: 480px) {
+    @media (max-width: 1300px) {
       top: 850px;
     }
 `;
 
-const MgmContentOne = styled.img`
+const MgmContentOne = styled.div`
     position: absolute;
     top: 900px;
     left: 50%;
     transform: translateX(-50%);
     width: 974px;
+    height: 263px;
+    background: url('./mgm/mgm-content1.svg') no-repeat center center;
+    background-size: cover;
+    @media (max-width: 1300px) {
+      top: 950px;
+      width: 404px;
+      height: 207px;
+      background: url('./mgm/mgm-content1-mobile.svg') no-repeat center center;
+    }
 `;
 
-const MgmContentTwo = styled.img`
+const MgmContentTwo = styled.div`
     position: absolute;
     top: 1163px;
     left: 50%;
     transform: translateX(-48%);
-    width: 1010px;
+    width: 1012px;
+    height: 308px;
+    background: url('./mgm/mgm-content2.svg') no-repeat center center;
+    background-size: cover;
+    @media (max-width: 1300px) {
+      top: 1120px;
+      width: 409px;
+      height: 187px;
+      background: url('./mgm/mgm-content2-mobile.svg') no-repeat center center;
+    }
 `;
 
-const MgmContentThree = styled.img`
+const MgmContentThree = styled.div`
     position: absolute;
     top: 1463px;
     left: 50%;
     transform: translateX(-52%);
-    width: 928px;
+    width: 929px;
+    height: 299px;
+    background: url('./mgm/mgm-content3.svg') no-repeat center center;
+    background-size: cover;
+    @media (max-width: 1300px) {
+      top: 1300px;
+      width: 414px;
+      height: 189px;
+      background: url('./mgm/mgm-content3-mobile.svg') no-repeat center center;
+    }
 `;
 
 const People = styled.img`
@@ -233,7 +264,7 @@ const BottomDesc = styled(Desc)`
 `;
 
 const DesktopPart = styled.div`
-  @media (max-width: 480px) {
+  @media (max-width: 1300px) {
       display: none;
   }
 `;
@@ -259,8 +290,6 @@ const MgmPage = () => {
 					<ContentPoint src="./mgm/mgm-content-p-point.svg" />
 					<BackgroundBuilding src="./mgm/mgm-building.svg" />
 					<BlueBackground src="./mgm/mgm-blue-building.svg" />
-					<BannerTitle src="./mgm/mgm-title.png" />
-					<BannerTitlePoint src="./mgm/mgm-title-p.png" />
 				</DesktopPart>
 				<Video src="./mgm/mgm-banner-video-mobile.mp4" autoPlay muted />
 				<BannerTitle src="./mgm/mgm-title.png" />
@@ -282,9 +311,9 @@ const MgmPage = () => {
 				</ContentDesc>
 				<LinePointsText src="./mgm/mgm-line-points-text.svg" />
 
-				<MgmContentOne src="./mgm/mgm-content1.svg" />
-				<MgmContentTwo src="./mgm/mgm-content2.svg" />
-				<MgmContentThree src="./mgm/mgm-content3.svg" />
+				<MgmContentOne />
+				<MgmContentTwo />
+				<MgmContentThree />
 
 				<People src="./mgm/mgm-people-and-frame.svg" />
 				<ActionDesc>
