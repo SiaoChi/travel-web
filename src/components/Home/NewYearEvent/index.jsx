@@ -5,6 +5,11 @@ const Section = styled.section`
     position: relative;
     height: 730px;
     overflow: hidden;
+    @media (max-width: 1301px) {
+        width: 414px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 `;
 
 const Title = styled.div`

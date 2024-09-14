@@ -5,6 +5,7 @@ const Section = styled.section`
     position: relative;
     height: 1127px;
     @media (max-width: 1301px) {
+        overflow: hidden;
         height: 1390px;
         width: 414px;
         left: 50%;
