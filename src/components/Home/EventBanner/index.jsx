@@ -65,7 +65,7 @@ const Desc = styled.div`
     font-size: 25px;
     font-weight: bold;
     > p > span {
-        color: ${(props) => (props.isBlue ? "#2496F0" : "#FF837E")};
+        color: ${(props) => (props.$isBlue ? "#2496F0" : "#FF837E")};
     }
     @media (max-width: 1301px) {
         margin: 0;
@@ -163,7 +163,7 @@ const EventBanner = () => {
 				<TitleText src="./home/event-banner-title.png" />
 				<TitleAirplaine src="./home/event-banner-airplane.png" />
 			</BannerTitle>
-			<Desc isBlue={isBlue}>
+			<Desc $isBlue={isBlue}>
 				<p>保全球旅平險</p>
 				<p>
 					驚喜<span>多多多多多多</span>到滿出來！
