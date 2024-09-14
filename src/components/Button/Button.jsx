@@ -46,6 +46,9 @@ const Border = styled.div`
   align-items: center;
   position: absolute;
   transition: all 0.3s ease;
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
 `;
 
 const Wrapper = styled.button`
@@ -66,7 +69,7 @@ const Wrapper = styled.button`
 
   &:hover {
     ${Layer} {
-      background-color: ${(props) =>  props.$hoverBgColor || '#FFFFFF'};
+      background-color: ${(props) => props.$hoverBgColor || "#FFFFFF"};
     }
     ${Border} {
       color: ${(props) => hoverTextColorMapping[props.$color]};
@@ -79,11 +82,30 @@ const IconWrapper = styled.div`
   right: 50px;
 `;
 
-const Button = ({ color = "yellow", hoverBgColor, children, onClick, icon, width, height}) => {
+const Button = ({
+	color = "yellow",
+	hoverBgColor,
+	children,
+	onClick,
+	icon,
+	width,
+	height,
+}) => {
 	return (
-		<Wrapper $color={color} $hoverBgColor={hoverBgColor} onClick={onClick} $width={width} $height={height}>
-			<Layer $color={color} $width={width} $height={height}/>
-			<Border $color={color} $isAccordion={!!icon} $width={width} $height={height}>
+		<Wrapper
+			$color={color}
+			$hoverBgColor={hoverBgColor}
+			onClick={onClick}
+			$width={width}
+			$height={height}
+		>
+			<Layer $color={color} $width={width} $height={height} />
+			<Border
+				$color={color}
+				$isAccordion={!!icon}
+				$width={width}
+				$height={height}
+			>
 				<div style={{ zIndex: 5 }}>{children}</div>
 			</Border>
 			{icon && <IconWrapper>{icon}</IconWrapper>}

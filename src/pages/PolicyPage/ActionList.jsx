@@ -24,24 +24,36 @@ const Item = styled.li`
   line-height: 1.5;
   &::before {
     content: counter(item);
+		min-width: 30px;
     font-size: 65px;
     font-weight: bold;
     margin-right: 30px;
     line-height: 65px;
     color: #2496F0;
   }
+	@media (max-width: 480px) {
+		&::before {
+			font-size: 50px;
+			margin-right: 20px;
+			line-height: 40px;
+		}
+	}
 `;
 
 const ItemWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;
+	@media (max-width: 480px) {
+		gap: 20px;
+	}
 `;
 
 const Title = styled.div`
   font-size: 40px;
   font-weight: bold;
   line-height: 40px;
+	font-family: "Noto Serif CJK TC";
 `;
 
 const Note = styled.div`
@@ -49,12 +61,21 @@ const Note = styled.div`
   line-height: ${({ lineHeight }) => lineHeight}px;
   color: ${({ highlight }) => (highlight ? "#2496F0" : "#000000")};
   white-space: pre-wrap;
+	font-family: "Noto Sans TC";
+	@media (max-width: 480px) {
+		margin-left: ${({ marginLeft }) => marginLeft};
+	}
 `;
 
 const Flex = styled.div`
   display: flex;
   align-items: flex-end;
   gap: 22px;
+	@media (max-width: 480px) {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+	}
 `;
 
 const SmallItem = styled.div`
@@ -69,6 +90,9 @@ const SmallItem = styled.div`
   font-size: 20px;
   font-weight: bold;
   flex-shrink: 0;
+	@media (max-width: 480px) {
+		margin-left: ${({ marginLeft }) => marginLeft};
+	}
 `;
 
 const SubTitle = styled.div`
@@ -100,7 +124,7 @@ function ActionList() {
 					<div
 						style={{ display: "flex", alignItems: "flex-start", gap: "22px" }}
 					>
-						<SmallItem>1</SmallItem>
+						<SmallItem marginLeft="-50px">1</SmallItem>
 						<Note lineHeight={30}>
 							單筆保費滿200元，該筆保單即享「500元好禮即享券」抽獎機會乙次
 							<br />
@@ -110,7 +134,7 @@ function ActionList() {
 					<div
 						style={{ display: "flex", alignItems: "flex-start", gap: "22px" }}
 					>
-						<SmallItem>2</SmallItem>
+						<SmallItem marginLeft="-50px">2</SmallItem>
 						<div>
 							<Note lineHeight={30}>
 								單筆保費滿500元，該筆保單即享「星宇航空東京來回機票」抽獎機會乙次
@@ -305,6 +329,10 @@ const CaseWrapper = styled.div`
 	width: 183px;
 	height: 42px;
 	border: 1px solid #000000;
+	@media (max-width: 480px) {
+		width: fit-content;
+		padding: 0 20px;
+	}
 `;
 
 export function Case() {
