@@ -1,16 +1,11 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import Button from "../Button";
 
 const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
-`;
-
-const Spacer = styled.div`
-  height: 40px;
 `;
 
 const Minus = () => {
@@ -55,17 +50,72 @@ const Plus = () => {
 	);
 };
 
+const Layer = styled.div`
+  width: ${(props) => props.$width || "100%"};
+  height: ${(props) => props.$height || "65px"};
+  background-color: #FFFAF1;
+  border-radius: 8px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  transition: all 0.3s ease;
+`;
+
+const Border = styled.div`
+  width: ${(props) => props.$width || "100%"};
+  height: ${(props) => props.$height || "65px"};
+  font-size: 25px;
+  font-weight: bold;
+  border: solid 2px black;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transition: all 0.3s ease;
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
+`;
+
+const Button = styled.button`
+  width: ${(props) => props.$width || "100%"};
+  height: ${(props) => props.$height || "65px"};
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+`;
+
+const IconWrapper = styled.div`
+  position: relative;
+  right: 50px;
+`;
+
 function Accordion({ title, isOpen, onClick, children }) {
 	return (
 		<Wrapper>
-			<Button
-				onClick={onClick}
-				color="white"
-				icon={isOpen ? <Minus /> : <Plus />}
-			>
-				{title}
+			<Button onClick={onClick}>
+				<Layer />
+				<Border>
+					<div style={{ zIndex: 5 }}>{title}</div>
+				</Border>
+				{isOpen ? (
+					<IconWrapper>
+						<Minus />
+					</IconWrapper>
+				) : (
+					<IconWrapper>
+						<Plus />
+					</IconWrapper>
+				)}
 			</Button>
-			<Spacer />
 			{isOpen && children}
 		</Wrapper>
 	);
