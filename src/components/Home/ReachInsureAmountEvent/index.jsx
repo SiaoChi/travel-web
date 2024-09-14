@@ -218,13 +218,13 @@ const ReachInsureAmountEvent = () => {
 
     return (
     
-        <Section id="sec2">
+        <Section >
             <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
             <MobileYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-mobile.svg" />
-            <Temple src="./home/reach-insure-amount-event-temple.svg" />
+            <Temple id="sec2" src="./home/reach-insure-amount-event-temple.svg" />
             <Mountain src="./home/reach-insure-amount-event-mountain.svg" />
 
-            <Title>
+            <Title >
                 <img src='./home/reach-insure-amount-event-title.svg' />
                 <img src='./home/common-title-lottery.svg' />
             </Title>

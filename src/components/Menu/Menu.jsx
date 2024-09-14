@@ -25,13 +25,13 @@ function Menu() {
     setIsMenuOpen(false);
 
     const isOnHomePage = window.location.pathname === '/' || window.location.pathname === '/index.html';
-
+    
 
     const navigateToTarget = () => {
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         const menuHeight = document.querySelector('.menu').offsetHeight;
-        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - menuHeight;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - menuHeight - 60;
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth'

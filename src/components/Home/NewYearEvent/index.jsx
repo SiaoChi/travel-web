@@ -177,13 +177,13 @@ const ButtonWrapper = styled.div`
 
 const NewYearEvent = () => {
 	return (
-		<Section id="sec1">
-			<Fireworks src="./home/new-year-event-fire.png" />
+		<Section >
+			<Fireworks id="sec1" src="./home/new-year-event-fire.png" />
 			<LineOne src="./home/shadow-line1.svg" />
 			<LineTwo src="./home/shadow-line2.svg" />
 			<MobileLine src="./home/shadow-line-mobile.svg" />
 
-			<Title>
+			<Title >
 				<img src="./home/new-year-event-title.svg" />
 				<img src="./home/common-title-lottery.svg" />
 			</Title>
