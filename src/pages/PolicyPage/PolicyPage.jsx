@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Button from "../../components/Button";
 import Accordion from "../../components/Accordion";
 import Details from "./Details";
-import ActionList, { AwardList } from "./ActionList";
+import ActionList, { AwardList, Invitor, Receiver } from "./ActionList";
 
 const Wrap = styled.div`
   padding-top: 121px;
@@ -208,9 +208,9 @@ function PolicyPage() {
 						</Text>
 					</Description>
 					<Spacer height={42} />
-					<img src="./policy/invitor.svg" alt="invitor rule" />
+					<Invitor />
 					<Spacer height={42} />
-					<img src="./policy/receiver.svg" alt="invitor rule" />
+					<Receiver />
 				</Container>
 			</Background>
 		</Wrap>

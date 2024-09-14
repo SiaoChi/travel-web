@@ -234,4 +234,67 @@ export const AwardList = () => {
 	);
 };
 
+export function Invitor() {
+	return (
+		<div style={{ width: "100%" }}>
+			<Title>邀請人</Title>
+			<div
+				style={{
+					marginTop: "24px",
+					display: "flex",
+					flexDirection: "column",
+					gap: "20px",
+				}}
+			>
+				<div style={{ display: "flex", alignItems: "baseline", gap: "20px" }}>
+					<Circle />
+					<Note lineHeight={30}>
+						成功邀請1筆保單，享「50點LINE
+						POINTS好禮即享券」抽獎機會乙次（共抽200名）。
+					</Note>
+				</div>
+				<div style={{ display: "flex", alignItems: "baseline", gap: "20px" }}>
+					<Circle />
+					<Note lineHeight={30}>
+						成功邀請2筆保單，享「150點LINE
+						POINTS好禮即享券」抽獎機會乙次（共抽200名）。
+					</Note>
+				</div>
+				<div style={{ display: "flex", alignItems: "baseline", gap: "20px" }}>
+					<Circle />
+					<Note lineHeight={30}>
+						成功邀請3筆以上保單，享「300點LINE
+						POINTS好禮即享券」抽獎機會乙次（共抽100名）。
+					</Note>
+				</div>
+			</div>
+		</div>
+	);
+}
+
+export function Receiver() {
+	return (
+		<div
+			style={{
+				width: "100%",
+				display: "flex",
+				flexDirection: "column",
+				gap: "20px",
+			}}
+		>
+			<Title>被邀請人</Title>
+			<div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+				<Note>
+					不限單筆保費金額，該筆保單即享「50點LINE
+					POINTS好禮即享券」抽獎機會乙次
+				</Note>
+				<Note>（共抽300名，每人限獲獎乙次）。</Note>
+				<Note highlight>
+					註：被邀請人投保時須填入「邀請人推薦碼」資訊（不可為本人推薦碼），雙方方符合抽獎資格。
+				</Note>
+			</div>
+		</div>
+	);
+}
+
 export default ActionList;
