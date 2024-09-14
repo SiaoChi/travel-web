@@ -46,7 +46,7 @@ const Desc = styled.div`
         transform: translateX(-46%);
         font-size: 20px;
         line-height: 35px;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         width: 320px;
     }
 `;

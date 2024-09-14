@@ -6,6 +6,9 @@ const Section = styled.section`
     height: 660px;
     @media (max-width: 1301px) {
         height: 900px;
+        width: 414px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 `;
 
@@ -72,7 +75,7 @@ const Desc = styled.div`
         left: 50%;
         transform: translateX(-50%);
         line-height: 30px;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         font-size: 20px;
     }
 `;
