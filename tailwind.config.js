@@ -10,10 +10,16 @@ export default {
       colors:{
         'bg-yellow':'#FFFAF1',
         'c-blue':'#2496F0',
-        'c-orange':'#FED430'
+        'c-orange':'#FED430',
+        'c-red':'#FF837E'
+      },
+      fontFamily: {
+        'roboto': ['Roboto', 'sans-serif'],
+      },
+      rotate: {
+        '30': '30deg',
       }
     },
   },
   plugins: [],
 }
-

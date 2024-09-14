@@ -2,16 +2,20 @@
 
 import logo from '/logo.png'; 
 import './Menu.css';
-import { useState ,useCallback} from 'react';
-import { Link } from 'react-router-dom';
+import { useState ,useCallback, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 
 function Menu() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation();
 
-    // 切換菜單顯示狀態的函數
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
+
     const toggleMenu = () => {
       setIsMenuOpen(!isMenuOpen);
     };
@@ -24,17 +28,22 @@ function Menu() {
 
 
     const navigateToTarget = () => {
-    const targetElement = document.querySelector(targetId);
+      const targetElement = document.querySelector(targetId);
       if (targetElement) {
-        targetElement.scrollIntoView({ behavior: 'smooth' });
+        const menuHeight = document.querySelector('.menu').offsetHeight;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - menuHeight;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
       } else {
-        console.log('未找到目標元素');
+        console.log('can not find target');
       }
     };
 
 
     if (!isOnHomePage) {
-      navigate(`./${targetId}`);
+      navigate(`/${targetId}`);
       setTimeout(() => {
       window.history.pushState(null, '', targetId);
       navigateToTarget()
@@ -58,17 +67,16 @@ function Menu() {
 
         {/* Navigation Menu */}
         <nav className="flex space-x-7">
-          <a href="./" className="relative menu-text" onClick={(e) => handleMenuItemClick(e, '#sec1')}>
+          <a href="/" className="relative menu-text" onClick={(e) => handleMenuItemClick(e, '#sec1')}>
               跨年出國抽
-              <img src="./menu/new.svg" alt="New" className="absolute top-[-13%] right-[-2%] w-7 h-7 transfer-position-xy-1" />
+              <p className="color-changing-text absolute top-[-13%] right-[-2%] w-7 h-7 transfer-position-xy-1 flex items-center justify-center text-xs font-bold font-roboto transform rotate-12">NEW</p>
           </a>        
-          <a href="./" className="menu-text" onClick={(e) => handleMenuItemClick(e, '#sec2')}>滿保滿額抽</a>
-          <a href="./" className="menu-text" onClick={(e) => handleMenuItemClick(e, '#sec3')}>首次投保抽</a>
+          <a href="/" className="menu-text" onClick={(e) => handleMenuItemClick(e, '#sec2')}>滿保滿額抽</a>
+          <a href="/" className="menu-text" onClick={(e) => handleMenuItemClick(e, '#sec3')}>首次投保抽</a>
           <Link to="/mgm" className="menu-text">分享全球抽</Link>
           <Link to="/policy" className="menu-text">活動辦法</Link>
         </nav>
     </header>
-
 
       {/* 手機版 Menu */}
       <header className={`mobile-menu lg:hidden ${isMenuOpen ? 'h-full' : ''}`}>
@@ -102,10 +110,10 @@ function Menu() {
              <nav className="flex flex-col space-y-6 px-14">
               <a href="./" className="relative mobile-text" onClick={(e) => handleMenuItemClick(e, '#sec1')}>
                 跨年出國抽
-                <img src="./menu/new.svg" alt="New" className="absolute top-[-13%] right-[-2%] w-5 h-7 transfer-position-xy-1" />
+                <p className="color-changing-text absolute top-[-13%] right-[-2%] w-5 h-7 transfer-position-xy-1 flex items-center justify-center text-xs font-bold font-roboto transform rotate-30">NEW</p>
               </a>        
-              <a href="./" className="mobile-text" onClick={(e) => handleMenuItemClick(e, '#sec2')}>滿保滿額抽</a>
-              <a href="./" className="mobile-text" onClick={(e) => handleMenuItemClick(e, '#sec3')}>首次投保抽</a>
+              <a href="/" className="mobile-text" onClick={(e) => handleMenuItemClick(e, '#sec2')}>滿保滿額抽</a>
+              <a href="/" className="mobile-text" onClick={(e) => handleMenuItemClick(e, '#sec3')}>首次投保抽</a>
               <Link to="/mgm" className="mobile-text" onClick={toggleMenu}>分享全球抽</Link>
               <Link to="/policy" className="mobile-text" onClick={toggleMenu}>活動辦法</Link>
             </nav>

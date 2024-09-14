@@ -1,9 +1,15 @@
+import MgmHeroSection from "../../components/MgmPage/HeroSection";
+import MgmInfoSection from "../../components/MgmPage/MgmInfoSection";
+import LinePointSection from "../../components/MgmPage/LinePointSection";
+
 
 function MgmPage() {
   return (
-    <div>
-      <h1>MagPage</h1>
-    </div>
+    <div className="relative bg-bg-yellow w-full md:max-w-[1440px] mx-auto">
+          <MgmHeroSection />
+          <MgmInfoSection />
+          <LinePointSection />
+    </div> 
   );
 }
 
