@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const List = styled.ol`
   padding-left: 20px;
@@ -24,14 +25,20 @@ const Anchor = styled.a`
 	cursor: pointer;
 `;
 
-function Details() {
+function Details({ isPart2 = false }) {
 	return (
 		<div>
 			<List>
 				<Item>
-					<Text>
-						本活動限定全球人壽網路投保會員參加，需於活動期間（2024/10/1-2025/1/31）成功網路投保「國內外旅行平安險」，並符合各獎項參加門檻，且該保單無撤銷或終止契約之情事者，始具備抽獎及中獎資格。
-					</Text>
+					{isPart2 ? (
+						<Text>
+							凡邀請人於活動期間（2024/10/1-2025/1/31）透過投保邀請連結，邀請親友成功投保國內外旅行平安險（其投保流程之「會員推薦碼」欄位須顯示邀請人推薦碼，若系統無自動帶入，可由被邀請人自行輸入，恕不接受補登），且該保單無撤銷或終止契約之情事者，始具備抽獎及中獎資格。
+						</Text>
+					) : (
+						<Text>
+							本活動限定全球人壽網路投保會員參加，需於活動期間（2024/10/1-2025/1/31）成功網路投保「國內外旅行平安險」，並符合各獎項參加門檻，且該保單無撤銷或終止契約之情事者，始具備抽獎及中獎資格。
+						</Text>
+					)}
 				</Item>
 				<Item>
 					<Text>
@@ -98,5 +105,9 @@ function Details() {
 		</div>
 	);
 }
+
+Details.propTypes = {
+	isPart2: PropTypes.bool,
+};
 
 export default Details;

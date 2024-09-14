@@ -3,7 +3,13 @@ import styled from "styled-components";
 import Button from "../../components/Button";
 import Accordion from "../../components/Accordion";
 import Details from "./Details";
-import ActionList, { AwardList } from "./ActionList";
+import ActionList, {
+	AwardList,
+	Invitor,
+	Receiver,
+	Case,
+	LinePoints,
+} from "./ActionList";
 
 const Wrap = styled.div`
   padding-top: 121px;
@@ -32,6 +38,12 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+	@media (max-width: 850px) {
+		padding: 62px 60px 49px;
+	}
+	@media (max-width: 480px) {
+		padding: 62px 20px 49px;
+	}
 `;
 
 const Flower = styled.img`
@@ -44,6 +56,10 @@ const Title = styled.div`
   font-size: 60px;
   font-weight: bold;
   margin-bottom: 63px;
+	font-family: "Noto Serif CJK TC";
+	@media (max-width: 480px) {
+		font-size: 40px;
+	}
 `;
 
 const Buttons = styled.div`
@@ -51,6 +67,9 @@ const Buttons = styled.div`
   display: flex;
   gap: 25px;
   margin-bottom: 37px;
+	@media (max-width: 480px) {
+		width: 100%;
+	}
 `;
 
 const Border = styled.div`
@@ -82,6 +101,10 @@ const Description = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 30px;
+	@media (max-width: 480px) {
+		flex-direction: column;
+		gap: 20px;
+	}
 `;
 
 const Label = styled.div`
@@ -94,11 +117,17 @@ const Label = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+	font-family: "Noto Sans TC";
+	letter-spacing: 2px;
+	@media (max-width: 480px) {
+		width: 128px;
+	}
 `;
 
 const Text = styled.div`
   font-weight: bold;
   font-size: 18px;
+	font-family: "Noto Sans TC";
 `;
 
 const Spacer = styled.div`
@@ -120,10 +149,14 @@ const Notice = styled.div`
   .text {
     font-size: 20px;
   }
+	@media (max-width: 480px) {
+		padding: 36px 34px;
+	}
 `;
 
 function PolicyPage() {
 	const [isOpenDetails, setIsOpenDetails] = useState(false);
+	const [isOpenDetailsPart2, setIsOpenDetailsPart2] = useState(false);
 	return (
 		<Wrap>
 			<Background>
@@ -149,7 +182,6 @@ function PolicyPage() {
 						<Label>活動辦法</Label>
 						<Text>
 							凡於活動期間內成功網路投保「國內外旅行平安險」，
-							<br />
 							並達指定活動條件，即符合該項抽獎資格。
 						</Text>
 					</Description>
@@ -185,10 +217,9 @@ function PolicyPage() {
 					>
 						<Details />
 					</Accordion>
-					<Flower src="./policy/flower.svg" alt="" />
 				</Container>
 			</Background>
-			<Background bg="#FED430" zIndex={-10}>
+			<Background bg="#FED430">
 				<Container>
 					<img src="./policy/event2-banner.svg" alt="event2-banner" />
 					<Spacer height={66} />
@@ -208,11 +239,46 @@ function PolicyPage() {
 						</Text>
 					</Description>
 					<Spacer height={42} />
-					<img src="./policy/invitor.svg" alt="invitor rule" />
+					<Invitor />
 					<Spacer height={42} />
-					<img src="./policy/receiver.svg" alt="invitor rule" />
+					<Receiver />
+					<Spacer height={42} />
+					<Case />
+					<Spacer height={45} />
+					<Border />
+					<Spacer height={54} />
+					<Description>
+						<Label>得獎公告</Label>
+						<Text>得獎者將於2025/4/30前於本網站統一公告。</Text>
+					</Description>
+					<Spacer height={44} />
+					<Border />
+					<Spacer height={53} />
+					<Description>
+						<Label>獎項說明</Label>
+					</Description>
+					<Spacer height={42} />
+					<LinePoints />
+					<Spacer height={42} />
+					<Accordion
+						title="注意事項"
+						isOpen={isOpenDetailsPart2}
+						onClick={() => {
+							setIsOpenDetailsPart2(!isOpenDetailsPart2);
+						}}
+					>
+						<Details isPart2 />
+					</Accordion>
+					<Spacer height={50} />
+					<Border />
+					<Spacer height={35} />
+					<Buttons>
+						<Button color="blue">旅行全球抽獎趣</Button>
+						<Button color="blue">分享全球樂透抽</Button>
+					</Buttons>
 				</Container>
 			</Background>
+			<Flower src="./policy/flower.svg" alt="" />
 		</Wrap>
 	);
 }

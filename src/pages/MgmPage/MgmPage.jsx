@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 const Wrap = styled.div`
   padding-top: 90px;
@@ -7,56 +7,74 @@ const Wrap = styled.div`
   display: flex;
   justify-content: center;
   overflow: hidden;
-`
+  @media (max-width: 1300px) {
+    padding-top: 65px;
+  }
+`;
 
 const Container = styled.div`
   width: 100%;
   max-width: 1500px;
   position: relative;
   height: 2780px;
-`
+  @media (max-width: 1300px) {
+    width: 414px;
+  }
+`;
 
 const YellowBackground = styled.img`
   position: absolute;
   top: 427px;
   left: 0;
   width: 100%;
-`
+`;
 
 const BannerFlower = styled.img`
   position: absolute;
   top: 0;
   right: 20px;
   width: 900px;
-`
+  @media (max-width: 1300px) {
+    display: none;
+  }
+`;
 
 const ContentFlower = styled.img`
   position: absolute;
   top: 700px;
   left: 60px;
   width: 1300px;
-`
+`;
 
 const ContentPoint = styled.img`
   position: absolute;
   top: 660px;
   left: 78px;
   width: 1360px;
-`
+`;
 
 const BackgroundBuilding = styled.img`
   position: absolute;
   bottom: 375px;
   left: 100px;
   width: 1312px;
-`
+`;
 
 const BlueBackground = styled.img`
   position: absolute;
   bottom: -32px;
   width: 100%;
-`
+`;
 
+const Video = styled.video`
+  position: absolute;
+  top: 0;
+  right: 50px;
+  @media (max-width: 1300px) {
+    align-self: center;
+    position: static;
+  }
+`;
 
 const BannerTitle = styled.img`
     position: absolute;
@@ -64,7 +82,12 @@ const BannerTitle = styled.img`
     left: 100px;
     width: 500px;
     animation: fadeIn 1s ease-in-out backwards;
-`
+    @media (max-width: 1300px) {
+        width: 100%;
+        top: 330px;
+        left: 15px;
+    }
+`;
 
 const BannerTitlePoint = styled.img`
     position: absolute;
@@ -73,7 +96,12 @@ const BannerTitlePoint = styled.img`
     width: 500px;
     animation: fadeIn 1s ease-in-out backwards;
     animation-delay: .5s;
-`
+    @media (max-width: 1300px) {
+        width: 100%;
+        top: 330px;
+        left: 15px;
+    }
+`;
 
 const Desc = styled.div`
     position: absolute;
@@ -88,9 +116,16 @@ const Desc = styled.div`
     font-size: 25px;
     font-weight: bold;
     > p > span {
-        color:  ${props => props.isBlue ? "#2496F0" : "#FF837E" };
+        color:  ${(props) => (props.isBlue ? "#2496F0" : "#FF837E")};
     }
-`
+    @media (max-width: 1300px) {
+        top: 550px;
+        left: 0px;
+        font-size: 20px;
+        line-height: 20px;
+        width: 100%;
+    }
+`;
 
 const EnglishTitle = styled.p`
     position: absolute;
@@ -101,14 +136,36 @@ const EnglishTitle = styled.p`
     font-weight: bold;
     letter-spacing: 2px;
     color: #2496F0;
-`
+    @media (max-width: 1300px) {
+      font-size: 40px;
+      line-height: 40px;
+      top: 660px;
+      left: 20px;
+    }
+`;
+
+const Br = styled.br`
+  display: ${(props) => (props.reverse ? "block" : "none")};
+  @media (max-width: 1300px) {
+    display: ${(props) => (props.reverse ? "none" : "block")};
+  }
+`;
 
 const ContentDesc = styled(Desc)`
     font-size: 20px;
     top: 730px;
     left: 50%;
     transform: translateX(-50%);
-`
+    @media (max-width: 1300px) {
+      top: 800px;
+      font-size: 16px;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+`;
 
 const LinePointsText = styled.img`
     position: absolute;
@@ -116,31 +173,61 @@ const LinePointsText = styled.img`
     left: 50%;
     transform: translateX(-50%);
     width: 387px;
-`
+    @media (max-width: 1300px) {
+      top: 850px;
+    }
+`;
 
-const MgmContentOne = styled.img`
+const MgmContentOne = styled.div`
     position: absolute;
     top: 900px;
     left: 50%;
     transform: translateX(-50%);
     width: 974px;
-`
+    height: 263px;
+    background: url('./mgm/mgm-content1.svg') no-repeat center center;
+    background-size: cover;
+    @media (max-width: 1300px) {
+      top: 950px;
+      width: 404px;
+      height: 207px;
+      background: url('./mgm/mgm-content1-mobile.svg') no-repeat center center;
+    }
+`;
 
-const MgmContentTwo = styled.img`
+const MgmContentTwo = styled.div`
     position: absolute;
     top: 1163px;
     left: 50%;
     transform: translateX(-48%);
-    width: 1010px;
-`
+    width: 1012px;
+    height: 308px;
+    background: url('./mgm/mgm-content2.svg') no-repeat center center;
+    background-size: cover;
+    @media (max-width: 1300px) {
+      top: 1120px;
+      width: 409px;
+      height: 187px;
+      background: url('./mgm/mgm-content2-mobile.svg') no-repeat center center;
+    }
+`;
 
-const MgmContentThree = styled.img`
+const MgmContentThree = styled.div`
     position: absolute;
     top: 1463px;
     left: 50%;
     transform: translateX(-52%);
-    width: 928px;
-`
+    width: 929px;
+    height: 299px;
+    background: url('./mgm/mgm-content3.svg') no-repeat center center;
+    background-size: cover;
+    @media (max-width: 1300px) {
+      top: 1300px;
+      width: 414px;
+      height: 189px;
+      background: url('./mgm/mgm-content3-mobile.svg') no-repeat center center;
+    }
+`;
 
 const People = styled.img`
     position: absolute;
@@ -148,15 +235,15 @@ const People = styled.img`
     left: 50%;
     transform: translateX(-50%);
     width: 821px;
-`
+`;
 
-const  ActionDesc = styled(Desc)`
+const ActionDesc = styled(Desc)`
     font-size: 20px;
     top: 2110px;
     left: 50%;
     transform: translateX(-50%);
     letter-spacing: 1px;
-`
+`;
 
 const ActionLinePoints = styled.img`
     position: absolute;
@@ -164,9 +251,9 @@ const ActionLinePoints = styled.img`
     left: 50%;
     transform: translateX(-50%);
     width: 717px;
-`
+`;
 
-const  BottomDesc = styled(Desc)`
+const BottomDesc = styled(Desc)`
     font-size: 16px;
     font-weight: 400;
     top: 2380px;
@@ -174,61 +261,72 @@ const  BottomDesc = styled(Desc)`
     transform: translateX(-50%);
     line-height: 25px;
     letter-spacing: 1px;
-`
+`;
 
+const DesktopPart = styled.div`
+  @media (max-width: 1300px) {
+      display: none;
+  }
+`;
 
 const MgmPage = () => {
-    const [isBlue, setIsBlue] = useState(true)
+	const [isBlue, setIsBlue] = useState(true);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setIsBlue(!isBlue)
-        }, 1000)
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setIsBlue(!isBlue);
+		}, 1000);
 
-        return () => clearInterval(interval)
-    },[isBlue])
+		return () => clearInterval(interval);
+	}, [isBlue]);
 
-    return (
-        <Wrap>
-            <Container>
-                <YellowBackground src="./mgm/mgm-trapezoid.svg" />
-                <BannerFlower src="./mgm/mgm-banner-flower.svg" />
-                <ContentFlower src="./mgm/mgm-info-flower.svg" />
-                <ContentPoint src="./mgm/mgm-content-p-point.svg" />
-                <BackgroundBuilding src="./mgm/mgm-building.svg" />
-                <BlueBackground src="./mgm/mgm-blue-building.svg" />
-                
-                <BannerTitle src="./mgm/mgm-title.png" />
-                <BannerTitlePoint src="./mgm/mgm-title-p.png" />
-                <Desc isBlue={isBlue}>
-                    <p>推薦好友全球旅平險</p>
-                    <p>快樂<span>+1+1+1+1+1+1+1+1+1</span></p>
-                </Desc>
-                <EnglishTitle>
-                    COLLECT<br/>A LOT OF LINE POINTS
-                </EnglishTitle>
+	return (
+		<Wrap>
+			<Container>
+				<DesktopPart>
+					<YellowBackground src="./mgm/mgm-trapezoid.svg" />
+					<BannerFlower src="./mgm/mgm-banner-flower.svg" />
+					<ContentFlower src="./mgm/mgm-info-flower.svg" />
+					<ContentPoint src="./mgm/mgm-content-p-point.svg" />
+					<BackgroundBuilding src="./mgm/mgm-building.svg" />
+					<BlueBackground src="./mgm/mgm-blue-building.svg" />
+				</DesktopPart>
+				<Video src="./mgm/mgm-banner-video-mobile.mp4" autoPlay muted />
+				<BannerTitle src="./mgm/mgm-title.png" />
+				<BannerTitlePoint src="./mgm/mgm-title-p.png" />
+				<Desc isBlue={isBlue}>
+					<p>推薦好友全球旅平險</p>
+					<p>
+						快樂<span>+1+1+1+1+1+1+1+1+1</span>
+					</p>
+				</Desc>
+				<EnglishTitle>
+					COLLECT
+					<Br reverse /> A LOT OF LINE POINTS
+				</EnglishTitle>
 
-                <ContentDesc>
-                    <p>2024/10/1~2025/1/31</p>
-                    <p>成功邀請親友投保旅平險，達指定筆數</p>
-                </ContentDesc>
-                <LinePointsText src="./mgm/mgm-line-points-text.svg" />
+				<ContentDesc>
+					<p>2024/10/1~2025/1/31</p>
+					<p>成功邀請親友投保旅平險，達指定筆數</p>
+				</ContentDesc>
+				<LinePointsText src="./mgm/mgm-line-points-text.svg" />
 
-                <MgmContentOne src="./mgm/mgm-content1.svg" />
-                <MgmContentTwo src="./mgm/mgm-content2.svg" />
-                <MgmContentThree src="./mgm/mgm-content3.svg" />
+				<MgmContentOne />
+				<MgmContentTwo />
+				<MgmContentThree />
 
-                <People src="./mgm/mgm-people-and-frame.svg" />
-                <ActionDesc><p>只要親友點選「你的推薦連結」成功投保</p></ActionDesc>
-                <ActionLinePoints src="./mgm/mgm-bottom-info-title.svg" />
-                <BottomDesc>
-                    <p>點擊上方按鈕後，註冊或登入取得邀請碼</p>
-                    <p>就能分享給親友，一起抽點數！</p>
-                </BottomDesc>
-        
-            </Container>
-      </Wrap>
-    )
-}
+				<People src="./mgm/mgm-people-and-frame.svg" />
+				<ActionDesc>
+					<p>只要親友點選「你的推薦連結」成功投保</p>
+				</ActionDesc>
+				<ActionLinePoints src="./mgm/mgm-bottom-info-title.svg" />
+				<BottomDesc>
+					<p>點擊上方按鈕後，註冊或登入取得邀請碼</p>
+					<p>就能分享給親友，一起抽點數！</p>
+				</BottomDesc>
+			</Container>
+		</Wrap>
+	);
+};
 
 export default MgmPage;

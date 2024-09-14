@@ -24,24 +24,36 @@ const Item = styled.li`
   line-height: 1.5;
   &::before {
     content: counter(item);
+		min-width: 30px;
     font-size: 65px;
     font-weight: bold;
     margin-right: 30px;
     line-height: 65px;
     color: #2496F0;
   }
+	@media (max-width: 480px) {
+		&::before {
+			font-size: 50px;
+			margin-right: 20px;
+			line-height: 40px;
+		}
+	}
 `;
 
 const ItemWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;
+	@media (max-width: 480px) {
+		gap: 20px;
+	}
 `;
 
 const Title = styled.div`
   font-size: 40px;
   font-weight: bold;
   line-height: 40px;
+	font-family: "Noto Serif CJK TC";
 `;
 
 const Note = styled.div`
@@ -49,12 +61,21 @@ const Note = styled.div`
   line-height: ${({ lineHeight }) => lineHeight}px;
   color: ${({ highlight }) => (highlight ? "#2496F0" : "#000000")};
   white-space: pre-wrap;
+	font-family: "Noto Sans TC";
+	@media (max-width: 480px) {
+		margin-left: ${({ marginLeft }) => marginLeft};
+	}
 `;
 
 const Flex = styled.div`
   display: flex;
   align-items: flex-end;
   gap: 22px;
+	@media (max-width: 480px) {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+	}
 `;
 
 const SmallItem = styled.div`
@@ -69,6 +90,9 @@ const SmallItem = styled.div`
   font-size: 20px;
   font-weight: bold;
   flex-shrink: 0;
+	@media (max-width: 480px) {
+		margin-left: ${({ marginLeft }) => marginLeft};
+	}
 `;
 
 const SubTitle = styled.div`
@@ -100,7 +124,7 @@ function ActionList() {
 					<div
 						style={{ display: "flex", alignItems: "flex-start", gap: "22px" }}
 					>
-						<SmallItem>1</SmallItem>
+						<SmallItem marginLeft="-50px">1</SmallItem>
 						<Note lineHeight={30}>
 							單筆保費滿200元，該筆保單即享「500元好禮即享券」抽獎機會乙次
 							<br />
@@ -110,7 +134,7 @@ function ActionList() {
 					<div
 						style={{ display: "flex", alignItems: "flex-start", gap: "22px" }}
 					>
-						<SmallItem>2</SmallItem>
+						<SmallItem marginLeft="-50px">2</SmallItem>
 						<div>
 							<Note lineHeight={30}>
 								單筆保費滿500元，該筆保單即享「星宇航空東京來回機票」抽獎機會乙次
@@ -233,5 +257,141 @@ export const AwardList = () => {
 		</div>
 	);
 };
+
+export function Invitor() {
+	return (
+		<div style={{ width: "100%" }}>
+			<Title>邀請人</Title>
+			<div
+				style={{
+					marginTop: "24px",
+					display: "flex",
+					flexDirection: "column",
+					gap: "20px",
+				}}
+			>
+				<div style={{ display: "flex", alignItems: "baseline", gap: "20px" }}>
+					<Circle />
+					<Note lineHeight={30}>
+						成功邀請1筆保單，享「50點LINE
+						POINTS好禮即享券」抽獎機會乙次（共抽200名）。
+					</Note>
+				</div>
+				<div style={{ display: "flex", alignItems: "baseline", gap: "20px" }}>
+					<Circle />
+					<Note lineHeight={30}>
+						成功邀請2筆保單，享「150點LINE
+						POINTS好禮即享券」抽獎機會乙次（共抽200名）。
+					</Note>
+				</div>
+				<div style={{ display: "flex", alignItems: "baseline", gap: "20px" }}>
+					<Circle />
+					<Note lineHeight={30}>
+						成功邀請3筆以上保單，享「300點LINE
+						POINTS好禮即享券」抽獎機會乙次（共抽100名）。
+					</Note>
+				</div>
+			</div>
+		</div>
+	);
+}
+
+export function Receiver() {
+	return (
+		<div
+			style={{
+				width: "100%",
+				display: "flex",
+				flexDirection: "column",
+				gap: "20px",
+			}}
+		>
+			<Title>被邀請人</Title>
+			<div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+				<Note>
+					不限單筆保費金額，該筆保單即享「50點LINE
+					POINTS好禮即享券」抽獎機會乙次
+				</Note>
+				<Note>（共抽300名，每人限獲獎乙次）。</Note>
+				<Note highlight>
+					註：被邀請人投保時須填入「邀請人推薦碼」資訊（不可為本人推薦碼），雙方方符合抽獎資格。
+				</Note>
+			</div>
+		</div>
+	);
+}
+
+const CaseWrapper = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	width: 183px;
+	height: 42px;
+	border: 1px solid #000000;
+	@media (max-width: 480px) {
+		width: fit-content;
+		padding: 0 20px;
+	}
+`;
+
+export function Case() {
+	return (
+		<div>
+			<CaseWrapper>案例說明</CaseWrapper>
+			<div style={{ marginTop: "20px" }}>
+				<Note>
+					全小球邀請五位朋友參與此活動，其中有兩位朋友於活動期間共成功投保3筆旅平險（且皆有填寫全小球之推薦碼)，則全小球可享「300點LINE
+					POINTS好禮即享券」抽獎機會乙次; 而兩位朋友分別享有「50點LINE
+					POINTS好禮即享券」1次與2次之抽獎機會。
+				</Note>
+			</div>
+		</div>
+	);
+}
+
+export function LinePoints() {
+	return (
+		<>
+			<div
+				style={{
+					width: "100%",
+					display: "flex",
+					flexDirection: "column",
+					gap: "24px",
+				}}
+			>
+				<Title>
+					50點、150點、300點
+					<br />
+					LINE POINTS好禮即享券
+				</Title>
+				<div style={{ display: "flex", alignItems: "flex-start", gap: "22px" }}>
+					<SmallItem>1</SmallItem>
+					<Note lineHeight={30}>
+						LINE POINTS即享券僅限LINE帳號註冊國家為台灣的用戶使用。
+					</Note>
+				</div>
+				<div style={{ display: "flex", alignItems: "flex-start", gap: "22px" }}>
+					<SmallItem>2</SmallItem>
+					<Note lineHeight={30}>
+						LINE POINTS的有效期限為最後一次獲得點數當天起算180天內，
+						<br />
+						一旦超過有效期限，您所持有的點數將會全數失效。
+					</Note>
+				</div>
+			</div>
+			<div style={{ marginTop: "24px" }}>
+				<CaseWrapper>活動獎項發放說明</CaseWrapper>
+				<div style={{ marginTop: "20px" }}>
+					<Note>
+						本活動獎項採電子票券形式，將以Edenred之LINE「好禮即享券領券通知」的官方帳號發送通知型訊息予中獎者。
+						若您無法接收到通知型訊息，活動小組將另發送好禮即享券簡訊通知。
+					</Note>
+				</div>
+			</div>
+		</>
+	);
+}
 
 export default ActionList;

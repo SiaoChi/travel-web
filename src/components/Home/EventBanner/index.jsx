@@ -1,28 +1,70 @@
-import styled from "styled-components"
-import { useEffect, useState } from "react"
+import styled from "styled-components";
+import { useEffect, useState } from "react";
 
 const Section = styled.section`
     position: relative;
     height: 660px;
-`
+    @media (max-width: 1301px) {
+        height: 900px;
+        width: 414px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+`;
 
 const YellowPolygon = styled.img`
     position: absolute;
     top: 380px;
     left: 0;
     width: 755px;
-`
+    @media (max-width: 1301px) {
+        top: 617px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 414px;
+    }
+`;
+
+const Video = styled.video`
+    position: absolute;
+    top: 0;
+    right: 50px;
+    width: 760px;
+    @media (max-width: 1301px) {
+        display: none;
+    }
+`;
+
+const MobileVideo = styled.video`
+    display: none;
+    @media (max-width: 1301px) {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 400px;
+    }
+`;
 
 const BannerTitle = styled.div`
     position: relative;
     margin: 20px 0px 20px 91px;
-`
+    @media (max-width: 1301px) {
+        margin: 0;
+        position: absolute;
+        top: 255px;
+        width: 359px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+`;
 
 const TitleText = styled.img`
     padding-top: 70px;
     width: 486px;
     animation: fadeIn 1s ease-in-out backwards;
-`
+`;
 
 const TitleAirplaine = styled.img`
     width: 520px;
@@ -31,7 +73,7 @@ const TitleAirplaine = styled.img`
     left: -10px;
     animation: fadeIn 1s ease-in-out backwards;
     animation-delay: .5s;
-`
+`;
 
 const Desc = styled.div`
     width: 486px;
@@ -45,9 +87,20 @@ const Desc = styled.div`
     font-size: 25px;
     font-weight: bold;
     > p > span {
-        color: ${props => props.isBlue ? "#2496F0" : "#FF837E" };
+        color: ${(props) => (props.$isBlue ? "#2496F0" : "#FF837E")};
     }
-`
+    @media (max-width: 1301px) {
+        margin: 0;
+        position: absolute;
+        top: 529px;
+        width: 354px;
+        left: 50%;
+        transform: translateX(-50%);
+        line-height: 30px;
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+`;
 
 const EnglishTitle = styled.p`
     position: relative;
@@ -59,61 +112,111 @@ const EnglishTitle = styled.p`
     letter-spacing: 2px;
     color: #2496F0;
     text-shadow: 0px 5px 5px lightgrey;
-`
+    @media (max-width: 1301px) {
+        font-size: 40px;
+        line-height: 45px;
+        margin: 0;
+        position: absolute;
+        top: 679px;
+        width: 354px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+`;
 
 const BgFlowers = styled.img`
     position: absolute;
     right: 50px;
     width: 795px;
-`
+    @media (max-width: 1301px) {
+        width: 414px;
+        height: 294px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+`;
 
 const LineOne = styled.img`
     position: absolute;
     top: 308px;
     left: 364px;
     width: 343px;
-`
+    @media (max-width: 1301px) {
+        display: none;
+    }
+`;
+
+const MobileLineOne = styled.img`
+    display: none;
+    @media (max-width: 1301px) {
+        display: block;
+        position: absolute;
+        top: 240px;
+        left: 0;
+        width: 80px;
+    }
+`;
 
 const LineTwo = styled.img`
     position: absolute;
     top: 300px;
     right: 0;
     width: 383px;
-    transform:rotate(-5deg);
-`
+    transform:rotate(-5deg);  
+    @media (max-width: 1301px) {
+        display: none;
+    }
+`;
+
+const MobileLineTwo = styled.img`
+    display: none;
+    @media (max-width: 1301px) {
+        display: block;
+        position: absolute;
+        top: 200px;
+        right: 0;
+        width: 70px;
+    }
+`;
 
 const EventBanner = () => {
-    const [isBlue, setIsBlue] = useState(true)
+	const [isBlue, setIsBlue] = useState(true);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setIsBlue(!isBlue)
-        }, 1000)
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setIsBlue(!isBlue);
+		}, 1000);
 
-        return () => clearInterval(interval)
-    },[isBlue])
+		return () => clearInterval(interval);
+	}, [isBlue]);
 
-    return (
-        <Section>
-            <YellowPolygon src="./home/home-polygon.svg" />
-            <BgFlowers src="./home/event-banner-flower.png" />
-            <LineOne src="./home/shadow-line1.svg" />
-            <LineTwo src="./home/shadow-line2.svg" />           
+	return (
+		<Section>
+			<YellowPolygon src="./home/home-polygon.svg" />
+			{/* <BgFlowers src="./home/event-banner-flower.png" /> */}
+			<LineOne src="./home/shadow-line1.svg" />
+            <MobileLineOne src="./home/shadow-line1-mobile.svg" />
+			<LineTwo src="./home/shadow-line2.svg" />
+            <MobileLineTwo src="./home/shadow-line2-mobile.svg" />
+            <Video src="./home/event-banner-video-desktop.mp4" autoPlay muted/>
+            <MobileVideo src="./home/event-banner-video-mobile.mp4" autoPlay muted/>
 
-            <BannerTitle>
-                <TitleText src="./home/event-banner-title.png" />
-                <TitleAirplaine src="./home/event-banner-airplane.png" />
-            </BannerTitle>
-            <Desc isBlue={isBlue}>
-                <p>保全球旅平險</p>
-                <p>驚喜<span>多多多多多多</span>到滿出來！</p>
-            </Desc>
-            <EnglishTitle>
-                TRAVEL<br/>A TRANSGLOBE JOURNEY
-            </EnglishTitle>
-        </Section>
-    )
-  
-}
+			<BannerTitle>
+				<TitleText src="./home/event-banner-title.png" />
+				<TitleAirplaine src="./home/event-banner-airplane.png" />
+			</BannerTitle>
+			<Desc $isBlue={isBlue}>
+				<p>保全球旅平險</p>
+				<p>
+					驚喜<span>多多多多多多</span>到滿出來！
+				</p>
+			</Desc>
+			<EnglishTitle>
+				TRAVEL
+				<br />A TRANSGLOBE JOURNEY
+			</EnglishTitle>
+		</Section>
+	);
+};
 
-export default EventBanner
+export default EventBanner;
