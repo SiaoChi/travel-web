@@ -3,7 +3,13 @@ import styled from "styled-components";
 import Button from "../../components/Button";
 import Accordion from "../../components/Accordion";
 import Details from "./Details";
-import ActionList, { AwardList, Invitor, Receiver } from "./ActionList";
+import ActionList, {
+	AwardList,
+	Invitor,
+	Receiver,
+	Case,
+	LinePoints,
+} from "./ActionList";
 
 const Wrap = styled.div`
   padding-top: 121px;
@@ -124,6 +130,7 @@ const Notice = styled.div`
 
 function PolicyPage() {
 	const [isOpenDetails, setIsOpenDetails] = useState(false);
+	const [isOpenDetailsPart2, setIsOpenDetailsPart2] = useState(false);
 	return (
 		<Wrap>
 			<Background>
@@ -185,10 +192,9 @@ function PolicyPage() {
 					>
 						<Details />
 					</Accordion>
-					<Flower src="./policy/flower.svg" alt="" />
 				</Container>
 			</Background>
-			<Background bg="#FED430" zIndex={-10}>
+			<Background bg="#FED430">
 				<Container>
 					<img src="./policy/event2-banner.svg" alt="event2-banner" />
 					<Spacer height={66} />
@@ -211,8 +217,36 @@ function PolicyPage() {
 					<Invitor />
 					<Spacer height={42} />
 					<Receiver />
+					<Spacer height={42} />
+					<Case />
+					<Spacer height={45} />
+					<Border />
+					<Spacer height={54} />
+					<Description>
+						<Label>得獎公告</Label>
+						<Text>得獎者將於2025/4/30前於本網站統一公告。</Text>
+					</Description>
+					<Spacer height={44} />
+					<Border />
+					<Spacer height={53} />
+					<Description>
+						<Label>獎項說明</Label>
+					</Description>
+					<Spacer height={42} />
+					<LinePoints />
+					<Spacer height={42} />
+					<Accordion
+						title="注意事項"
+						isOpen={isOpenDetailsPart2}
+						onClick={() => {
+							setIsOpenDetailsPart2(!isOpenDetailsPart2);
+						}}
+					>
+						<Details isPart2 />
+					</Accordion>
 				</Container>
 			</Background>
+			<Flower src="./policy/flower.svg" alt="" />
 		</Wrap>
 	);
 }

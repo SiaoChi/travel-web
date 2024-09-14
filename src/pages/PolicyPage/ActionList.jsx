@@ -297,4 +297,73 @@ export function Receiver() {
 	);
 }
 
+const CaseWrapper = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	width: 183px;
+	height: 42px;
+	border: 1px solid #000000;
+`;
+
+export function Case() {
+	return (
+		<div>
+			<CaseWrapper>案例說明</CaseWrapper>
+			<div style={{ marginTop: "20px" }}>
+				<Note>
+					全小球邀請五位朋友參與此活動，其中有兩位朋友於活動期間共成功投保3筆旅平險（且皆有填寫全小球之推薦碼)，則全小球可享「300點LINE
+					POINTS好禮即享券」抽獎機會乙次; 而兩位朋友分別享有「50點LINE
+					POINTS好禮即享券」1次與2次之抽獎機會。
+				</Note>
+			</div>
+		</div>
+	);
+}
+
+export function LinePoints() {
+	return (
+		<>
+			<div
+				style={{
+					width: "100%",
+					display: "flex",
+					flexDirection: "column",
+					gap: "24px",
+				}}
+			>
+				<Title>
+					50點、150點、300點
+					<br />
+					LINE POINTS好禮即享券
+				</Title>
+				<div style={{ display: "flex", alignItems: "flex-start", gap: "22px" }}>
+					<SmallItem>1</SmallItem>
+					<Note lineHeight={30}>
+						LINE POINTS即享券僅限LINE帳號註冊國家為台灣的用戶使用。
+					</Note>
+				</div>
+				<div style={{ display: "flex", alignItems: "flex-start", gap: "22px" }}>
+					<SmallItem>2</SmallItem>
+					<Note lineHeight={30}>
+						LINE POINTS的有效期限為最後一次獲得點數當天起算180天內，
+						<br />
+						一旦超過有效期限，您所持有的點數將會全數失效。
+					</Note>
+				</div>
+			</div>
+			<div style={{ marginTop: "24px" }}>
+				<CaseWrapper>活動獎項發放說明</CaseWrapper>
+				<div style={{ marginTop: "20px" }}>
+					<Note>
+						本活動獎項採電子票券形式，將以Edenred之LINE「好禮即享券領券通知」的官方帳號發送通知型訊息予中獎者。
+						若您無法接收到通知型訊息，活動小組將另發送好禮即享券簡訊通知。
+					</Note>
+				</div>
+			</div>
+		</>
+	);
+}
+
 export default ActionList;
