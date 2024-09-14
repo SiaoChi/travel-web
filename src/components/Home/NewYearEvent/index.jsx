@@ -4,7 +4,6 @@ import Button from "../../Button/Button";
 const Section = styled.section`
     position: relative;
     height: 730px;
-    overflow: hidden;
     @media (max-width: 1301px) {
         width: 414px;
         left: 50%;
@@ -97,9 +96,7 @@ const LineOne = styled.img`
     bottom: 20px;
     width: 343px;
     @media (max-width: 1301px) {
-        bottom: 200px;
-        left: 50%;
-        transform: translateX(-90%);
+        display: none;
     }
 `;
 
@@ -110,9 +107,19 @@ const LineTwo = styled.img`
     width: 383px;
     transform:rotate(-5deg);
     @media (max-width: 1301px) {
-        bottom: 200px;
+        display: none;
+    }
+`;
+
+const MobileLine = styled.img`
+    display: none;
+    @media (max-width: 1301px) {
+        display: block;
+        position: absolute;
+        top: 400px;
         left: 50%;
-        transform: translateX(-10%);
+        transform: translateX(-50%);
+        width: 414px;
     }
 `;
 
@@ -174,6 +181,7 @@ const NewYearEvent = () => {
 			<Fireworks src="./home/new-year-event-fire.png" />
 			<LineOne src="./home/shadow-line1.svg" />
 			<LineTwo src="./home/shadow-line2.svg" />
+			<MobileLine src="./home/shadow-line-mobile.svg" />
 
 			<Title>
 				<img src="./home/new-year-event-title.svg" />
