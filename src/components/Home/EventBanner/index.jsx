@@ -25,6 +25,28 @@ const YellowPolygon = styled.img`
     }
 `;
 
+const Video = styled.video`
+    position: absolute;
+    top: 0;
+    right: 50px;
+    width: 760px;
+    @media (max-width: 1301px) {
+        display: none;
+    }
+`;
+
+const MobileVideo = styled.video`
+    display: none;
+    @media (max-width: 1301px) {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 400px;
+    }
+`;
+
 const BannerTitle = styled.div`
     position: relative;
     margin: 20px 0px 20px 91px;
@@ -120,10 +142,18 @@ const LineOne = styled.img`
     left: 364px;
     width: 343px;
     @media (max-width: 1301px) {
-        top: 200px;
-        left: -50px;
-        width: 182px;
-        transform: scaleY(-1);
+        display: none;
+    }
+`;
+
+const MobileLineOne = styled.img`
+    display: none;
+    @media (max-width: 1301px) {
+        display: block;
+        position: absolute;
+        top: 240px;
+        left: 0;
+        width: 80px;
     }
 `;
 
@@ -134,10 +164,18 @@ const LineTwo = styled.img`
     width: 383px;
     transform:rotate(-5deg);  
     @media (max-width: 1301px) {
+        display: none;
+    }
+`;
+
+const MobileLineTwo = styled.img`
+    display: none;
+    @media (max-width: 1301px) {
+        display: block;
+        position: absolute;
         top: 200px;
-        right: -100px;
-        width: 204px;
-        transform: scaleY(-1) rotate(-10deg);
+        right: 0;
+        width: 70px;
     }
 `;
 
@@ -155,9 +193,13 @@ const EventBanner = () => {
 	return (
 		<Section>
 			<YellowPolygon src="./home/home-polygon.svg" />
-			<BgFlowers src="./home/event-banner-flower.png" />
+			{/* <BgFlowers src="./home/event-banner-flower.png" /> */}
 			<LineOne src="./home/shadow-line1.svg" />
+            <MobileLineOne src="./home/shadow-line1-mobile.svg" />
 			<LineTwo src="./home/shadow-line2.svg" />
+            <MobileLineTwo src="./home/shadow-line2-mobile.svg" />
+            <Video src="./home/event-banner-video-desktop.mp4" autoPlay muted/>
+            <MobileVideo src="./home/event-banner-video-mobile.mp4" autoPlay muted/>
 
 			<BannerTitle>
 				<TitleText src="./home/event-banner-title.png" />
