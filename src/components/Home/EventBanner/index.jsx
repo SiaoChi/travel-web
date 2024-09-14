@@ -16,6 +16,9 @@ const YellowPolygon = styled.img`
     width: 755px;
     @media (max-width: 1301px) {
         top: 617px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 414px;
     }
 `;
 

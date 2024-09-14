@@ -45,7 +45,7 @@ const Desc = styled.div`
         left: 50%;
         transform: translateX(-46%);
         font-size: 20px;
-        line-height: 40px;
+        line-height: 35px;
         letter-spacing: 2px;
         width: 320px;
     }
@@ -161,7 +161,6 @@ const ButtonWrapper = styled.div`
         left: 50%;
         transform: translateX(-50%);
     }
-
 `;
 
 const NewYearEvent = () => {
