@@ -122,8 +122,11 @@ const EnglishText = styled.div`
     text-align: right;
     @media (max-width: 1301px) {
         top: 260px;
+        left: 50%;
+        transform: translateX(-40%);
         font-size: 40px;
         line-height: 40px;
+        min-width: 300px;
     }
 `;
 
