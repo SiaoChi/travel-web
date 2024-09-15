@@ -25,6 +25,10 @@
     }
     .footer_top {
       background-color: #fff;
+      padding: 20px;
+      @media (max-width: 382px) {
+        padding: 10px;
+      }
     }
     .footer_top .footer_inner {
       display: flex;
@@ -156,6 +160,7 @@
       display: inline-block;
       vertical-align: middle;
       transform: rotate(-180deg);
+      margin-left: 5px;
     }
     @media (min-width: 1px) and (max-width: 767.98px) {
       .footer_link {

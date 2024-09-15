@@ -37,6 +37,7 @@ const Border = styled.div`
   width: ${(props) => props.$width || "100%"};
   height: ${(props) => props.$height || "65px"};
   font-size: 25px;
+  line-height: 30px;
   font-weight: bold;
   border: solid 2px black;
   border-radius: ${(props) => (props.$isAccordion ? "0" : "8px")};
@@ -48,7 +49,7 @@ const Border = styled.div`
   transition: all 0.3s ease;
   font-family: "Noto Serif TC", "Noto Serif", serif; 
   font-weight: 700;
-  @media (max-width: 480px) {
+  @media (max-width: 1300px) {
     font-size: 20px;
   }
 `;
