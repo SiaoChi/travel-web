@@ -29,7 +29,8 @@ const VerticalLine = styled.div`
 	width: 50px;
 	border-left: 1px solid black;
 	@media screen and (max-width: 1300px) {
-		display: none;
+		left: 30px;
+		top: 880px;
 	}
 `;
 
@@ -115,7 +116,6 @@ function HomePage() {
 				<NewYearEvent />
 				<ReachInsureAmountEvent />
 				<FirstInsureAndLinePoints />
-
 				<VerticalLine id="vertical-line">
 					<Fly id="fly" src="./home/home-fly.svg" />
 					<Pointer id="pointer" />
