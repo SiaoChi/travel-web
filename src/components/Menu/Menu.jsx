@@ -68,10 +68,10 @@ function Menu() {
 
           {/* Navigation Menu */}
           <nav className="flex space-x-7">
-            <a href="/" className="relative menu-text" onClick={(e) => handleMenuItemClick(e, '#sec1')}>
+            <Link href="/" className="relative menu-text" onClick={(e) => handleMenuItemClick(e, '#sec1')}>
                 跨年出國抽
                 <p className="color-changing-text absolute top-[-13%] right-[-2%] w-7 h-7 transfer-position-xy-1 flex items-center justify-center text-xs font-bold font-roboto transform rotate-12">NEW</p>
-            </a>        
+            </Link>        
             <a href="/" className="menu-text" onClick={(e) => handleMenuItemClick(e, '#sec2')}>投保滿額抽</a>
             <a href="/" className="menu-text" onClick={(e) => handleMenuItemClick(e, '#sec3')}>首次投保抽</a>
             <Link to="/mgm" className="menu-text">分享全球抽</Link>
