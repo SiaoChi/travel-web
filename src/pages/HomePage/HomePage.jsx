@@ -30,6 +30,8 @@ const VerticalLine = styled.div`
 	@media screen and (max-width: 1300px) {
 		left: 30px;
 		top: 880px;
+		z-index: 0;
+		display: none;
 	}
 `;
 
