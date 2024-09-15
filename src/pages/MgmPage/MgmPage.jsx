@@ -373,7 +373,7 @@ const MgmPage = () => {
 					<ContentFlower src="./mgm/mgm-info-flower.svg" />
 					<ContentPoint src="./mgm/mgm-content-p-point.svg" />
 				</DesktopPart>
-				<Video src="./mgm/mgm-banner-video-mobile.mp4" autoPlay muted />
+				<Video src="./mgm/mgm-banner-video-mobile.mp4" autoPlay muted playsInline />
 				<BannerTitle src="./mgm/mgm-title.png" />
 				<BannerTitlePoint src="./mgm/mgm-title-p.png" />
 			    <YellowBackground />
