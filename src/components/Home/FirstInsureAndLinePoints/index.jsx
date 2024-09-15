@@ -56,6 +56,9 @@ const Tower = styled.img`
         transform: translateX(-50%);
         width: 400px;
     }
+    @media (max-width: 376px) {
+        width: 375px;
+    }
 `
 
 
