@@ -89,7 +89,7 @@ const Fireworks = styled.img`
         top: -60px;
         left: 4%;
         transform: translateX(-50%);
-        width: 400px;
+        width: 380px;
     }
     @media (max-width: 376px) {
         width: 375px;

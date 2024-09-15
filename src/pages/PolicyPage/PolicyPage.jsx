@@ -92,7 +92,6 @@ const TitleAirplaine = styled.img`
   width: 419px;
   position: absolute;
   top: 4px;
-  left: -10px;
 `;
 
 const BannerWrapper = styled.div`

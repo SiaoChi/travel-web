@@ -121,6 +121,7 @@ const Buttons = styled.div`
         flex-direction: column;
         gap: 29px;
         width: 294px;
+        z-index: 10;
     }
 `;
 
@@ -356,6 +357,20 @@ const DesktopPart = styled.div`
   }
 `;
 
+const Building = styled.img`
+  display: none;
+  @media (max-width: 1300px) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: full;
+    object-fit: cover;
+    z-index: 0;
+  }
+  
+`;
+
 const MgmPage = () => {
 	const [isBlue, setIsBlue] = useState(true);
 
@@ -423,7 +438,7 @@ const MgmPage = () => {
 				<People className="mgm-content" />
         <ButtonContainer>
             <Button color="red">
-                <a href="https://e-commerce.transglobe.com.tw/member/missionActivities/etamgm?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_etamgm&utm_term=2024q4&utm_content=missionActivities">立即推薦親友</a>
+                <a target="_blank" href="https://e-commerce.transglobe.com.tw/member/missionActivities/etamgm?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_etamgm&utm_term=2024q4&utm_content=missionActivities">立即推薦親友</a>
             </Button>
         </ButtonContainer>
 
@@ -441,18 +456,30 @@ const MgmPage = () => {
 				<BlueBackground>
           <Buttons>
             <Button color="yellow">
-              <a href="https://e-commerce.transglobe.com.tw/member/missionActivities?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_mgmsearch&utm_term=2024q4&utm_content=missionActivities">
-                  推薦好友<Br reverse />
+              <a className="xl:text-[1.25rem] xl:leading-none" href="https://e-commerce.transglobe.com.tw/member/missionActivities?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_mgmsearch&utm_term=2024q4&utm_content=missionActivities">
+                  推薦好友 <Br reverse />
                   成功筆數查詢
               </a>
             </Button>
             <Button color="yellow">
-              <HashLink to="/#sec2">參加更多抽獎</HashLink>
+              {/* 此圖會跳頁會被NAVBAR蓋掉，所以先暴力解 */}
+              <HashLink 
+                className="xl:text-[1.25rem]" 
+                to="/#sec2" 
+                scroll={(el) => {
+                  const yOffset = -80;
+                  const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+                  window.scrollTo({top: y, behavior: 'smooth'});
+                }}
+              >
+                參加更多抽獎
+              </HashLink>
             </Button>
             <Button color="white" hoverBgColor="#FF837E">
-              <Link to="/policy">活動辦法</Link>
+              <Link className="xl:text-[1.25rem]" to="/policy">活動辦法</Link>
             </Button>
           </Buttons>
+          <Building src="./mgm/mgm-building-mb.svg" />
         </BlueBackground>
 			</Container>
 		</Wrap>
