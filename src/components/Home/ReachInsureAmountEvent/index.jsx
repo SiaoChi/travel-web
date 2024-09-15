@@ -214,6 +214,8 @@ const ButtonWrapperTwo = styled.div`
     }
 `
 
+const LINK = "https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_domestic%26foreign&utm_term=2024q4&utm_content=eta"
+
 const ReachInsureAmountEvent = () => {
     return (
         <Section >
@@ -237,7 +239,7 @@ const ReachInsureAmountEvent = () => {
             <MobileEventImgOne src="./home/reach-insure-amount-event1-mobile.svg"  className="event-content"/>
             <ButtonWrapperOne>
 				<Button color="blue" height="60px">
-					投保立即抽
+                    <a href={LINK}>投保立即抽</a>
 				</Button>
 			</ButtonWrapperOne>
 
@@ -245,7 +247,7 @@ const ReachInsureAmountEvent = () => {
             <MobileEventImgTwo src="./home/reach-insure-amount-event2-mobile.svg"  className="event-content"/>
             <ButtonWrapperTwo>
 				<Button color="blue" height="60px">
-					投保立即抽
+                    <a href={LINK}>投保立即抽</a>
 				</Button>
 			</ButtonWrapperTwo>
 

@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Button from "../../Button"
+import { Link } from "react-router-dom"
 
 const Section = styled.section`
     position: relative;
@@ -272,7 +273,7 @@ const FirstInsureAndLinePoints = () => {
             <MobileEventImg src="./home/first-insure-event-mobile.svg"  className="event-content"/>
             <ButtonWrapperOne>
 				<Button color="blue" height="60px">
-					投保立即抽
+                    <a href="https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_first-time&utm_term=2024q4&utm_content=eta">投保立即抽</a>
 				</Button>
 			</ButtonWrapperOne>
             <EnglishTextOne>PX MART<br/>COUPON</EnglishTextOne>
@@ -300,12 +301,12 @@ const FirstInsureAndLinePoints = () => {
             <MoreRewardDesc>快推薦好友，就有機會獲得 LINE POINTS 喔！</MoreRewardDesc>
             <ButtonWrapperTwo>
 				<Button color="red" height="60px">
-                立即前往
+                    <Link to="/mgm">立即前往</Link>
 				</Button>
 			</ButtonWrapperTwo>
             <ButtonWrapperThree>
 				<Button color="white" height="60px" hoverBgColor="#FF837E">
-                活動辦法
+                    <Link to="/policy">活動辦法</Link>
 				</Button>
 			</ButtonWrapperThree>
 
