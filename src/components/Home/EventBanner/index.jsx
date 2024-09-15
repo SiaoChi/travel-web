@@ -180,6 +180,8 @@ const MobileLineTwo = styled.img`
 `;
 
 const EventBanner = () => {
+    
+
 	const [isBlue, setIsBlue] = useState(true);
 
 	useEffect(() => {
@@ -199,7 +201,7 @@ const EventBanner = () => {
 			<LineTwo src="./home/shadow-line2.svg" />
             <MobileLineTwo src="./home/shadow-line2-mobile.svg" />
             <Video src="./home/event-banner-video-desktop.mp4" autoPlay muted/>
-            <MobileVideo src="./home/event-banner-video-mobile.mp4" autoPlay muted/>
+            <MobileVideo src="./home/event-banner-video-mobile.mp4" autoPlay muted playsInline preload="auto"/>
 
 			<BannerTitle>
 				<TitleText src="./home/event-banner-title.png" />

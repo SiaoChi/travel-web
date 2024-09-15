@@ -13,7 +13,19 @@ export default {
         'c-orange':'#FED430'
       },
       fontFamily: {
-        'roboto': ['Roboto', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif','Noto-Serif-TC'],
+        'Noto-Serif-TC': ['Noto Serif TC', 'serif'],
+      },
+       fontWeight: {
+        thin: '100',
+        extralight: '200',
+        light: '300',
+        normal: '400',
+        medium: '500',
+        semibold: '600',
+        bold: '700',
+        extrabold: '800',
+        black: '900',
       },
       rotate: {
         '30': '30deg',

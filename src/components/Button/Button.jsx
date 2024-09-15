@@ -46,6 +46,8 @@ const Border = styled.div`
   align-items: center;
   position: absolute;
   transition: all 0.3s ease;
+  font-family: "Noto Serif TC", "Noto Serif", serif; 
+  font-weight: 700;
   @media (max-width: 480px) {
     font-size: 20px;
   }

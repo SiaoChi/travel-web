@@ -13,7 +13,7 @@
 .menu-text {
     @apply  hover:bg-c-orange rounded-full;
     @apply  py-2 px-4;
-    @apply  font-serif lg:text-xl text-black font-extrabold tracking-wider;
+    @apply  font-Noto-Serif-TC font-semibold lg:text-xl text-black  tracking-wider;
 }
 
 /* 手機版menu */
@@ -27,7 +27,7 @@
 .mobile-text {
     @apply  hover:bg-c-orange rounded-full ;
     @apply  py-2 px-4;
-    @apply  font-serif text-center text-2xl text-black font-extrabold tracking-wider;
+    @apply  font-Noto-Serif-TC font-semibold text-center text-2xl text-black font-extrabold tracking-wider;
 }
 
 

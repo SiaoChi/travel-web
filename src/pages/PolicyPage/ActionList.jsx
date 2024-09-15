@@ -53,15 +53,16 @@ const Title = styled.div`
   font-size: 40px;
   font-weight: bold;
   line-height: 40px;
-	font-family: "Noto Serif CJK TC";
+	font-family: "Noto Serif TC";
 `;
 
 const Note = styled.div`
   font-size: 20px;
+  font-weight: 300;
   line-height: ${({ lineHeight }) => lineHeight}px;
   color: ${({ highlight }) => (highlight ? "#2496F0" : "#000000")};
   white-space: pre-wrap;
-	font-family: "Noto Sans TC";
+  font-family: Noto TC;
 	@media (max-width: 480px) {
 		margin-left: ${({ marginLeft }) => marginLeft};
 	}

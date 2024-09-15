@@ -16,35 +16,21 @@
   0% {
     opacity: 0;
     visibility: hidden;
+    transform: scale(0.7);
   }
   100% {
     opacity: 1;
     visibility: visible;
+    transform: scale(1);
   }
 }
 
 .fade-in {
-  animation: fadeIn 1s ease-in-out forwards;
+  animation: fadeIn 2s ease-in-out forwards;
   opacity: 0; 
+  transform: scale(0.7);
 }
 
-@keyframes fadeInFromRight {
-  0% {
-    opacity: 0;
-    transform: translateX(80%);
-    visibility: hidden;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.fade-in-from-right {
-  animation: fadeInFromRight 1s ease-out forwards;
-  opacity: 0; 
-  transform: translateY(-100%); 
-}
 
 
 @keyframes fadeInFromTop {
@@ -107,4 +93,3 @@
 .transfer-position-xy-1{
     @apply transition-transform duration-300 hover:-translate-y-1 hover:-translate-x-1 
 }
-
