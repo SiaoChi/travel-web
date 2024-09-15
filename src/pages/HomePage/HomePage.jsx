@@ -1,10 +1,11 @@
+import { useEffect } from "react";
 import styled from "styled-components";
 import EventBanner from "../../components/Home/EventBanner";
 import NewYearEvent from "../../components/Home/NewYearEvent";
 import ReachInsureAmountEvent from "../../components/Home/ReachInsureAmountEvent";
 import FirstInsureAndLinePoints from "../../components/Home/FirstInsureAndLinePoints";
 import { gsap, useGSAP } from "../../gsap";
-
+import debounce from 'lodash/debounce';
 
 const Wrap = styled.div`
   padding-top: 90px;
@@ -26,22 +27,72 @@ const VerticalLine = styled.div`
   position: absolute;
   left: 112px;
   top: 687px;
-  background-color: black;
+	width: 50px;
+	border-left: 1px solid black;
    @media (max-width: 1301px) {
-        top: 200px;
-        right: -100px;
-        width: 204px;
-        transform: scaleY(-1) rotate(-10deg);
+      display: none;
     }
 `;
 
 const Fly = styled.img`
-  position: fixed;
-  left: calc((100vw - 1500px)/2 + 90px);
-  top: calc(687px + 120px);
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	transform: translate(-50%, 0%);
+	will-change: transform;
+`;
+
+const Pointer = styled.div`
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	position: absolute;
+	/* background-color: red; */
+	bottom: 0;
+	left: 0;
+	transform: translate(-50%, 0%);
 `;
 
 function HomePage() {
+
+	useEffect(() => {
+		const verticalLine = document.getElementById("vertical-line");
+		const verticalLineRect = verticalLine.getBoundingClientRect();
+		const fly = document.getElementById("fly");
+		const pointer = document.getElementById("pointer");
+		const pointerRect = pointer.getBoundingClientRect();
+
+		const end = pointerRect.y;
+		fly.style.position = 'fixed';
+		fly.style.top = `${verticalLineRect.y}px`;
+		fly.style.left = `${verticalLineRect.x}px`;
+		
+		const handleScroll = () => {
+			const current = window.scrollY + verticalLineRect.top;
+			if (current > end) {
+				fly.style.position = 'absolute';
+				fly.style.top = '100%';
+				fly.style.left = `${0}px`;
+				return;
+			}
+			if (current < end) {
+				fly.style.position = 'fixed';
+				fly.style.top = `${verticalLineRect.y}px`;
+				fly.style.left = `${verticalLineRect.x}px`;
+			}
+		};
+
+		const debouncedHandleScroll = debounce(handleScroll, 10, { leading: true, trailing: true })
+
+		window.addEventListener('scroll', debouncedHandleScroll);
+
+		debouncedHandleScroll();
+
+		return () => {
+			window.removeEventListener('scroll', debouncedHandleScroll);
+			debouncedHandleScroll.cancel();
+		};
+	}, []);
 
   useGSAP(() => {
 		gsap.utils.toArray(".event-content").forEach((content) => {
@@ -67,8 +118,10 @@ function HomePage() {
 				<ReachInsureAmountEvent />
 				<FirstInsureAndLinePoints />
 
-				{/* <VerticalLine /> */}
-				<Fly src="./home/home-fly.svg" />
+				<VerticalLine id="vertical-line">
+					<Fly id="fly" src="./home/home-fly.svg" />
+					<Pointer id="pointer" />
+				</VerticalLine>
 			</Container>
 		</Wrap>
 	);
