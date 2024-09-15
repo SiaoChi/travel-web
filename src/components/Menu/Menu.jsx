@@ -58,7 +58,7 @@ function Menu() {
   return (
     /* 網頁版menu */ 
     <>
-    <header className='menu flex justify-center'>
+    <header className='menu justify-center bg-bg-yellow'>
         <div className="flex justify-between w-full px-6 max-w-[1500px]">
           <div className="flex-shrink-0 ml-[3vw]">
             <a href="https://www.transglobe.com.tw/" target="_blank" rel="noopener noreferrer">
@@ -81,8 +81,8 @@ function Menu() {
     </header>
 
       {/* 手機版 Menu */}
-      <header className={`mobile-menu xl:hidden ${isMenuOpen ? 'h-full' : ''}`}>
-          <div className={`flex-shrink-0 w-[26vw] ml-[3vw] mt-2 ${isMenuOpen ? 'hidden' : 'block'}`}>
+      <header className={`mobile-menu  xl:hidden ${isMenuOpen ? 'h-full' : ''}`}>
+          <div className={`flex-shrink-0 w-[30vw] ml-[3vw] mt-1 ${isMenuOpen ? 'hidden' : 'block'}`}>
             <a href="https://www.transglobe.com.tw/" target="_blank" rel="noopener noreferrer">
               <img src={logo} alt="Logo" className="" />
             </a>

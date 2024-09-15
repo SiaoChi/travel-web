@@ -19,6 +19,34 @@ const Container = styled.div`
   position: relative;
 `;
 
+const VerticalLineMobile = styled.div`
+  display: none;
+  border-left: 1px solid black;
+  @media screen and (max-width: 400px) {
+    display: block;
+	width: 1px;
+	height: 2563px;
+	position: absolute;
+	left: 30px;
+	top: 900px;
+  }
+`;
+
+const FlyMobile = styled.img`
+	display: none;
+	@media screen and (max-width: 400px) {
+		display: block;
+		width: 30px;
+		height: 30px;
+		position: fixed;
+		transform: translate(-50%, 0%);
+		will-change: transform;
+		left: 30px;
+		bottom: 1px;
+	}
+`;
+
+
 const VerticalLine = styled.div`
   height: 2563px;
   width: 1px;
@@ -105,6 +133,10 @@ function HomePage() {
 					<Fly id="fly" src="./home/home-fly.svg" />
 					<Pointer id="pointer" />
 				</VerticalLine>
+				{/* <VerticalLineMobile id="vertical-line-mobile">
+					<FlyMobile id="fly" src="./home/home-fly.svg" />
+					<Pointer id="pointer" />
+				</VerticalLineMobile> */}
 			</Container>
 		</Wrap>
 	);
