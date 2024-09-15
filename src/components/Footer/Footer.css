@@ -26,6 +26,9 @@
     .footer_top {
       background-color: #fff;
       padding: 20px;
+      @media (max-width: 382px) {
+        padding: 10px;
+      }
     }
     .footer_top .footer_inner {
       display: flex;
