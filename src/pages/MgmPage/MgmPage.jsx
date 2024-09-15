@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import { gsap, useGSAP } from "../../gsap";
+import Button from "../../components/Button/Button";
 
 const Wrap = styled.div`
   padding-top: 90px;
@@ -20,14 +21,23 @@ const Container = styled.div`
   height: 2780px;
   @media (max-width: 1300px) {
     width: 414px;
+    height: 2500px;
   }
 `;
 
-const YellowBackground = styled.img`
+const YellowBackground = styled.div`
   position: absolute;
   top: 427px;
   left: 0;
   width: 100%;
+  height: 1081px;
+  background: url('./mgm/mgm-trapezoid.svg') no-repeat center center;
+  @media (max-width: 1300px) {
+    top: 525px;
+    height: 850px;
+    width: 414px;
+    background-size: cover;
+  }
 `;
 
 const BannerFlower = styled.img`
@@ -54,17 +64,49 @@ const ContentPoint = styled.img`
   width: 1360px;
 `;
 
-const BackgroundBuilding = styled.img`
+const BackgroundBuilding = styled.div`
   position: absolute;
   bottom: 375px;
   left: 100px;
   width: 1312px;
+  height: 353px;
+  background: url('./mgm/mgm-building.svg') no-repeat center center;
+  @media (max-width: 1300px) {
+    width: 414px;
+    height: 218px;
+    background: url('./mgm/mgm-building-mobile.svg') no-repeat center center;
+    left: 0;
+    bottom: -20px;
+  }
 `;
 
-const BlueBackground = styled.img`
+const BlueBackground = styled.div`
   position: absolute;
   bottom: -32px;
   width: 100%;
+  height: 278px;
+  background: url('./mgm/mgm-blue-building.svg') no-repeat center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 1300px) {
+    height: 408px;
+    background: #2496F0;
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+`;
+
+const Buttons = styled.div`
+    display: flex;
+    align-items: center;
+    width: 1039px;
+    gap: 7px;
+    @media (max-width: 1300px) {
+        flex-direction: column;
+        gap: 29px;
+        width: 294px;
+    }
 `;
 
 const Video = styled.video`
@@ -230,12 +272,36 @@ const MgmContentThree = styled.div`
     }
 `;
 
-const People = styled.img`
+const People = styled.div`
     position: absolute;
     top: 1800px;
     left: 50%;
     transform: translateX(-50%);
     width: 821px;
+    height: 683px;
+    background: url('./mgm/mgm-people-and-frame.svg') no-repeat center center;
+    background-size: cover;
+    pointer-events: none;
+    @media (max-width: 1300px) {
+        top: 1500px;
+        width: 359px;
+        height: 597px;
+        background: url('./mgm/mgm-people-and-frame-mobile.svg') no-repeat center center;
+    }
+`;
+
+const ButtonContainer = styled.div`
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    width: 294px;
+    @media (max-width: 1300px) {
+        width: 229px;
+        top: 70%;
+    }
 `;
 
 const ActionDesc = styled(Desc)`
@@ -301,16 +367,14 @@ const MgmPage = () => {
 		<Wrap>
 			<Container>
 				<DesktopPart>
-					<YellowBackground src="./mgm/mgm-trapezoid.svg" />
 					<BannerFlower src="./mgm/mgm-banner-flower.svg" />
 					<ContentFlower src="./mgm/mgm-info-flower.svg" />
 					<ContentPoint src="./mgm/mgm-content-p-point.svg" />
-					<BackgroundBuilding src="./mgm/mgm-building.svg" />
-					<BlueBackground src="./mgm/mgm-blue-building.svg" />
 				</DesktopPart>
 				<Video src="./mgm/mgm-banner-video-mobile.mp4" autoPlay muted />
 				<BannerTitle src="./mgm/mgm-title.png" />
 				<BannerTitlePoint src="./mgm/mgm-title-p.png" />
+			    <YellowBackground />
 				<Desc isBlue={isBlue}>
 					<p>推薦好友全球旅平險</p>
 					<p>
@@ -332,15 +396,38 @@ const MgmPage = () => {
 				<MgmContentTwo className="mgm-content" />
 				<MgmContentThree className="mgm-content" />
 
-				<People src="./mgm/mgm-people-and-frame.svg" />
-				<ActionDesc>
-					<p>只要親友點選「你的推薦連結」成功投保</p>
-				</ActionDesc>
-				<ActionLinePoints src="./mgm/mgm-bottom-info-title.svg" />
-				<BottomDesc>
-					<p>點擊上方按鈕後，註冊或登入取得邀請碼</p>
-					<p>就能分享給親友，一起抽點數！</p>
-				</BottomDesc>
+				<People className="mgm-content">
+                    <ButtonContainer>
+                        <Button color="red">
+                            立即推薦親友
+                        </Button>
+                    </ButtonContainer>
+                </People>
+                <DesktopPart>
+                    <ActionDesc>
+                        <p>只要親友點選「你的推薦連結」成功投保</p>
+                    </ActionDesc>
+                    <ActionLinePoints src="./mgm/mgm-bottom-info-title.svg" />
+                    <BottomDesc>
+                        <p>點擊上方按鈕後，註冊或登入取得邀請碼</p>
+                        <p>就能分享給親友，一起抽點數！</p>
+                    </BottomDesc>
+                </DesktopPart>
+				<BlueBackground>
+				    <BackgroundBuilding />
+                    <Buttons>
+                        <Button color="yellow">
+                            推薦好友<Br reverse />
+                            成功筆數查詢
+                        </Button>
+                        <Button color="yellow">
+                            參加更多抽獎
+                        </Button>
+                        <Button color="white" hoverBgColor="#FF837E">
+                            活動辦法
+                        </Button>
+                    </Buttons>
+                </BlueBackground>
 			</Container>
 		</Wrap>
 	);
