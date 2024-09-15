@@ -57,7 +57,7 @@ function HomePage() {
 				},
 			});
 		});
-	});
+	}, []);
 
 	return (
 		<Wrap>

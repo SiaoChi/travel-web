@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
+import { HashLink } from 'react-router-hash-link';
+import { Link } from "react-router-dom";
 import { gsap, useGSAP } from "../../gsap";
 import Button from "../../components/Button/Button";
 
@@ -399,7 +401,7 @@ const MgmPage = () => {
 				<People className="mgm-content">
                     <ButtonContainer>
                         <Button color="red">
-                            立即推薦親友
+                            <a href="https://e-commerce.transglobe.com.tw/member/missionActivities/etamgm?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_etamgm&utm_term=2024q4&utm_content=missionActivities">立即推薦親友</a>
                         </Button>
                     </ButtonContainer>
                 </People>
@@ -417,14 +419,16 @@ const MgmPage = () => {
 				    <BackgroundBuilding />
                     <Buttons>
                         <Button color="yellow">
-                            推薦好友<Br reverse />
-                            成功筆數查詢
+                            <a href="https://e-commerce.transglobe.com.tw/member/missionActivities?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_mgmsearch&utm_term=2024q4&utm_content=missionActivities">
+                                推薦好友<Br reverse />
+                                成功筆數查詢
+                            </a>
                         </Button>
                         <Button color="yellow">
-                            參加更多抽獎
+                            <HashLink to="/#sec2">參加更多抽獎</HashLink>
                         </Button>
                         <Button color="white" hoverBgColor="#FF837E">
-                            活動辦法
+                            <Link to="/policy">活動辦法</Link>
                         </Button>
                     </Buttons>
                 </BlueBackground>
