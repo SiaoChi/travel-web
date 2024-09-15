@@ -144,8 +144,7 @@ const BannerTitle = styled.img`
     @media (max-width: 1300px) {
         width: 354px;
         top: 340px;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 7%;
     }
 `;
 
@@ -159,8 +158,7 @@ const BannerTitlePoint = styled.img`
     @media (max-width: 1300px) {
         width: 354px;
         top: 340px;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 7%;
     }
 `;
 
