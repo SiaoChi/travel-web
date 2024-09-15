@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
+import { gsap, useGSAP } from "../../gsap";
 
 const Wrap = styled.div`
   padding-top: 90px;
@@ -205,7 +206,7 @@ const MgmContentTwo = styled.div`
     background: url('./mgm/mgm-content2.svg') no-repeat center center;
     background-size: cover;
     @media (max-width: 1300px) {
-      top: 1120px;
+      top: 1136px;
       width: 409px;
       height: 187px;
       background: url('./mgm/mgm-content2-mobile.svg') no-repeat center center;
@@ -272,6 +273,22 @@ const DesktopPart = styled.div`
 const MgmPage = () => {
 	const [isBlue, setIsBlue] = useState(true);
 
+	useGSAP(() => {
+		gsap.utils.toArray(".mgm-content").forEach((content) => {
+			gsap.from(content, {
+				y: 100,
+				opacity: 0,
+				duration: 1,
+				ease: "power3.out",
+				scrollTrigger: {
+					trigger: content,
+					start: "top 80%",
+					toggleActions: "play none none none",
+				},
+			});
+		});
+	});
+
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setIsBlue(!isBlue);
@@ -311,9 +328,9 @@ const MgmPage = () => {
 				</ContentDesc>
 				<LinePointsText src="./mgm/mgm-line-points-text.svg" />
 
-				<MgmContentOne />
-				<MgmContentTwo />
-				<MgmContentThree />
+				<MgmContentOne className="mgm-content" />
+				<MgmContentTwo className="mgm-content" />
+				<MgmContentThree className="mgm-content" />
 
 				<People src="./mgm/mgm-people-and-frame.svg" />
 				<ActionDesc>
