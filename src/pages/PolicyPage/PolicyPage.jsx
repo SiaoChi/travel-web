@@ -13,7 +13,7 @@ import ActionList, {
 } from "./ActionList";
 
 const Wrap = styled.div`
-  padding-top: 121px;
+  padding-top: 90px;
   display: flex;
   flex-direction: column;
   justify-content: center;
