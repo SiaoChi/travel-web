@@ -4,11 +4,73 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>全球人壽活動網站</title>
-    <script type="module" crossorigin src="./assets/index-DzyG5zqf.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-wYShKBxJ.css">
+    <title id="pageTitle"></title>
+    <meta name="description" content="" id="pageDescription">
+    <meta name="keywords" content="" id="pageKeywords">
+    <meta property="og:image" content="meta-img.png" />
+    
+    <script>
+      function updateMetaTags() {
+        const path = window.location.pathname;
+        console.log(path);
+        if (path === '/mgm') {
+          document.getElementById('pageTitle').textContent = '分享全球樂透抽 | 全球人壽網路投保';
+          document.getElementById('pageDescription').setAttribute('content', '推薦好友全球旅平險，快樂+1 +1 +1 +1 +1 +1');
+          document.getElementById('pageKeywords').setAttribute('content', '網路投保、線上投保、旅平險推薦、邀請親友、推薦好友');
+        } else {
+          document.getElementById('pageTitle').textContent = '旅行全球抽獎趣 | 全球人壽網路投保';
+          document.getElementById('pageDescription').setAttribute('content', '投保全球旅平險，驚喜多多多多多多到滿出來！');
+          document.getElementById('pageKeywords').setAttribute('content', '網路投保、線上投保、旅平險推薦、旅平險、旅遊保障');
+        }
+      }
+
+      window.addEventListener('load', updateMetaTags);
+      window.addEventListener('popstate', updateMetaTags);
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4TG17N7W4"></script> -->
+
+
+    <!-- <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-B4TG17N7W4');
+    </script>
+  
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-NRW8GWH');</script>
+  
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-T95S74L');</script> -->
+
+
+    <script type="module" crossorigin src="./assets/index-B4cFZ0A1.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DIZLv-aH.css">
   </head>
   <body>
+    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRW8GWH" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T95S74L" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript> -->
     <div id="root"></div>
   </body>
 </html>
