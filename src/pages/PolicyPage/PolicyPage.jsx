@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import Accordion from "../../components/Accordion";
 import Details from "./Details";
@@ -163,11 +164,31 @@ function PolicyPage() {
 				<Container>
 					<Title>活動辦法</Title>
 					<Buttons>
-						<Button>旅行全球抽獎趣</Button>
-						<Button>分享全球樂透抽</Button>
+						<Button onClick={() => {
+							const targetElement = document.getElementById('sec1');
+							const menuHeight = document.querySelector('.menu').offsetHeight;
+							const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - menuHeight - 60;
+							window.scrollTo({
+								top: targetPosition,
+								behavior: 'smooth'
+							});
+						}}>
+							旅行全球抽獎趣
+						</Button>
+						<Button onClick={() => {
+							const targetElement = document.getElementById('sec2');
+							const menuHeight = document.querySelector('.menu').offsetHeight;
+							const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - menuHeight - 60;
+							window.scrollTo({
+								top: targetPosition,
+								behavior: 'smooth'
+							});
+						}}>
+							分享全球樂透抽
+						</Button>
 					</Buttons>
 					<Border />
-					<BannerWrapper>
+					<BannerWrapper id="sec1">
 						<TitleText src="./home/event-banner-title.png" />
 						<TitleAirplaine src="./home/event-banner-airplane.png" />
 					</BannerWrapper>
@@ -220,7 +241,7 @@ function PolicyPage() {
 				</Container>
 			</Background>
 			<Background bg="#FED430">
-				<Container>
+				<Container id="sec2">
 					<img src="./policy/event2-banner.svg" alt="event2-banner" />
 					<Spacer height={66} />
 					<Description>
@@ -273,8 +294,12 @@ function PolicyPage() {
 					<Border />
 					<Spacer height={35} />
 					<Buttons>
-						<Button color="blue">旅行全球抽獎趣</Button>
-						<Button color="blue">分享全球樂透抽</Button>
+						<Button color="blue">
+							<Link to="/">旅行全球抽獎趣</Link>
+						</Button>
+						<Button color="blue">
+							<Link to="/mgm">分享全球樂透抽</Link>
+						</Button>
 					</Buttons>
 				</Container>
 			</Background>
