@@ -103,7 +103,7 @@ const Buttons = styled.div`
     display: flex;
     align-items: center;
     width: 1039px;
-    gap: 7px;
+    gap: 73px;
     @media (max-width: 1300px) {
         flex-direction: column;
         gap: 29px;
