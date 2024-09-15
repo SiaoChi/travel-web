@@ -70,6 +70,9 @@ const Temple = styled.img`
         transform: translateX(-50%);
         width: 400px;
     }
+    @media (max-width: 376px) {
+        width: 375px;
+    }
 `
 
 const Mountain = styled.img`
@@ -245,7 +248,7 @@ const ReachInsureAmountEvent = () => {
             });
         });
     }, { scope: sectionRef });
-
+ 
     return (
         <Section ref={sectionRef}>
             <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />

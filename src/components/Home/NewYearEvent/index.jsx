@@ -1,5 +1,8 @@
+import { useRef } from "react";
 import styled from "styled-components";
 import Button from "../../Button/Button";
+import { gsap, useGSAP } from "../../../gsap";
+
 
 const Section = styled.section`
     position: relative;
@@ -87,6 +90,9 @@ const Fireworks = styled.img`
         left: 50%;
         transform: translateX(-50%);
         width: 400px;
+    }
+    @media (max-width: 376px) {
+        width: 375px;
     }
 `;
 
@@ -176,9 +182,28 @@ const ButtonWrapper = styled.div`
 `;
 
 const NewYearEvent = () => {
+
+    const sectionRef = useRef(null);
+
+    useGSAP(() => {
+        gsap.utils.toArray(".event-content").forEach((content) => {
+			gsap.from(content, {
+				scale: 0.2,
+				opacity: 0,
+				duration: 1,
+				ease: "power3.out",
+				scrollTrigger: {
+					trigger: content,
+					start: "top 80%",
+					toggleActions: "play none none none",
+				},
+			});
+		});
+    }, { scope: sectionRef });
+
 	return (
-		<Section >
-			<Fireworks id="sec1" src="./home/new-year-event-fire.png" />
+		<Section ref={sectionRef}>
+			<Fireworks id="sec1" src="./home/new-year-event-fire.png" className="event-content" />
 			<LineOne src="./home/shadow-line1.svg" />
 			<LineTwo src="./home/shadow-line2.svg" />
 			<MobileLine src="./home/shadow-line-mobile.svg" />
