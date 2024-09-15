@@ -314,7 +314,7 @@ const People = styled.div`
 
 const ButtonContainer = styled.div`
     position: absolute;
-    top: 78%;
+    top: 2320px;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -322,7 +322,7 @@ const ButtonContainer = styled.div`
     width: 294px;
     @media (max-width: 1300px) {
         width: 229px;
-        top: 70%;
+        top: 1930px;
     }
 `;
 
@@ -420,13 +420,14 @@ const MgmPage = () => {
 					<ContentPoint src="./mgm/mgm-content-p-point.svg" />
 				</DesktopPart>
 
-				<People className="mgm-content">
-          <ButtonContainer>
-              <Button color="red">
-                  <a href="https://e-commerce.transglobe.com.tw/member/missionActivities/etamgm?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_etamgm&utm_term=2024q4&utm_content=missionActivities">立即推薦親友</a>
-              </Button>
-          </ButtonContainer>
-        </People>
+        <BackgroundBuilding />
+
+				<People className="mgm-content" />
+        <ButtonContainer>
+            <Button color="red">
+                <a href="https://e-commerce.transglobe.com.tw/member/missionActivities/etamgm?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_etamgm&utm_term=2024q4&utm_content=missionActivities">立即推薦親友</a>
+            </Button>
+        </ButtonContainer>
 
         <DesktopPart>
             <ActionDesc>
@@ -440,7 +441,6 @@ const MgmPage = () => {
         </DesktopPart>
 
 				<BlueBackground>
-          <BackgroundBuilding />
           <Buttons>
             <Button color="yellow">
               <a href="https://e-commerce.transglobe.com.tw/member/missionActivities?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_mgmsearch&utm_term=2024q4&utm_content=missionActivities">
