@@ -73,6 +73,10 @@ const TitleAirplaine = styled.img`
     left: -10px;
     animation: fadeIn 1s ease-in-out backwards;
     animation-delay: .5s;
+    @media (max-width: 1300px) {
+        top: 65px;
+        left: 0px;
+    }
 `;
 
 const Desc = styled.div`
