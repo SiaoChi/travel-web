@@ -1,6 +1,8 @@
+import { useRef } from "react"
 import styled from "styled-components"
 import Button from "../../Button"
 import { Link } from "react-router-dom"
+import { gsap, useGSAP } from "../../../gsap";
 
 const Section = styled.section`
     position: relative;
@@ -94,7 +96,7 @@ const People = styled.img`
     position: absolute;
     left: 50%;
     bottom: 244px;
-    transform: translateX(-50%);
+    transform: translate(-50%, 0);
     @media (max-width: 1301px) {
         display: none;
     }
@@ -104,7 +106,7 @@ const MobilePeople = styled.img`
     position: absolute;
     left: 50%;
     bottom: 120px;
-    transform: translateX(-50%);
+    transform: translate(-50%, 0);
     @media (min-width: 1301px) {
         display: none;
     }
@@ -265,12 +267,39 @@ const EnglishTextTwo = styled(EnglishText)`
 `
 
 const FirstInsureAndLinePoints = () => {
+
+    const sectionRef = useRef(null);
+
+    useGSAP(() => {
+        const xMapping = {
+            img1: "0%",
+            img2: "-42%",
+            img3: "-50%",
+            img4: "-50%",
+        }
+        gsap.utils.toArray(".event-content").forEach((content) => {
+            const x = xMapping[content.id];
+            gsap.fromTo(content, { y: 100, transform: `translateX(${x})`, opacity: 0 }, {
+                y: 0,
+                transform: `translateX(${x})`,
+                opacity: 1,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: content,
+                    start: "top 80%",
+                    toggleActions: "play none none none",
+                },
+            });
+        });
+    }, { scope: sectionRef, dependencies: [] });
+
     return (
-        <Section >
+        <Section ref={sectionRef}>
             <Tower id="sec3" src="./home/first-insure-event-tower.svg" />
 
-            <EventImg src="./home/first-insure-event.svg" className="event-content"/>
-            <MobileEventImg src="./home/first-insure-event-mobile.svg"  className="event-content"/>
+            <EventImg src="./home/first-insure-event.svg" className="event-content" id="img1" />
+            <MobileEventImg src="./home/first-insure-event-mobile.svg" className="event-content" id="img2" />
             <ButtonWrapperOne>
 				<Button color="blue" height="60px">
                     <a href="https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_first-time&utm_term=2024q4&utm_content=eta">投保立即抽</a>
@@ -292,8 +321,8 @@ const FirstInsureAndLinePoints = () => {
             <BlueBackground src="./home/line-points-blue-background.svg" />
             <MobileBlueBackground src="./home/line-points-blue-background-mobile.svg" />
 
-            <People src="./home/line-points-people.svg" className="event-content"/>
-            <MobilePeople src="./home/line-points-people-mobile.svg"  className="event-content"/>
+            <People src="./home/line-points-people.svg" className="event-content" id="img3" />
+            <MobilePeople src="./home/line-points-people-mobile.svg"  className="event-content" id="img4" />
 
             <EnglishTextTwo>LINE<br/>POINTS</EnglishTextTwo>
 

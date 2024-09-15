@@ -4,7 +4,6 @@ import EventBanner from "../../components/Home/EventBanner";
 import NewYearEvent from "../../components/Home/NewYearEvent";
 import ReachInsureAmountEvent from "../../components/Home/ReachInsureAmountEvent";
 import FirstInsureAndLinePoints from "../../components/Home/FirstInsureAndLinePoints";
-import { gsap, useGSAP } from "../../gsap";
 
 const Wrap = styled.div`
   padding-top: 90px;
@@ -91,22 +90,6 @@ function HomePage() {
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
-	}, []);
-
-  useGSAP(() => {
-		gsap.utils.toArray(".event-content").forEach((content) => {
-			gsap.from(content, {
-				y: 100,
-				opacity: 0,
-				duration: 1,
-				ease: "power3.out",
-				scrollTrigger: {
-					trigger: content,
-					start: "top 80%",
-					toggleActions: "play none none none",
-				},
-			});
-		});
 	}, []);
 
 	return (
