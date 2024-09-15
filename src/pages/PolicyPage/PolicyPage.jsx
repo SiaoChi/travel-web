@@ -56,7 +56,7 @@ const Title = styled.div`
   font-size: 60px;
   font-weight: bold;
   margin-bottom: 63px;
-	font-family: "Noto Serif CJK TC";
+	font-family: "Noto Serif TC";
 	@media (max-width: 480px) {
 		font-size: 40px;
 	}

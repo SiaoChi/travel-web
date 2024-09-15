@@ -79,7 +79,7 @@ function Menu() {
     </header>
 
       {/* 手機版 Menu */}
-      <header className={`mobile-menu lg:hidden ${isMenuOpen ? 'h-full' : ''}`}>
+      <header className={`mobile-menu xl:hidden ${isMenuOpen ? 'h-full' : ''}`}>
           <div className={`flex-shrink-0 w-[26vw] ml-[3vw] mt-2 ${isMenuOpen ? 'hidden' : 'block'}`}>
             <a href="https://www.transglobe.com.tw/" target="_blank" rel="noopener noreferrer">
               <img src={logo} alt="Logo" className="" />
@@ -108,7 +108,7 @@ function Menu() {
            <nav className={`static flex flex-col items-center justify-center space-y-4 ${isMenuOpen ? '' : 'hidden'}`}>
 
              <nav className="flex flex-col space-y-6 px-14">
-              <a href="./" className="relative mobile-text" onClick={(e) => handleMenuItemClick(e, '#sec1')}>
+              <a href="/" className="relative mobile-text" onClick={(e) => handleMenuItemClick(e, '#sec1')}>
                 跨年出國抽
                 <p className="color-changing-text absolute top-[-13%] right-[-2%] w-5 h-7 transfer-position-xy-1 flex items-center justify-center text-xs font-bold font-roboto transform rotate-30">NEW</p>
               </a>        

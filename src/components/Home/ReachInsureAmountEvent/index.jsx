@@ -215,7 +215,6 @@ const ButtonWrapperTwo = styled.div`
 `
 
 const ReachInsureAmountEvent = () => {
-
     return (
     
         <Section >
