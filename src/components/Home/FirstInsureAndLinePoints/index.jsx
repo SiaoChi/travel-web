@@ -104,7 +104,7 @@ const MobilePeople = styled.img`
     position: absolute;
     left: 50%;
     bottom: 120px;
-    translate: -50% 0;
+    transform: translateX(-50%);
     @media (min-width: 1301px) {
         display: none;
     }
