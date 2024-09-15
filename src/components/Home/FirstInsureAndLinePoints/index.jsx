@@ -93,7 +93,7 @@ const People = styled.img`
     position: absolute;
     left: 50%;
     bottom: 244px;
-    translate: -50% 0;
+    transform: translateX(-50%);
     @media (max-width: 1301px) {
         display: none;
     }
@@ -268,8 +268,8 @@ const FirstInsureAndLinePoints = () => {
         <Section >
             <Tower id="sec3" src="./home/first-insure-event-tower.svg" />
 
-            <EventImg src="./home/first-insure-event.svg" />
-            <MobileEventImg src="./home/first-insure-event-mobile.svg" />
+            <EventImg src="./home/first-insure-event.svg" className="event-content"/>
+            <MobileEventImg src="./home/first-insure-event-mobile.svg"  className="event-content"/>
             <ButtonWrapperOne>
 				<Button color="blue" height="60px">
 					投保立即抽
@@ -291,8 +291,8 @@ const FirstInsureAndLinePoints = () => {
             <BlueBackground src="./home/line-points-blue-background.svg" />
             <MobileBlueBackground src="./home/line-points-blue-background-mobile.svg" />
 
-            <People src="./home/line-points-people.svg" />
-            <MobilePeople src="./home/line-points-people-mobile.svg" />
+            <People src="./home/line-points-people.svg" className="event-content"/>
+            <MobilePeople src="./home/line-points-people-mobile.svg"  className="event-content"/>
 
             <EnglishTextTwo>LINE<br/>POINTS</EnglishTextTwo>
 

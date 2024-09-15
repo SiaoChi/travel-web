@@ -216,7 +216,6 @@ const ButtonWrapperTwo = styled.div`
 
 const ReachInsureAmountEvent = () => {
     return (
-    
         <Section >
             <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
             <MobileYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-mobile.svg" />
@@ -234,16 +233,16 @@ const ReachInsureAmountEvent = () => {
 
             <EnglishText>TRAVEL<br/>JAPAN<br/>TOKYO</EnglishText>
 
-            <EventImgOne src="./home/reach-insure-amount-event1.svg" />
-            <MobileEventImgOne src="./home/reach-insure-amount-event1-mobile.svg" />
+            <EventImgOne src="./home/reach-insure-amount-event1.svg" className="event-content"/>
+            <MobileEventImgOne src="./home/reach-insure-amount-event1-mobile.svg"  className="event-content"/>
             <ButtonWrapperOne>
 				<Button color="blue" height="60px">
 					投保立即抽
 				</Button>
 			</ButtonWrapperOne>
 
-            <EventImgTwo src="./home/reach-insure-amount-event2.svg" />
-            <MobileEventImgTwo src="./home/reach-insure-amount-event2-mobile.svg" />
+            <EventImgTwo src="./home/reach-insure-amount-event2.svg" className="event-content"/>
+            <MobileEventImgTwo src="./home/reach-insure-amount-event2-mobile.svg"  className="event-content"/>
             <ButtonWrapperTwo>
 				<Button color="blue" height="60px">
 					投保立即抽
