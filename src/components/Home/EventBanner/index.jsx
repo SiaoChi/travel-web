@@ -198,7 +198,6 @@ const EventBanner = () => {
 			{/* <BgFlowers src="./home/event-banner-flower.png" /> */}
 			<LineOne src="./home/shadow-line1.svg" />
             <MobileLineOne src="./home/shadow-line1-mobile.svg" />
-			<LineTwo src="./home/shadow-line2.svg" />
             <MobileLineTwo src="./home/shadow-line2-mobile.svg" />
             <Video src="./home/event-banner-video-desktop.mp4" autoPlay muted/>
             <MobileVideo src="./home/event-banner-video-mobile.mp4" autoPlay muted playsInline preload="auto"/>
