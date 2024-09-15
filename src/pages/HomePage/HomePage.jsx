@@ -5,7 +5,6 @@ import NewYearEvent from "../../components/Home/NewYearEvent";
 import ReachInsureAmountEvent from "../../components/Home/ReachInsureAmountEvent";
 import FirstInsureAndLinePoints from "../../components/Home/FirstInsureAndLinePoints";
 import { gsap, useGSAP } from "../../gsap";
-import debounce from 'lodash/debounce';
 
 const Wrap = styled.div`
   padding-top: 90px;
@@ -26,12 +25,12 @@ const VerticalLine = styled.div`
   width: 1px;
   position: absolute;
   left: 112px;
-  top: 687px;
+  top: 680px;
 	width: 50px;
 	border-left: 1px solid black;
-   @media (max-width: 1301px) {
-      display: none;
-    }
+	@media screen and (max-width: 1300px) {
+		display: none;
+	}
 `;
 
 const Fly = styled.img`
@@ -40,6 +39,9 @@ const Fly = styled.img`
 	position: absolute;
 	transform: translate(-50%, 0%);
 	will-change: transform;
+	@media screen and (max-width: 1300px) {
+		display: none;
+	}
 `;
 
 const Pointer = styled.div`
@@ -47,7 +49,6 @@ const Pointer = styled.div`
 	height: 10px;
 	border-radius: 50%;
 	position: absolute;
-	/* background-color: red; */
 	bottom: 0;
 	left: 0;
 	transform: translate(-50%, 0%);
@@ -71,26 +72,23 @@ function HomePage() {
 			const current = window.scrollY + verticalLineRect.top;
 			if (current > end) {
 				fly.style.position = 'absolute';
-				fly.style.top = '100%';
+				fly.style.top = 'calc(100% - 50px)';
 				fly.style.left = `${0}px`;
 				return;
 			}
-			if (current < end) {
+			if (current < end + 50) {
 				fly.style.position = 'fixed';
-				fly.style.top = `${verticalLineRect.y}px`;
+				fly.style.top = `${verticalLineRect.y - 50}px`;
 				fly.style.left = `${verticalLineRect.x}px`;
 			}
 		};
 
-		const debouncedHandleScroll = debounce(handleScroll, 10, { leading: true, trailing: true })
+		window.addEventListener('scroll', handleScroll);
 
-		window.addEventListener('scroll', debouncedHandleScroll);
-
-		debouncedHandleScroll();
+		handleScroll();
 
 		return () => {
-			window.removeEventListener('scroll', debouncedHandleScroll);
-			debouncedHandleScroll.cancel();
+			window.removeEventListener('scroll', handleScroll);
 		};
 	}, []);
 
