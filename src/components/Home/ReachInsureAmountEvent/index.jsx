@@ -80,8 +80,9 @@ const Mountain = styled.img`
     position: absolute;
     top: 220px;
     right: -40px;
-    width: 428px;
+    width: 700px;
     @media (max-width: 1301px) {
+        width: 428px;
         top: 380px;
         left: 50%;
         transform: translateX(-40%);
