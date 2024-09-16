@@ -266,7 +266,7 @@ const ReachInsureAmountEvent = () => {
             </Title>
             <Desc ref={fadeInFromLeft}>
                 2024/10/1~2025/1/31期間，<br/>
-                成功網路投保<span>「國外旅平險」</span>，單筆保費滿額即可抽！
+                成功網路投保<span>「國內外旅平險」</span>，單筆保費滿額即可抽！
             </Desc>
 
             <EnglishText ref={fadeInFromBottom}>TRAVEL<br/>JAPAN<br/>TOKYO</EnglishText>
