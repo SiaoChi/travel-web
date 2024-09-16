@@ -115,7 +115,6 @@ const EnglishTitle = styled.p`
     font-weight: bold;
     letter-spacing: 2px;
     color: #2496F0;
-    text-shadow: 0px 5px 5px lightgrey;
     @media (max-width: 1301px) {
         font-size: 40px;
         line-height: 45px;
@@ -198,7 +197,7 @@ const EventBanner = () => {
 
 	return (
 		<Section>
-			<YellowPolygon src="./home/home-polygon.svg" />
+			{/* <YellowPolygon src="./home/home-polygon.svg" /> */}
 			{/* <BgFlowers src="./home/event-banner-flower.png" /> */}
 			<LineOne src="./home/shadow-line1.svg" />
             <MobileLineOne src="./home/shadow-line1-mobile.svg" />

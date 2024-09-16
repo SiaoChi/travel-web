@@ -32,6 +32,7 @@ const BlueBackground = styled.img`
     position: absolute;
     bottom: -220px;
     width: 100%;
+    background-color: red;
     @media (max-width: 1301px) {
         display: none;
     }
@@ -75,7 +76,7 @@ const EventImg = styled.img`
 const MobileEventImg = styled.img`
     position: absolute;
     top: 260px;
-    left: 50%;
+    left: 15%;
     transform: translateX(-42%);
     @media (min-width: 1301px) {
         display: none;
@@ -91,7 +92,7 @@ const ButtonWrapperOne = styled.div`
     @media (max-width: 1301px) {
         width: 220px;
         top: 470px;
-        left: 50%;
+        left: 23%;
         transform: translateX(-50%);
     }
 `
@@ -101,6 +102,7 @@ const People = styled.img`
     left: 50%;
     bottom: 244px;
     transform: translate(-50%, 0);
+    z-index: 10;
     @media (max-width: 1301px) {
         display: none;
     }
@@ -148,6 +150,7 @@ const MoreRewardTitle = styled.img`
     bottom: 450px;
     translate: -50% 0;
     height: 50px;
+    z-index: 10;
     @media (max-width: 1301px) {
         bottom: 350px;
         height: 40px;
@@ -163,6 +166,7 @@ const MoreRewardDesc = styled.p`
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+    z-index: 10;
     @media (max-width: 1301px) {
         bottom: 280px;
         height: 40px;
@@ -241,8 +245,9 @@ const EnglishText = styled.div`
     line-height: 65px;
     font-weight: bold;
     color: #FED430;
+    z-index: 10;
     @media (max-width: 1301px) {
-        left: 25%;
+        left: 20%;
         font-size: 40px;
         line-height: 40px;
         min-width: 300px;
@@ -271,7 +276,7 @@ const EnglishTextTwo = styled(EnglishText)`
 `
 
 const FirstInsureAndLinePoints = () => {
-    const { fadeInFromBottom, fadeInFromLeft, fadeInFromRight } = useAnimations();
+    const { fadeInFromBottom, fadeInFromLeft } = useAnimations();
     const sectionRef = useRef(null);
 
     useGSAP(() => {
@@ -302,9 +307,9 @@ const FirstInsureAndLinePoints = () => {
         <Section ref={sectionRef}>
             <Tower ref={fadeInFromLeft} id="sec3" src="./home/first-insure-event-tower.svg" />
 
-            <EventImg src="./home/first-insure-event.svg" className="event-content" id="img1" />
-            <MobileEventImg src="./home/first-insure-event-mobile.svg" className="event-content" id="img2" />
-            <ButtonWrapperOne>
+            <EventImg ref={fadeInFromBottom} src="./home/first-insure-event.svg" className="event-content" id="img1" />
+            <MobileEventImg ref={fadeInFromBottom} src="./home/first-insure-event-mobile.svg" className="event-content" id="img2" />
+            <ButtonWrapperOne ref={fadeInFromBottom}>
 				<Button color="blue" height="60px">
                     <a target="_blank" href="https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_first-time&utm_term=2024q4&utm_content=eta">投保立即抽</a>
 				</Button>
@@ -322,7 +327,7 @@ const FirstInsureAndLinePoints = () => {
             </Desc>
             
             <Italy src="./home/first-insure-event-italy.svg" />
-            <BlueBackground src="./home/line-points-blue-background.svg" />
+            {/* <BlueBackground src="./home/line-points-blue-background.svg" /> */}
             <MobileBlueBackground src="./home/line-points-blue-background-mobile.svg" />
 
             <People src="./home/line-points-people.svg" className="event-content" id="img3" />

@@ -11,8 +11,23 @@ const Wrap = styled.div`
   display: flex;
   justify-content: center;
   overflow: hidden;
+  position: relative; 
+  z-index: 0;
   @media (max-width: 1300px) {
     padding-top: 65px;
+  }
+`;
+
+const BottomBlueBg = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 211px;
+  background-color: #2496F0;
+  z-index: 0;
+  @media (max-width: 1300px) {
+    display: none;
   }
 `;
 
@@ -30,15 +45,16 @@ const Container = styled.div`
 const YellowBackground = styled.div`
   position: absolute;
   top: 427px;
-  left: 0;
-  width: 100%;
-  height: 1130px;
-  background: url('./mgm/mgm-trapezoid.svg') no-repeat center center;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  aspect-ratio: 1640 / 1260;
+  background: url('./mgm/mgm-trapezoid.png') no-repeat center center;
+  background-size: cover;
+  z-index: 1;
   @media (max-width: 1300px) {
-    top: 525px;
-    height: 850px;
-    width: 430px;
-    background-size: cover;
+    top: 530px;
+    aspect-ratio: 410 / 700;
   }
 `;
 
@@ -57,6 +73,7 @@ const ContentFlower = styled.img`
   top: 700px;
   left: 60px;
   width: 1300px;
+  z-index: 1;
   @media (max-width: 1300px) {
     display: none;
   }
@@ -67,6 +84,7 @@ const MobileContentFlower = styled.img`
   top: 585px;
   left: 25px;
   width: 373px;
+    z-index: 1;
   @media (min-width: 1300px) {
     display: none;
   }
@@ -77,6 +95,10 @@ const ContentPoint = styled.img`
   top: 660px;
   left: 78px;
   width: 1360px;
+  z-index: 1;
+  @media (max-width: 1300px) {
+    display: none;
+  }
 `;
 
 const BackgroundBuilding = styled.div`
@@ -87,6 +109,7 @@ const BackgroundBuilding = styled.div`
   width: 1312px;
   height: 353px;
   background: url('./mgm/mgm-building.svg') no-repeat center center;
+  z-index: 1;
   @media (max-width: 1300px) {
     width: 414px;
     height: 218px;
@@ -103,6 +126,7 @@ const BlueBackground = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
   @media (max-width: 1300px) {
     height: 428px;
     width: 100%;
@@ -130,6 +154,7 @@ const Video = styled.video`
   top: 0;
   right: 150px;
   width: 610px;
+  z-index: 0;
   @media (max-width: 1300px) {
     align-self: center;
     position: static;
@@ -141,6 +166,7 @@ const BannerTitle = styled.img`
     top: 50px;
     left: 100px;
     width: 500px;
+    z-index: 1; 
     animation: fadeIn 1s ease-in-out backwards;
     @media (max-width: 1300px) {
         width: 354px;
@@ -156,6 +182,7 @@ const BannerTitlePoint = styled.img`
     width: 500px;
     animation: fadeIn 1s ease-in-out backwards;
     animation-delay: .5s;
+    z-index: 1;
     @media (max-width: 1300px) {
         width: 354px;
         top: 340px;
@@ -175,6 +202,7 @@ const Desc = styled.div`
     letter-spacing: 4px;
     font-size: 25px;
     font-weight: bold;
+    z-index: 1;
     > p > span {
         color:  ${(props) => (props.isBlue ? "#2496F0" : "#FF837E")};
     }
@@ -192,6 +220,7 @@ const EnglishTitle = styled.p`
     position: absolute;
     top: 471px;
     left: 112px;
+    z-index: 1;
     font-size: 65px;
     line-height: 65px;
     font-weight: bold;
@@ -218,6 +247,7 @@ const ContentDesc = styled(Desc)`
     top: 730px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1;
     @media (max-width: 1300px) {
       top: 780px;
       font-size: 20px;
@@ -247,6 +277,7 @@ const MgmContentOne = styled.div`
     top: 900px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1;
     width: 974px;
     height: 263px;
     background: url('./mgm/mgm-content1.svg') no-repeat center center;
@@ -266,6 +297,7 @@ const MgmContentTwo = styled.div`
     transform: translateX(-48%);
     width: 1012px;
     height: 308px;
+    z-index: 1;
     background: url('./mgm/mgm-content2.svg') no-repeat center center;
     background-size: cover;
     @media (max-width: 1300px) {
@@ -283,6 +315,7 @@ const MgmContentThree = styled.div`
     transform: translateX(-52%);
     width: 929px;
     height: 299px;
+    z-index: 1;
     background: url('./mgm/mgm-content3.svg') no-repeat center center;
     background-size: cover;
     @media (max-width: 1300px) {
@@ -298,11 +331,12 @@ const People = styled.div`
     top: 1800px;
     left: 50%;
     transform: translateX(-50%);
-    width: 821px;
+    width: 821px;  
     height: 683px;
     background: url('./mgm/mgm-people-and-frame.svg') no-repeat center center;
     background-size: cover;
     pointer-events: none;
+    z-index: 1;
     @media (max-width: 1300px) {
         top: 1500px;
         width: 359px;
@@ -319,6 +353,7 @@ const ButtonContainer = styled.div`
     display: flex;
     justify-content: center;
     width: 294px;
+    z-index:1;
     @media (max-width: 1300px) {
         width: 229px;
         top: 1930px;
@@ -331,6 +366,7 @@ const ActionDesc = styled(Desc)`
     left: 50%;
     transform: translateX(-50%);
     letter-spacing: 1px;
+    z-index:1;
 `;
 
 const ActionLinePoints = styled.img`
@@ -339,6 +375,7 @@ const ActionLinePoints = styled.img`
     left: 50%;
     transform: translateX(-50%);
     width: 717px;
+    z-index:1;
 `;
 
 const BottomDesc = styled(Desc)`
@@ -400,11 +437,11 @@ const MgmPage = () => {
 
 	return (
 		<Wrap>
+       <YellowBackground />
 			<Container>
 				<Video src="./mgm/mgm-banner-video-mobile.mp4" autoPlay muted playsInline />
 				<BannerTitle src="./mgm/mgm-title.png" />
 				<BannerTitlePoint src="./mgm/mgm-title-p.png" />
-			    <YellowBackground />
 				<Desc isBlue={isBlue}>
 					<p>推薦好友全球旅平險</p>
 					<p>
@@ -482,6 +519,7 @@ const MgmPage = () => {
           <Building src="./mgm/mgm-building-mb.svg" />
         </BlueBackground>
 			</Container>
+      <BottomBlueBg />
 		</Wrap>
 	);
 };

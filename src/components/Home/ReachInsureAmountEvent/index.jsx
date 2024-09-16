@@ -165,7 +165,7 @@ const EventImgOne = styled.img`
 const MobileEventImgOne = styled.img`
     position: absolute;
     top: 520px;
-    left: 50%;
+    left: 5%;
     transform: translateX(-52%);
     @media (min-width: 1301px) {
         display: none;
@@ -182,7 +182,7 @@ const ButtonWrapperOne = styled.div`
     @media (max-width: 1301px) {
         width: 220px;
         top: 790px;
-        left: 50%;
+        left: 24%;
         transform: translateX(-45%);
     }
 `
@@ -199,7 +199,7 @@ const EventImgTwo = styled.img`
 const MobileEventImgTwo = styled.img`
     position: absolute;
     top: 860px;
-    left: 50%;
+    left: 15%;
     transform: translateX(-38%);
     @media (min-width: 1301px) {
         display: none;
@@ -215,7 +215,7 @@ const ButtonWrapperTwo = styled.div`
     @media (max-width: 1301px) {
         width: 220px;
         top: 1150px;
-        left: 50%;
+        left: 24%;
         transform: translateX(-45%);
     }
 `
@@ -252,7 +252,7 @@ const ReachInsureAmountEvent = () => {
  
     return (
         <Section ref={sectionRef}>
-            <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
+            {/* <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" /> */}
             <MobileYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-mobile.svg" />
             <Temple ref={fadeInFromLeft} id="sec2" src="./home/reach-insure-amount-event-temple.svg" />
             <Mountain src="./home/reach-insure-amount-event-mountain.svg" />
@@ -268,17 +268,17 @@ const ReachInsureAmountEvent = () => {
 
             <EnglishText ref={fadeInFromBottom}>TRAVEL<br/>JAPAN<br/>TOKYO</EnglishText>
 
-            <EventImgOne src="./home/reach-insure-amount-event1.svg" className="event-content" id="img1" />
-            <MobileEventImgOne src="./home/reach-insure-amount-event1-mobile.svg"  className="event-content" id="img2" />
-            <ButtonWrapperOne>
+            <EventImgOne ref={fadeInFromBottom} src="./home/reach-insure-amount-event1.svg" className="event-content" id="img1" />
+            <MobileEventImgOne ref={fadeInFromBottom} src="./home/reach-insure-amount-event1-mobile.svg"  className="event-content" id="img2" />
+            <ButtonWrapperOne ref={fadeInFromBottom}>
 				<Button color="blue" height="60px">
                     <a target="_blank" href={LINK}>投保立即抽</a>
 				</Button>
 			</ButtonWrapperOne>
 
-            <EventImgTwo src="./home/reach-insure-amount-event2.svg" className="event-content" id="img3"/>
-            <MobileEventImgTwo src="./home/reach-insure-amount-event2-mobile.svg"  className="event-content" id="img4"/>
-            <ButtonWrapperTwo>
+            <EventImgTwo ref={fadeInFromBottom} src="./home/reach-insure-amount-event2.svg" className="event-content" id="img3"/>
+            <MobileEventImgTwo ref={fadeInFromBottom} src="./home/reach-insure-amount-event2-mobile.svg"  className="event-content" id="img4"/>
+            <ButtonWrapperTwo ref={fadeInFromBottom}>
 				<Button color="blue" height="60px">
                     <a target="_blank" href={LINK}>投保立即抽</a>
 				</Button>

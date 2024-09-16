@@ -8,24 +8,28 @@ import { useNavigate } from 'react-router-dom';
 
 
 function Menu() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const navigate = useNavigate();
-    const location = useLocation();
+   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const currentLocation = useLocation();
+  const [activePath, setActivePath] = useState(currentLocation.hash || currentLocation.pathname);
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [location.pathname]);
+  // 當路徑改變時，滾動到頂部，並更新 activePath
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setActivePath(currentLocation.hash || currentLocation.pathname); // 更新 activePath
+  }, [currentLocation]);
 
-    const toggleMenu = () => {
-      setIsMenuOpen(!isMenuOpen);
-    };
+  // 切換 menu 開關
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
-    const handleMenuItemClick = useCallback((event, targetId) => {
+  // 處理 menu 項目點擊行為
+  const handleMenuItemClick = useCallback((event, targetId) => {
     event.preventDefault();
     setIsMenuOpen(false);
 
     const isOnHomePage = window.location.pathname === '/' || window.location.pathname === '/index.html';
-    
 
     const navigateToTarget = () => {
       const targetElement = document.querySelector(targetId);
@@ -34,31 +38,37 @@ function Menu() {
         const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - menuHeight - 60;
         window.scrollTo({
           top: targetPosition,
-          behavior: 'smooth'
+          behavior: 'smooth',
         });
+        // 更新 activePath 為目標區塊的 ID
+        setActivePath(targetId);
       } else {
         console.log('can not find target');
       }
     };
 
-
     if (!isOnHomePage) {
       navigate(`/${targetId}`);
       setTimeout(() => {
-      window.history.pushState(null, '', targetId);
-      navigateToTarget()
+        window.history.pushState(null, '', targetId);
+        navigateToTarget();
       }, 200);
-    } else  {
+    } else {
       window.history.pushState(null, '', targetId);
       navigateToTarget();
-  }
-}, []);
+    }
+  }, [navigate]);
+
+  // 根據當前路徑動態設置 menu item 的 class
+  const getMenuItemClass = (path) => {
+    return activePath === path ? 'menu-text bg-c-orange' : 'menu-text';
+  };
 
 
   return (
     /* 網頁版menu */ 
     <>
-    <header className='menu justify-center bg-bg-yellow'>
+              <header className='menu justify-center bg-bg-yellow'>
         <div className="flex justify-between w-full px-6 max-w-[1500px]">
           <div className="flex-shrink-0 ml-[3vw]">
             <a href="https://www.transglobe.com.tw/" target="_blank" rel="noopener noreferrer">
@@ -68,17 +78,22 @@ function Menu() {
 
           {/* Navigation Menu */}
           <nav className="flex space-x-7">
-            <Link to="/" className="relative menu-text" onClick={(e) => handleMenuItemClick(e, '#sec1')}>
-                跨年出國抽
-                <p className="color-changing-text absolute top-[-13%] right-[-2%] w-7 h-7 transfer-position-xy-1 flex items-center justify-center text-xs font-bold font-roboto transform rotate-12">NEW</p>
+            <Link 
+              to="/" 
+              className={`relative menu-text ${getMenuItemClass('#sec1')}`} 
+              onClick={(e) => handleMenuItemClick(e, '#sec1')}
+            >
+              跨年出國抽
+              {/* NEW 標籤效果保留 */}
+              <p className="color-changing-text absolute top-[-13%] right-[-2%] w-7 h-7 transfer-position-xy-1 flex items-center justify-center text-xs font-bold font-roboto transform rotate-12">NEW</p>
             </Link>        
-            <a href="/" className="menu-text" onClick={(e) => handleMenuItemClick(e, '#sec2')}>投保滿額抽</a>
-            <a href="/" className="menu-text" onClick={(e) => handleMenuItemClick(e, '#sec3')}>首次投保抽</a>
-            <Link to="/mgm" className="menu-text">分享全球抽</Link>
-            <Link to="/policy" className="menu-text">活動辦法</Link>
+            <a href="/" className={`menu-text ${getMenuItemClass('#sec2')}`} onClick={(e) => handleMenuItemClick(e, '#sec2')}>投保滿額抽</a>
+            <a href="/" className={`menu-text ${getMenuItemClass('#sec3')}`} onClick={(e) => handleMenuItemClick(e, '#sec3')}>首次投保抽</a>
+            <Link to="/mgm" className={`menu-text ${getMenuItemClass('/mgm')}`}>分享全球抽</Link>
+            <Link to="/policy" className={`menu-text ${getMenuItemClass('/policy')}`}>活動辦法</Link>
           </nav>
         </div>
-    </header>
+      </header>
 
       {/* 手機版 Menu */}
       <header className={`mobile-menu  xl:hidden ${isMenuOpen ? 'h-full' : ''}`}>
