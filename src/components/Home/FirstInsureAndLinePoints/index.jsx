@@ -88,6 +88,9 @@ const MobileEventImg = styled.img`
     @media (min-width: 1301px) {
         display: none;
     }
+    @media (min-width: 450px) and (max-width: 576px) {
+        left: 20%;
+    }
 `
 
 const ButtonWrapperOne = styled.div`
@@ -101,6 +104,9 @@ const ButtonWrapperOne = styled.div`
         top: 470px;
         left: 23%;
         transform: translateX(-50%);
+    }
+     @media (min-width: 450px) and (max-width: 576px) {
+        left: 25%;
     }
 `
 
@@ -119,11 +125,13 @@ const MobilePeople = styled.img`
     left: 9%;
     bottom: 120px;
     transform: translate(-50%, 0);
+    width: 80%;
     @media (min-width: 1301px) {
         display: none;
     }
     @media (min-width: 450px) and (max-width: 576px) {
         left: 18%;
+        width: 65%;
     }
 `
 
@@ -222,6 +230,9 @@ const Title = styled.div`
             height: 40px;
         }
     }
+    @media (min-width: 450px) and (max-width: 576px) {
+        left: 120px;
+    }
 `
 
 const Desc = styled.div`
@@ -246,6 +257,9 @@ const Desc = styled.div`
         letter-spacing: 1px;
         width: 350px;
         font-size: 16px;
+    }
+    @media (min-width: 450px) and (max-width: 576px) {
+        left: 20%;
     }
 `
 

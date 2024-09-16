@@ -367,6 +367,9 @@ const ButtonContainer = styled.div`
         top: 1900px;
         left: 20%;
     }
+    @media (min-width: 450px) and (max-width: 576px) {
+        left: 23%;
+    }
 `;
 
 const ActionDesc = styled(Desc)`
