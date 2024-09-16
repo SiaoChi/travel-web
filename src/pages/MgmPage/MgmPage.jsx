@@ -22,7 +22,7 @@ const Container = styled.div`
   position: relative;
   height: 2780px;
   @media (max-width: 1300px) {
-    width: 414px;
+    width: 430px;
     height: 2500px;
   }
 `;
@@ -37,7 +37,7 @@ const YellowBackground = styled.div`
   @media (max-width: 1300px) {
     top: 525px;
     height: 850px;
-    width: 414px;
+    width: 430px;
     background-size: cover;
   }
 `;
@@ -90,7 +90,6 @@ const BackgroundBuilding = styled.div`
   @media (max-width: 1300px) {
     width: 414px;
     height: 218px;
-    background: url('./mgm/mgm-building-mobile.svg') no-repeat center center;
     bottom: -20px;
   }
 `;
@@ -105,8 +104,9 @@ const BlueBackground = styled.div`
   justify-content: center;
   align-items: center;
   @media (max-width: 1300px) {
-    height: 408px;
-    background: #2496F0;
+    height: 428px;
+    width: 100%;
+    background-color: #2496F0;
     align-items: flex-start;
     padding-top: 40px;
   }
