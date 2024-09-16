@@ -6,25 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>旅行全球抽獎趣 | 全球人壽網路投保</title>
     <meta property="og:title" content="旅行全球抽獎趣 | 全球人壽網路投保">
-    <meta property="og:description" content="投保全球旅平險，驚喜多多多多多多到滿出來！">
-    <meta property="og:keywords" content="網路投保、線上投保、旅平險推薦、旅平險、旅遊保障">
-    <meta property="og:image" content="meta-img.png" />
-    <meta property="og:url" content="https://e-commerce.transglobe.com.tw/activity/campaign-detail/2024Q4/index.html" />
-    <meta property="og:type" content="website" />
+    <meta property="og:description" content="投保全球旅平險，驚喜多多多多多多到滿出來">
+    <meta name="keywords" content="網路投保、線上投保、旅平險推薦、旅平險、旅遊保障">
+    <meta property="og:image" content="/meta-img.png">
+    <meta property="og:url" content="https://e-commerce.transglobe.com.tw/activity/campaign-detail/2024Q4/index.html">
+    <meta property="og:type" content="website">
     
     <script>
-       function updateMetaTags() {
-          const path = window.location.pathname;
-          console.log(path);
-          if (path === '/mgm') {
-            document.querySelector('meta[property="og:title"]').setAttribute('content', '分享全球樂透抽 | 全球人壽網路投保');
-            document.querySelector('meta[property="og:description"]').setAttribute('content', '推薦好友全球旅平險，快樂+1 +1 +1 +1 +1 +1');
-            document.querySelector('meta[name="keywords"]').setAttribute('content', '網路投保、線上投保、旅平險推薦、邀請親友、推薦好友');
-            document.querySelector('meta[property="og:image"]').setAttribute('content', '../meta-img.png');
-          }
-        }
-      window.addEventListener('load', updateMetaTags);
-      window.addEventListener('popstate', updateMetaTags);
+      function setMetaTags() {
+        const path = window.location.pathname;
+        let title, description, keywords;
+        
+        if (path === '/mgm') {
+          title = '分享全球樂透抽 | 全球人壽網路投保';
+          description = '推薦好友全球旅平險，快樂+1 +1 +1 +1 +1 +1';
+          keywords = '網路投保、線上投保、旅平險推薦、邀請親友、推薦好友';
+        } 
+
+        document.querySelector('meta[property="og:title"]').setAttribute('content', title);
+        document.querySelector('meta[property="og:description"]').setAttribute('content', description);
+        document.querySelector('meta[name="keywords"]').setAttribute('content', keywords);
+      }
+
+      document.addEventListener('DOMContentLoaded', setMetaTags);
+      window.addEventListener('popstate', setMetaTags);
     </script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
