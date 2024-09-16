@@ -69,10 +69,21 @@ const fadeIn = keyframes`
     }
 `;
 
+const zoomInAnimation = keyframes`
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+`;
+
 const TitleText = styled.img`
     padding-top: 70px;
     width: 486px;
-    animation: ${fadeIn} 1s ease-in-out backwards;
+    animation: ${zoomInAnimation} 1s ease-in-out backwards;
 `;
 
 const TitleAirplaine = styled.img`
