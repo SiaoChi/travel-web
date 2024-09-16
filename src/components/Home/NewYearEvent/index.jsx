@@ -229,9 +229,9 @@ const NewYearEvent = () => {
 			<EventImg ref={fadeInFromBottom} src="./home/new-year-event.svg" />
 			<MobileEventImg ref={fadeInFromBottom} src="./home/new-year-event-mobile.svg" />
 			<ButtonWrapper>
-				<Button color="blue" height="60px">
-                    <a target="_blank" href="https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_newyear&utm_term=2024q4&utm_content=eta">投保立即抽</a>
-				</Button>
+                <a target="_blank" href="https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_newyear&utm_term=2024q4&utm_content=eta">
+				    <Button color="blue" height="60px">投保立即抽</Button>
+                </a>
 			</ButtonWrapper>
 			<Flowers src="./home/new-year-event-flower.svg" />
 			<MobileFlowers src="./home/new-year-event-flower-mobile.svg" />

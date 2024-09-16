@@ -141,6 +141,9 @@ const Buttons = styled.div`
     align-items: center;
     width: 1039px;
     gap: 73px;
+    > a {
+      width: 100%;
+    }
     @media (max-width: 1300px) {
         flex-direction: column;
         gap: 29px;
@@ -354,6 +357,9 @@ const ButtonContainer = styled.div`
     justify-content: center;
     width: 294px;
     z-index:1;
+    > a {
+      width: 100%;
+    }
     @media (max-width: 1300px) {
         width: 229px;
         top: 1930px;
@@ -474,9 +480,9 @@ const MgmPage = () => {
 
 				<People className="mgm-content" />
         <ButtonContainer>
-            <Button color="red">
-                <a target="_blank" href="https://e-commerce.transglobe.com.tw/member/missionActivities/etamgm?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_etamgm&utm_term=2024q4&utm_content=missionActivities">立即推薦親友</a>
-            </Button>
+          <a target="_blank" href="https://e-commerce.transglobe.com.tw/member/missionActivities/etamgm?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_etamgm&utm_term=2024q4&utm_content=missionActivities">
+            <Button color="red">立即推薦親友</Button>
+          </a>
         </ButtonContainer>
 
         <DesktopPart>
@@ -492,13 +498,12 @@ const MgmPage = () => {
 
 				<BlueBackground>
           <Buttons>
-            <Button color="yellow">
               <a className="xl:text-[1.25rem] xl:leading-none" href="https://e-commerce.transglobe.com.tw/member/missionActivities?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_mgmsearch&utm_term=2024q4&utm_content=missionActivities">
+                  <Button color="yellow">
                   推薦好友 <Br reverse />
                   成功筆數查詢
+                  </Button>
               </a>
-            </Button>
-            <Button color="yellow">
               {/* 此圖會跳頁會被NAVBAR蓋掉，所以先暴力解 */}
               <HashLink 
                 className="xl:text-[1.25rem]" 
@@ -509,12 +514,11 @@ const MgmPage = () => {
                   window.scrollTo({top: y, behavior: 'smooth'});
                 }}
               >
-                參加更多抽獎
+                <Button color="yellow">參加更多抽獎</Button>
               </HashLink>
-            </Button>
-            <Button color="white" hoverBgColor="#FF837E">
-              <Link className="xl:text-[1.25rem]" to="/policy">活動辦法</Link>
-            </Button>
+              <Link className="xl:text-[1.25rem]" to="/policy">
+                <Button color="white" hoverBgColor="#FF837E">活動辦法</Button>
+              </Link>
           </Buttons>
           <Building src="./mgm/mgm-building-mb.svg" />
         </BlueBackground>

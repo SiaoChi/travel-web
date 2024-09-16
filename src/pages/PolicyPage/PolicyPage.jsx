@@ -72,6 +72,9 @@ const Buttons = styled.div`
   display: flex;
   gap: 25px;
   margin-bottom: 37px;
+	> a {
+		width: 100%;
+	}
 	@media (max-width: 480px) {
 		width: 100%;
 	}
@@ -297,12 +300,12 @@ function PolicyPage() {
 					<Border />
 					<Spacer height={35} />
 					<Buttons>
-						<Button color="blue">
-							<Link to="/">旅行全球抽獎趣</Link>
-						</Button>
-						<Button color="blue">
-							<Link to="/mgm">分享全球樂透抽</Link>
-						</Button>
+						<Link to="/">
+							<Button color="blue">旅行全球抽獎趣</Button>
+						</Link>
+						<Link to="/mgm">
+							<Button color="blue">分享全球樂透抽</Button>
+						</Link>
 					</Buttons>
 				</Container>
 			</Background>

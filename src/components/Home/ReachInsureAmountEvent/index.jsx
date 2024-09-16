@@ -271,17 +271,17 @@ const ReachInsureAmountEvent = () => {
             <EventImgOne ref={fadeInFromBottom} src="./home/reach-insure-amount-event1.svg" className="event-content" id="img1" />
             <MobileEventImgOne ref={fadeInFromBottom} src="./home/reach-insure-amount-event1-mobile.svg"  className="event-content" id="img2" />
             <ButtonWrapperOne ref={fadeInFromBottom}>
-				<Button color="blue" height="60px">
-                    <a target="_blank" href={LINK}>投保立即抽</a>
-				</Button>
+				<a target="_blank" href={LINK}>
+                    <Button color="blue" height="60px">投保立即抽</Button>
+                </a>
 			</ButtonWrapperOne>
 
             <EventImgTwo ref={fadeInFromBottom} src="./home/reach-insure-amount-event2.svg" className="event-content" id="img3"/>
             <MobileEventImgTwo ref={fadeInFromBottom} src="./home/reach-insure-amount-event2-mobile.svg"  className="event-content" id="img4"/>
             <ButtonWrapperTwo ref={fadeInFromBottom}>
-				<Button color="blue" height="60px">
-                    <a target="_blank" href={LINK}>投保立即抽</a>
-				</Button>
+                <a target="_blank" href={LINK}>
+                    <Button color="blue" height="60px">投保立即抽</Button>
+                </a>
 			</ButtonWrapperTwo>
 
             <Flowers src="./home/reach-insure-amount-event-flower.svg" />

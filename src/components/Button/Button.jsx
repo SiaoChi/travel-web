@@ -121,6 +121,9 @@ Button.propTypes = {
 	children: PropTypes.node.isRequired,
 	onClick: PropTypes.func,
 	icon: PropTypes.node,
+  hoverBgColor: PropTypes.string,
+  width: PropTypes.string,
+  height: PropTypes.string,
 };
 
 export default Button;
