@@ -72,7 +72,8 @@ const Temple = styled.img`
         width: 430px;
     }
     @media (max-width: 376px) {
-        width: 385px;
+        width: 400px;
+        left: 7%;
     }
 `
 
