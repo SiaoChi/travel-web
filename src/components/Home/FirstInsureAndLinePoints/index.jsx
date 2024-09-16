@@ -99,9 +99,8 @@ const ButtonWrapperOne = styled.div`
 
 const People = styled.img`
     position: absolute;
-    left: 50%;
+    left: 17%;
     bottom: 244px;
-    transform: translate(-50%, 0);
     z-index: 10;
     @media (max-width: 1301px) {
         display: none;
@@ -110,7 +109,7 @@ const People = styled.img`
 
 const MobilePeople = styled.img`
     position: absolute;
-    left: 50%;
+    left: 6%;
     bottom: 120px;
     transform: translate(-50%, 0);
     @media (min-width: 1301px) {
@@ -333,14 +332,14 @@ const FirstInsureAndLinePoints = () => {
             {/* <BlueBackground src="./home/line-points-blue-background.svg" /> */}
             <MobileBlueBackground src="./home/line-points-blue-background-mobile.svg" />
 
-            <People src="./home/line-points-people.svg" className="event-content" id="img3" />
-            <MobilePeople src="./home/line-points-people-mobile.svg"  className="event-content" id="img4" />
+            <People ref={fadeInFromBottom} src="./home/line-points-people.svg" className="event-content" id="img3" />
+            <MobilePeople ref={fadeInFromBottom} src="./home/line-points-people-mobile.svg"  className="event-content" id="img4" />
 
             <EnglishTextTwo ref={fadeInFromLeft}>LINE<br/>POINTS</EnglishTextTwo>
 
             <MoreRewardTitle src="./home/line-points-event-title.svg" />
             <MoreRewardDesc>快推薦好友，就有機會獲得 LINE POINTS 喔！</MoreRewardDesc>
-            <ButtonWrapperTwo>
+            <ButtonWrapperTwo ref={fadeInFromBottom}>
 				<Link to="/mgm">
                     <Button color="red" height="60px">立即前往</Button>
                 </Link>

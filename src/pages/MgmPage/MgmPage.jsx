@@ -4,6 +4,7 @@ import { HashLink } from 'react-router-hash-link';
 import { Link } from "react-router-dom";
 import { gsap, useGSAP } from "../../gsap";
 import Button from "../../components/Button/Button";
+import { useAnimations } from "../../components/Animation/useAnimations";
 
 const Wrap = styled.div`
   padding-top: 90px;
@@ -351,8 +352,8 @@ const People = styled.div`
 
 const ButtonContainer = styled.div`
     position: absolute;
-    top: 2320px;
-    left: 50%;
+    top: 2290px;
+    left: 40%;
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
@@ -363,7 +364,8 @@ const ButtonContainer = styled.div`
     }
     @media (max-width: 1300px) {
         width: 229px;
-        top: 1930px;
+        top: 1900px;
+        left: 20%;
     }
 `;
 
@@ -416,6 +418,7 @@ const Building = styled.img`
 `;
 
 const MgmPage = () => {
+  const {fadeInFromBottom}= useAnimations();
 	const [isBlue, setIsBlue] = useState(true);
 
 	useGSAP(() => {
@@ -480,9 +483,9 @@ const MgmPage = () => {
         <BackgroundBuilding />
 
 				<People className="mgm-content" />
-        <ButtonContainer>
+        <ButtonContainer ref={fadeInFromBottom}>
           <a target="_blank" href="https://e-commerce.transglobe.com.tw/member/missionActivities/etamgm?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_etamgm&utm_term=2024q4&utm_content=missionActivities">
-            <Button color="red">立即推薦親友</Button>
+            <Button  color="red">立即推薦親友</Button>
           </a>
         </ButtonContainer>
 
