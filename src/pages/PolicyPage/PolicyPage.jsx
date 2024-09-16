@@ -135,8 +135,9 @@ const Label = styled.div`
 
 const Text = styled.div`
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
 	font-family: "Noto Sans TC";
+	padding-top: 10px;
 `;
 
 const Spacer = styled.div`
@@ -161,6 +162,13 @@ const Notice = styled.div`
 	@media (max-width: 480px) {
 		padding: 36px 34px;
 	}
+`;
+
+const Br = styled.br`
+  display: ${(props) => (props.reverse ? "block" : "none")};
+  @media (max-width: 1300px) {
+    display: ${(props) => (props.reverse ? "none" : "block")};
+  }
 `;
 
 function PolicyPage() {
@@ -211,6 +219,7 @@ function PolicyPage() {
 						<Label>活動辦法</Label>
 						<Text>
 							凡於活動期間內成功網路投保「國內外旅行平安險」，
+							<Br reverse />
 							並達指定活動條件，即符合該項抽獎資格。
 						</Text>
 					</Description>
@@ -265,7 +274,7 @@ function PolicyPage() {
 						<Label>活動辦法</Label>
 						<Text>
 							活動期間邀請親友成功投保國內外旅平險達指定筆數，
-							<br />
+							<Br reverse />
 							即符合LINE POINTS抽獎資格。
 						</Text>
 					</Description>
