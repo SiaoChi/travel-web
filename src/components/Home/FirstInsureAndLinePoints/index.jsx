@@ -14,6 +14,9 @@ const Section = styled.section`
         left: 50%;
         transform: translateX(-50%);
     }
+    @media (min-width: 450px) and (max-width: 576px) {
+        width: 575px;
+    }
 `
 
 const Italy = styled.img`
@@ -45,10 +48,11 @@ const MobileBlueBackground = styled.img`
     bottom: -25px;
     left: 50%;
     transform: translateX(-50%);
-    width: 460px;
+    width: 440px;
     @media (min-width: 1301px) {
         display: none;
     }
+
 `
 
 const Tower = styled.img`
@@ -116,6 +120,9 @@ const MobilePeople = styled.img`
     transform: translate(-50%, 0);
     @media (min-width: 1301px) {
         display: none;
+    }
+    @media (min-width: 450px) and (max-width: 576px) {
+        left: 18%;
     }
 `
 
@@ -276,6 +283,9 @@ const EnglishTextTwo = styled(EnglishText)`
     @media (max-width: 1301px) {
         top: 840px;
         left: 10%;
+    }
+    @media (min-width: 450px) and (max-width: 576px) {
+        left: 15%;
     }
 `
 
