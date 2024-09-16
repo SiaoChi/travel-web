@@ -229,6 +229,7 @@ const EnglishTitle = styled.p`
     font-weight: bold;
     letter-spacing: 2px;
     color: #2496F0;
+    font-family: 'Roboto';
     @media (max-width: 1300px) {
       font-size: 40px;
       line-height: 40px;

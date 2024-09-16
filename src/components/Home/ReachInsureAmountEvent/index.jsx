@@ -142,6 +142,7 @@ const EnglishText = styled.div`
     font-weight: bold;
     color: #2496F0;
     text-align: right;
+    font-family: 'Roboto';
     @media (max-width: 1301px) {
         top: 420px;
         left: 20%;

@@ -246,6 +246,7 @@ const EnglishText = styled.div`
     font-weight: bold;
     color: #FED430;
     z-index: 10;
+    font-family: 'Roboto';
     @media (max-width: 1301px) {
         left: 20%;
         font-size: 40px;
@@ -259,6 +260,7 @@ const EnglishTextOne = styled(EnglishText)`
     top: 580px;
     right: 87px;
     text-align: right;
+    font-family: 'Roboto';
     @media (max-width: 1301px) {
         transform: translateX(-40%);
     }
@@ -269,6 +271,7 @@ const EnglishTextTwo = styled(EnglishText)`
     top: 737px;
     left: 114px;
     text-align: left;
+    font-family: 'Roboto';
     @media (max-width: 1301px) {
         top: 840px;
         left: 10%;
