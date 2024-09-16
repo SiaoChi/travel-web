@@ -502,7 +502,7 @@ const MgmPage = () => {
 
 				<BlueBackground>
           <Buttons>
-              <a className="xl:text-[1.25rem] xl:leading-none" href="https://e-commerce.transglobe.com.tw/member/missionActivities?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_mgmsearch&utm_term=2024q4&utm_content=missionActivities">
+              <a target="_blank" className="xl:text-[1.25rem] xl:leading-none" href="https://e-commerce.transglobe.com.tw/member/missionActivities?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_mgmsearch&utm_term=2024q4&utm_content=missionActivities">
                   <Button color="yellow">
                   推薦好友 <Br reverse />
                   成功筆數查詢
