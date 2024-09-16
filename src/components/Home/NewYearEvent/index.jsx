@@ -183,6 +183,7 @@ const Surprise = styled.img`
     }
 `
 
+
 const ButtonWrapper = styled.div`
     position: absolute;
     bottom: 80px;
@@ -196,7 +197,7 @@ const ButtonWrapper = styled.div`
 `;
 
 const NewYearEvent = () => {
-    const { fadeIn , fadeInFromLeft, fadeInFromRight, fadeInFromBottom } = useAnimations();
+    const { fadeIn , fadeInFromLeft, fadeInAndPulse , fadeInFromBottom } = useAnimations();
 
     const sectionRef = useRef(null);
 
@@ -242,7 +243,7 @@ const NewYearEvent = () => {
 			</EnglishText>
 			<EventImg ref={fadeInFromBottom} src="./home/new-year-event.svg" />
 			<MobileEventImg ref={fadeInFromBottom} src="./home/new-year-event-mobile.svg" />
-            <Surprise src="./home/new-year-event-surprise.svg" />
+            <Surprise ref={fadeInAndPulse} src="./home/new-year-event-surprise.svg" />
 			<ButtonWrapper ref={fadeInFromBottom}>
                 <a target="_blank" href="https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_newyear&utm_term=2024q4&utm_content=eta">
 				    <Button color="blue" height="60px">投保立即抽</Button>
