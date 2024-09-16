@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Button from "../../Button"
 import { Link } from "react-router-dom"
 import { gsap, useGSAP } from "../../../gsap";
+import { useAnimations } from "../../Animation/useAnimations";
 
 const Section = styled.section`
     position: relative;
@@ -31,6 +32,7 @@ const BlueBackground = styled.img`
     position: absolute;
     bottom: -220px;
     width: 100%;
+    background-color: red;
     @media (max-width: 1301px) {
         display: none;
     }
@@ -52,9 +54,9 @@ const Tower = styled.img`
     left: 51px;
     @media (max-width: 1301px) {
         top: -100px;
-        left: 50%;
+        left: 4%;
         transform: translateX(-50%);
-        width: 400px;
+        width: 380px;
     }
     @media (max-width: 376px) {
         width: 375px;
@@ -74,7 +76,7 @@ const EventImg = styled.img`
 const MobileEventImg = styled.img`
     position: absolute;
     top: 260px;
-    left: 50%;
+    left: 15%;
     transform: translateX(-42%);
     @media (min-width: 1301px) {
         display: none;
@@ -90,7 +92,7 @@ const ButtonWrapperOne = styled.div`
     @media (max-width: 1301px) {
         width: 220px;
         top: 470px;
-        left: 50%;
+        left: 23%;
         transform: translateX(-50%);
     }
 `
@@ -100,6 +102,7 @@ const People = styled.img`
     left: 50%;
     bottom: 244px;
     transform: translate(-50%, 0);
+    z-index: 10;
     @media (max-width: 1301px) {
         display: none;
     }
@@ -147,6 +150,7 @@ const MoreRewardTitle = styled.img`
     bottom: 450px;
     translate: -50% 0;
     height: 50px;
+    z-index: 10;
     @media (max-width: 1301px) {
         bottom: 350px;
         height: 40px;
@@ -162,6 +166,7 @@ const MoreRewardDesc = styled.p`
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+    z-index: 10;
     @media (max-width: 1301px) {
         bottom: 280px;
         height: 40px;
@@ -201,7 +206,7 @@ const Title = styled.div`
     }
     @media (max-width: 1301px) {
         top: -40px;
-        left: 50%;
+        left: 14%;
         transform: translateX(-46%);
         width: 320px;
          > img {
@@ -226,7 +231,7 @@ const Desc = styled.div`
     }
     @media (max-width: 1301px) {
         top: 120px;
-        left: 50%;
+        left: 14%;
         transform: translateX(-42%);
         line-height: 35px;
         letter-spacing: 1px;
@@ -240,8 +245,9 @@ const EnglishText = styled.div`
     line-height: 65px;
     font-weight: bold;
     color: #FED430;
+    z-index: 10;
     @media (max-width: 1301px) {
-        left: 50%;
+        left: 20%;
         font-size: 40px;
         line-height: 40px;
         min-width: 300px;
@@ -265,12 +271,12 @@ const EnglishTextTwo = styled(EnglishText)`
     text-align: left;
     @media (max-width: 1301px) {
         top: 840px;
-        transform: translateX(-26%);
+        left: 10%;
     }
 `
 
 const FirstInsureAndLinePoints = () => {
-
+    const { fadeInFromBottom, fadeInFromLeft } = useAnimations();
     const sectionRef = useRef(null);
 
     useGSAP(() => {
@@ -299,35 +305,35 @@ const FirstInsureAndLinePoints = () => {
 
     return (
         <Section ref={sectionRef}>
-            <Tower id="sec3" src="./home/first-insure-event-tower.svg" />
+            <Tower ref={fadeInFromLeft} id="sec3" src="./home/first-insure-event-tower.svg" />
 
-            <EventImg src="./home/first-insure-event.svg" className="event-content" id="img1" />
-            <MobileEventImg src="./home/first-insure-event-mobile.svg" className="event-content" id="img2" />
-            <ButtonWrapperOne>
+            <EventImg ref={fadeInFromBottom} src="./home/first-insure-event.svg" className="event-content" id="img1" />
+            <MobileEventImg ref={fadeInFromBottom} src="./home/first-insure-event-mobile.svg" className="event-content" id="img2" />
+            <ButtonWrapperOne ref={fadeInFromBottom}>
 				<Button color="blue" height="60px">
-                    <a href="https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_first-time&utm_term=2024q4&utm_content=eta">投保立即抽</a>
+                    <a target="_blank" href="https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_first-time&utm_term=2024q4&utm_content=eta">投保立即抽</a>
 				</Button>
 			</ButtonWrapperOne>
-            <EnglishTextOne>PX MART<br/>COUPON</EnglishTextOne>
+            <EnglishTextOne ref={fadeInFromBottom}>PX MART<br/>COUPON</EnglishTextOne>
 
-            <Title>
+            <Title ref={fadeInFromLeft}>
                 <img src='./home/first-insure-event-title.svg' />
                 <img src='./home/common-title-lottery.svg' />
             </Title>
-            <Desc>
+            <Desc ref={fadeInFromLeft}>
                 <strong>2024/10/1~2025/1/31期間，</strong><br/>
                 <strong><span>首次</span>成功網路投保<span>「國內外旅平險」</span></strong><br/>
                 （限從未投保全球人壽任一險種者）
             </Desc>
             
             <Italy src="./home/first-insure-event-italy.svg" />
-            <BlueBackground src="./home/line-points-blue-background.svg" />
+            {/* <BlueBackground src="./home/line-points-blue-background.svg" /> */}
             <MobileBlueBackground src="./home/line-points-blue-background-mobile.svg" />
 
             <People src="./home/line-points-people.svg" className="event-content" id="img3" />
             <MobilePeople src="./home/line-points-people-mobile.svg"  className="event-content" id="img4" />
 
-            <EnglishTextTwo>LINE<br/>POINTS</EnglishTextTwo>
+            <EnglishTextTwo ref={fadeInFromLeft}>LINE<br/>POINTS</EnglishTextTwo>
 
             <MoreRewardTitle src="./home/line-points-event-title.svg" />
             <MoreRewardDesc>快推薦好友，就有機會獲得 LINE POINTS 喔！</MoreRewardDesc>

@@ -13,13 +13,17 @@ import ActionList, {
 } from "./ActionList";
 
 const Wrap = styled.div`
-  padding-top: 90px;
+  padding-top: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 500px) {
+    padding-top: 65px;
+  }
 `;
 
 const Background = styled.div`
@@ -88,7 +92,6 @@ const TitleAirplaine = styled.img`
   width: 419px;
   position: absolute;
   top: 4px;
-  left: -10px;
 `;
 
 const BannerWrapper = styled.div`

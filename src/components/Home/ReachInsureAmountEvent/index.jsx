@@ -2,6 +2,7 @@ import { useRef } from "react"
 import styled from "styled-components"
 import Button from "../../Button"
 import { gsap, useGSAP } from "../../../gsap";
+import { useAnimations } from "../../Animation/useAnimations";
 
 const Section = styled.section`
     position: relative;
@@ -66,12 +67,12 @@ const Temple = styled.img`
     width: 678px;
     @media (max-width: 1301px) {
         top: 80px;
-        left: 50%;
+        left: 4%;
         transform: translateX(-50%);
-        width: 400px;
+        width: 430px;
     }
     @media (max-width: 376px) {
-        width: 375px;
+        width: 385px;
     }
 `
 
@@ -100,7 +101,7 @@ const Title = styled.div`
     }
     @media (max-width: 1301px) {
         top: 100px;
-        left: 50%;
+        left: 14%;
         transform: translateX(-46%);
         width: 320px;
          > img {
@@ -123,7 +124,7 @@ const Desc = styled.div`
     }
     @media (max-width: 1301px) {
         top: 260px;
-        left: 50%;
+        left: 14%;
         transform: translateX(-48%);
         font-size: 20px;
         line-height: 35px;
@@ -143,7 +144,7 @@ const EnglishText = styled.div`
     text-align: right;
     @media (max-width: 1301px) {
         top: 420px;
-        left: 50%;
+        left: 20%;
         transform: translateX(-40%);
         font-size: 40px;
         line-height: 40px;
@@ -164,7 +165,7 @@ const EventImgOne = styled.img`
 const MobileEventImgOne = styled.img`
     position: absolute;
     top: 520px;
-    left: 50%;
+    left: 5%;
     transform: translateX(-52%);
     @media (min-width: 1301px) {
         display: none;
@@ -181,7 +182,7 @@ const ButtonWrapperOne = styled.div`
     @media (max-width: 1301px) {
         width: 220px;
         top: 790px;
-        left: 50%;
+        left: 24%;
         transform: translateX(-45%);
     }
 `
@@ -198,7 +199,7 @@ const EventImgTwo = styled.img`
 const MobileEventImgTwo = styled.img`
     position: absolute;
     top: 860px;
-    left: 50%;
+    left: 15%;
     transform: translateX(-38%);
     @media (min-width: 1301px) {
         display: none;
@@ -214,7 +215,7 @@ const ButtonWrapperTwo = styled.div`
     @media (max-width: 1301px) {
         width: 220px;
         top: 1150px;
-        left: 50%;
+        left: 24%;
         transform: translateX(-45%);
     }
 `
@@ -222,7 +223,7 @@ const ButtonWrapperTwo = styled.div`
 const LINK = "https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_domestic%26foreign&utm_term=2024q4&utm_content=eta"
 
 const ReachInsureAmountEvent = () => {
-
+    const { fadeInFromBottom, fadeInFromLeft, fadeInFromRight } = useAnimations();
     const sectionRef = useRef(null);
 
     const xMapping = {
@@ -251,35 +252,35 @@ const ReachInsureAmountEvent = () => {
  
     return (
         <Section ref={sectionRef}>
-            <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
+            {/* <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" /> */}
             <MobileYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-mobile.svg" />
-            <Temple id="sec2" src="./home/reach-insure-amount-event-temple.svg" />
+            <Temple ref={fadeInFromLeft} id="sec2" src="./home/reach-insure-amount-event-temple.svg" />
             <Mountain src="./home/reach-insure-amount-event-mountain.svg" />
 
-            <Title >
+            <Title ref={fadeInFromLeft}>
                 <img src='./home/reach-insure-amount-event-title.svg' />
                 <img src='./home/common-title-lottery.svg' />
             </Title>
-            <Desc>
+            <Desc ref={fadeInFromLeft}>
                 2024/10/1~2025/1/31期間，<br/>
                 成功網路投保<span>「國外旅平險」</span>，單筆保費滿額即可抽！
             </Desc>
 
-            <EnglishText>TRAVEL<br/>JAPAN<br/>TOKYO</EnglishText>
+            <EnglishText ref={fadeInFromBottom}>TRAVEL<br/>JAPAN<br/>TOKYO</EnglishText>
 
-            <EventImgOne src="./home/reach-insure-amount-event1.svg" className="event-content" id="img1" />
-            <MobileEventImgOne src="./home/reach-insure-amount-event1-mobile.svg"  className="event-content" id="img2" />
-            <ButtonWrapperOne>
+            <EventImgOne ref={fadeInFromBottom} src="./home/reach-insure-amount-event1.svg" className="event-content" id="img1" />
+            <MobileEventImgOne ref={fadeInFromBottom} src="./home/reach-insure-amount-event1-mobile.svg"  className="event-content" id="img2" />
+            <ButtonWrapperOne ref={fadeInFromBottom}>
 				<Button color="blue" height="60px">
-                    <a href={LINK}>投保立即抽</a>
+                    <a target="_blank" href={LINK}>投保立即抽</a>
 				</Button>
 			</ButtonWrapperOne>
 
-            <EventImgTwo src="./home/reach-insure-amount-event2.svg" className="event-content" id="img3"/>
-            <MobileEventImgTwo src="./home/reach-insure-amount-event2-mobile.svg"  className="event-content" id="img4"/>
-            <ButtonWrapperTwo>
+            <EventImgTwo ref={fadeInFromBottom} src="./home/reach-insure-amount-event2.svg" className="event-content" id="img3"/>
+            <MobileEventImgTwo ref={fadeInFromBottom} src="./home/reach-insure-amount-event2-mobile.svg"  className="event-content" id="img4"/>
+            <ButtonWrapperTwo ref={fadeInFromBottom}>
 				<Button color="blue" height="60px">
-                    <a href={LINK}>投保立即抽</a>
+                    <a target="_blank" href={LINK}>投保立即抽</a>
 				</Button>
 			</ButtonWrapperTwo>
 

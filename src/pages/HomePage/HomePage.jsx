@@ -11,6 +11,7 @@ const Wrap = styled.div`
   display: flex;
   justify-content: center;
   overflow: hidden;
+  position: relative;
 `;
 
 const Container = styled.div`
@@ -19,17 +20,22 @@ const Container = styled.div`
   position: relative;
 `;
 
+
+
 const VerticalLine = styled.div`
   height: 2563px;
   width: 1px;
   position: absolute;
   left: 112px;
   top: 680px;
+  z-index: 10;
 	width: 50px;
 	border-left: 1px solid black;
 	@media screen and (max-width: 1300px) {
 		left: 30px;
 		top: 880px;
+		z-index: 0;
+		display: none;
 	}
 `;
 
@@ -52,6 +58,74 @@ const Pointer = styled.div`
 	bottom: 0;
 	left: 0;
 	transform: translate(-50%, 0%);
+`;
+
+
+const YellowPolygon = styled.img`
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width:1180px;
+	z-index: 0;
+    @media (max-width: 1560px) {
+        top: 500px;
+        left: 0px;
+        width: 800px;
+    }
+
+    @media (max-width: 1301px) {
+        top: 617px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 414px;
+    }
+`;
+
+
+
+const YellowTrapezoid = styled.img`
+    display: none;
+    @media (max-width: 1560px) and (min-width: 1301px) {
+        display: block;
+        position: absolute;
+        top: 1500px;
+        z-index: 0;
+        width: 100%;
+    }
+`;
+
+const LargeYellowTrapezoid = styled.img`
+    position: absolute;
+    top: 1480px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 0;
+    @media (max-width: 1560px) {
+        display: none;
+    }
+`;
+
+const BlueBackground = styled.img`
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    z-index: 0;
+    @media (max-width: 1301px) {
+        display: none;
+    }`;
+
+const LargeBlueBackground = styled.img`
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    z-index: 0;
+	  @media (max-width: 1560px) {
+        display: none;
+    }
 `;
 
 function HomePage() {
@@ -94,6 +168,9 @@ function HomePage() {
 
 	return (
 		<Wrap>
+			<YellowPolygon src="./home/home-polygon.svg" />
+			<YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
+			<LargeYellowTrapezoid src="./home-yellow-bg-2.svg" />
 			<Container>
 				<EventBanner />
 				<NewYearEvent />
@@ -104,6 +181,8 @@ function HomePage() {
 					<Pointer id="pointer" />
 				</VerticalLine>
 			</Container>
+			 <BlueBackground src="./home-blue-bg-3.svg" />
+			 <LargeBlueBackground src="./home-blue-lg-bg-3.svg" />
 		</Wrap>
 	);
 }
