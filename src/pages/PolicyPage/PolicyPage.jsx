@@ -91,7 +91,7 @@ const TitleText = styled.img`
   width: 419px;
 `;
 
-const TitleAirplaine = styled.img`
+const TitleADecoration = styled.img`
   width: 419px;
   position: absolute;
   top: 4px;
@@ -116,6 +116,7 @@ const Description = styled.div`
 
 const Label = styled.div`
   width: 183px;
+  min-width: 183px;
   height: 42px;
   background-color: #2496F0;
   color: #FFFAF1;
@@ -128,6 +129,7 @@ const Label = styled.div`
 	letter-spacing: 2px;
 	@media (max-width: 480px) {
 		width: 128px;
+		min-width: 128px;
 	}
 `;
 
@@ -196,7 +198,7 @@ function PolicyPage() {
 					<Border />
 					<BannerWrapper id="sec1">
 						<TitleText src="./home/event-banner-title.png" />
-						<TitleAirplaine src="./home/event-banner-airplane.png" />
+						<TitleADecoration src="./home/event-banner-airplane.png" />
 					</BannerWrapper>
 					<Description>
 						<Label>活動期間</Label>
@@ -248,8 +250,10 @@ function PolicyPage() {
 			</Background>
 			<Background bg="#FED430">
 				<Container id="sec2">
-					<img src="./policy/event2-banner.svg" alt="event2-banner" />
-					<Spacer height={66} />
+					<BannerWrapper id="sec1">
+						<TitleText src="./mgm/mgm-title.png" />
+						<TitleADecoration src="./mgm/mgm-title-p.png" />
+					</BannerWrapper>
 					<Description>
 						<Label>活動期間</Label>
 						<Text>2024/10/1-2025/1/31</Text>
