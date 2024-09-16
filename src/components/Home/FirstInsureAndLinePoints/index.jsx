@@ -246,6 +246,7 @@ const EnglishText = styled.div`
     font-weight: bold;
     color: #FED430;
     z-index: 10;
+    font-family: 'Roboto';
     @media (max-width: 1301px) {
         left: 20%;
         font-size: 40px;
@@ -259,6 +260,7 @@ const EnglishTextOne = styled(EnglishText)`
     top: 580px;
     right: 87px;
     text-align: right;
+    font-family: 'Roboto';
     @media (max-width: 1301px) {
         transform: translateX(-40%);
     }
@@ -269,6 +271,7 @@ const EnglishTextTwo = styled(EnglishText)`
     top: 737px;
     left: 114px;
     text-align: left;
+    font-family: 'Roboto';
     @media (max-width: 1301px) {
         top: 840px;
         left: 10%;
@@ -310,9 +313,9 @@ const FirstInsureAndLinePoints = () => {
             <EventImg ref={fadeInFromBottom} src="./home/first-insure-event.svg" className="event-content" id="img1" />
             <MobileEventImg ref={fadeInFromBottom} src="./home/first-insure-event-mobile.svg" className="event-content" id="img2" />
             <ButtonWrapperOne ref={fadeInFromBottom}>
-				<Button color="blue" height="60px">
-                    <a target="_blank" href="https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_first-time&utm_term=2024q4&utm_content=eta">投保立即抽</a>
-				</Button>
+                <a target="_blank" href="https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_first-time&utm_term=2024q4&utm_content=eta">
+				    <Button color="blue" height="60px">投保立即抽</Button>
+                </a>
 			</ButtonWrapperOne>
             <EnglishTextOne ref={fadeInFromBottom}>PX MART<br/>COUPON</EnglishTextOne>
 
@@ -338,14 +341,14 @@ const FirstInsureAndLinePoints = () => {
             <MoreRewardTitle src="./home/line-points-event-title.svg" />
             <MoreRewardDesc>快推薦好友，就有機會獲得 LINE POINTS 喔！</MoreRewardDesc>
             <ButtonWrapperTwo>
-				<Button color="red" height="60px">
-                    <Link to="/mgm">立即前往</Link>
-				</Button>
+				<Link to="/mgm">
+                    <Button color="red" height="60px">立即前往</Button>
+                </Link>
 			</ButtonWrapperTwo>
             <ButtonWrapperThree>
-				<Button color="white" height="60px" hoverBgColor="#FF837E">
-                    <Link to="/policy">活動辦法</Link>
-				</Button>
+				<Link to="/policy">
+                    <Button color="white" height="60px" hoverBgColor="#FF837E">活動辦法</Button>
+                </Link>
 			</ButtonWrapperThree>
 
             <Flower src="./home/first-insure-line-points-flower.svg"/>

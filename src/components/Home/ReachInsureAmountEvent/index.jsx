@@ -80,8 +80,9 @@ const Mountain = styled.img`
     position: absolute;
     top: 220px;
     right: -40px;
-    width: 428px;
+    width: 700px;
     @media (max-width: 1301px) {
+        width: 428px;
         top: 380px;
         left: 50%;
         transform: translateX(-40%);
@@ -142,6 +143,7 @@ const EnglishText = styled.div`
     font-weight: bold;
     color: #2496F0;
     text-align: right;
+    font-family: 'Roboto';
     @media (max-width: 1301px) {
         top: 420px;
         left: 20%;
@@ -271,17 +273,17 @@ const ReachInsureAmountEvent = () => {
             <EventImgOne ref={fadeInFromBottom} src="./home/reach-insure-amount-event1.svg" className="event-content" id="img1" />
             <MobileEventImgOne ref={fadeInFromBottom} src="./home/reach-insure-amount-event1-mobile.svg"  className="event-content" id="img2" />
             <ButtonWrapperOne ref={fadeInFromBottom}>
-				<Button color="blue" height="60px">
-                    <a target="_blank" href={LINK}>投保立即抽</a>
-				</Button>
+				<a target="_blank" href={LINK}>
+                    <Button color="blue" height="60px">投保立即抽</Button>
+                </a>
 			</ButtonWrapperOne>
 
             <EventImgTwo ref={fadeInFromBottom} src="./home/reach-insure-amount-event2.svg" className="event-content" id="img3"/>
             <MobileEventImgTwo ref={fadeInFromBottom} src="./home/reach-insure-amount-event2-mobile.svg"  className="event-content" id="img4"/>
             <ButtonWrapperTwo ref={fadeInFromBottom}>
-				<Button color="blue" height="60px">
-                    <a target="_blank" href={LINK}>投保立即抽</a>
-				</Button>
+                <a target="_blank" href={LINK}>
+                    <Button color="blue" height="60px">投保立即抽</Button>
+                </a>
 			</ButtonWrapperTwo>
 
             <Flowers src="./home/reach-insure-amount-event-flower.svg" />

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { useEffect, useState } from "react";
 
 const Section = styled.section`
@@ -60,10 +60,19 @@ const BannerTitle = styled.div`
     }
 `;
 
+const fadeIn = keyframes`
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+`;
+
 const TitleText = styled.img`
     padding-top: 70px;
     width: 486px;
-    animation: fadeIn 1s ease-in-out backwards;
+    animation: ${fadeIn} 1s ease-in-out backwards;
 `;
 
 const TitleAirplaine = styled.img`
@@ -71,7 +80,7 @@ const TitleAirplaine = styled.img`
     position: absolute;
     top: 58px;
     left: -10px;
-    animation: fadeIn 1s ease-in-out backwards;
+    animation: ${fadeIn} 1s ease-in-out backwards;
     animation-delay: .5s;
     @media (max-width: 1300px) {
         top: 65px;
@@ -115,6 +124,7 @@ const EnglishTitle = styled.p`
     font-weight: bold;
     letter-spacing: 2px;
     color: #2496F0;
+    font-family: 'Roboto';
     @media (max-width: 1301px) {
         font-size: 40px;
         line-height: 45px;
@@ -184,7 +194,6 @@ const MobileLineTwo = styled.img`
 
 const EventBanner = () => {
     
-
 	const [isBlue, setIsBlue] = useState(true);
 
 	useEffect(() => {

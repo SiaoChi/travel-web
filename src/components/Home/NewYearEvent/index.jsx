@@ -139,6 +139,7 @@ const EnglishText = styled.div`
     font-weight: bold;
     color: #FED430;
     text-align: right;
+    font-family: 'Roboto';
     @media (max-width: 1301px) {
         top: 260px;
         left: 20%;
@@ -160,13 +161,27 @@ const EventImg = styled.img`
 
 const MobileEventImg = styled.img`
     position: absolute;
-    top: 330px;
+    top: 370px;
     transform: translateX(-50%);
     width: 414px;
     @media (min-width: 1301px) {
         display: none;
     }
 `;
+
+
+const Surprise = styled.img`
+    position: absolute;
+    bottom: 350px;
+    right: 560px;
+    @media (max-width: 1301px) {
+        top: 330px;
+        left: 27px;
+        bottom: unset;
+        right: unset;
+        width: 104px;
+    }
+`
 
 const ButtonWrapper = styled.div`
     position: absolute;
@@ -228,10 +243,11 @@ const NewYearEvent = () => {
 			</EnglishText>
 			<EventImg ref={fadeInFromBottom} src="./home/new-year-event.svg" />
 			<MobileEventImg ref={fadeInFromBottom} src="./home/new-year-event-mobile.svg" />
+            <Surprise src="./home/new-year-event-surprise.svg" />
 			<ButtonWrapper>
-				<Button color="blue" height="60px">
-                    <a target="_blank" href="https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_newyear&utm_term=2024q4&utm_content=eta">投保立即抽</a>
-				</Button>
+                <a target="_blank" href="https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_newyear&utm_term=2024q4&utm_content=eta">
+				    <Button color="blue" height="60px">投保立即抽</Button>
+                </a>
 			</ButtonWrapper>
 			<Flowers src="./home/new-year-event-flower.svg" />
 			<MobileFlowers src="./home/new-year-event-flower-mobile.svg" />

@@ -72,6 +72,9 @@ const Buttons = styled.div`
   display: flex;
   gap: 25px;
   margin-bottom: 37px;
+	> a {
+		width: 100%;
+	}
 	@media (max-width: 480px) {
 		width: 100%;
 	}
@@ -88,7 +91,7 @@ const TitleText = styled.img`
   width: 419px;
 `;
 
-const TitleAirplaine = styled.img`
+const TitleADecoration = styled.img`
   width: 419px;
   position: absolute;
   top: 4px;
@@ -113,6 +116,7 @@ const Description = styled.div`
 
 const Label = styled.div`
   width: 183px;
+  min-width: 183px;
   height: 42px;
   background-color: #2496F0;
   color: #FFFAF1;
@@ -125,13 +129,15 @@ const Label = styled.div`
 	letter-spacing: 2px;
 	@media (max-width: 480px) {
 		width: 128px;
+		min-width: 128px;
 	}
 `;
 
 const Text = styled.div`
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
 	font-family: "Noto Sans TC";
+	padding-top: 10px;
 `;
 
 const Spacer = styled.div`
@@ -156,6 +162,13 @@ const Notice = styled.div`
 	@media (max-width: 480px) {
 		padding: 36px 34px;
 	}
+`;
+
+const Br = styled.br`
+  display: ${(props) => (props.reverse ? "block" : "none")};
+  @media (max-width: 1300px) {
+    display: ${(props) => (props.reverse ? "none" : "block")};
+  }
 `;
 
 function PolicyPage() {
@@ -193,7 +206,7 @@ function PolicyPage() {
 					<Border />
 					<BannerWrapper id="sec1">
 						<TitleText src="./home/event-banner-title.png" />
-						<TitleAirplaine src="./home/event-banner-airplane.png" />
+						<TitleADecoration src="./home/event-banner-airplane.png" />
 					</BannerWrapper>
 					<Description>
 						<Label>活動期間</Label>
@@ -206,6 +219,7 @@ function PolicyPage() {
 						<Label>活動辦法</Label>
 						<Text>
 							凡於活動期間內成功網路投保「國內外旅行平安險」，
+							<Br reverse />
 							並達指定活動條件，即符合該項抽獎資格。
 						</Text>
 					</Description>
@@ -245,8 +259,10 @@ function PolicyPage() {
 			</Background>
 			<Background bg="#FED430">
 				<Container id="sec2">
-					<img src="./policy/event2-banner.svg" alt="event2-banner" />
-					<Spacer height={66} />
+					<BannerWrapper id="sec1">
+						<TitleText src="./mgm/mgm-title.png" />
+						<TitleADecoration src="./mgm/mgm-title-p.png" />
+					</BannerWrapper>
 					<Description>
 						<Label>活動期間</Label>
 						<Text>2024/10/1-2025/1/31</Text>
@@ -258,7 +274,7 @@ function PolicyPage() {
 						<Label>活動辦法</Label>
 						<Text>
 							活動期間邀請親友成功投保國內外旅平險達指定筆數，
-							<br />
+							<Br reverse />
 							即符合LINE POINTS抽獎資格。
 						</Text>
 					</Description>
@@ -297,12 +313,12 @@ function PolicyPage() {
 					<Border />
 					<Spacer height={35} />
 					<Buttons>
-						<Button color="blue">
-							<Link to="/">旅行全球抽獎趣</Link>
-						</Button>
-						<Button color="blue">
-							<Link to="/mgm">分享全球樂透抽</Link>
-						</Button>
+						<Link to="/">
+							<Button color="blue">旅行全球抽獎趣</Button>
+						</Link>
+						<Link to="/mgm">
+							<Button color="blue">分享全球樂透抽</Button>
+						</Link>
 					</Buttons>
 				</Container>
 			</Background>
