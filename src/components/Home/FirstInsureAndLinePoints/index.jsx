@@ -10,17 +10,19 @@ const Section = styled.section`
     height: 1429px;
     @media (max-width: 1301px) {
         height: 1529px;
-        width: 414px;
+        width: 440px;
         left: 50%;
         transform: translateX(-50%);
     }
 `
 
 const Italy = styled.img`
-    position: absolute;
+    display: none;
     top: 414px;
     left: 244px;
     @media (max-width: 1301px) {
+        display: block;
+        position: absolute;
         top: 620px;
         left: 50%;
         transform: translateX(-60%);
@@ -43,7 +45,7 @@ const MobileBlueBackground = styled.img`
     bottom: -25px;
     left: 50%;
     transform: translateX(-50%);
-    width: 414px;
+    width: 460px;
     @media (min-width: 1301px) {
         display: none;
     }
@@ -109,7 +111,7 @@ const People = styled.img`
 
 const MobilePeople = styled.img`
     position: absolute;
-    left: 6%;
+    left: 9%;
     bottom: 120px;
     transform: translate(-50%, 0);
     @media (min-width: 1301px) {

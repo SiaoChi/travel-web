@@ -10,7 +10,7 @@ const Section = styled.section`
     @media (max-width: 1301px) {
         overflow: hidden;
         height: 1390px;
-        width: 414px;
+        width: 440px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -31,7 +31,7 @@ const MobileYellowTrapezoid = styled.img`
     top: -50px;
     left: 50%;
     transform: translateX(-50%);
-    width: 414px;
+    width: 440px;
     @media (min-width: 1301px) {
         display: none;
     }
