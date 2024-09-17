@@ -12,19 +12,6 @@ const Section = styled.section`
     }
 `;
 
-const YellowPolygon = styled.img`
-    position: absolute;
-    top: 380px;
-    left: 0;
-    width: 755px;
-    @media (max-width: 1301px) {
-        top: 617px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 414px;
-    }
-`;
-
 const Video = styled.video`
     position: absolute;
     top: 0;
@@ -69,10 +56,21 @@ const fadeIn = keyframes`
     }
 `;
 
+const zoomInAnimation = keyframes`
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+`;
+
 const TitleText = styled.img`
     padding-top: 70px;
     width: 486px;
-    animation: ${fadeIn} 1s ease-in-out backwards;
+    animation: ${zoomInAnimation} 1s ease-in-out backwards;
 `;
 
 const TitleAirplaine = styled.img`
@@ -137,18 +135,6 @@ const EnglishTitle = styled.p`
     }
 `;
 
-const BgFlowers = styled.img`
-    position: absolute;
-    right: 50px;
-    width: 795px;
-    @media (max-width: 1301px) {
-        width: 414px;
-        height: 294px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-`;
-
 const LineOne = styled.img`
     position: absolute;
     top: 308px;
@@ -167,17 +153,6 @@ const MobileLineOne = styled.img`
         top: 240px;
         left: 0;
         width: 80px;
-    }
-`;
-
-const LineTwo = styled.img`
-    position: absolute;
-    top: 300px;
-    right: 0;
-    width: 383px;
-    transform:rotate(-5deg);  
-    @media (max-width: 1301px) {
-        display: none;
     }
 `;
 

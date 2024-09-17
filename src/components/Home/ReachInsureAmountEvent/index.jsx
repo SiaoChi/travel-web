@@ -10,7 +10,7 @@ const Section = styled.section`
     @media (max-width: 1301px) {
         overflow: hidden;
         height: 1390px;
-        width: 414px;
+        width: 440px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -31,7 +31,7 @@ const MobileYellowTrapezoid = styled.img`
     top: -50px;
     left: 50%;
     transform: translateX(-50%);
-    width: 414px;
+    width: 440px;
     @media (min-width: 1301px) {
         display: none;
     }
@@ -72,7 +72,8 @@ const Temple = styled.img`
         width: 430px;
     }
     @media (max-width: 376px) {
-        width: 385px;
+        width: 400px;
+        left: 7%;
     }
 `
 
@@ -265,7 +266,7 @@ const ReachInsureAmountEvent = () => {
             </Title>
             <Desc ref={fadeInFromLeft}>
                 2024/10/1~2025/1/31期間，<br/>
-                成功網路投保<span>「國外旅平險」</span>，單筆保費滿額即可抽！
+                成功網路投保<span>「國內外旅平險」</span>，單筆保費滿額即可抽！
             </Desc>
 
             <EnglishText ref={fadeInFromBottom}>TRAVEL<br/>JAPAN<br/>TOKYO</EnglishText>

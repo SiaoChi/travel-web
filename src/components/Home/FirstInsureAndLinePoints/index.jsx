@@ -10,17 +10,22 @@ const Section = styled.section`
     height: 1429px;
     @media (max-width: 1301px) {
         height: 1529px;
-        width: 414px;
+        width: 440px;
         left: 50%;
         transform: translateX(-50%);
+    }
+    @media (min-width: 450px) and (max-width: 576px) {
+        width: 575px;
     }
 `
 
 const Italy = styled.img`
-    position: absolute;
+    display: none;
     top: 414px;
     left: 244px;
     @media (max-width: 1301px) {
+        display: block;
+        position: absolute;
         top: 620px;
         left: 50%;
         transform: translateX(-60%);
@@ -43,10 +48,11 @@ const MobileBlueBackground = styled.img`
     bottom: -25px;
     left: 50%;
     transform: translateX(-50%);
-    width: 414px;
+    width: 440px;
     @media (min-width: 1301px) {
         display: none;
     }
+
 `
 
 const Tower = styled.img`
@@ -60,6 +66,7 @@ const Tower = styled.img`
     }
     @media (max-width: 376px) {
         width: 375px;
+        left: 6%;
     }
 `
 
@@ -81,6 +88,9 @@ const MobileEventImg = styled.img`
     @media (min-width: 1301px) {
         display: none;
     }
+    @media (min-width: 450px) and (max-width: 576px) {
+        left: 20%;
+    }
 `
 
 const ButtonWrapperOne = styled.div`
@@ -95,13 +105,15 @@ const ButtonWrapperOne = styled.div`
         left: 23%;
         transform: translateX(-50%);
     }
+     @media (min-width: 450px) and (max-width: 576px) {
+        left: 25%;
+    }
 `
 
 const People = styled.img`
     position: absolute;
-    left: 50%;
+    left: 17%;
     bottom: 244px;
-    transform: translate(-50%, 0);
     z-index: 10;
     @media (max-width: 1301px) {
         display: none;
@@ -110,11 +122,16 @@ const People = styled.img`
 
 const MobilePeople = styled.img`
     position: absolute;
-    left: 50%;
+    left: 9%;
     bottom: 120px;
     transform: translate(-50%, 0);
+    width: 80%;
     @media (min-width: 1301px) {
         display: none;
+    }
+    @media (min-width: 450px) and (max-width: 576px) {
+        left: 18%;
+        width: 65%;
     }
 `
 
@@ -213,6 +230,9 @@ const Title = styled.div`
             height: 40px;
         }
     }
+    @media (min-width: 450px) and (max-width: 576px) {
+        left: 120px;
+    }
 `
 
 const Desc = styled.div`
@@ -237,6 +257,9 @@ const Desc = styled.div`
         letter-spacing: 1px;
         width: 350px;
         font-size: 16px;
+    }
+    @media (min-width: 450px) and (max-width: 576px) {
+        left: 20%;
     }
 `
 
@@ -275,6 +298,9 @@ const EnglishTextTwo = styled(EnglishText)`
     @media (max-width: 1301px) {
         top: 840px;
         left: 10%;
+    }
+    @media (min-width: 450px) and (max-width: 576px) {
+        left: 15%;
     }
 `
 
@@ -333,14 +359,14 @@ const FirstInsureAndLinePoints = () => {
             {/* <BlueBackground src="./home/line-points-blue-background.svg" /> */}
             <MobileBlueBackground src="./home/line-points-blue-background-mobile.svg" />
 
-            <People src="./home/line-points-people.svg" className="event-content" id="img3" />
-            <MobilePeople src="./home/line-points-people-mobile.svg"  className="event-content" id="img4" />
+            <People ref={fadeInFromBottom} src="./home/line-points-people.svg" className="event-content" id="img3" />
+            <MobilePeople ref={fadeInFromBottom} src="./home/line-points-people-mobile.svg"  className="event-content" id="img4" />
 
             <EnglishTextTwo ref={fadeInFromLeft}>LINE<br/>POINTS</EnglishTextTwo>
 
             <MoreRewardTitle src="./home/line-points-event-title.svg" />
             <MoreRewardDesc>快推薦好友，就有機會獲得 LINE POINTS 喔！</MoreRewardDesc>
-            <ButtonWrapperTwo>
+            <ButtonWrapperTwo ref={fadeInFromBottom}>
 				<Link to="/mgm">
                     <Button color="red" height="60px">立即前往</Button>
                 </Link>

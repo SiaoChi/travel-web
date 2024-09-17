@@ -13,7 +13,7 @@ import ActionList, {
 } from "./ActionList";
 
 const Wrap = styled.div`
-  padding-top: 80px;
+  padding-top: 73px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,7 +32,6 @@ const Background = styled.div`
   background-color: ${(props) => props.bg || "#FFF5CD"};
   display: flex;
   justify-content: center;
-  z-index: ${(props) => props.zIndex || 0};
 `;
 
 const Container = styled.div`
@@ -43,6 +42,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+	z-index: 2;
 	@media (max-width: 850px) {
 		padding: 62px 60px 49px;
 	}
@@ -256,6 +256,7 @@ function PolicyPage() {
 						<Details />
 					</Accordion>
 				</Container>
+				<Flower src="./policy/flower.svg" alt="" />
 			</Background>
 			<Background bg="#FED430">
 				<Container id="sec2">
@@ -322,7 +323,6 @@ function PolicyPage() {
 					</Buttons>
 				</Container>
 			</Background>
-			<Flower src="./policy/flower.svg" alt="" />
 		</Wrap>
 	);
 }

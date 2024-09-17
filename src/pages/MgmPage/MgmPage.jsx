@@ -4,6 +4,7 @@ import { HashLink } from 'react-router-hash-link';
 import { Link } from "react-router-dom";
 import { gsap, useGSAP } from "../../gsap";
 import Button from "../../components/Button/Button";
+import { useAnimations } from "../../components/Animation/useAnimations";
 
 const Wrap = styled.div`
   padding-top: 90px;
@@ -55,16 +56,6 @@ const YellowBackground = styled.div`
   @media (max-width: 1300px) {
     top: 530px;
     aspect-ratio: 410 / 700;
-  }
-`;
-
-const BannerFlower = styled.img`
-  position: absolute;
-  top: 0;
-  right: 20px;
-  width: 900px;
-  @media (max-width: 1300px) {
-    display: none;
   }
 `;
 
@@ -270,6 +261,7 @@ const LinePointsText = styled.img`
     left: 50%;
     transform: translateX(-50%);
     width: 387px;
+    z-index: 1;
     @media (max-width: 1300px) {
       top: 850px;
       width: 340px;
@@ -308,7 +300,8 @@ const MgmContentTwo = styled.div`
       top: 1136px;
       width: 409px;
       height: 187px;
-      background: url('./mgm/mgm-content2-mobile.svg') no-repeat -10px center;
+      background: url('./mgm/mgm-content2-mobile.svg') no-repeat center center;
+      transform: translateX(-50%);
     }
 `;
 
@@ -326,7 +319,8 @@ const MgmContentThree = styled.div`
       top: 1300px;
       width: 414px;
       height: 189px;
-      background: url('./mgm/mgm-content3-mobile.svg') no-repeat 5px center;
+      background: url('./mgm/mgm-content3-mobile.svg') no-repeat center center;
+      transform: translateX(-50%);
     }
 `;
 
@@ -351,8 +345,8 @@ const People = styled.div`
 
 const ButtonContainer = styled.div`
     position: absolute;
-    top: 2320px;
-    left: 50%;
+    top: 2290px;
+    left: 40%;
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
@@ -363,7 +357,11 @@ const ButtonContainer = styled.div`
     }
     @media (max-width: 1300px) {
         width: 229px;
-        top: 1930px;
+        top: 1900px;
+        left: 20%;
+    }
+    @media (min-width: 450px) and (max-width: 576px) {
+        left: 23%;
     }
 `;
 
@@ -416,6 +414,7 @@ const Building = styled.img`
 `;
 
 const MgmPage = () => {
+  const {fadeInFromBottom}= useAnimations();
 	const [isBlue, setIsBlue] = useState(true);
 
 	useGSAP(() => {
@@ -480,9 +479,9 @@ const MgmPage = () => {
         <BackgroundBuilding />
 
 				<People className="mgm-content" />
-        <ButtonContainer>
+        <ButtonContainer ref={fadeInFromBottom}>
           <a target="_blank" href="https://e-commerce.transglobe.com.tw/member/missionActivities/etamgm?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_etamgm&utm_term=2024q4&utm_content=missionActivities">
-            <Button color="red">立即推薦親友</Button>
+            <Button  color="red">立即推薦親友</Button>
           </a>
         </ButtonContainer>
 
@@ -499,7 +498,7 @@ const MgmPage = () => {
 
 				<BlueBackground>
           <Buttons>
-              <a className="xl:text-[1.25rem] xl:leading-none" href="https://e-commerce.transglobe.com.tw/member/missionActivities?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_mgmsearch&utm_term=2024q4&utm_content=missionActivities">
+              <a target="_blank" className="xl:text-[1.25rem] xl:leading-none" href="https://e-commerce.transglobe.com.tw/member/missionActivities?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_mgmsearch&utm_term=2024q4&utm_content=missionActivities">
                   <Button color="yellow">
                   推薦好友 <Br reverse />
                   成功筆數查詢

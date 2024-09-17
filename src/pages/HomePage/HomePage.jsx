@@ -77,7 +77,7 @@ const YellowPolygon = styled.img`
         top: 617px;
         left: 50%;
         transform: translateX(-50%);
-        width: 414px;
+        width: 440px;
     }
 `;
 
@@ -111,11 +111,12 @@ const BlueBackground = styled.img`
     position: absolute;
     bottom: 0;
     width: 100%;
-    display: block;
+    display: none;
     z-index: 0;
-    @media (max-width: 1301px) {
-        display: none;
-    }`;
+    @media (max-width: 1600px) and (min-width: 1302px) {
+        display: block;
+    }
+`;
 
 const LargeBlueBackground = styled.img`
     position: absolute;
@@ -123,7 +124,7 @@ const LargeBlueBackground = styled.img`
     width: 100%;
     display: block;
     z-index: 0;
-	  @media (max-width: 1560px) {
+    @media (max-width: 1600px) {
         display: none;
     }
 `;
