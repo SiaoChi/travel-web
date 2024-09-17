@@ -12,19 +12,6 @@ const Section = styled.section`
     }
 `;
 
-const YellowPolygon = styled.img`
-    position: absolute;
-    top: 380px;
-    left: 0;
-    width: 755px;
-    @media (max-width: 1301px) {
-        top: 617px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 414px;
-    }
-`;
-
 const Video = styled.video`
     position: absolute;
     top: 0;
@@ -148,18 +135,6 @@ const EnglishTitle = styled.p`
     }
 `;
 
-const BgFlowers = styled.img`
-    position: absolute;
-    right: 50px;
-    width: 795px;
-    @media (max-width: 1301px) {
-        width: 414px;
-        height: 294px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-`;
-
 const LineOne = styled.img`
     position: absolute;
     top: 308px;
@@ -178,17 +153,6 @@ const MobileLineOne = styled.img`
         top: 240px;
         left: 0;
         width: 80px;
-    }
-`;
-
-const LineTwo = styled.img`
-    position: absolute;
-    top: 300px;
-    right: 0;
-    width: 383px;
-    transform:rotate(-5deg);  
-    @media (max-width: 1301px) {
-        display: none;
     }
 `;
 
