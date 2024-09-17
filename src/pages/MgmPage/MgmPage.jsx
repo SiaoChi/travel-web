@@ -310,7 +310,8 @@ const MgmContentTwo = styled.div`
       top: 1136px;
       width: 409px;
       height: 187px;
-      background: url('./mgm/mgm-content2-mobile.svg') no-repeat -10px center;
+      background: url('./mgm/mgm-content2-mobile.svg') no-repeat center center;
+      transform: translateX(-50%);
     }
 `;
 
@@ -328,7 +329,8 @@ const MgmContentThree = styled.div`
       top: 1300px;
       width: 414px;
       height: 189px;
-      background: url('./mgm/mgm-content3-mobile.svg') no-repeat 5px center;
+      background: url('./mgm/mgm-content3-mobile.svg') no-repeat center center;
+      transform: translateX(-50%);
     }
 `;
 
