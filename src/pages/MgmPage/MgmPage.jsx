@@ -271,6 +271,7 @@ const LinePointsText = styled.img`
     left: 50%;
     transform: translateX(-50%);
     width: 387px;
+    z-index: 1;
     @media (max-width: 1300px) {
       top: 850px;
       width: 340px;
