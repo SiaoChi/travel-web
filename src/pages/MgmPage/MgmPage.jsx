@@ -59,16 +59,6 @@ const YellowBackground = styled.div`
   }
 `;
 
-const BannerFlower = styled.img`
-  position: absolute;
-  top: 0;
-  right: 20px;
-  width: 900px;
-  @media (max-width: 1300px) {
-    display: none;
-  }
-`;
-
 const ContentFlower = styled.img`
   position: absolute;
   top: 700px;
