@@ -143,7 +143,6 @@ const EnglishText = styled.div`
     @media (max-width: 1301px) {
         top: 260px;
         left: 20%;
-        transform: translateX(-40%);
         font-size: 40px;
         line-height: 40px;
         min-width: 300px;
@@ -162,7 +161,6 @@ const EventImg = styled.img`
 const MobileEventImg = styled.img`
     position: absolute;
     top: 370px;
-    transform: translateX(-50%);
     width: 414px;
     @media (min-width: 1301px) {
         display: none;
@@ -197,7 +195,7 @@ const ButtonWrapper = styled.div`
 `;
 
 const NewYearEvent = () => {
-    const { fadeIn , fadeInFromLeft, fadeInAndPulse , fadeInFromBottom } = useAnimations();
+    const { fadeIn , fadeInFromLeft, fadeInAndPulse , fadeInFromBottom, btnFadeInFromBottom } = useAnimations();
 
     const sectionRef = useRef(null);
 
@@ -219,7 +217,7 @@ const NewYearEvent = () => {
 
 	return (
 		<Section ref={sectionRef}>
-			<Fireworks ref={fadeIn} id="sec1" src="./home/new-year-event-fire.png" className="event-content" />
+			<Fireworks ref={fadeIn} id="sec1" src="./home/new-year-event-fire.png" />
 			<LineOne src="./home/shadow-line1.svg" />
 			<LineTwo src="./home/shadow-line2.svg" />
 			<MobileLine src="./home/shadow-line-mobile.svg" />
@@ -244,7 +242,7 @@ const NewYearEvent = () => {
 			<EventImg ref={fadeInFromBottom} src="./home/new-year-event.svg" />
 			<MobileEventImg ref={fadeInFromBottom} src="./home/new-year-event-mobile.svg" />
             <Surprise ref={fadeInAndPulse} src="./home/new-year-event-surprise.svg" />
-			<ButtonWrapper ref={fadeInFromBottom}>
+			<ButtonWrapper ref={btnFadeInFromBottom}>
                 <a target="_blank" href="https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_newyear&utm_term=2024q4&utm_content=eta">
 				    <Button color="blue" height="60px">投保立即抽</Button>
                 </a>

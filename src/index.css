@@ -53,6 +53,7 @@
 }
 
 
+
 @keyframes fadeInFromBottom {
   0% {
     opacity: 0;
@@ -62,14 +63,31 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@keyframes fadeInBtn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
 
 .fade-in-from-bottom {
-  animation: fadeInFromBottom 1.5s ease-out forwards;
+  animation: fadeInFromBottom 1s ease-out forwards;
   opacity: 0; 
-  transform: translateY(-100%); 
+  transform: translateY(-60px); 
+}
+
+.btn-fade-in-from-bottom {
+  animation: fadeInBtn 1s ease-out 0.5s forwards;
+  opacity: 0;
 }
 
 @keyframes fadeInFromLeft {
@@ -78,7 +96,7 @@
     transform: translateX(-50%);
     visibility: hidden;
   }
-  100% {
+   100% {
     opacity: 1;
     transform: translateX(0);
   }
