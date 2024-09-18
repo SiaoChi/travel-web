@@ -184,8 +184,8 @@ const ButtonWrapperOne = styled.div`
     @media (max-width: 1301px) {
         width: 220px;
         top: 790px;
-        left: 46%;
-        transform: translateX(-45%);
+        left: 23%;
+        opacity: 0;
     }
 `
 
@@ -202,7 +202,6 @@ const MobileEventImgTwo = styled.img`
     position: absolute;
     top: 860px;
     left: 15%;
-    transform: translateX(-38%);
     @media (min-width: 1301px) {
         display: none;
     }

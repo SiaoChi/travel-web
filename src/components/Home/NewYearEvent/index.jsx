@@ -143,7 +143,6 @@ const EnglishText = styled.div`
     @media (max-width: 1301px) {
         top: 260px;
         left: 20%;
-        transform: translateX(-40%);
         font-size: 40px;
         line-height: 40px;
         min-width: 300px;
@@ -162,7 +161,6 @@ const EventImg = styled.img`
 const MobileEventImg = styled.img`
     position: absolute;
     top: 370px;
-    transform: translateX(-50%);
     width: 414px;
     @media (min-width: 1301px) {
         display: none;

@@ -147,24 +147,10 @@ const LineOne = styled.img`
 
 const MobileLineOne = styled.img`
     display: none;
-    @media (max-width: 1301px) {
-        display: block;
-        position: absolute;
-        top: 240px;
-        left: 0;
-        width: 80px;
-    }
 `;
 
 const MobileLineTwo = styled.img`
     display: none;
-    @media (max-width: 1301px) {
-        display: block;
-        position: absolute;
-        top: 200px;
-        right: 0;
-        width: 70px;
-    }
 `;
 
 const EventBanner = () => {

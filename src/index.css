@@ -58,19 +58,23 @@
   0% {
     opacity: 0;
     transform: translateY(50%);
+    visibility: hidden;
   }
   100% {
     opacity: 1;
     transform: translateY(0);
+    visibility: visible;
   }
 }
 
 @keyframes fadeInBtn {
   0% {
     opacity: 0;
+    visibility: hidden;
   }
   100% {
     opacity: 1;
+    visibility: visible;
   }
 }
 
