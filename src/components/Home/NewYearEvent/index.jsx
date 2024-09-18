@@ -222,14 +222,14 @@ const NewYearEvent = () => {
 
 	return (
 		<Section ref={sectionRef}>
-			<Fireworks ref={fadeIn} id="sec1" src="./home/new-year-event-fire.png" />
-			<LineOne src="./home/shadow-line1.svg" />
-			<LineTwo src="./home/shadow-line2.svg" />
-			<MobileLine src="./home/shadow-line-mobile.svg" />
+			<Fireworks ref={fadeIn} id="sec1" src="/home/new-year-event-fire.png" />
+			<LineOne src="/home/shadow-line1.svg" />
+			<LineTwo src="/home/shadow-line2.svg" />
+			<MobileLine src="/home/shadow-line-mobile.svg" />
 
 			<Title ref={fadeInFromLeft}>
-				<img src="./home/new-year-event-title.svg" />
-				<img src="./home/common-title-lottery.svg" />
+				<img src="/home/new-year-event-title.svg" />
+				<img src="/home/common-title-lottery.svg" />
 			</Title>
 			<Desc ref={fadeInFromLeft}>
 				<span>2024/12/15-2025/1/20</span>期間，
@@ -244,16 +244,16 @@ const NewYearEvent = () => {
 				<br />
 				2025
 			</EnglishText>
-			<EventImg ref={fadeInFromBottom} src="./home/new-year-event.svg" />
+			<EventImg ref={fadeInFromBottom} src="/home/new-year-event.svg" />
 			<MobileEventImg ref={fadeInFromBottom} src="./home/new-year-event-mobile.svg" />
-            <Surprise ref={fadeInAndPulse} src="./home/new-year-event-surprise.svg" />
+            <Surprise ref={fadeInAndPulse} src="/home/new-year-event-surprise.svg" />
 			<ButtonWrapper ref={btnFadeInFromBottom}>
                 <a target="_blank" href="https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_newyear&utm_term=2024q4&utm_content=eta">
 				    <Button color="blue" height="60px">投保立即抽</Button>
                 </a>
 			</ButtonWrapper>
-			<Flowers src="./home/new-year-event-flower.svg" />
-			<MobileFlowers src="./home/new-year-event-flower-mobile.svg" />
+			<Flowers src="/home/new-year-event-flower.svg" />
+			<MobileFlowers src="/home/new-year-event-flower-mobile.svg" />
 		</Section>
 	);
 };

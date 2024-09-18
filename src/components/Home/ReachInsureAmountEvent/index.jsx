@@ -1,7 +1,5 @@
-import { useRef } from "react"
 import styled from "styled-components"
 import Button from "../../Button"
-import { gsap, useGSAP } from "../../../gsap";
 import { useAnimations } from "../../Animation/useAnimations";
 
 const Section = styled.section`
@@ -13,16 +11,6 @@ const Section = styled.section`
         width: 440px;
         left: 50%;
         transform: translateX(-50%);
-    }
-`
-
-const YellowTrapezoid = styled.img`
-    position: absolute;
-    top: 0px;
-    left: 0;
-    width: 100%;
-    @media (max-width: 1301px) {
-        display: none;
     }
 `
 
@@ -228,14 +216,14 @@ const ReachInsureAmountEvent = () => {
  
     return (
         <Section>
-            {/* <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" /> */}
-            <MobileYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-mobile.svg" />
-            <Temple ref={fadeInFromLeft} id="sec2" src="./home/reach-insure-amount-event-temple.svg" />
-            <Mountain src="./home/reach-insure-amount-event-mountain.svg" />
+            {/* <YellowTrapezoid src="/home/reach-insure-amount-event-trapezoid.svg" /> */}
+            <MobileYellowTrapezoid src="/home/reach-insure-amount-event-trapezoid-mobile.svg" />
+            <Temple ref={fadeInFromLeft} id="sec2" src="/home/reach-insure-amount-event-temple.svg" />
+            <Mountain src="/home/reach-insure-amount-event-mountain.svg" />
 
             <Title ref={fadeInFromLeft}>
-                <img src='./home/reach-insure-amount-event-title.svg' />
-                <img src='./home/common-title-lottery.svg' />
+                <img src='/home/reach-insure-amount-event-title.svg' />
+                <img src='/home/common-title-lottery.svg' />
             </Title>
             <Desc ref={fadeInFromLeft}>
                 2024/10/1~2025/1/31期間，<br/>
@@ -244,24 +232,24 @@ const ReachInsureAmountEvent = () => {
 
             <EnglishText ref={fadeInFromBottom}>TRAVEL<br/>JAPAN<br/>TOKYO</EnglishText>
 
-            <EventImgOne ref={fadeInFromBottom} src="./home/reach-insure-amount-event1.svg" id="img1" />
-            <MobileEventImgOne ref={fadeInFromBottom} src="./home/reach-insure-amount-event1-mobile.svg"  id="img2" />
+            <EventImgOne ref={fadeInFromBottom} src="/home/reach-insure-amount-event1.svg" id="img1" />
+            <MobileEventImgOne ref={fadeInFromBottom} src="/home/reach-insure-amount-event1-mobile.svg"  id="img2" />
             <ButtonWrapperOne ref={btnFadeInFromBottom}>
 				<a target="_blank" href={LINK}>
                     <Button color="blue" height="60px">投保立即抽</Button>
                 </a>
 			</ButtonWrapperOne>
 
-            <EventImgTwo ref={fadeInFromBottom} src="./home/reach-insure-amount-event2.svg" id="img3"/>
-            <MobileEventImgTwo ref={fadeInFromBottom} src="./home/reach-insure-amount-event2-mobile.svg" id="img4"/>
+            <EventImgTwo ref={fadeInFromBottom} src="/home/reach-insure-amount-event2.svg" id="img3"/>
+            <MobileEventImgTwo ref={fadeInFromBottom} src="/home/reach-insure-amount-event2-mobile.svg" id="img4"/>
             <ButtonWrapperTwo ref={btnFadeInFromBottom}>
                 <a target="_blank" href={LINK}>
                     <Button color="blue" height="60px">投保立即抽</Button>
                 </a>
 			</ButtonWrapperTwo>
 
-            <Flowers src="./home/reach-insure-amount-event-flower.svg" />
-            <MobileFlowers src="./home/reach-insure-amount-event-flower-mobile.svg" />
+            <Flowers src="/home/reach-insure-amount-event-flower.svg" />
+            <MobileFlowers src="/home/reach-insure-amount-event-flower-mobile.svg" />
         </Section>
     )
 }

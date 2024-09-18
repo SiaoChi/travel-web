@@ -321,10 +321,10 @@ const FirstInsureAndLinePoints = () => {
 
     return (
         <Section ref={sectionRef}>
-            <Tower ref={fadeInFromLeft} id="sec3" src="./home/first-insure-event-tower.svg" />
+            <Tower ref={fadeInFromLeft} id="sec3" src="/home/first-insure-event-tower.svg" />
 
-            <EventImg ref={fadeInFromBottom} src="./home/first-insure-event.svg" className="event-content" id="img1" />
-            <MobileEventImg ref={fadeInFromBottom} src="./home/first-insure-event-mobile.svg" className="event-content" id="img2" />
+            <EventImg ref={fadeInFromBottom} src="/home/first-insure-event.svg" className="event-content" id="img1" />
+            <MobileEventImg ref={fadeInFromBottom} src="/home/first-insure-event-mobile.svg" className="event-content" id="img2" />
             <ButtonWrapperOne ref={btnFadeInFromBottom}>
                 <a target="_blank" href="https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_first-time&utm_term=2024q4&utm_content=eta">
 				    <Button color="blue" height="60px">投保立即抽</Button>
@@ -333,8 +333,8 @@ const FirstInsureAndLinePoints = () => {
             <EnglishTextOne ref={fadeInFromBottom}>PX MART<br/>COUPON</EnglishTextOne>
 
             <Title ref={fadeInFromLeft}>
-                <img src='./home/first-insure-event-title.svg' />
-                <img src='./home/common-title-lottery.svg' />
+                <img src='/home/first-insure-event-title.svg' />
+                <img src='/home/common-title-lottery.svg' />
             </Title>
             <Desc ref={fadeInFromLeft}>
                 <strong>2024/10/1~2025/1/31期間，</strong><br/>
@@ -342,7 +342,7 @@ const FirstInsureAndLinePoints = () => {
                 （限從未投保全球人壽任一險種者）
             </Desc>
             
-            <Italy src="./home/first-insure-event-italy.svg" />
+            <Italy src="/home/first-insure-event-italy.svg" />
             {/* <BlueBackground src="./home/line-points-blue-background.svg" /> */}
             <MobileBlueBackground src="./home/line-points-blue-background-mobile.svg" />
 
@@ -351,7 +351,7 @@ const FirstInsureAndLinePoints = () => {
 
             <EnglishTextTwo ref={fadeInFromLeft}>LINE<br/>POINTS</EnglishTextTwo>
 
-            <MoreRewardTitle src="./home/line-points-event-title.svg" />
+            <MoreRewardTitle src="/home/line-points-event-title.svg" />
             <MoreRewardDesc>快推薦好友，就有機會獲得 LINE POINTS 喔！</MoreRewardDesc>
             <ButtonWrapperTwo ref={fadeInFromBottom}>
 				<Link to="/mgm">
@@ -364,8 +364,8 @@ const FirstInsureAndLinePoints = () => {
                 </Link>
 			</ButtonWrapperThree>
 
-            <Flower src="./home/first-insure-line-points-flower.svg"/>
-            <MobileFlower src="./home/first-insure-line-points-flower-mobile.svg"/>
+            <Flower src="/home/first-insure-line-points-flower.svg"/>
+            <MobileFlower src="/home/first-insure-line-points-flower-mobile.svg"/>
         </Section>
     )
 }
