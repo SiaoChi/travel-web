@@ -445,9 +445,9 @@ const MgmPage = () => {
 		<Wrap>
        <YellowBackground />
 			<Container>
-				<Video src="./mgm/mgm-banner-video-mobile.mp4" autoPlay muted playsInline />
-				<BannerTitle src="./mgm/mgm-title.png" />
-				<BannerTitlePoint src="./mgm/mgm-title-p.png" />
+				<Video src="/mgm/mgm-banner-video-mobile.mp4" autoPlay muted playsInline />
+				<BannerTitle src="/mgm/mgm-title.png" />
+				<BannerTitlePoint src="/mgm/mgm-title-p.png" />
 				<Desc isBlue={isBlue}>
 					<p>推薦好友全球旅平險</p>
 					<p>
@@ -459,12 +459,12 @@ const MgmPage = () => {
 					<Br reverse /> A LOT OF LINE POINTS
 				</EnglishTitle>
 
-				<MobileContentFlower src="./mgm/mgm-points-and-flower-mobile.svg" />
+				<MobileContentFlower src="/mgm/mgm-points-and-flower-mobile.svg" />
 				<ContentDesc>
 					<p>2024/10/1~2025/1/31</p>
 					<p>成功邀請親友投保旅平險，達指定筆數</p>
 				</ContentDesc>
-				<LinePointsText src="./mgm/mgm-line-points-text.svg" />
+				<LinePointsText src="/mgm/mgm-line-points-text.svg" />
 
 				<MgmContentOne className="mgm-content" />
 				<MgmContentTwo className="mgm-content" />
@@ -472,8 +472,8 @@ const MgmPage = () => {
 
         <DesktopPart>
 					{/* <BannerFlower src="./mgm/mgm-banner-flower.svg" /> */}
-					<ContentFlower src="./mgm/mgm-info-flower.svg" />
-					<ContentPoint src="./mgm/mgm-content-p-point.svg" />
+					<ContentFlower src="/mgm/mgm-info-flower.svg" />
+					<ContentPoint src="/mgm/mgm-content-p-point.svg" />
 				</DesktopPart>
 
         <BackgroundBuilding />
@@ -489,7 +489,7 @@ const MgmPage = () => {
             <ActionDesc>
                 <p>只要親友點選「你的推薦連結」成功投保</p>
             </ActionDesc>
-            <ActionLinePoints src="./mgm/mgm-bottom-info-title.svg" />
+            <ActionLinePoints src="/mgm/mgm-bottom-info-title.svg" />
             <BottomDesc>
                 <p>點擊上方按鈕後，註冊或登入取得邀請碼</p>
                 <p>就能分享給親友，一起抽點數！</p>
@@ -519,7 +519,7 @@ const MgmPage = () => {
                 <Button color="white" hoverBgColor="#FF837E"  height="82px">活動辦法</Button>
               </Link>
           </Buttons>
-          <Building src="./mgm/mgm-building-mb.svg" />
+          <Building src="/mgm/mgm-building-mb.svg" />
         </BlueBackground>
 			</Container>
       <BottomBlueBg />

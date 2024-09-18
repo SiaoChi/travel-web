@@ -205,8 +205,8 @@ function PolicyPage() {
 					</Buttons>
 					<Border />
 					<BannerWrapper id="sec1">
-						<TitleText src="./home/event-banner-title.png" />
-						<TitleADecoration src="./home/event-banner-airplane.png" />
+						<TitleText src="/home/event-banner-title.png" />
+						<TitleADecoration src="/home/event-banner-airplane.png" />
 					</BannerWrapper>
 					<Description>
 						<Label>活動期間</Label>
@@ -261,8 +261,8 @@ function PolicyPage() {
 			<Background bg="#FED430">
 				<Container id="sec2">
 					<BannerWrapper id="sec1">
-						<TitleText src="./mgm/mgm-title.png" />
-						<TitleADecoration src="./mgm/mgm-title-p.png" />
+						<TitleText src="/mgm/mgm-title.png" />
+						<TitleADecoration src="/mgm/mgm-title-p.png" />
 					</BannerWrapper>
 					<Description>
 						<Label>活動期間</Label>

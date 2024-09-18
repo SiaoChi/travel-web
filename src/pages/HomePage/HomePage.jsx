@@ -169,21 +169,21 @@ function HomePage() {
 
 	return (
 		<Wrap>
-			<YellowPolygon src="./home/home-polygon.svg" />
-			<YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
-			<LargeYellowTrapezoid src="./home-yellow-bg-2.svg" />
+			<YellowPolygon src="/home/home-polygon.svg" />
+			<YellowTrapezoid src="/home/reach-insure-amount-event-trapezoid.svg" />
+			<LargeYellowTrapezoid src="/home-yellow-bg-2.svg" />
 			<Container>
 				<EventBanner />
 				<NewYearEvent />
 				<ReachInsureAmountEvent />
 				<FirstInsureAndLinePoints />
 				<VerticalLine id="vertical-line">
-					<Fly id="fly" src="./home/home-fly.svg" />
+					<Fly id="fly" src="/home/home-fly.svg" />
 					<Pointer id="pointer" />
 				</VerticalLine>
 			</Container>
-			 <BlueBackground src="./home-blue-bg-3.svg" />
-			 <LargeBlueBackground src="./home-blue-lg-bg-3.svg" />
+			 <BlueBackground src="/home-blue-bg-3.svg" />
+			 <LargeBlueBackground src="/home-blue-lg-bg-3.svg" />
 		</Wrap>
 	);
 }
