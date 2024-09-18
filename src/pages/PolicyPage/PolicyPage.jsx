@@ -256,7 +256,7 @@ function PolicyPage() {
 						<Details />
 					</Accordion>
 				</Container>
-				<Flower src="./policy/flower.svg" alt="" />
+				<Flower src="/policy/flower.svg" alt="" />
 			</Background>
 			<Background bg="#FED430">
 				<Container id="sec2">

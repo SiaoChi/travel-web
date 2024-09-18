@@ -245,7 +245,7 @@ const NewYearEvent = () => {
 				2025
 			</EnglishText>
 			<EventImg ref={fadeInFromBottom} src="/home/new-year-event.svg" />
-			<MobileEventImg ref={fadeInFromBottom} src="./home/new-year-event-mobile.svg" />
+			<MobileEventImg ref={fadeInFromBottom} src="/home/new-year-event-mobile.svg" />
             <Surprise ref={fadeInAndPulse} src="/home/new-year-event-surprise.svg" />
 			<ButtonWrapper ref={btnFadeInFromBottom}>
                 <a target="_blank" href="https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_newyear&utm_term=2024q4&utm_content=eta">

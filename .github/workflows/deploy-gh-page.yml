@@ -25,6 +25,9 @@ jobs:
         run: 
           npm install
 
+       name: Print environment variable
+        run: echo "VITE_BASE_URL=${{ secrets.VITE_BASE_URL }}"
+
       - name: Build React app
         env:
           VITE_BASE_URL: ${{ secrets.VITE_BASE_URL }}

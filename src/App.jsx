@@ -52,7 +52,7 @@ function App() {
         <Route path="/policy" element={<PolicyPage />} />
       </Routes>
       <Footer />
-      <ScrollTopBtn src="./top-btn.svg" onClick={handleScrollTop} $show={showScrollTopBtn}/>
+      <ScrollTopBtn src="/top-btn.svg" onClick={handleScrollTop} $show={showScrollTopBtn}/>
     </Router>
   );
 }
