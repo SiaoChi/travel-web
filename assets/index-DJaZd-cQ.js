@@ -302,6 +302,7 @@ Error generating stack: `+o.message+`
     position: absolute;
     left: 182px;
     top: 160px;
+    opacity: 0;
     > img {
         height: 60px;
     }
@@ -357,10 +358,10 @@ Error generating stack: `+o.message+`
     top: 72px;
     left: 62px;
     width: 584px;
+    opacity: 0;
     @media (max-width: 1301px) {
         top: -60px;
         left: 4%;
-        transform: translateX(-50%);
         width: 380px;
     }
     @media (max-width: 376px) {
@@ -404,6 +405,7 @@ Error generating stack: `+o.message+`
     color: #FED430;
     text-align: right;
     font-family: 'Roboto';
+    opacity: 0;
     @media (max-width: 1301px) {
         top: 260px;
         left: 20%;
@@ -415,6 +417,7 @@ Error generating stack: `+o.message+`
     position: absolute;
     bottom: 20px;
     right: 48px;
+    opacity: 0;
     @media (max-width: 1301px) {
         display: none;
     }
@@ -422,6 +425,7 @@ Error generating stack: `+o.message+`
     position: absolute;
     top: 370px;
     width: 414px;
+    opacity: 0;
     @media (min-width: 1301px) {
         display: none;
     }
@@ -442,6 +446,7 @@ Error generating stack: `+o.message+`
     right: 250px;
     z-index: 10;
     width: 289px;
+    opacity: 0;
     @media (max-width: 1301px) {
         width: 220px;
         left: 24%;
@@ -645,25 +650,14 @@ Error generating stack: `+o.message+`
     }
 `,yT=P.img`
     display: none;
-    top: 414px;
-    left: 244px;
     @media (max-width: 1301px) {
         display: block;
         position: absolute;
         top: 620px;
-        left: 50%;
-        transform: translateX(-60%);
+        left: 10%;
         width: 294px;
     }
-`;P.img`
-    position: absolute;
-    bottom: -220px;
-    width: 100%;
-    background-color: red;
-    @media (max-width: 1301px) {
-        display: none;
-    }
-`;const _T=P.img`
+`,_T=P.img`
     position: absolute;
     bottom: -25px;
     left: 50%;
@@ -679,7 +673,6 @@ Error generating stack: `+o.message+`
     @media (max-width: 1301px) {
         top: -100px;
         left: 4%;
-        transform: translateX(-50%);
         width: 380px;
     }
     @media (max-width: 376px) {
@@ -697,7 +690,6 @@ Error generating stack: `+o.message+`
     position: absolute;
     top: 260px;
     left: 15%;
-    transform: translateX(-42%);
     @media (min-width: 1301px) {
         display: none;
     }
@@ -710,17 +702,21 @@ Error generating stack: `+o.message+`
     right: 275px;
     z-index: 10;
     width: 289px;
+    opacity: 0;
     @media (max-width: 1301px) {
         width: 220px;
         top: 470px;
-        left: 46%;
-        transform: translateX(-50%);
+        left: 23%;
+    }
+    @media (min-width: 450px) and (max-width: 576px) {
+        left: 26%;
     }
 `,ET=P.img`
     position: absolute;
     left: 17%;
     bottom: 244px;
     z-index: 10;
+    opacity: 0;
     @media (max-width: 1301px) {
         display: none;
     }
@@ -728,8 +724,8 @@ Error generating stack: `+o.message+`
     position: absolute;
     left: 9%;
     bottom: 120px;
-    transform: translate(-50%, 0);
     width: 80%;
+    opacity: 0;
     @media (min-width: 1301px) {
         display: none;
     }
