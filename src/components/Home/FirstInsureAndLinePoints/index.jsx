@@ -21,27 +21,15 @@ const Section = styled.section`
 
 const Italy = styled.img`
     display: none;
-    top: 414px;
-    left: 244px;
     @media (max-width: 1301px) {
         display: block;
         position: absolute;
         top: 620px;
-        left: 50%;
-        transform: translateX(-60%);
+        left: 10%;
         width: 294px;
     }
 `
 
-const BlueBackground = styled.img`
-    position: absolute;
-    bottom: -220px;
-    width: 100%;
-    background-color: red;
-    @media (max-width: 1301px) {
-        display: none;
-    }
-`
 
 const MobileBlueBackground = styled.img`
     position: absolute;
@@ -61,7 +49,6 @@ const Tower = styled.img`
     @media (max-width: 1301px) {
         top: -100px;
         left: 4%;
-        transform: translateX(-50%);
         width: 380px;
     }
     @media (max-width: 376px) {
@@ -84,7 +71,6 @@ const MobileEventImg = styled.img`
     position: absolute;
     top: 260px;
     left: 15%;
-    transform: translateX(-42%);
     @media (min-width: 1301px) {
         display: none;
     }
@@ -99,11 +85,14 @@ const ButtonWrapperOne = styled.div`
     right: 275px;
     z-index: 10;
     width: 289px;
+    opacity: 0;
     @media (max-width: 1301px) {
         width: 220px;
         top: 470px;
-        left: 46%;
-        transform: translateX(-50%);
+        left: 23%;
+    }
+    @media (min-width: 450px) and (max-width: 576px) {
+        left: 26%;
     }
 `
 
@@ -112,6 +101,7 @@ const People = styled.img`
     left: 17%;
     bottom: 244px;
     z-index: 10;
+    opacity: 0;
     @media (max-width: 1301px) {
         display: none;
     }
@@ -121,8 +111,8 @@ const MobilePeople = styled.img`
     position: absolute;
     left: 9%;
     bottom: 120px;
-    transform: translate(-50%, 0);
     width: 80%;
+    opacity: 0;
     @media (min-width: 1301px) {
         display: none;
     }

@@ -22,6 +22,7 @@ const Title = styled.div`
     position: absolute;
     left: 182px;
     top: 160px;
+    opacity: 0;
     > img {
         height: 60px;
     }
@@ -85,10 +86,10 @@ const Fireworks = styled.img`
     top: 72px;
     left: 62px;
     width: 584px;
+    opacity: 0;
     @media (max-width: 1301px) {
         top: -60px;
         left: 4%;
-        transform: translateX(-50%);
         width: 380px;
     }
     @media (max-width: 376px) {
@@ -140,6 +141,7 @@ const EnglishText = styled.div`
     color: #FED430;
     text-align: right;
     font-family: 'Roboto';
+    opacity: 0;
     @media (max-width: 1301px) {
         top: 260px;
         left: 20%;
@@ -153,6 +155,7 @@ const EventImg = styled.img`
     position: absolute;
     bottom: 20px;
     right: 48px;
+    opacity: 0;
     @media (max-width: 1301px) {
         display: none;
     }
@@ -162,6 +165,7 @@ const MobileEventImg = styled.img`
     position: absolute;
     top: 370px;
     width: 414px;
+    opacity: 0;
     @media (min-width: 1301px) {
         display: none;
     }
@@ -188,6 +192,7 @@ const ButtonWrapper = styled.div`
     right: 250px;
     z-index: 10;
     width: 289px;
+    opacity: 0;
     @media (max-width: 1301px) {
         width: 220px;
         left: 24%;
