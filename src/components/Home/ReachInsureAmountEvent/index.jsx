@@ -169,7 +169,6 @@ const MobileEventImgOne = styled.img`
     position: absolute;
     top: 520px;
     left: 5%;
-    transform: translateX(-52%);
     @media (min-width: 1301px) {
         display: none;
         
@@ -185,7 +184,7 @@ const ButtonWrapperOne = styled.div`
     @media (max-width: 1301px) {
         width: 220px;
         top: 790px;
-        left: 24%;
+        left: 46%;
         transform: translateX(-45%);
     }
 `
@@ -218,7 +217,7 @@ const ButtonWrapperTwo = styled.div`
     @media (max-width: 1301px) {
         width: 220px;
         top: 1150px;
-        left: 24%;
+        left: 46%;
         transform: translateX(-45%);
     }
 `
@@ -226,35 +225,10 @@ const ButtonWrapperTwo = styled.div`
 const LINK = "https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_domestic%26foreign&utm_term=2024q4&utm_content=eta"
 
 const ReachInsureAmountEvent = () => {
-    const { fadeInFromBottom, fadeInFromLeft, fadeInFromRight } = useAnimations();
-    const sectionRef = useRef(null);
-
-    const xMapping = {
-        img1: "0%",
-        img2: "-52%",
-        img3: "0%",
-        img4: "-38%",
-    }
-
-    useGSAP(() => {
-        gsap.utils.toArray(".event-content").forEach((content) => {
-            gsap.fromTo(content, { y: 100, x: xMapping[content.id], opacity: 0 }, {
-                x: xMapping[content.id],
-                y: 0,
-                opacity: 1,
-                duration: 1,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: content,
-                    start: "top 80%",
-                    toggleActions: "play none none none",
-                },
-            });
-        });
-    }, { scope: sectionRef });
+    const { fadeInFromBottom, fadeInFromLeft, btnFadeInFromBottom } = useAnimations();
  
     return (
-        <Section ref={sectionRef}>
+        <Section>
             {/* <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" /> */}
             <MobileYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-mobile.svg" />
             <Temple ref={fadeInFromLeft} id="sec2" src="./home/reach-insure-amount-event-temple.svg" />
@@ -271,17 +245,17 @@ const ReachInsureAmountEvent = () => {
 
             <EnglishText ref={fadeInFromBottom}>TRAVEL<br/>JAPAN<br/>TOKYO</EnglishText>
 
-            <EventImgOne ref={fadeInFromBottom} src="./home/reach-insure-amount-event1.svg" className="event-content" id="img1" />
-            <MobileEventImgOne ref={fadeInFromBottom} src="./home/reach-insure-amount-event1-mobile.svg"  className="event-content" id="img2" />
-            <ButtonWrapperOne ref={fadeInFromBottom}>
+            <EventImgOne ref={fadeInFromBottom} src="./home/reach-insure-amount-event1.svg" id="img1" />
+            <MobileEventImgOne ref={fadeInFromBottom} src="./home/reach-insure-amount-event1-mobile.svg"  id="img2" />
+            <ButtonWrapperOne ref={btnFadeInFromBottom}>
 				<a target="_blank" href={LINK}>
                     <Button color="blue" height="60px">投保立即抽</Button>
                 </a>
 			</ButtonWrapperOne>
 
-            <EventImgTwo ref={fadeInFromBottom} src="./home/reach-insure-amount-event2.svg" className="event-content" id="img3"/>
-            <MobileEventImgTwo ref={fadeInFromBottom} src="./home/reach-insure-amount-event2-mobile.svg"  className="event-content" id="img4"/>
-            <ButtonWrapperTwo ref={fadeInFromBottom}>
+            <EventImgTwo ref={fadeInFromBottom} src="./home/reach-insure-amount-event2.svg" id="img3"/>
+            <MobileEventImgTwo ref={fadeInFromBottom} src="./home/reach-insure-amount-event2-mobile.svg" id="img4"/>
+            <ButtonWrapperTwo ref={btnFadeInFromBottom}>
                 <a target="_blank" href={LINK}>
                     <Button color="blue" height="60px">投保立即抽</Button>
                 </a>

@@ -498,15 +498,14 @@ const MgmPage = () => {
 
 				<BlueBackground>
           <Buttons>
-              <a target="_blank" className="xl:text-[1.25rem] xl:leading-none" href="https://e-commerce.transglobe.com.tw/member/missionActivities?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_mgmsearch&utm_term=2024q4&utm_content=missionActivities">
-                  <Button color="yellow">
+              <a target="_blank" href="https://e-commerce.transglobe.com.tw/member/missionActivities?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_mgmsearch&utm_term=2024q4&utm_content=missionActivities">
+                  <Button color="yellow" height="82px">
                   推薦好友 <Br reverse />
                   成功筆數查詢
                   </Button>
               </a>
               {/* 此圖會跳頁會被NAVBAR蓋掉，所以先暴力解 */}
               <HashLink 
-                className="xl:text-[1.25rem]" 
                 to="/#sec2" 
                 scroll={(el) => {
                   const yOffset = -80;
@@ -514,10 +513,10 @@ const MgmPage = () => {
                   window.scrollTo({top: y, behavior: 'smooth'});
                 }}
               >
-                <Button color="yellow">參加更多抽獎</Button>
+                <Button color="yellow"  height="82px">參加更多抽獎</Button>
               </HashLink>
-              <Link className="xl:text-[1.25rem]" to="/policy">
-                <Button color="white" hoverBgColor="#FF837E">活動辦法</Button>
+              <Link to="/policy">
+                <Button color="white" hoverBgColor="#FF837E"  height="82px">活動辦法</Button>
               </Link>
           </Buttons>
           <Building src="./mgm/mgm-building-mb.svg" />

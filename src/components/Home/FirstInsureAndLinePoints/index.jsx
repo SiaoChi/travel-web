@@ -102,11 +102,8 @@ const ButtonWrapperOne = styled.div`
     @media (max-width: 1301px) {
         width: 220px;
         top: 470px;
-        left: 23%;
+        left: 46%;
         transform: translateX(-50%);
-    }
-     @media (min-width: 450px) and (max-width: 576px) {
-        left: 25%;
     }
 `
 
@@ -305,7 +302,7 @@ const EnglishTextTwo = styled(EnglishText)`
 `
 
 const FirstInsureAndLinePoints = () => {
-    const { fadeInFromBottom, fadeInFromLeft } = useAnimations();
+    const { fadeInFromBottom, fadeInFromLeft, btnFadeInFromBottom} = useAnimations();
     const sectionRef = useRef(null);
 
     useGSAP(() => {
@@ -338,7 +335,7 @@ const FirstInsureAndLinePoints = () => {
 
             <EventImg ref={fadeInFromBottom} src="./home/first-insure-event.svg" className="event-content" id="img1" />
             <MobileEventImg ref={fadeInFromBottom} src="./home/first-insure-event-mobile.svg" className="event-content" id="img2" />
-            <ButtonWrapperOne ref={fadeInFromBottom}>
+            <ButtonWrapperOne ref={btnFadeInFromBottom}>
                 <a target="_blank" href="https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_first-time&utm_term=2024q4&utm_content=eta">
 				    <Button color="blue" height="60px">投保立即抽</Button>
                 </a>
