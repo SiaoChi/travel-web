@@ -287,13 +287,13 @@ const EnglishTextTwo = styled(EnglishText)`
     text-align: left;
     font-family: 'Roboto';
     @media (max-width: 1301px) {
-        top: 790px;
+        top: 800px;
         left: 70px;
     }
     @media (max-width: 428px) {
-        top: 790px;
-        left: 50px;
-    }
+        top: 860px;
+        left: 60px;
+    };
 `
 
 const FirstInsureAndLinePoints = () => {

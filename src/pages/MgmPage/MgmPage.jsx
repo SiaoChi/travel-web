@@ -382,7 +382,7 @@ const People = styled.div`
         top: 1500px;
         width: 359px;
         height: 597px;
-        background: url('./mgm/mgm-people-and-frame-mobile.png') no-repeat center center;
+        background: url('./mgm/mgm-people-and-frame-mobile.svg') no-repeat center center;
     }
     @media (max-width: 800px) {
       left: 51%;
