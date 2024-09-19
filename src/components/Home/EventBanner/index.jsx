@@ -130,8 +130,7 @@ const EnglishTitle = styled.p`
         position: absolute;
         top: 679px;
         width: 354px;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 8%
     }
 `;
 
@@ -180,7 +179,7 @@ const EventBanner = () => {
 				<TitleAirplaine src="./home/event-banner-airplane.png" />
 			</BannerTitle>
 			<Desc $isBlue={isBlue}>
-				<p>保全球旅平險</p>
+				<p>投保全球旅平險</p>
 				<p>
 					驚喜<span>多多多多多多</span>到滿出來！
 				</p>
