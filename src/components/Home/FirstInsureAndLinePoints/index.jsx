@@ -351,8 +351,8 @@ const FirstInsureAndLinePoints = () => {
             {/* <BlueBackground src="./home/line-points-blue-background.svg" /> */}
             {/* <MobileBlueBackground src="./home/line-points-blue-background-mobile.svg" /> */}
 
-            <People ref={fadeInFromBottom} src="./home/line-points-people.svg" className="event-content" id="img3" />
-            <MobilePeople ref={fadeInFromBottom} src="./home/line-points-people-mobile.svg"  className="event-content" id="img4" />
+            <People ref={fadeInFromBottom} src="./home/line-points-people.png" className="event-content" id="img3" />
+            <MobilePeople ref={fadeInFromBottom} src="./home/line-points-people-mobile.png"  className="event-content" id="img4" />
 
             <EnglishTextTwo ref={fadeInFromLeft}>LINE<br/>POINTS</EnglishTextTwo>
 
