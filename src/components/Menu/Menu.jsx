@@ -68,7 +68,7 @@ function Menu() {
   return (
     /* 網頁版menu */ 
     <>
-              <header className='menu justify-center bg-bg-yellow'>
+      <header className='menu justify-center bg-bg-yellow'>
         <div className="flex justify-between w-full px-6 max-w-[1500px]">
           <div className="flex-shrink-0 ml-[3vw]">
             <a href="https://www.transglobe.com.tw/" target="_blank" rel="noopener noreferrer">

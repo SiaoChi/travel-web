@@ -271,45 +271,48 @@ const LinePointsText = styled.img`
 const MgmContentOne = styled.div`
     position: absolute;
     top: 900px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 18%;
     z-index: 1;
     width: 974px;
     height: 263px;
     background: url('./mgm/mgm-content1.svg') no-repeat center center;
     background-size: cover;
     @media (max-width: 1300px) {
+      left: 5%;
       top: 950px;
       width: 404px;
       height: 207px;
       background: url('./mgm/mgm-content1-mobile.svg') no-repeat center center;
+    }
+    @media (max-width: 400px) {
+      left: 0;
     }
 `;
 
 const MgmContentTwo = styled.div`
     position: absolute;
     top: 1163px;
-    left: 50%;
-    transform: translateX(-48%);
+    left: 18%;
     width: 1012px;
     height: 308px;
     z-index: 1;
     background: url('./mgm/mgm-content2.svg') no-repeat center center;
     background-size: cover;
     @media (max-width: 1300px) {
+      left: 5%;
       top: 1136px;
       width: 409px;
       height: 187px;
       background: url('./mgm/mgm-content2-mobile.svg') no-repeat center center;
-      transform: translateX(-50%);
+    }@media (max-width: 400px) {
+      left: -1%;
     }
 `;
 
 const MgmContentThree = styled.div`
     position: absolute;
     top: 1463px;
-    left: 50%;
-    transform: translateX(-52%);
+    left: 18%;
     width: 929px;
     height: 299px;
     z-index: 1;
@@ -317,10 +320,12 @@ const MgmContentThree = styled.div`
     background-size: cover;
     @media (max-width: 1300px) {
       top: 1300px;
+      left: 4%;
       width: 414px;
       height: 189px;
       background: url('./mgm/mgm-content3-mobile.svg') no-repeat center center;
-      transform: translateX(-50%);
+    }@media (max-width: 400px) {
+      left: -2%;
     }
 `;
 
@@ -336,6 +341,7 @@ const People = styled.div`
     pointer-events: none;
     z-index: 1;
     @media (max-width: 1300px) {
+        left: 53%;
         top: 1500px;
         width: 359px;
         height: 597px;
@@ -347,7 +353,6 @@ const ButtonContainer = styled.div`
     position: absolute;
     top: 2290px;
     left: 40%;
-    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     width: 294px;
@@ -358,10 +363,7 @@ const ButtonContainer = styled.div`
     @media (max-width: 1300px) {
         width: 229px;
         top: 1900px;
-        left: 20%;
-    }
-    @media (min-width: 450px) and (max-width: 576px) {
-        left: 23%;
+        left: 24%;
     }
 `;
 

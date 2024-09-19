@@ -160,9 +160,10 @@ const EventImgOne = styled.img`
     position: absolute;
     bottom: 170px;
     left: 122px;
-    @media (max-width: 1301px) {
+    @media (max-width: 1280px) {
         display: none;
     }
+    
 `
 
 const MobileEventImgOne = styled.img`
@@ -171,7 +172,6 @@ const MobileEventImgOne = styled.img`
     left: 5%;
     @media (min-width: 1301px) {
         display: none;
-        
     }
 `
 
