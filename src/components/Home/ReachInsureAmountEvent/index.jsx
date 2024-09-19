@@ -1,7 +1,5 @@
-import { useRef } from "react"
 import styled from "styled-components"
 import Button from "../../Button"
-import { gsap, useGSAP } from "../../../gsap";
 import { useAnimations } from "../../Animation/useAnimations";
 
 const Section = styled.section`
@@ -13,16 +11,6 @@ const Section = styled.section`
         width: 440px;
         left: 50%;
         transform: translateX(-50%);
-    }
-`
-
-const YellowTrapezoid = styled.img`
-    position: absolute;
-    top: 0px;
-    left: 0;
-    width: 100%;
-    @media (max-width: 1301px) {
-        display: none;
     }
 `
 
@@ -160,9 +148,13 @@ const EventImgOne = styled.img`
     position: absolute;
     bottom: 170px;
     left: 122px;
+    @media (max-width: 1430px) {
+        width: 440px;
+    }
     @media (max-width: 1301px) {
         display: none;
     }
+    
 `
 
 const MobileEventImgOne = styled.img`
@@ -171,7 +163,6 @@ const MobileEventImgOne = styled.img`
     left: 5%;
     @media (min-width: 1301px) {
         display: none;
-        
     }
 `
 
@@ -181,6 +172,9 @@ const ButtonWrapperOne = styled.div`
     left: 280px;
     z-index: 10;
     width: 289px;
+    @media (max-width: 1430px) {
+        left: 225px;
+    }
     @media (max-width: 1301px) {
         width: 220px;
         top: 790px;
@@ -193,6 +187,9 @@ const EventImgTwo = styled.img`
     position: absolute;
     bottom: 170px;
     right: 60px;
+    @media (max-width: 1430px) {
+        width: 500px;
+    }
     @media (max-width: 1301px) {
         display: none;
     }
@@ -213,6 +210,9 @@ const ButtonWrapperTwo = styled.div`
     right: 320px;
     z-index: 10;
     width: 289px;
+    @media (max-width: 1430px) {
+        right: 225px;
+    }
     @media (max-width: 1301px) {
         width: 220px;
         top: 1150px;
