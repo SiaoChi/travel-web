@@ -301,8 +301,14 @@ const MgmContentOne = styled.div`
       background: url('./mgm/mgm-content1-mobile.svg') no-repeat center center;
     }
     @media (max-width: 400px) {
-      width: 380px;
-      left: 0;
+      width: 390px;
+      left: -1%;
+      background-size: contain;
+    }
+    @media (max-width: 370px) {
+      width: 390px;
+      left: -2%;
+      background-size: contain;
     }
 `;
 
@@ -321,9 +327,15 @@ const MgmContentTwo = styled.div`
       width: 409px;
       height: 187px;
       background: url('./mgm/mgm-content2-mobile.svg') no-repeat center center;
-    }@media (max-width: 400px) {
+    }
+     @media (max-width: 400px) {
+      width: 390px;
       left: -1%;
-      width: 383px;
+      background-size: contain;
+    }  
+    @media (max-width: 370px) {
+      left: -2%;
+      background-size: contain;
     }
 `;
 
@@ -342,9 +354,15 @@ const MgmContentThree = styled.div`
       width: 414px;
       height: 189px;
       background: url('./mgm/mgm-content3-mobile.svg') no-repeat center center;
-    }@media (max-width: 400px) {
-      left: -2%;
-      width: 383px;
+    }
+     @media (max-width: 400px) {
+      width: 390px;
+      left: -1%;
+      background-size: contain;
+    }  
+    @media (max-width: 380px) {
+      width: 380px;
+      background-size: contain;
     }
 `;
 
@@ -524,11 +542,9 @@ const MgmPage = () => {
 					<p>成功邀請親友投保旅平險，達指定筆數</p>
 				</ContentDesc>
 				<LinePointsText src="./mgm/mgm-line-points-text.svg" />
-
-				<MgmContentOne className="mgm-content" />
-				<MgmContentTwo className="mgm-content" />
-				<MgmContentThree className="mgm-content" />
-
+          <MgmContentOne className="mgm-content" />
+          <MgmContentTwo className="mgm-content" />
+          <MgmContentThree className="mgm-content" />
         <DesktopPart>
 					{/* <BannerFlower src="./mgm/mgm-banner-flower.svg" /> */}
 					<ContentFlower src="./mgm/mgm-info-flower.svg" />
