@@ -51,9 +51,9 @@ const Tower = styled.img`
         left: 4%;
         width: 380px;
     }
-    @media (max-width: 376px) {
+    @media (max-width: 381px) {
         width: 375px;
-        left: 6%;
+        left: 0%;
     }
 `
 
@@ -102,7 +102,10 @@ const People = styled.img`
     bottom: 244px;
     z-index: 10;
     opacity: 0;
-    @media (max-width: 1301px) {
+    @media (min-width:1301px) and (max-width: 1480px) {
+        left: 14%;
+    }
+    @media (max-width: 1300px) {
         display: none;
     }
 `
@@ -113,6 +116,7 @@ const MobilePeople = styled.img`
     bottom: 120px;
     width: 80%;
     opacity: 0;
+    z-index: 11;
     @media (min-width: 1301px) {
         display: none;
     }
@@ -127,7 +131,7 @@ const ButtonWrapperTwo = styled.div`
     left: 50%;
     bottom: 295px;
     translate: -50% 0;
-    z-index: 10;
+    z-index: 11;
     width: 289px;
     @media (max-width: 1301px) {
         width: 220px;
@@ -154,7 +158,7 @@ const MoreRewardTitle = styled.img`
     bottom: 450px;
     translate: -50% 0;
     height: 50px;
-    z-index: 10;
+    z-index: 11;
     @media (max-width: 1301px) {
         bottom: 350px;
         height: 40px;
@@ -170,7 +174,7 @@ const MoreRewardDesc = styled.p`
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    z-index: 10;
+    z-index: 11;
     @media (max-width: 1301px) {
         bottom: 280px;
         height: 40px;
@@ -261,33 +265,34 @@ const EnglishText = styled.div`
         left: 20%;
         font-size: 40px;
         line-height: 40px;
-        min-width: 300px;
+        min-width: 250px;
     }
 `
 
 const EnglishTextOne = styled(EnglishText)`
     position: absolute;
     top: 580px;
-    right: 87px;
+    right: 85px;
     text-align: right;
     font-family: 'Roboto';
-    @media (max-width: 1301px) {
-        transform: translateX(-40%);
+    @media (max-width: 380px) {
+        right:80px;
     }
 `
 
 const EnglishTextTwo = styled(EnglishText)`
     position: absolute;
-    top: 737px;
+    top: 740px;
     left: 114px;
     text-align: left;
     font-family: 'Roboto';
     @media (max-width: 1301px) {
-        top: 840px;
-        left: 10%;
+        top: 790px;
+        left: 70px;
     }
-    @media (min-width: 450px) and (max-width: 576px) {
-        left: 15%;
+    @media (max-width: 428px) {
+        top: 790px;
+        left: 50px;
     }
 `
 
@@ -338,13 +343,13 @@ const FirstInsureAndLinePoints = () => {
             </Title>
             <Desc ref={fadeInFromLeft}>
                 <strong>2024/10/1~2025/1/31期間，</strong><br/>
-                <strong><span>首次</span>成功網路投保<span>「國內外旅平險」</span></strong><br/>
-                （限從未投保全球人壽任一險種者）
+                <strong><span>首次</span>成功<span className="text-c-red">網路投保</span><span>「國內外旅平險」</span></strong><br/>
+                （限從<span className="text-c-red">網路</span>投保全球人壽任一險種者）
             </Desc>
             
-            <Italy src="./home/first-insure-event-italy.svg" />
+            {/* <Italy src="./home/first-insure-event-italy.svg" /> */}
             {/* <BlueBackground src="./home/line-points-blue-background.svg" /> */}
-            <MobileBlueBackground src="./home/line-points-blue-background-mobile.svg" />
+            {/* <MobileBlueBackground src="./home/line-points-blue-background-mobile.svg" /> */}
 
             <People ref={fadeInFromBottom} src="./home/line-points-people.svg" className="event-content" id="img3" />
             <MobilePeople ref={fadeInFromBottom} src="./home/line-points-people-mobile.svg"  className="event-content" id="img4" />

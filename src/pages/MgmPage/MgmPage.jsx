@@ -19,6 +19,7 @@ const Wrap = styled.div`
   }
 `;
 
+// 藍色底
 const BottomBlueBg = styled.div`
   position: absolute;
   bottom: 0;
@@ -26,9 +27,10 @@ const BottomBlueBg = styled.div`
   width: 100%;
   height: 211px;
   background-color: #2496F0;
-  z-index: 0;
+  z-index: 1;
   @media (max-width: 1300px) {
-    display: none;
+     width: 100%;
+     height: 400px;
   }
 `;
 
@@ -92,6 +94,7 @@ const ContentPoint = styled.img`
   }
 `;
 
+// 不要動他是people的背景building
 const BackgroundBuilding = styled.div`
   position: absolute;
   bottom: 375px;
@@ -105,25 +108,38 @@ const BackgroundBuilding = styled.div`
     width: 414px;
     height: 218px;
     bottom: -20px;
+    background-size: cover;
   }
 `;
 
-const BlueBackground = styled.div`
+// 藍色底建築物
+const DeskBlueBackgroundBuilding = styled.div`
   position: absolute;
-  bottom: -32px;
+  bottom: -20px;
+  transform: translateX(-50%);
+  left: 50%;
   width: 100%;
   height: 278px;
   background: url('./mgm/mgm-blue-building.svg') no-repeat center center;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: 2;
   @media (max-width: 1300px) {
-    height: 428px;
-    width: 100%;
-    background-color: #2496F0;
-    align-items: flex-start;
+    bottom: 0;
+    height: 400px;
+    width: 100vw;
     padding-top: 40px;
+    align-items: start;
+    background:none;
+    left: 53%;
+  }
+  @media (max-width: 800px) {
+    bottom: 0;
+    height: 400px;
+    width: 100vw;
+    background:none;
+    left: 51%;
   }
 `;
 
@@ -285,6 +301,7 @@ const MgmContentOne = styled.div`
       background: url('./mgm/mgm-content1-mobile.svg') no-repeat center center;
     }
     @media (max-width: 400px) {
+      width: 380px;
       left: 0;
     }
 `;
@@ -306,6 +323,7 @@ const MgmContentTwo = styled.div`
       background: url('./mgm/mgm-content2-mobile.svg') no-repeat center center;
     }@media (max-width: 400px) {
       left: -1%;
+      width: 383px;
     }
 `;
 
@@ -326,6 +344,7 @@ const MgmContentThree = styled.div`
       background: url('./mgm/mgm-content3-mobile.svg') no-repeat center center;
     }@media (max-width: 400px) {
       left: -2%;
+      width: 383px;
     }
 `;
 
@@ -341,11 +360,14 @@ const People = styled.div`
     pointer-events: none;
     z-index: 1;
     @media (max-width: 1300px) {
-        left: 53%;
+        left: 54%;
         top: 1500px;
         width: 359px;
         height: 597px;
         background: url('./mgm/mgm-people-and-frame-mobile.svg') no-repeat center center;
+    }
+    @media (max-width: 800px) {
+      left: 51%;
     }
 `;
 
@@ -363,7 +385,17 @@ const ButtonContainer = styled.div`
     @media (max-width: 1300px) {
         width: 229px;
         top: 1900px;
+        left: 28%;
+    }
+    @media (max-width: 800px) {
+        width: 229px;
+        top: 1900px;
         left: 24%;
+    }
+     @media (max-width: 400px) {
+        width: 229px;
+        top: 1900px;
+        left: 21%;
     }
 `;
 
@@ -401,17 +433,42 @@ const DesktopPart = styled.div`
   }
 `;
 
+// 透明底黑線建築物
 const Building = styled.img`
   display: none;
-  @media (max-width: 1300px) {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: full;
-    object-fit: cover;
-    z-index: 0;
-  }
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50%;
+  object-fit: cover;
+  z-index: 0;
+  object-fit: contain;
+  object-position: bottom;
+  left: 30%;
+    @media (max-width: 500px) {
+       display:block;  
+       width: 100%;
+       left: 0;
+    }
+  
+`;
+
+const IpadBuilding = styled.img`
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50%;
+  object-fit: cover;
+  z-index: 0;
+  object-fit: contain;
+  object-position: bottom;
+  left: 30%;
+    @media (min-width: 501px) and (max-width: 1301px) {
+       display:block;  
+       width: 100%;
+       left: 0;
+    }
   
 `;
 
@@ -498,7 +555,7 @@ const MgmPage = () => {
             </BottomDesc>
         </DesktopPart>
 
-				<BlueBackground>
+				<DeskBlueBackgroundBuilding>
           <Buttons>
               <a target="_blank" href="https://e-commerce.transglobe.com.tw/member/missionActivities?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_mgmsearch&utm_term=2024q4&utm_content=missionActivities">
                   <Button color="yellow" height="82px">
@@ -522,7 +579,8 @@ const MgmPage = () => {
               </Link>
           </Buttons>
           <Building src="./mgm/mgm-building-mb.svg" />
-        </BlueBackground>
+          <IpadBuilding src="./mgm/mgm-building-ipad.svg" />
+        </DeskBlueBackgroundBuilding>
 			</Container>
       <BottomBlueBg />
 		</Wrap>

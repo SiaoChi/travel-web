@@ -12,12 +12,14 @@ const Wrap = styled.div`
   justify-content: center;
   overflow: hidden;
   position: relative;
+  z-index: -2;
 `;
 
 const Container = styled.div`
   width: 100%;
   max-width: 1500px;
   position: relative;
+  z-index: 0;
 `;
 
 
@@ -75,9 +77,9 @@ const YellowPolygon = styled.img`
 
     @media (max-width: 1301px) {
         top: 617px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 440px;
+        left: 0;
+        width: 480px;
+		max-width: 100%;
     }
 `;
 
@@ -94,6 +96,31 @@ const YellowTrapezoid = styled.img`
     }
 `;
 
+const MobileYellowTrapezoid = styled.img`
+    position: absolute;
+    top: 1480px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: -1;
+    @media (min-width: 800px) {
+        display: none;
+    }
+`
+
+const IPadYellowTrapezoid = styled.img`
+    position: absolute;
+    top: 1400px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    display: none;
+	@media (min-width: 800px) and (max-width: 1300px) {
+		display: block;
+	}
+`
+
 const LargeYellowTrapezoid = styled.img`
     position: absolute;
     top: 1480px;
@@ -102,17 +129,41 @@ const LargeYellowTrapezoid = styled.img`
     height: auto;
     display: block;
     z-index: 0;
-    @media (max-width: 1560px) {
+
+    @media (max-width: 1301px) {
         display: none;
     }
+		
 `;
+
+const MobileBlueBackground = styled.img`
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+	z-index: -1;
+    @media (min-width:570px) {
+        display: none;
+    }
+
+`
+
+const IPadBlueBackground = styled.img`
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+	z-index: -1;
+    display: none;
+    @media (min-width:570px) and (max-width: 1300px) {
+        display: block;
+    }
+`
 
 const BlueBackground = styled.img`
     position: absolute;
     bottom: 0;
     width: 100%;
     display: none;
-    z-index: 0;
+    z-index: -1;
     @media (max-width: 1600px) and (min-width: 1302px) {
         display: block;
     }
@@ -123,11 +174,13 @@ const LargeBlueBackground = styled.img`
     bottom: 0;
     width: 100%;
     display: block;
-    z-index: 0;
+    z-index: -1;
     @media (max-width: 1600px) {
         display: none;
     }
 `;
+
+
 
 function HomePage() {
 
@@ -169,9 +222,14 @@ function HomePage() {
 
 	return (
 		<Wrap>
+            {/* 橘色三角形 */}
 			<YellowPolygon src="./home/home-polygon.svg" />
-			<YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
-			<LargeYellowTrapezoid src="./home-yellow-bg-2.svg" />
+
+            {/* 黃色梯形 */}
+            <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
+			<MobileYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-mobile.svg" />
+            <IPadYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-ipad.svg" />
+			<LargeYellowTrapezoid src=".home//reach-insure-amount-event-trapezoid-large.svg" />
 			<Container>
 				<EventBanner />
 				<NewYearEvent />
@@ -182,8 +240,12 @@ function HomePage() {
 					<Pointer id="pointer" />
 				</VerticalLine>
 			</Container>
-			 <BlueBackground src="./home-blue-bg-3.svg" />
-			 <LargeBlueBackground src="./home-blue-lg-bg-3.svg" />
+
+            {/* 藍色背景 */}
+			 <BlueBackground src="./home/home-blue-bg-3.svg" />
+			 <IPadBlueBackground src="./home/line-points-blue-background-ipad.svg" />
+			 <LargeBlueBackground src="./home/home-blue-lg-bg-3.svg" />
+			 <MobileBlueBackground src="./home/line-points-blue-background-mobile.svg" /> 
 		</Wrap>
 	);
 }

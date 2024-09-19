@@ -56,12 +56,11 @@ const Temple = styled.img`
     @media (max-width: 1301px) {
         top: 80px;
         left: 4%;
-        transform: translateX(-50%);
         width: 430px;
     }
-    @media (max-width: 376px) {
-        width: 400px;
-        left: 7%;
+    @media (max-width: 381px) {
+        width: 380px;
+        left: 0%;
     }
 `
 
@@ -73,7 +72,7 @@ const Mountain = styled.img`
     @media (max-width: 1301px) {
         width: 428px;
         top: 380px;
-        left: 50%;
+        left: 45%;
         transform: translateX(-40%);
     }
 `
@@ -149,12 +148,26 @@ const EventImgOne = styled.img`
     bottom: 170px;
     left: 122px;
     @media (max-width: 1430px) {
+        left: 122px;
         width: 440px;
     }
     @media (max-width: 1301px) {
         display: none;
     }
     
+`
+
+const EventImgTwo = styled.img`
+    position: absolute;
+    bottom: 170px;
+    right: 60px;
+    @media (max-width: 1430px) {
+        width: 515px;
+        right: 10%;
+    }
+    @media (max-width: 1301px) {
+        display: none;
+    }
 `
 
 const MobileEventImgOne = styled.img`
@@ -183,15 +196,22 @@ const ButtonWrapperOne = styled.div`
     }
 `
 
-const EventImgTwo = styled.img`
+const ButtonWrapperTwo = styled.div`
     position: absolute;
-    bottom: 170px;
-    right: 60px;
-    @media (max-width: 1430px) {
-        width: 500px;
+    bottom: 150px;
+    right: 320px;
+    z-index: 10;
+    width: 289px;
+    @media (min-width: 1301px) and (max-width: 1400px) {
+        width: 280px;
+        top: 920px;
+        right: 24%;
+        opacity: 0;
     }
-    @media (max-width: 1301px) {
-        display: none;
+    @media (max-width: 1300px) {
+        width: 220px;
+        top: 1150px;
+        left: 23%;
     }
 `
 
@@ -204,23 +224,6 @@ const MobileEventImgTwo = styled.img`
     }
 `
 
-const ButtonWrapperTwo = styled.div`
-    position: absolute;
-    bottom: 150px;
-    right: 320px;
-    z-index: 10;
-    width: 289px;
-    @media (max-width: 1430px) {
-        right: 225px;
-    }
-    @media (max-width: 1301px) {
-        width: 220px;
-        top: 1150px;
-        left: 46%;
-        transform: translateX(-45%);
-    }
-`
-
 const LINK = "https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_domestic%26foreign&utm_term=2024q4&utm_content=eta"
 
 const ReachInsureAmountEvent = () => {
@@ -229,7 +232,7 @@ const ReachInsureAmountEvent = () => {
     return (
         <Section>
             {/* <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" /> */}
-            <MobileYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-mobile.svg" />
+            {/* <MobileYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-mobile.svg" /> */}
             <Temple ref={fadeInFromLeft} id="sec2" src="./home/reach-insure-amount-event-temple.svg" />
             <Mountain src="./home/reach-insure-amount-event-mountain.svg" />
 

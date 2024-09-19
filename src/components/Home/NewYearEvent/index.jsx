@@ -84,16 +84,16 @@ const MobileFlowers = styled.img`
 const Fireworks = styled.img`
     position: absolute;
     top: 72px;
-    left: 62px;
+    left: 60px;
     width: 584px;
     opacity: 0;
     @media (max-width: 1301px) {
         top: -60px;
-        left: 4%;
-        width: 380px;
+        left: 3%;
+        width: 400px;
     }
-    @media (max-width: 376px) {
-        width: 375px;
+    @media (max-width: 381px) {
+        left: -2%;
     }
 `;
 
@@ -144,7 +144,7 @@ const EnglishText = styled.div`
     opacity: 0;
     @media (max-width: 1301px) {
         top: 260px;
-        left: 20%;
+        left: 15%;
         font-size: 40px;
         line-height: 40px;
         min-width: 300px;
