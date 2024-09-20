@@ -97,23 +97,26 @@ const ButtonWrapperOne = styled.div`
 `
 
 const People = styled.img`
-    position: absolute;
-    left: 17%;
-    bottom: 244px;
     z-index: 10;
     opacity: 0;
-    @media (min-width:1301px) and (max-width: 1480px) {
-        left: 14%;
-    }
     @media (max-width: 1300px) {
         display: none;
     }
 `
 
+const PeopleWrapper = styled.div`
+    position: absolute;
+    bottom: 244px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @media (max-width: 1300px) {
+        bottom: 600px;
+    }
+`
+
 const MobilePeople = styled.img`
     position: absolute;
-    left: 9%;
-    bottom: 120px;
     width: 80%;
     opacity: 0;
     z-index: 11;
@@ -121,7 +124,6 @@ const MobilePeople = styled.img`
         display: none;
     }
     @media (min-width: 450px) and (max-width: 576px) {
-        left: 18%;
         width: 65%;
     }
 `
@@ -347,8 +349,10 @@ const FirstInsureAndLinePoints = () => {
                 （限從未網路投保全球人壽任一險種者）
             </Desc>
 
-            <People ref={fadeInFromBottom} src="./home/line-points-people.png" className="event-content" id="img3" />
-            <MobilePeople ref={fadeInFromBottom} src="./home/line-points-people-mobile.png"  className="event-content" id="img4" />
+            <PeopleWrapper>
+                <People ref={fadeInFromBottom} src="./home/line-points-people.png" className="event-content" id="img3" />
+                <MobilePeople ref={fadeInFromBottom} src="./home/line-points-people-mobile.png"  className="event-content" id="img4" />
+            </PeopleWrapper>
 
             <EnglishTextTwo ref={fadeInFromLeft}>LINE<br/>POINTS</EnglishTextTwo>
 

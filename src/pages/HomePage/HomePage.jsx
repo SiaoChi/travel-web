@@ -189,7 +189,8 @@ function HomePage() {
 
 	useEffect(() => {
 		const verticalLine = document.getElementById("vertical-line");
-		const verticalLineRect = verticalLine.getBoundingClientRect();
+        const { y: originY } = verticalLine.getBoundingClientRect();
+		let verticalLineRect = verticalLine.getBoundingClientRect();
 		const fly = document.getElementById("fly");
 		const pointer = document.getElementById("pointer");
 		const pointerRect = pointer.getBoundingClientRect();
@@ -200,7 +201,7 @@ function HomePage() {
 		fly.style.left = `${verticalLineRect.x}px`;
 		
 		const handleScroll = () => {
-			const current = window.scrollY + verticalLineRect.top;
+			const current = window.scrollY + originY;
 			if (current > end) {
 				fly.style.position = 'absolute';
 				fly.style.top = 'calc(100% - 50px)';
@@ -209,11 +210,20 @@ function HomePage() {
 			}
 			if (current < end + 50) {
 				fly.style.position = 'fixed';
-				fly.style.top = `${verticalLineRect.y - 50}px`;
+				fly.style.top = `${originY - 50}px`;
 				fly.style.left = `${verticalLineRect.x}px`;
 			}
 		};
 
+        let timeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                verticalLineRect = verticalLine.getBoundingClientRect();
+                if (fly.style.position === "absolute") return;
+                fly.style.left = `${verticalLineRect.x}px`;
+            }, 250);
+        });
 		window.addEventListener('scroll', handleScroll);
 
 		handleScroll();
