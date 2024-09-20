@@ -718,21 +718,22 @@ Error generating stack: `+o.message+`
         left: 26%;
     }
 `,ST=j.img`
-    position: absolute;
-    left: 17%;
-    bottom: 244px;
     z-index: 10;
     opacity: 0;
-    @media (min-width:1301px) and (max-width: 1480px) {
-        left: 14%;
-    }
     @media (max-width: 1300px) {
         display: none;
     }
-`,kT=j.img`
+`,kT=j.div`
     position: absolute;
-    left: 9%;
-    bottom: 120px;
+    bottom: 244px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @media (max-width: 1300px) {
+        bottom: 600px;
+    }
+`,CT=j.img`
+    position: absolute;
     width: 80%;
     opacity: 0;
     z-index: 11;
@@ -740,10 +741,9 @@ Error generating stack: `+o.message+`
         display: none;
     }
     @media (min-width: 450px) and (max-width: 576px) {
-        left: 18%;
         width: 65%;
     }
-`,CT=j.div`
+`,ET=j.div`
     position: absolute;
     left: 50%;
     bottom: 295px;
@@ -754,7 +754,7 @@ Error generating stack: `+o.message+`
         width: 220px;
         bottom: 168px;
     }
-`,ET=j.div`
+`,TT=j.div`
     position: absolute;
     left: 50%;
     bottom: 105px;
@@ -765,7 +765,7 @@ Error generating stack: `+o.message+`
         width: 220px;
         bottom: 30px;
     }
-`,TT=j.img`
+`,jT=j.img`
     position: absolute;
     left: 50%;
     bottom: 450px;
@@ -776,7 +776,7 @@ Error generating stack: `+o.message+`
         bottom: 350px;
         height: 40px;
     }
-`,jT=j.p`
+`,PT=j.p`
     position: absolute;
     left: 50%;
     bottom: 380px;
@@ -791,14 +791,14 @@ Error generating stack: `+o.message+`
         height: 40px;
         width: 280px;
     }
-`,PT=j.img`
+`,OT=j.img`
     position: absolute;
     top: 50px;
     left: 150px;
     @media (max-width: 1301px) {
         display: none;
     }
-`,OT=j.img`
+`,RT=j.img`
     position: absolute;
     top: -100px;
     left: 50%;
@@ -806,7 +806,7 @@ Error generating stack: `+o.message+`
     @media (min-width: 1301px) {
         display: none;
     }
-`,RT=j.div`
+`,NT=j.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -829,7 +829,7 @@ Error generating stack: `+o.message+`
     @media (min-width: 450px) and (max-width: 576px) {
         left: 120px;
     }
-`,NT=j.div`
+`,zT=j.div`
     position: absolute;
     z-index: 1;
     top: 280px;
@@ -868,7 +868,7 @@ Error generating stack: `+o.message+`
         line-height: 40px;
         min-width: 250px;
     }
-`,zT=j(l_)`
+`,bT=j(l_)`
     position: absolute;
     top: 580px;
     right: 85px;
@@ -877,7 +877,7 @@ Error generating stack: `+o.message+`
     @media (max-width: 380px) {
         right:80px;
     }
-`,bT=j(l_)`
+`,LT=j(l_)`
     position: absolute;
     top: 740px;
     left: 114px;
@@ -891,7 +891,7 @@ Error generating stack: `+o.message+`
         top: 860px;
         left: 60px;
     };
-`,LT=()=>{const{fadeInFromBottom:t,fadeInFromLeft:e,btnFadeInFromBottom:n}=nf(),r=z.useRef(null);return Vs(()=>{const i={img1:"0%",img2:"-42%",img3:"-50%",img4:"-50%"};Hr.utils.toArray(".event-content").forEach(o=>{const s=i[o.id];Hr.fromTo(o,{y:100,transform:`translateX(${s})`,opacity:0},{y:0,transform:`translateX(${s})`,opacity:1,duration:1,ease:"power3.out",scrollTrigger:{trigger:o,start:"top 80%",toggleActions:"play none none none"}})})},{scope:r,dependencies:[]}),c.jsxs(xT,{ref:r,children:[c.jsx(vT,{ref:e,id:"sec3",src:"./home/first-insure-event-tower.svg"}),c.jsx(yT,{ref:t,src:"./home/first-insure-event.svg",className:"event-content",id:"img1"}),c.jsx(_T,{ref:t,src:"./home/first-insure-event-mobile.svg",className:"event-content",id:"img2"}),c.jsx(wT,{ref:n,children:c.jsx("a",{target:"_blank",href:"https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_first-time&utm_term=2024q4&utm_content=eta",children:c.jsx(Vt,{color:"blue",height:"60px",children:"投保立即抽"})})}),c.jsxs(zT,{ref:t,children:["PX MART",c.jsx("br",{}),"COUPON"]}),c.jsxs(RT,{ref:e,children:[c.jsx("img",{src:"./home/first-insure-event-title.svg"}),c.jsx("img",{src:"./home/common-title-lottery.svg"})]}),c.jsxs(NT,{ref:e,children:[c.jsx("strong",{children:"2024/10/1~2025/1/31期間，"}),c.jsx("br",{}),c.jsxs("strong",{children:[c.jsx("span",{children:"首次"}),"成功",c.jsx("span",{className:"text-c-red",children:"網路投保"}),c.jsx("span",{children:"「國內外旅平險」"})]}),c.jsx("br",{}),"（限從未網路投保全球人壽任一險種者）"]}),c.jsx(ST,{ref:t,src:"./home/line-points-people.png",className:"event-content",id:"img3"}),c.jsx(kT,{ref:t,src:"./home/line-points-people-mobile.png",className:"event-content",id:"img4"}),c.jsxs(bT,{ref:e,children:["LINE",c.jsx("br",{}),"POINTS"]}),c.jsx(TT,{src:"./home/line-points-event-title.svg"}),c.jsx(jT,{children:"快推薦好友，就有機會獲得 LINE POINTS 喔！"}),c.jsx(CT,{ref:t,children:c.jsx(Mn,{to:"/mgm",children:c.jsx(Vt,{color:"red",height:"60px",children:"立即前往"})})}),c.jsx(ET,{children:c.jsx(Mn,{to:"/policy",children:c.jsx(Vt,{color:"white",height:"60px",hoverBgColor:"#FF837E",children:"活動辦法"})})}),c.jsx(PT,{src:"./home/first-insure-line-points-flower.svg"}),c.jsx(OT,{src:"./home/first-insure-line-points-flower-mobile.svg"})]})},MT=j.div`
+`,MT=()=>{const{fadeInFromBottom:t,fadeInFromLeft:e,btnFadeInFromBottom:n}=nf(),r=z.useRef(null);return Vs(()=>{const i={img1:"0%",img2:"-42%",img3:"-50%",img4:"-50%"};Hr.utils.toArray(".event-content").forEach(o=>{const s=i[o.id];Hr.fromTo(o,{y:100,transform:`translateX(${s})`,opacity:0},{y:0,transform:`translateX(${s})`,opacity:1,duration:1,ease:"power3.out",scrollTrigger:{trigger:o,start:"top 80%",toggleActions:"play none none none"}})})},{scope:r,dependencies:[]}),c.jsxs(xT,{ref:r,children:[c.jsx(vT,{ref:e,id:"sec3",src:"./home/first-insure-event-tower.svg"}),c.jsx(yT,{ref:t,src:"./home/first-insure-event.svg",className:"event-content",id:"img1"}),c.jsx(_T,{ref:t,src:"./home/first-insure-event-mobile.svg",className:"event-content",id:"img2"}),c.jsx(wT,{ref:n,children:c.jsx("a",{target:"_blank",href:"https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_first-time&utm_term=2024q4&utm_content=eta",children:c.jsx(Vt,{color:"blue",height:"60px",children:"投保立即抽"})})}),c.jsxs(bT,{ref:t,children:["PX MART",c.jsx("br",{}),"COUPON"]}),c.jsxs(NT,{ref:e,children:[c.jsx("img",{src:"./home/first-insure-event-title.svg"}),c.jsx("img",{src:"./home/common-title-lottery.svg"})]}),c.jsxs(zT,{ref:e,children:[c.jsx("strong",{children:"2024/10/1~2025/1/31期間，"}),c.jsx("br",{}),c.jsxs("strong",{children:[c.jsx("span",{children:"首次"}),"成功",c.jsx("span",{className:"text-c-red",children:"網路投保"}),c.jsx("span",{children:"「國內外旅平險」"})]}),c.jsx("br",{}),"（限從未網路投保全球人壽任一險種者）"]}),c.jsxs(kT,{children:[c.jsx(ST,{ref:t,src:"./home/line-points-people.png",className:"event-content",id:"img3"}),c.jsx(CT,{ref:t,src:"./home/line-points-people-mobile.png",className:"event-content",id:"img4"})]}),c.jsxs(LT,{ref:e,children:["LINE",c.jsx("br",{}),"POINTS"]}),c.jsx(jT,{src:"./home/line-points-event-title.svg"}),c.jsx(PT,{children:"快推薦好友，就有機會獲得 LINE POINTS 喔！"}),c.jsx(ET,{ref:t,children:c.jsx(Mn,{to:"/mgm",children:c.jsx(Vt,{color:"red",height:"60px",children:"立即前往"})})}),c.jsx(TT,{children:c.jsx(Mn,{to:"/policy",children:c.jsx(Vt,{color:"white",height:"60px",hoverBgColor:"#FF837E",children:"活動辦法"})})}),c.jsx(OT,{src:"./home/first-insure-line-points-flower.svg"}),c.jsx(RT,{src:"./home/first-insure-line-points-flower-mobile.svg"})]})},IT=j.div`
   padding-top: 90px;
   background-color: #FFFAF1;
   display: flex;
@@ -899,12 +899,12 @@ Error generating stack: `+o.message+`
   overflow: hidden;
   position: relative;
   z-index: 0;
-`,IT=j.div`
+`,FT=j.div`
   width: 100%;
   max-width: 1500px;
   position: relative;
   z-index: 0;
-`,FT=j.div`
+`,DT=j.div`
   height: 2563px;
   width: 1px;
   position: absolute;
@@ -919,7 +919,7 @@ Error generating stack: `+o.message+`
 		z-index: 0;
 		display: none;
 	}
-`,DT=j.img`
+`,$T=j.img`
 	width: 50px;
 	height: 50px;
 	position: absolute;
@@ -928,7 +928,7 @@ Error generating stack: `+o.message+`
 	@media screen and (max-width: 1300px) {
 		display: none;
 	}
-`,$T=j.div`
+`,AT=j.div`
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
@@ -936,7 +936,7 @@ Error generating stack: `+o.message+`
 	bottom: 0;
 	left: 0;
 	transform: translate(-50%, 0%);
-`,AT=j.img`
+`,BT=j.img`
     position: absolute;
     top: 200px;
     left: 0;
@@ -954,7 +954,7 @@ Error generating stack: `+o.message+`
         width: 480px;
 		max-width: 100%;
     }
-`,BT=j.img`
+`,UT=j.img`
     display: none;
     @media (max-width: 1560px) and (min-width: 1301px) {
         display: block;
@@ -963,7 +963,7 @@ Error generating stack: `+o.message+`
         z-index: 0;
         width: 100%;
     }
-`,UT=j.img`
+`,WT=j.img`
     position: absolute;
     top: 1480px;
     left: 0;
@@ -974,7 +974,7 @@ Error generating stack: `+o.message+`
     @media (min-width: 800px) {
         display: none;
     }
-`,WT=j.img`
+`,VT=j.img`
     position: absolute;
     top: 1400px;
     left: 0;
@@ -984,7 +984,7 @@ Error generating stack: `+o.message+`
 	@media (min-width: 800px) and (max-width: 1300px) {
 		display: block;
 	}
-`,VT=j.img`
+`,HT=j.img`
     position: absolute;
     top: 1480px;
     left: 0;
@@ -997,7 +997,7 @@ Error generating stack: `+o.message+`
         display: none;
     }
 		
-`,HT=j.img`
+`,YT=j.img`
     position: absolute;
     width: 100%;
     bottom: 0px;
@@ -1006,7 +1006,7 @@ Error generating stack: `+o.message+`
         display: none;
     }
 
-`,YT=j.img`
+`,XT=j.img`
     position: absolute;
     width: 100%;
     bottom: 0px;
@@ -1018,7 +1018,7 @@ Error generating stack: `+o.message+`
     @media (min-width: 990px) and (max-width: 1300px) {
         content: url("./home/line-points-blue-background-ipad-h.svg");
     }
-`,XT=j.img`
+`,GT=j.img`
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -1027,7 +1027,7 @@ Error generating stack: `+o.message+`
     @media (max-width: 1600px) and (min-width: 1301px) {
         display: block;
     }
-`,GT=j.img`
+`,QT=j.img`
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -1036,7 +1036,7 @@ Error generating stack: `+o.message+`
     @media (max-width: 1600px) {
         display: none;
     }
-`;function QT(){return z.useEffect(()=>{const e=document.getElementById("vertical-line").getBoundingClientRect(),n=document.getElementById("fly"),o=document.getElementById("pointer").getBoundingClientRect().y;n.style.position="fixed",n.style.top=`${e.y}px`,n.style.left=`${e.x}px`;const s=()=>{const l=window.scrollY+e.top;if(l>o){n.style.position="absolute",n.style.top="calc(100% - 50px)",n.style.left="0px";return}l<o+50&&(n.style.position="fixed",n.style.top=`${e.y-50}px`,n.style.left=`${e.x}px`)};return window.addEventListener("scroll",s),s(),()=>{window.removeEventListener("scroll",s)}},[]),c.jsxs(MT,{children:[c.jsx(AT,{src:"./home/home-polygon.svg"}),c.jsx(BT,{src:"./home/reach-insure-amount-event-trapezoid.svg"}),c.jsx(UT,{src:"./home/reach-insure-amount-event-trapezoid-mobile.svg"}),c.jsx(WT,{src:"./home/reach-insure-amount-event-trapezoid-ipad.svg"}),c.jsx(VT,{src:"./home/reach-insure-amount-event-trapezoid-large.svg"}),c.jsxs(IT,{children:[c.jsx(q2,{}),c.jsx(tT,{}),c.jsx(gT,{}),c.jsx(LT,{}),c.jsxs(FT,{id:"vertical-line",children:[c.jsx(DT,{id:"fly",src:"./home/home-fly.svg"}),c.jsx($T,{id:"pointer"})]})]}),c.jsx(XT,{src:"./home/home-blue-bg-3.svg"}),c.jsx(YT,{src:"./home/line-points-blue-background-ipad.svg"}),c.jsx(GT,{src:"./home/home-blue-lg-bg-3.svg"}),c.jsx(HT,{src:"./home/line-points-blue-background-mobile.svg"})]})}/*! *****************************************************************************
+`;function KT(){return z.useEffect(()=>{const t=document.getElementById("vertical-line"),{y:e}=t.getBoundingClientRect();let n=t.getBoundingClientRect();const r=document.getElementById("fly"),s=document.getElementById("pointer").getBoundingClientRect().y;r.style.position="fixed",r.style.top=`${n.y}px`,r.style.left=`${n.x}px`;const l=()=>{const u=window.scrollY+e;if(u>s){r.style.position="absolute",r.style.top="calc(100% - 50px)",r.style.left="0px";return}u<s+50&&(r.style.position="fixed",r.style.top=`${e-50}px`,r.style.left=`${n.x}px`)};let a;return window.addEventListener("resize",()=>{clearTimeout(a),a=setTimeout(()=>{n=t.getBoundingClientRect(),r.style.position!=="absolute"&&(r.style.left=`${n.x}px`)},250)}),window.addEventListener("scroll",l),l(),()=>{window.removeEventListener("scroll",l)}},[]),c.jsxs(IT,{children:[c.jsx(BT,{src:"./home/home-polygon.svg"}),c.jsx(UT,{src:"./home/reach-insure-amount-event-trapezoid.svg"}),c.jsx(WT,{src:"./home/reach-insure-amount-event-trapezoid-mobile.svg"}),c.jsx(VT,{src:"./home/reach-insure-amount-event-trapezoid-ipad.svg"}),c.jsx(HT,{src:"./home/reach-insure-amount-event-trapezoid-large.svg"}),c.jsxs(FT,{children:[c.jsx(q2,{}),c.jsx(tT,{}),c.jsx(gT,{}),c.jsx(MT,{}),c.jsxs(DT,{id:"vertical-line",children:[c.jsx($T,{id:"fly",src:"./home/home-fly.svg"}),c.jsx(AT,{id:"pointer"})]})]}),c.jsx(GT,{src:"./home/home-blue-bg-3.svg"}),c.jsx(XT,{src:"./home/line-points-blue-background-ipad.svg"}),c.jsx(QT,{src:"./home/home-blue-lg-bg-3.svg"}),c.jsx(YT,{src:"./home/line-points-blue-background-mobile.svg"})]})}/*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
 
 Permission to use, copy, modify, and/or distribute this software for any
@@ -1049,7 +1049,7 @@ INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
 LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */var Op=function(){return Op=Object.assign||function(e){for(var n,r=1,i=arguments.length;r<i;r++){n=arguments[r];for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(e[o]=n[o])}return e},Op.apply(this,arguments)};function KT(t,e){var n={};for(var r in t)Object.prototype.hasOwnProperty.call(t,r)&&e.indexOf(r)<0&&(n[r]=t[r]);if(t!=null&&typeof Object.getOwnPropertySymbols=="function")for(var i=0,r=Object.getOwnPropertySymbols(t);i<r.length;i++)e.indexOf(r[i])<0&&Object.prototype.propertyIsEnumerable.call(t,r[i])&&(n[r[i]]=t[r[i]]);return n}var xs="",Bl=null,Iu=null,a_=null;function t0(){xs="",Bl!==null&&Bl.disconnect(),Iu!==null&&(window.clearTimeout(Iu),Iu=null)}function mg(t){var e=["BUTTON","INPUT","SELECT","TEXTAREA"],n=["A","AREA"];return e.includes(t.tagName)&&!t.hasAttribute("disabled")||n.includes(t.tagName)&&t.hasAttribute("href")}function gg(){var t=null;if(xs==="#")t=document.body;else{var e=xs.replace("#","");t=document.getElementById(e),t===null&&xs==="#top"&&(t=document.body)}if(t!==null){a_(t);var n=t.getAttribute("tabindex");return n===null&&!mg(t)&&t.setAttribute("tabindex",-1),t.focus({preventScroll:!0}),n===null&&!mg(t)&&(t.blur(),t.removeAttribute("tabindex")),t0(),!0}return!1}function qT(t){window.setTimeout(function(){gg()===!1&&(Bl===null&&(Bl=new MutationObserver(gg)),Bl.observe(document,{attributes:!0,childList:!0,subtree:!0}),Iu=window.setTimeout(function(){t0()},t||1e4))},0)}function u_(t){return Pi.forwardRef(function(e,n){var r="";typeof e.to=="string"&&e.to.includes("#")?r="#"+e.to.split("#").slice(1).join("#"):typeof e.to=="object"&&typeof e.to.hash=="string"&&(r=e.to.hash);var i={};t===nv&&(i.isActive=function(l,a){return l&&l.isExact&&a.hash===r});function o(l){t0(),xs=e.elementId?"#"+e.elementId:r,e.onClick&&e.onClick(l),xs!==""&&!l.defaultPrevented&&l.button===0&&(!e.target||e.target==="_self")&&!(l.metaKey||l.altKey||l.ctrlKey||l.shiftKey)&&(a_=e.scroll||function(a){return e.smooth?a.scrollIntoView({behavior:"smooth"}):a.scrollIntoView()},qT(e.timeout))}var s=KT(e,["scroll","smooth","timeout","elementId"]);return Pi.createElement(t,Op({},i,s,{onClick:o,ref:n}),e.children)})}var ZT=u_(Mn);u_(nv);const JT=j.div`
+***************************************************************************** */var Op=function(){return Op=Object.assign||function(e){for(var n,r=1,i=arguments.length;r<i;r++){n=arguments[r];for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(e[o]=n[o])}return e},Op.apply(this,arguments)};function qT(t,e){var n={};for(var r in t)Object.prototype.hasOwnProperty.call(t,r)&&e.indexOf(r)<0&&(n[r]=t[r]);if(t!=null&&typeof Object.getOwnPropertySymbols=="function")for(var i=0,r=Object.getOwnPropertySymbols(t);i<r.length;i++)e.indexOf(r[i])<0&&Object.prototype.propertyIsEnumerable.call(t,r[i])&&(n[r[i]]=t[r[i]]);return n}var xs="",Bl=null,Iu=null,a_=null;function t0(){xs="",Bl!==null&&Bl.disconnect(),Iu!==null&&(window.clearTimeout(Iu),Iu=null)}function mg(t){var e=["BUTTON","INPUT","SELECT","TEXTAREA"],n=["A","AREA"];return e.includes(t.tagName)&&!t.hasAttribute("disabled")||n.includes(t.tagName)&&t.hasAttribute("href")}function gg(){var t=null;if(xs==="#")t=document.body;else{var e=xs.replace("#","");t=document.getElementById(e),t===null&&xs==="#top"&&(t=document.body)}if(t!==null){a_(t);var n=t.getAttribute("tabindex");return n===null&&!mg(t)&&t.setAttribute("tabindex",-1),t.focus({preventScroll:!0}),n===null&&!mg(t)&&(t.blur(),t.removeAttribute("tabindex")),t0(),!0}return!1}function ZT(t){window.setTimeout(function(){gg()===!1&&(Bl===null&&(Bl=new MutationObserver(gg)),Bl.observe(document,{attributes:!0,childList:!0,subtree:!0}),Iu=window.setTimeout(function(){t0()},t||1e4))},0)}function u_(t){return Pi.forwardRef(function(e,n){var r="";typeof e.to=="string"&&e.to.includes("#")?r="#"+e.to.split("#").slice(1).join("#"):typeof e.to=="object"&&typeof e.to.hash=="string"&&(r=e.to.hash);var i={};t===nv&&(i.isActive=function(l,a){return l&&l.isExact&&a.hash===r});function o(l){t0(),xs=e.elementId?"#"+e.elementId:r,e.onClick&&e.onClick(l),xs!==""&&!l.defaultPrevented&&l.button===0&&(!e.target||e.target==="_self")&&!(l.metaKey||l.altKey||l.ctrlKey||l.shiftKey)&&(a_=e.scroll||function(a){return e.smooth?a.scrollIntoView({behavior:"smooth"}):a.scrollIntoView()},ZT(e.timeout))}var s=qT(e,["scroll","smooth","timeout","elementId"]);return Pi.createElement(t,Op({},i,s,{onClick:o,ref:n}),e.children)})}var JT=u_(Mn);u_(nv);const e3=j.div`
   padding-top: 90px;
   background-color: #FFFAF1;
   display: flex;
@@ -1060,7 +1060,7 @@ PERFORMANCE OF THIS SOFTWARE.
   @media (max-width: 1300px) {
     padding-top: 65px;
   }
-`,e3=j.div`
+`,t3=j.div`
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1072,7 +1072,7 @@ PERFORMANCE OF THIS SOFTWARE.
      width: 100%;
      height: 400px;
   }
-`,t3=j.div`
+`,n3=j.div`
   width: 100%;
   max-width: 1500px;
   position: relative;
@@ -1081,7 +1081,7 @@ PERFORMANCE OF THIS SOFTWARE.
     width: 430px;
     height: 2500px;
   }
-`,n3=j.div`
+`,r3=j.div`
   position: absolute;
   top: 427px;
   left: 50%;
@@ -1095,7 +1095,7 @@ PERFORMANCE OF THIS SOFTWARE.
     top: 530px;
     aspect-ratio: 410 / 700;
   }
-`,r3=j.img`
+`,i3=j.img`
   position: absolute;
   top: 700px;
   left: 60px;
@@ -1104,7 +1104,7 @@ PERFORMANCE OF THIS SOFTWARE.
   @media (max-width: 1300px) {
     display: none;
   }
-`,i3=j.img`
+`,o3=j.img`
   position: absolute;
   top: 585px;
   left: 25px;
@@ -1113,7 +1113,7 @@ PERFORMANCE OF THIS SOFTWARE.
   @media (min-width: 1300px) {
     display: none;
   }
-`,o3=j.img`
+`,s3=j.img`
   position: absolute;
   top: 660px;
   left: 78px;
@@ -1122,7 +1122,7 @@ PERFORMANCE OF THIS SOFTWARE.
   @media (max-width: 1300px) {
     display: none;
   }
-`,s3=j.div`
+`,l3=j.div`
   position: absolute;
   bottom: 375px;
   left: 50%;
@@ -1137,7 +1137,7 @@ PERFORMANCE OF THIS SOFTWARE.
     bottom: -20px;
     background-size: cover;
   }
-`,l3=j.div`
+`,a3=j.div`
   position: absolute;
   bottom: -20px;
   transform: translateX(-50%);
@@ -1165,7 +1165,7 @@ PERFORMANCE OF THIS SOFTWARE.
     background:none;
     left: 51%;
   }
-`,a3=j.div`
+`,u3=j.div`
     display: flex;
     align-items: center;
     width: 1039px;
@@ -1179,7 +1179,7 @@ PERFORMANCE OF THIS SOFTWARE.
         width: 294px;
         z-index: 10;
     }
-`,u3=j.video`
+`,c3=j.video`
   position: absolute;
   top: 0;
   right: 150px;
@@ -1189,7 +1189,7 @@ PERFORMANCE OF THIS SOFTWARE.
     align-self: center;
     position: static;
   }
-`,c3=j.img`
+`,f3=j.img`
     position: absolute;
     top: 50px;
     left: 100px;
@@ -1201,7 +1201,7 @@ PERFORMANCE OF THIS SOFTWARE.
         top: 340px;
         left: 7%;
     }
-`,f3=j.img`
+`,d3=j.img`
     position: absolute;
     top: 50px;
     left: 100px;
@@ -1238,7 +1238,7 @@ PERFORMANCE OF THIS SOFTWARE.
         letter-spacing: 2px;
         width: 100%;
     }
-`,d3=j.p`
+`,p3=j.p`
     position: absolute;
     top: 471px;
     left: 112px;
@@ -1261,7 +1261,7 @@ PERFORMANCE OF THIS SOFTWARE.
   @media (max-width: 1300px) {
     display: ${t=>t.reverse?"none":"block"};
   }
-`,p3=j(rf)`
+`,h3=j(rf)`
     font-size: 20px;
     top: 730px;
     left: 50%;
@@ -1277,7 +1277,7 @@ PERFORMANCE OF THIS SOFTWARE.
       width: 280px;
       text-align: center;
     }
-`,h3=j.img`
+`,m3=j.img`
     position: absolute;
     top: 790px;
     left: 50%;
@@ -1288,7 +1288,7 @@ PERFORMANCE OF THIS SOFTWARE.
       top: 850px;
       width: 340px;
     }
-`,m3=j.div`
+`,g3=j.div`
     position: absolute;
     top: 900px;
     left: 18%;
@@ -1314,7 +1314,7 @@ PERFORMANCE OF THIS SOFTWARE.
       left: -2%;
       background-size: contain;
     }
-`,g3=j.div`
+`,x3=j.div`
     position: absolute;
     top: 1163px;
     left: 18%;
@@ -1339,7 +1339,7 @@ PERFORMANCE OF THIS SOFTWARE.
       left: -2%;
       background-size: contain;
     }
-`,x3=j.div`
+`,v3=j.div`
     position: absolute;
     top: 1463px;
     left: 18%;
@@ -1364,11 +1364,7 @@ PERFORMANCE OF THIS SOFTWARE.
       width: 380px;
       background-size: contain;
     }
-`,v3=j.div`
-    position: absolute;
-    top: 1800px;
-    left: 50%;
-    transform: translateX(-50%);
+`,y3=j.div`
     width: 821px;  
     height: 683px;
     background: url('./mgm/mgm-people-and-frame.svg') no-repeat center center;
@@ -1376,19 +1372,24 @@ PERFORMANCE OF THIS SOFTWARE.
     pointer-events: none;
     z-index: 1;
     @media (max-width: 1300px) {
-        left: 54%;
-        top: 1500px;
         width: 359px;
         height: 597px;
         background: url('./mgm/mgm-people-and-frame-mobile.svg') no-repeat center center;
     }
-    @media (max-width: 800px) {
-      left: 51%;
-    }
-`,y3=j.div`
+`,_3=j.div`
     position: absolute;
-    top: 2290px;
-    left: 40%;
+    top: 1800px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @media (max-width: 1300px) {
+        top: 1500px;
+    }
+`,w3=j.div`
     display: flex;
     justify-content: center;
     width: 294px;
@@ -1398,34 +1399,43 @@ PERFORMANCE OF THIS SOFTWARE.
     }
     @media (max-width: 1300px) {
         width: 229px;
-        top: 1900px;
-        left: 28%;
     }
     @media (max-width: 800px) {
         width: 229px;
-        top: 1900px;
-        left: 24%;
     }
      @media (max-width: 400px) {
         width: 229px;
-        top: 1900px;
-        left: 21%;
     }
-`,_3=j(rf)`
+`,S3=j.div`
+  position: absolute;
+  top: 2290px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  @media (max-width: 1300px) {
+      top: 1900px;
+  }
+  @media (max-width: 800px) {
+      top: 1900px;
+  }
+    @media (max-width: 400px) {
+      top: 1900px;
+  }
+`,k3=j(rf)`
     font-size: 20px;
     top: 2110px;
     left: 50%;
     transform: translateX(-50%);
     letter-spacing: 1px;
     z-index:1;
-`,w3=j.img`
+`,C3=j.img`
     position: absolute;
     top: 2160px;
     left: 50%;
     transform: translateX(-50%);
     width: 717px;
     z-index:1;
-`,S3=j(rf)`
+`,E3=j(rf)`
     font-size: 16px;
     font-weight: 400;
     top: 2380px;
@@ -1437,7 +1447,7 @@ PERFORMANCE OF THIS SOFTWARE.
   @media (max-width: 1300px) {
       display: none;
   }
-`,k3=j.img`
+`,T3=j.img`
   display: none;
   position: absolute;
   bottom: 0;
@@ -1454,7 +1464,7 @@ PERFORMANCE OF THIS SOFTWARE.
        left: 0;
     }
   
-`,C3=j.img`
+`,j3=j.img`
   display: none;
   position: absolute;
   bottom: 0;
@@ -1471,12 +1481,12 @@ PERFORMANCE OF THIS SOFTWARE.
        left: 0;
     }
   
-`,E3=()=>{const{fadeInFromBottom:t}=nf(),[e,n]=z.useState(!0);return Vs(()=>{Hr.utils.toArray(".mgm-content").forEach(r=>{Hr.from(r,{y:100,opacity:0,duration:1,ease:"power3.out",scrollTrigger:{trigger:r,start:"top 80%",toggleActions:"play none none none"}})})}),z.useEffect(()=>{const r=setInterval(()=>{n(!e)},1e3);return()=>clearInterval(r)},[e]),c.jsxs(JT,{children:[c.jsx(n3,{}),c.jsxs(t3,{children:[c.jsx(u3,{src:"./mgm/mgm-banner-video-mobile.mp4",autoPlay:!0,muted:!0,playsInline:!0}),c.jsx(c3,{src:"./mgm/mgm-title.png"}),c.jsx(f3,{src:"./mgm/mgm-title-p.png"}),c.jsxs(rf,{isBlue:e,children:[c.jsx("p",{children:"推薦好友全球旅平險"}),c.jsxs("p",{children:["快樂",c.jsx("span",{children:"+1+1+1+1+1+1+1+1+1"})]})]}),c.jsxs(d3,{children:["COLLECT",c.jsx(xg,{reverse:!0})," A LOT OF LINE POINTS"]}),c.jsx(i3,{src:"./mgm/mgm-points-and-flower-mobile.svg"}),c.jsxs(p3,{children:[c.jsx("p",{children:"2024/10/1~2025/1/31"}),c.jsx("p",{children:"成功邀請親友投保旅平險，達指定筆數"})]}),c.jsx(h3,{src:"./mgm/mgm-line-points-text.svg"}),c.jsx(m3,{className:"mgm-content"}),c.jsx(g3,{className:"mgm-content"}),c.jsx(x3,{className:"mgm-content"}),c.jsxs(vg,{children:[c.jsx(r3,{src:"./mgm/mgm-info-flower.svg"}),c.jsx(o3,{src:"./mgm/mgm-content-p-point.svg"})]}),c.jsx(s3,{}),c.jsx(v3,{className:"mgm-content"}),c.jsx(y3,{ref:t,children:c.jsx("a",{target:"_blank",href:"https://e-commerce.transglobe.com.tw/member/missionActivities/etamgm?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_etamgm&utm_term=2024q4&utm_content=missionActivities",children:c.jsx(Vt,{color:"red",children:"立即推薦親友"})})}),c.jsxs(vg,{children:[c.jsx(_3,{children:c.jsx("p",{children:"只要親友點選「你的推薦連結」成功投保"})}),c.jsx(w3,{src:"./mgm/mgm-bottom-info-title.svg"}),c.jsxs(S3,{children:[c.jsx("p",{children:"點擊上方按鈕後，註冊或登入取得邀請碼"}),c.jsx("p",{children:"就能分享給親友，一起抽點數！"})]})]}),c.jsxs(l3,{children:[c.jsxs(a3,{children:[c.jsx("a",{target:"_blank",href:"https://e-commerce.transglobe.com.tw/member/missionActivities?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_mgmsearch&utm_term=2024q4&utm_content=missionActivities",children:c.jsxs(Vt,{color:"yellow",height:"82px",children:["推薦好友 ",c.jsx(xg,{reverse:!0}),"成功筆數查詢"]})}),c.jsx(ZT,{to:"/#sec2",scroll:r=>{const o=r.getBoundingClientRect().top+window.scrollY+-80;window.scrollTo({top:o,behavior:"smooth"})},children:c.jsx(Vt,{color:"yellow",height:"82px",children:"參加更多抽獎"})}),c.jsx(Mn,{to:"/policy",children:c.jsx(Vt,{color:"white",hoverBgColor:"#FF837E",height:"82px",children:"活動辦法"})})]}),c.jsx(k3,{src:"./mgm/mgm-building-mb.svg"}),c.jsx(C3,{src:"./mgm/mgm-building-ipad.svg"})]})]}),c.jsx(e3,{})]})},T3=j.div`
+`,P3=()=>{const{fadeInFromBottom:t}=nf(),[e,n]=z.useState(!0);return Vs(()=>{Hr.utils.toArray(".mgm-content").forEach(r=>{Hr.from(r,{y:100,opacity:0,duration:1,ease:"power3.out",scrollTrigger:{trigger:r,start:"top 80%",toggleActions:"play none none none"}})})}),z.useEffect(()=>{const r=setInterval(()=>{n(!e)},1e3);return()=>clearInterval(r)},[e]),c.jsxs(e3,{children:[c.jsx(r3,{}),c.jsxs(n3,{children:[c.jsx(c3,{src:"./mgm/mgm-banner-video-mobile.mp4",autoPlay:!0,muted:!0,playsInline:!0}),c.jsx(f3,{src:"./mgm/mgm-title.png"}),c.jsx(d3,{src:"./mgm/mgm-title-p.png"}),c.jsxs(rf,{isBlue:e,children:[c.jsx("p",{children:"推薦好友全球旅平險"}),c.jsxs("p",{children:["快樂",c.jsx("span",{children:"+1+1+1+1+1+1+1+1+1"})]})]}),c.jsxs(p3,{children:["COLLECT",c.jsx(xg,{reverse:!0})," A LOT OF LINE POINTS"]}),c.jsx(o3,{src:"./mgm/mgm-points-and-flower-mobile.svg"}),c.jsxs(h3,{children:[c.jsx("p",{children:"2024/10/1~2025/1/31"}),c.jsx("p",{children:"成功邀請親友投保旅平險，達指定筆數"})]}),c.jsx(m3,{src:"./mgm/mgm-line-points-text.svg"}),c.jsx(g3,{className:"mgm-content"}),c.jsx(x3,{className:"mgm-content"}),c.jsx(v3,{className:"mgm-content"}),c.jsxs(vg,{children:[c.jsx(i3,{src:"./mgm/mgm-info-flower.svg"}),c.jsx(s3,{src:"./mgm/mgm-content-p-point.svg"})]}),c.jsx(l3,{}),c.jsx(_3,{children:c.jsx(y3,{className:"mgm-content"})}),c.jsx(S3,{children:c.jsx(w3,{ref:t,children:c.jsx("a",{target:"_blank",href:"https://e-commerce.transglobe.com.tw/member/missionActivities/etamgm?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_etamgm&utm_term=2024q4&utm_content=missionActivities",children:c.jsx(Vt,{color:"red",children:"立即推薦親友"})})})}),c.jsxs(vg,{children:[c.jsx(k3,{children:c.jsx("p",{children:"只要親友點選「你的推薦連結」成功投保"})}),c.jsx(C3,{src:"./mgm/mgm-bottom-info-title.svg"}),c.jsxs(E3,{children:[c.jsx("p",{children:"點擊上方按鈕後，註冊或登入取得邀請碼"}),c.jsx("p",{children:"就能分享給親友，一起抽點數！"})]})]}),c.jsxs(a3,{children:[c.jsxs(u3,{children:[c.jsx("a",{target:"_blank",href:"https://e-commerce.transglobe.com.tw/member/missionActivities?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_mgmsearch&utm_term=2024q4&utm_content=missionActivities",children:c.jsxs(Vt,{color:"yellow",height:"82px",children:["推薦好友 ",c.jsx(xg,{reverse:!0}),"成功筆數查詢"]})}),c.jsx(JT,{to:"/#sec2",scroll:r=>{const o=r.getBoundingClientRect().top+window.scrollY+-80;window.scrollTo({top:o,behavior:"smooth"})},children:c.jsx(Vt,{color:"yellow",height:"82px",children:"參加更多抽獎"})}),c.jsx(Mn,{to:"/policy",children:c.jsx(Vt,{color:"white",hoverBgColor:"#FF837E",height:"82px",children:"活動辦法"})})]}),c.jsx(T3,{src:"./mgm/mgm-building-mb.svg"}),c.jsx(j3,{src:"./mgm/mgm-building-ipad.svg"})]})]}),c.jsx(t3,{})]})},O3=j.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
-`,j3=()=>c.jsx("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",title:"減號圖標",children:c.jsx("path",{d:"M6 12L18 12",stroke:"#000000",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"})}),P3=()=>c.jsx("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",title:"加號圖標",children:c.jsx("path",{d:"M12 6V18M6 12H18",stroke:"#000000",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"})}),O3=j.div`
+`,R3=()=>c.jsx("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",title:"減號圖標",children:c.jsx("path",{d:"M6 12L18 12",stroke:"#000000",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"})}),N3=()=>c.jsx("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",title:"加號圖標",children:c.jsx("path",{d:"M12 6V18M6 12H18",stroke:"#000000",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"})}),z3=j.div`
   width: ${t=>t.$width||"100%"};
   height: ${t=>t.$height||"65px"};
   background-color: #FFFAF1;
@@ -1485,7 +1495,7 @@ PERFORMANCE OF THIS SOFTWARE.
   top: 5px;
   left: 5px;
   transition: all 0.3s ease;
-`,R3=j.div`
+`,b3=j.div`
   width: ${t=>t.$width||"100%"};
   height: ${t=>t.$height||"65px"};
   font-size: 25px;
@@ -1500,7 +1510,7 @@ PERFORMANCE OF THIS SOFTWARE.
   @media (max-width: 480px) {
     font-size: 20px;
   }
-`,N3=j.button`
+`,L3=j.button`
   width: ${t=>t.$width||"100%"};
   height: ${t=>t.$height||"65px"};
   font-size: 25px;
@@ -1516,7 +1526,7 @@ PERFORMANCE OF THIS SOFTWARE.
 `,yg=j.div`
   position: relative;
   right: 50px;
-`;function Rp({title:t,isOpen:e,onClick:n,children:r}){return c.jsxs(T3,{children:[c.jsxs(N3,{onClick:n,children:[c.jsx(O3,{}),c.jsx(R3,{children:c.jsx("div",{style:{zIndex:5},children:t})}),e?c.jsx(yg,{children:c.jsx(j3,{})}):c.jsx(yg,{children:c.jsx(P3,{})})]}),e&&r]})}Rp.propTypes={title:Rn.string.isRequired,isOpen:Rn.bool.isRequired,onClick:Rn.func.isRequired,children:Rn.node.isRequired};const z3=j.ol`
+`;function Rp({title:t,isOpen:e,onClick:n,children:r}){return c.jsxs(O3,{children:[c.jsxs(L3,{onClick:n,children:[c.jsx(z3,{}),c.jsx(b3,{children:c.jsx("div",{style:{zIndex:5},children:t})}),e?c.jsx(yg,{children:c.jsx(R3,{})}):c.jsx(yg,{children:c.jsx(N3,{})})]}),e&&r]})}Rp.propTypes={title:Rn.string.isRequired,isOpen:Rn.bool.isRequired,onClick:Rn.func.isRequired,children:Rn.node.isRequired};const M3=j.ol`
   padding-left: 20px;
 `,qn=j.li`
   margin-bottom: 10px;
@@ -1532,7 +1542,7 @@ PERFORMANCE OF THIS SOFTWARE.
   color: #000000;
   text-decoration: underline;
 	cursor: pointer;
-`;function Np({isPart2:t=!1}){return c.jsx("div",{children:c.jsxs(z3,{children:[c.jsx(qn,{children:t?c.jsx(Pn,{children:"凡邀請人於活動期間（2024/10/1-2025/1/31）透過投保邀請連結，邀請親友成功投保國內外旅行平安險（其投保流程之「會員推薦碼」欄位須顯示邀請人推薦碼，若系統無自動帶入，可由被邀請人自行輸入，恕不接受補登），且該保單無撤銷或終止契約之情事者，始具備抽獎及中獎資格。"}):c.jsx(Pn,{children:"本活動限定全球人壽網路投保會員參加，需於活動期間（2024/10/1-2025/1/31）成功網路投保「國內外旅行平安險」，並符合各獎項參加門檻，且該保單無撤銷或終止契約之情事者，始具備抽獎及中獎資格。"})}),c.jsx(qn,{children:c.jsx(Pn,{children:"本活動將於2025/3/31前以電腦隨機抽出獎項，2025/4/30前於本網站公告中獎名單。本公司將主動以電子郵件/簡訊通知活動中獎人，請活動中獎人於指定回覆資料截止日期前登錄系統，並提供真實姓名、身分證字號、地址、電話等個人資料，以完成相關領獎作業（上傳代扣稅收據及中獎人身分證正反面影本），逾期回覆或未回覆者視為放棄中獎資格，本公司不遞補名額。"})}),c.jsx(qn,{children:c.jsxs(Pn,{children:["本活動所提供獎品之電子禮券使用方式及限制等，悉依各項獎品或服務之製造或提供廠商的說明為準，詳情請前往",c.jsx(_g,{href:"https://tx.edenred.tw/",target:"_blank",children:"Edenred好禮即享券網站"}),"查詢。因廠商或品牌之電子禮券序號大多具有兌換時效性，建議您在獲得中獎序號同時立即進行兌換，若因逾期未兌換而失效者，不得要求本公司重新提供或更換獎項；若序號遺失或遭盜用、竄改等情形，亦恕不補發。"]})}),c.jsx(qn,{children:c.jsx(Pn,{children:"本活動所提供之獎項內容，不得折換現金、兌換其他商品或優惠，亦不得將本活動中獎資格轉讓或轉售予他人；本活動獎項如遇缺貨或不可抗力之因素無法提供時，本公司有權以其他等值商品替代。獎項實際金額以本公司購入之當時金額為準，獎項所衍生之費用皆由中獎者自行負擔。"})}),c.jsx(qn,{children:c.jsx(Pn,{children:"參加本活動即視為同意本公司得因本活動之需要，依個人資料保護法相關規定，於本活動期間內，以電子檔或紙本形式於我國境內蒐集、處理，及向活動廠商、稅捐機關等對象利用其個人資料（包含姓名、身分證字號/居留證、電話、電子郵件等）。參加本活動者可自由選擇是否提供完整個人資訊，惟若不願提供或提供資訊不完整、不正確者，將無法參加本活動或喪失中獎資格。"})}),c.jsx(qn,{children:c.jsx(Pn,{children:"本活動如有任何因電腦、網路、電話、技術或其他不可歸責於本公司之事由，致本系統誤送活動訊息或中獎通知，或使參加本活動者所寄出、填寫或登錄之資料有遺失、錯誤、無法辨識或毀損等情形，本公司不負任何法律責任。"})}),c.jsx(qn,{children:c.jsx(Pn,{children:"本公司有權檢視本活動是否有人為操作之行為，對於以偽造、詐欺或其他不正當之方式意圖兌領之參加者，本公司有權撤銷其中獎資格或拒絕其參與本活動，並對於任何破壞本活動行為保留相關權利。活動中獎人若取消保單將喪失中獎資格。"})}),c.jsx(qn,{children:c.jsx(Pn,{children:"依稅法規定，中獎者若為中華民國境內居住之個人，且所中獎項價值超過新臺幣（以下同）1,000元時，本公司將於翌年開立所得稅扣繳憑單予中獎者，如所中獎項價值為20,000元（含）以上者，中獎者須先繳交10%機會中獎稅金，始可領獎。中獎者若為非中華民國境內居住之個人（即在中華民國境內居住未達183天之本國人及外國人），不論中獎獎項價值，均須先就中獎所得扣繳20％機會中獎稅金，始可領獎，且本公司須開立所得稅扣繳憑單。若未能依法繳納應繳稅額，即視為喪失中獎資格。參加者因參加本活動而須支付之任何稅捐皆為參加者之義務，概與本公司無關。前述稅捐法規如有更新或變動者，依修正後之規定辦理。"})}),c.jsx(qn,{children:c.jsxs(Pn,{children:["本活動連結之保險完整商品內容與給付限制，請參閱",c.jsx(_g,{href:"https://e-commerce.transglobe.com.tw/product/eta",target:"_blank",children:"e路平安旅行平安保險"}),"商品頁之保單條款。"]})}),c.jsx(qn,{children:c.jsx(Pn,{children:"本公司非獎品製造者或提供者，與各項獎品或服務之製造或提供廠商無任何代理或合夥關係，對於各項獎品不負任何擔保責任，且本活動獎品之保固期限均依廠商出廠時實際提供者為準。得獎者如因本活動各項獎品、服務或保固發生任何爭議，概與本公司無關。"})}),c.jsx(qn,{children:c.jsx(Pn,{children:"本活動如因故無法舉行，本公司有權取消、終止、延期、修改活動內容、更換獎項內容或暫停本活動進行等之相關決定，並得以公告方式通知參加者。如有未盡事宜或疑義時，悉依本公司相關規定或解釋辦理。"})})]})})}Np.propTypes={isPart2:Rn.bool};const b3=j.ol`
+`;function Np({isPart2:t=!1}){return c.jsx("div",{children:c.jsxs(M3,{children:[c.jsx(qn,{children:t?c.jsx(Pn,{children:"凡邀請人於活動期間（2024/10/1-2025/1/31）透過投保邀請連結，邀請親友成功投保國內外旅行平安險（其投保流程之「會員推薦碼」欄位須顯示邀請人推薦碼，若系統無自動帶入，可由被邀請人自行輸入，恕不接受補登），且該保單無撤銷或終止契約之情事者，始具備抽獎及中獎資格。"}):c.jsx(Pn,{children:"本活動限定全球人壽網路投保會員參加，需於活動期間（2024/10/1-2025/1/31）成功網路投保「國內外旅行平安險」，並符合各獎項參加門檻，且該保單無撤銷或終止契約之情事者，始具備抽獎及中獎資格。"})}),c.jsx(qn,{children:c.jsx(Pn,{children:"本活動將於2025/3/31前以電腦隨機抽出獎項，2025/4/30前於本網站公告中獎名單。本公司將主動以電子郵件/簡訊通知活動中獎人，請活動中獎人於指定回覆資料截止日期前登錄系統，並提供真實姓名、身分證字號、地址、電話等個人資料，以完成相關領獎作業（上傳代扣稅收據及中獎人身分證正反面影本），逾期回覆或未回覆者視為放棄中獎資格，本公司不遞補名額。"})}),c.jsx(qn,{children:c.jsxs(Pn,{children:["本活動所提供獎品之電子禮券使用方式及限制等，悉依各項獎品或服務之製造或提供廠商的說明為準，詳情請前往",c.jsx(_g,{href:"https://tx.edenred.tw/",target:"_blank",children:"Edenred好禮即享券網站"}),"查詢。因廠商或品牌之電子禮券序號大多具有兌換時效性，建議您在獲得中獎序號同時立即進行兌換，若因逾期未兌換而失效者，不得要求本公司重新提供或更換獎項；若序號遺失或遭盜用、竄改等情形，亦恕不補發。"]})}),c.jsx(qn,{children:c.jsx(Pn,{children:"本活動所提供之獎項內容，不得折換現金、兌換其他商品或優惠，亦不得將本活動中獎資格轉讓或轉售予他人；本活動獎項如遇缺貨或不可抗力之因素無法提供時，本公司有權以其他等值商品替代。獎項實際金額以本公司購入之當時金額為準，獎項所衍生之費用皆由中獎者自行負擔。"})}),c.jsx(qn,{children:c.jsx(Pn,{children:"參加本活動即視為同意本公司得因本活動之需要，依個人資料保護法相關規定，於本活動期間內，以電子檔或紙本形式於我國境內蒐集、處理，及向活動廠商、稅捐機關等對象利用其個人資料（包含姓名、身分證字號/居留證、電話、電子郵件等）。參加本活動者可自由選擇是否提供完整個人資訊，惟若不願提供或提供資訊不完整、不正確者，將無法參加本活動或喪失中獎資格。"})}),c.jsx(qn,{children:c.jsx(Pn,{children:"本活動如有任何因電腦、網路、電話、技術或其他不可歸責於本公司之事由，致本系統誤送活動訊息或中獎通知，或使參加本活動者所寄出、填寫或登錄之資料有遺失、錯誤、無法辨識或毀損等情形，本公司不負任何法律責任。"})}),c.jsx(qn,{children:c.jsx(Pn,{children:"本公司有權檢視本活動是否有人為操作之行為，對於以偽造、詐欺或其他不正當之方式意圖兌領之參加者，本公司有權撤銷其中獎資格或拒絕其參與本活動，並對於任何破壞本活動行為保留相關權利。活動中獎人若取消保單將喪失中獎資格。"})}),c.jsx(qn,{children:c.jsx(Pn,{children:"依稅法規定，中獎者若為中華民國境內居住之個人，且所中獎項價值超過新臺幣（以下同）1,000元時，本公司將於翌年開立所得稅扣繳憑單予中獎者，如所中獎項價值為20,000元（含）以上者，中獎者須先繳交10%機會中獎稅金，始可領獎。中獎者若為非中華民國境內居住之個人（即在中華民國境內居住未達183天之本國人及外國人），不論中獎獎項價值，均須先就中獎所得扣繳20％機會中獎稅金，始可領獎，且本公司須開立所得稅扣繳憑單。若未能依法繳納應繳稅額，即視為喪失中獎資格。參加者因參加本活動而須支付之任何稅捐皆為參加者之義務，概與本公司無關。前述稅捐法規如有更新或變動者，依修正後之規定辦理。"})}),c.jsx(qn,{children:c.jsxs(Pn,{children:["本活動連結之保險完整商品內容與給付限制，請參閱",c.jsx(_g,{href:"https://e-commerce.transglobe.com.tw/product/eta",target:"_blank",children:"e路平安旅行平安保險"}),"商品頁之保單條款。"]})}),c.jsx(qn,{children:c.jsx(Pn,{children:"本公司非獎品製造者或提供者，與各項獎品或服務之製造或提供廠商無任何代理或合夥關係，對於各項獎品不負任何擔保責任，且本活動獎品之保固期限均依廠商出廠時實際提供者為準。得獎者如因本活動各項獎品、服務或保固發生任何爭議，概與本公司無關。"})}),c.jsx(qn,{children:c.jsx(Pn,{children:"本活動如因故無法舉行，本公司有權取消、終止、延期、修改活動內容、更換獎項內容或暫停本活動進行等之相關決定，並得以公告方式通知參加者。如有未盡事宜或疑義時，悉依本公司相關規定或解釋辦理。"})})]})})}Np.propTypes={isPart2:Rn.bool};const I3=j.ol`
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -1618,7 +1628,7 @@ PERFORMANCE OF THIS SOFTWARE.
   line-height: 25px;
   color: #000000;
   font-weight: bold;
-`;function L3(){return c.jsxs(b3,{children:[c.jsx(Jf,{children:c.jsxs(ed,{children:[c.jsxs(io,{children:[c.jsx(Dr,{children:"跨年出國抽獎趣"}),c.jsx(me,{lineHeight:20,children:"(僅限國外旅平險)"})]}),c.jsx(me,{lineHeight:30,children:"於2024/12/15-2025/1/20期間成功投保「國外旅平險」，不限單筆保費金額，可額外享「8,800元旅遊大紅包」加碼抽獎機會乙次（價值8,800元好禮即享券，共抽5名，每人限獲獎乙次）。"})]})}),c.jsx(Jf,{children:c.jsxs(ed,{children:[c.jsx(io,{children:c.jsx(Dr,{children:"投保滿額抽獎趣"})}),c.jsxs("div",{style:{display:"flex",alignItems:"flex-start",gap:"22px"},children:[c.jsx(Tc,{marginLeft:"-50px",children:"1"}),c.jsxs(me,{lineHeight:30,children:["單筆保費滿200元，該筆保單即享「500元好禮即享券」抽獎機會乙次",c.jsx("br",{}),"（共抽100名，每人獲獎次數不限）。"]})]}),c.jsxs("div",{style:{display:"flex",alignItems:"flex-start",gap:"22px"},children:[c.jsx(Tc,{marginLeft:"-50px",children:"2"}),c.jsxs("div",{children:[c.jsxs(me,{lineHeight:30,children:["單筆保費滿500元，該筆保單即享「星宇航空東京來回機票」抽獎機會乙次",c.jsx("br",{}),"（價值20,000元旅遊商品兌換券乙組，共抽5名，每人限獲獎乙次）。"]}),c.jsx(me,{highlight:!0,lineHeight:30,children:"註：上述活動採擇優最高門檻計，每筆保單享乙個獎項抽獎機會一次。"})]})]})]})}),c.jsx(Jf,{children:c.jsxs(ed,{children:[c.jsxs(io,{children:[c.jsx(Dr,{children:"首次投保抽獎趣"}),c.jsx(me,{lineHeight:20,children:"(僅限國外旅平險)"})]}),c.jsxs("div",{children:[c.jsx(me,{lineHeight:30,children:"活動期間於本公司網路投保首次成功投保者*，不限該筆旅平險保費金額，即享「200元全聯禮券」抽獎機會乙次（共抽200名，每人限獲獎乙次）。"}),c.jsx(me,{highlight:!0,lineHeight:30,children:"註：「首次成功投保者」係指自註冊後從未網路投保本公司任一險種之網路投保會員，且於活動期間成功投保旅平險為其首筆保單。"})]})]})})]})}const M3=()=>c.jsxs("div",{children:[c.jsxs("div",{style:{paddingBottom:"40px",borderBottom:"1px solid #000000"},children:[c.jsx("div",{style:{marginBottom:"30px"},children:c.jsx(Dr,{children:"跨年出國抽獎趣"})}),c.jsxs(io,{style:{marginBottom:"20px"},children:[c.jsx(au,{children:"8,800元好禮即享券"}),c.jsx(me,{lineHeight:20,children:"（無效期餘額型）"})]}),c.jsxs(me,{children:["20大品牌讓收券者自選面額，可多次自由選配。",c.jsx("br",{}),"適用通路：全聯、王品集團、7-ELEVEN、全家、家樂福、大潤發、屈臣氏、特力集團、漢來美食通用券、遠東SOGO百貨、遠東百貨、遠東巨城購物中心、foodpanda、寶雅集團、漢神百貨/漢神巨蛋、瓦城集團、爭鮮集團、小北百貨、美廉社&三友藥妝通用、楓康超市。"]})]}),c.jsxs("div",{style:{marginTop:"40px"},children:[c.jsx("div",{style:{marginBottom:"30px"},children:c.jsx(Dr,{children:"投保滿額抽獎趣"})}),c.jsxs(io,{style:{marginBottom:"20px"},children:[c.jsx(au,{children:"500元好禮即享券"}),c.jsx(me,{lineHeight:20,children:"（無效期餘額型）"})]}),c.jsxs(me,{children:["可分次抵用。五大品牌擇一使用，一旦選定品牌，限全額度單一品牌兌換使用。",c.jsx("br",{}),"適用通路：家樂福、遠東SOGO百貨、遠東百貨、王品集團、7-ELEVEN。"]})]}),c.jsxs("div",{style:{marginTop:"40px",paddingBottom:"40px",borderBottom:"1px solid #000000"},children:[c.jsxs(io,{children:[c.jsx(au,{children:"星宇航空東京來回機票"}),c.jsx(me,{lineHeight:20,children:"（以ezfly 優惠碼形式提供「價值20,000元旅遊兌換券」）"})]}),c.jsx("div",{style:{marginTop:"20px"},children:c.jsxs("div",{style:{display:"flex",alignItems:"baseline",gap:"20px"},children:[c.jsx(vs,{}),c.jsx(me,{lineHeight:30,children:"本優惠碼ezfly易飛網全品項都可使用，恕無法兌換現金或找零，請一次抵用完畢，不可重複使用。"})]})}),c.jsx("div",{style:{marginTop:"20px"},children:c.jsxs("div",{style:{display:"flex",alignItems:"baseline",gap:"20px"},children:[c.jsx(vs,{}),c.jsx(me,{lineHeight:30,children:"兌換方式：本優惠碼需以人工訂票方式預約行程並成功開票或確認完成訂房、訂票，方可使用。"})]})}),c.jsx("div",{style:{marginTop:"20px"},children:c.jsxs("div",{style:{display:"flex",alignItems:"baseline",gap:"20px"},children:[c.jsx(vs,{}),c.jsx(me,{lineHeight:30,children:"本優惠碼因訂票方式，若預定品項為國內外機票或其他旅遊行程等預定品項，則另需支付人工訂票手續費，詳細費用請洽ezfly專人。"})]})})]}),c.jsxs("div",{style:{marginTop:"40px"},children:[c.jsx("div",{style:{marginBottom:"30px"},children:c.jsx(Dr,{children:"首次投保抽獎趣"})}),c.jsxs(io,{style:{marginBottom:"20px"},children:[c.jsx(au,{children:"200元全聯禮券"}),c.jsx(me,{lineHeight:20,children:"（無效期餘額型）"})]}),c.jsx(me,{children:"限全聯實體門市使用，可分次使用至面額兌換完畢，恕無法支付線上購物（含PXGo!、分批取、小時達等)、外送平台、代收業務（含雙北專用購物袋)、服務事項、兌換現金/儲值金/禮券/禮卡及菸品等相關受法令限制商品。"})]})]});function I3(){return c.jsxs("div",{style:{width:"100%"},children:[c.jsx(Dr,{children:"邀請人"}),c.jsxs("div",{style:{marginTop:"24px",display:"flex",flexDirection:"column",gap:"20px"},children:[c.jsxs("div",{style:{display:"flex",alignItems:"baseline",gap:"20px"},children:[c.jsx(vs,{}),c.jsx(me,{lineHeight:30,children:"成功邀請1筆保單，享「50點LINE POINTS好禮即享券」抽獎機會乙次（共抽200名）。"})]}),c.jsxs("div",{style:{display:"flex",alignItems:"baseline",gap:"20px"},children:[c.jsx(vs,{}),c.jsx(me,{lineHeight:30,children:"成功邀請2筆保單，享「150點LINE POINTS好禮即享券」抽獎機會乙次（共抽200名）。"})]}),c.jsxs("div",{style:{display:"flex",alignItems:"baseline",gap:"20px"},children:[c.jsx(vs,{}),c.jsx(me,{lineHeight:30,children:"成功邀請3筆以上保單，享「300點LINE POINTS好禮即享券」抽獎機會乙次（共抽100名）。"})]})]})]})}function F3(){return c.jsxs("div",{style:{width:"100%",display:"flex",flexDirection:"column",gap:"20px"},children:[c.jsx(Dr,{children:"被邀請人"}),c.jsxs("div",{style:{display:"flex",flexDirection:"column",gap:"10px"},children:[c.jsx(me,{children:"不限單筆保費金額，該筆保單即享「50點LINE POINTS好禮即享券」抽獎機會乙次"}),c.jsx(me,{children:"（共抽300名，每人限獲獎乙次）。"}),c.jsx(me,{highlight:!0,children:"註：被邀請人投保時須填入「邀請人推薦碼」資訊（不可為本人推薦碼），雙方方符合抽獎資格。"})]})]})}const c_=j.div`
+`;function F3(){return c.jsxs(I3,{children:[c.jsx(Jf,{children:c.jsxs(ed,{children:[c.jsxs(io,{children:[c.jsx(Dr,{children:"跨年出國抽獎趣"}),c.jsx(me,{lineHeight:20,children:"(僅限國外旅平險)"})]}),c.jsx(me,{lineHeight:30,children:"於2024/12/15-2025/1/20期間成功投保「國外旅平險」，不限單筆保費金額，可額外享「8,800元旅遊大紅包」加碼抽獎機會乙次（價值8,800元好禮即享券，共抽5名，每人限獲獎乙次）。"})]})}),c.jsx(Jf,{children:c.jsxs(ed,{children:[c.jsx(io,{children:c.jsx(Dr,{children:"投保滿額抽獎趣"})}),c.jsxs("div",{style:{display:"flex",alignItems:"flex-start",gap:"22px"},children:[c.jsx(Tc,{marginLeft:"-50px",children:"1"}),c.jsxs(me,{lineHeight:30,children:["單筆保費滿200元，該筆保單即享「500元好禮即享券」抽獎機會乙次",c.jsx("br",{}),"（共抽100名，每人獲獎次數不限）。"]})]}),c.jsxs("div",{style:{display:"flex",alignItems:"flex-start",gap:"22px"},children:[c.jsx(Tc,{marginLeft:"-50px",children:"2"}),c.jsxs("div",{children:[c.jsxs(me,{lineHeight:30,children:["單筆保費滿500元，該筆保單即享「星宇航空東京來回機票」抽獎機會乙次",c.jsx("br",{}),"（價值20,000元旅遊商品兌換券乙組，共抽5名，每人限獲獎乙次）。"]}),c.jsx(me,{highlight:!0,lineHeight:30,children:"註：上述活動採擇優最高門檻計，每筆保單享乙個獎項抽獎機會一次。"})]})]})]})}),c.jsx(Jf,{children:c.jsxs(ed,{children:[c.jsxs(io,{children:[c.jsx(Dr,{children:"首次投保抽獎趣"}),c.jsx(me,{lineHeight:20,children:"(僅限國外旅平險)"})]}),c.jsxs("div",{children:[c.jsx(me,{lineHeight:30,children:"活動期間於本公司網路投保首次成功投保者*，不限該筆旅平險保費金額，即享「200元全聯禮券」抽獎機會乙次（共抽200名，每人限獲獎乙次）。"}),c.jsx(me,{highlight:!0,lineHeight:30,children:"註：「首次成功投保者」係指自註冊後從未網路投保本公司任一險種之網路投保會員，且於活動期間成功投保旅平險為其首筆保單。"})]})]})})]})}const D3=()=>c.jsxs("div",{children:[c.jsxs("div",{style:{paddingBottom:"40px",borderBottom:"1px solid #000000"},children:[c.jsx("div",{style:{marginBottom:"30px"},children:c.jsx(Dr,{children:"跨年出國抽獎趣"})}),c.jsxs(io,{style:{marginBottom:"20px"},children:[c.jsx(au,{children:"8,800元好禮即享券"}),c.jsx(me,{lineHeight:20,children:"（無效期餘額型）"})]}),c.jsxs(me,{children:["20大品牌讓收券者自選面額，可多次自由選配。",c.jsx("br",{}),"適用通路：全聯、王品集團、7-ELEVEN、全家、家樂福、大潤發、屈臣氏、特力集團、漢來美食通用券、遠東SOGO百貨、遠東百貨、遠東巨城購物中心、foodpanda、寶雅集團、漢神百貨/漢神巨蛋、瓦城集團、爭鮮集團、小北百貨、美廉社&三友藥妝通用、楓康超市。"]})]}),c.jsxs("div",{style:{marginTop:"40px"},children:[c.jsx("div",{style:{marginBottom:"30px"},children:c.jsx(Dr,{children:"投保滿額抽獎趣"})}),c.jsxs(io,{style:{marginBottom:"20px"},children:[c.jsx(au,{children:"500元好禮即享券"}),c.jsx(me,{lineHeight:20,children:"（無效期餘額型）"})]}),c.jsxs(me,{children:["可分次抵用。五大品牌擇一使用，一旦選定品牌，限全額度單一品牌兌換使用。",c.jsx("br",{}),"適用通路：家樂福、遠東SOGO百貨、遠東百貨、王品集團、7-ELEVEN。"]})]}),c.jsxs("div",{style:{marginTop:"40px",paddingBottom:"40px",borderBottom:"1px solid #000000"},children:[c.jsxs(io,{children:[c.jsx(au,{children:"星宇航空東京來回機票"}),c.jsx(me,{lineHeight:20,children:"（以ezfly 優惠碼形式提供「價值20,000元旅遊兌換券」）"})]}),c.jsx("div",{style:{marginTop:"20px"},children:c.jsxs("div",{style:{display:"flex",alignItems:"baseline",gap:"20px"},children:[c.jsx(vs,{}),c.jsx(me,{lineHeight:30,children:"本優惠碼ezfly易飛網全品項都可使用，恕無法兌換現金或找零，請一次抵用完畢，不可重複使用。"})]})}),c.jsx("div",{style:{marginTop:"20px"},children:c.jsxs("div",{style:{display:"flex",alignItems:"baseline",gap:"20px"},children:[c.jsx(vs,{}),c.jsx(me,{lineHeight:30,children:"兌換方式：本優惠碼需以人工訂票方式預約行程並成功開票或確認完成訂房、訂票，方可使用。"})]})}),c.jsx("div",{style:{marginTop:"20px"},children:c.jsxs("div",{style:{display:"flex",alignItems:"baseline",gap:"20px"},children:[c.jsx(vs,{}),c.jsx(me,{lineHeight:30,children:"本優惠碼因訂票方式，若預定品項為國內外機票或其他旅遊行程等預定品項，則另需支付人工訂票手續費，詳細費用請洽ezfly專人。"})]})})]}),c.jsxs("div",{style:{marginTop:"40px"},children:[c.jsx("div",{style:{marginBottom:"30px"},children:c.jsx(Dr,{children:"首次投保抽獎趣"})}),c.jsxs(io,{style:{marginBottom:"20px"},children:[c.jsx(au,{children:"200元全聯禮券"}),c.jsx(me,{lineHeight:20,children:"（無效期餘額型）"})]}),c.jsx(me,{children:"限全聯實體門市使用，可分次使用至面額兌換完畢，恕無法支付線上購物（含PXGo!、分批取、小時達等)、外送平台、代收業務（含雙北專用購物袋)、服務事項、兌換現金/儲值金/禮券/禮卡及菸品等相關受法令限制商品。"})]})]});function $3(){return c.jsxs("div",{style:{width:"100%"},children:[c.jsx(Dr,{children:"邀請人"}),c.jsxs("div",{style:{marginTop:"24px",display:"flex",flexDirection:"column",gap:"20px"},children:[c.jsxs("div",{style:{display:"flex",alignItems:"baseline",gap:"20px"},children:[c.jsx(vs,{}),c.jsx(me,{lineHeight:30,children:"成功邀請1筆保單，享「50點LINE POINTS好禮即享券」抽獎機會乙次（共抽200名）。"})]}),c.jsxs("div",{style:{display:"flex",alignItems:"baseline",gap:"20px"},children:[c.jsx(vs,{}),c.jsx(me,{lineHeight:30,children:"成功邀請2筆保單，享「150點LINE POINTS好禮即享券」抽獎機會乙次（共抽200名）。"})]}),c.jsxs("div",{style:{display:"flex",alignItems:"baseline",gap:"20px"},children:[c.jsx(vs,{}),c.jsx(me,{lineHeight:30,children:"成功邀請3筆以上保單，享「300點LINE POINTS好禮即享券」抽獎機會乙次（共抽100名）。"})]})]})]})}function A3(){return c.jsxs("div",{style:{width:"100%",display:"flex",flexDirection:"column",gap:"20px"},children:[c.jsx(Dr,{children:"被邀請人"}),c.jsxs("div",{style:{display:"flex",flexDirection:"column",gap:"10px"},children:[c.jsx(me,{children:"不限單筆保費金額，該筆保單即享「50點LINE POINTS好禮即享券」抽獎機會乙次"}),c.jsx(me,{children:"（共抽300名，每人限獲獎乙次）。"}),c.jsx(me,{highlight:!0,children:"註：被邀請人投保時須填入「邀請人推薦碼」資訊（不可為本人推薦碼），雙方方符合抽獎資格。"})]})]})}const c_=j.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -1630,7 +1640,7 @@ PERFORMANCE OF THIS SOFTWARE.
 		width: fit-content;
 		padding: 0 20px;
 	}
-`;function D3(){return c.jsxs("div",{children:[c.jsx(c_,{children:"案例說明"}),c.jsx("div",{style:{marginTop:"20px"},children:c.jsx(me,{children:"全小球邀請五位朋友參與此活動，其中有兩位朋友於活動期間共成功投保3筆旅平險（且皆有填寫全小球之推薦碼)，則全小球可享「300點LINE POINTS好禮即享券」抽獎機會乙次; 而兩位朋友分別享有「50點LINE POINTS好禮即享券」1次與2次之抽獎機會。"})})]})}function $3(){return c.jsxs(c.Fragment,{children:[c.jsxs("div",{style:{width:"100%",display:"flex",flexDirection:"column",gap:"24px"},children:[c.jsxs(Dr,{children:["50點、150點、300點",c.jsx("br",{}),"LINE POINTS好禮即享券"]}),c.jsxs("div",{style:{display:"flex",alignItems:"flex-start",gap:"22px"},children:[c.jsx(Tc,{children:"1"}),c.jsx(me,{lineHeight:30,children:"LINE POINTS即享券僅限LINE帳號註冊國家為台灣的用戶使用。"})]}),c.jsxs("div",{style:{display:"flex",alignItems:"flex-start",gap:"22px"},children:[c.jsx(Tc,{children:"2"}),c.jsxs(me,{lineHeight:30,children:["LINE POINTS的有效期限為最後一次獲得點數當天起算180天內，",c.jsx("br",{}),"一旦超過有效期限，您所持有的點數將會全數失效。"]})]})]}),c.jsxs("div",{style:{marginTop:"24px"},children:[c.jsx(c_,{children:"活動獎項發放說明"}),c.jsx("div",{style:{marginTop:"20px"},children:c.jsx(me,{children:"本活動獎項採電子票券形式，將以Edenred之LINE「好禮即享券領券通知」的官方帳號發送通知型訊息予中獎者。 若您無法接收到通知型訊息，活動小組將另發送好禮即享券簡訊通知。"})})]})]})}const A3=j.div`
+`;function B3(){return c.jsxs("div",{children:[c.jsx(c_,{children:"案例說明"}),c.jsx("div",{style:{marginTop:"20px"},children:c.jsx(me,{children:"全小球邀請五位朋友參與此活動，其中有兩位朋友於活動期間共成功投保3筆旅平險（且皆有填寫全小球之推薦碼)，則全小球可享「300點LINE POINTS好禮即享券」抽獎機會乙次; 而兩位朋友分別享有「50點LINE POINTS好禮即享券」1次與2次之抽獎機會。"})})]})}function U3(){return c.jsxs(c.Fragment,{children:[c.jsxs("div",{style:{width:"100%",display:"flex",flexDirection:"column",gap:"24px"},children:[c.jsxs(Dr,{children:["50點、150點、300點",c.jsx("br",{}),"LINE POINTS好禮即享券"]}),c.jsxs("div",{style:{display:"flex",alignItems:"flex-start",gap:"22px"},children:[c.jsx(Tc,{children:"1"}),c.jsx(me,{lineHeight:30,children:"LINE POINTS即享券僅限LINE帳號註冊國家為台灣的用戶使用。"})]}),c.jsxs("div",{style:{display:"flex",alignItems:"flex-start",gap:"22px"},children:[c.jsx(Tc,{children:"2"}),c.jsxs(me,{lineHeight:30,children:["LINE POINTS的有效期限為最後一次獲得點數當天起算180天內，",c.jsx("br",{}),"一旦超過有效期限，您所持有的點數將會全數失效。"]})]})]}),c.jsxs("div",{style:{marginTop:"24px"},children:[c.jsx(c_,{children:"活動獎項發放說明"}),c.jsx("div",{style:{marginTop:"20px"},children:c.jsx(me,{children:"本活動獎項採電子票券形式，將以Edenred之LINE「好禮即享券領券通知」的官方帳號發送通知型訊息予中獎者。 若您無法接收到通知型訊息，活動小組將另發送好禮即享券簡訊通知。"})})]})]})}const W3=j.div`
   padding-top: 73px;
   display: flex;
   flex-direction: column;
@@ -1663,11 +1673,11 @@ PERFORMANCE OF THIS SOFTWARE.
 	@media (max-width: 480px) {
 		padding: 62px 20px 49px;
 	}
-`,B3=j.img`
+`,V3=j.img`
   width: 100%;
   position: absolute;
   pointer-events: none;
-`,U3=j.div`
+`,H3=j.div`
   font-size: 60px;
   font-weight: bold;
   margin-bottom: 63px;
@@ -1735,7 +1745,7 @@ PERFORMANCE OF THIS SOFTWARE.
 `,Re=j.div`
   width: 100%;
   height: ${t=>t.height}px;
-`,W3=j.div`
+`,Y3=j.div`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1757,7 +1767,7 @@ PERFORMANCE OF THIS SOFTWARE.
   @media (max-width: 1300px) {
     display: ${t=>t.reverse?"none":"block"};
   }
-`;function V3(){const[t,e]=z.useState(!1),[n,r]=z.useState(!1);return c.jsxs(A3,{children:[c.jsxs(wg,{children:[c.jsxs(Sg,{children:[c.jsx(U3,{children:"活動辦法"}),c.jsxs(kg,{children:[c.jsx(Vt,{onClick:()=>{const i=document.getElementById("sec1"),o=document.querySelector(".menu").offsetHeight,s=i.getBoundingClientRect().top+window.scrollY-o-60;window.scrollTo({top:s,behavior:"smooth"})},children:"旅行全球抽獎趣"}),c.jsx(Vt,{onClick:()=>{const i=document.getElementById("sec2"),o=document.querySelector(".menu").offsetHeight,s=i.getBoundingClientRect().top+window.scrollY-o-60;window.scrollTo({top:s,behavior:"smooth"})},children:"分享全球樂透抽"})]}),c.jsx(Jr,{}),c.jsxs(Tg,{id:"sec1",children:[c.jsx(Cg,{src:"./home/event-banner-title.png"}),c.jsx(Eg,{src:"./home/event-banner-airplane.png"})]}),c.jsxs(ei,{children:[c.jsx(ti,{children:"活動期間"}),c.jsx(Ao,{children:"2024/10/1-2025/1/31"})]}),c.jsx(Re,{height:32}),c.jsx(Jr,{}),c.jsx(Re,{height:32}),c.jsxs(ei,{children:[c.jsx(ti,{children:"活動辦法"}),c.jsxs(Ao,{children:["凡於活動期間內成功網路投保「國內外旅行平安險」，",c.jsx(jg,{reverse:!0}),"並達指定活動條件，即符合該項抽獎資格。"]})]}),c.jsx(Re,{height:83}),c.jsx(L3,{}),c.jsx(Re,{height:40}),c.jsx(Jr,{}),c.jsx(Re,{height:53}),c.jsxs(ei,{children:[c.jsx(ti,{children:"得獎公告"}),c.jsx(Ao,{children:"得獎者將於2025/4/30前於本網站統一公告。"})]}),c.jsx(Re,{height:44}),c.jsx(Jr,{}),c.jsx(Re,{height:53}),c.jsx(ei,{children:c.jsx(ti,{children:"獎項說明"})}),c.jsx(Re,{height:25}),c.jsx(M3,{}),c.jsx(Re,{height:40}),c.jsxs(W3,{children:[c.jsx("div",{className:"title",children:"活動獎項發放說明"}),c.jsx("div",{className:"text",children:"本活動獎項採電子票券形式，將以Edenred之LINE「好禮即享券領券通知」的官方帳號發送通知型訊息予中獎者。若您無法接收到通知型訊息，活動小組將另發送好禮即享券簡訊通知。"})]}),c.jsx(Re,{height:58}),c.jsx(Rp,{title:"注意事項",isOpen:t,onClick:()=>e(!t),children:c.jsx(Np,{})})]}),c.jsx(B3,{src:"./policy/flower.svg",alt:""})]}),c.jsx(wg,{bg:"#FED430",children:c.jsxs(Sg,{id:"sec2",children:[c.jsxs(Tg,{id:"sec1",children:[c.jsx(Cg,{src:"./mgm/mgm-title.png"}),c.jsx(Eg,{src:"./mgm/mgm-title-p.png"})]}),c.jsxs(ei,{children:[c.jsx(ti,{children:"活動期間"}),c.jsx(Ao,{children:"2024/10/1-2025/1/31"})]}),c.jsx(Re,{height:32}),c.jsx(Jr,{}),c.jsx(Re,{height:32}),c.jsxs(ei,{children:[c.jsx(ti,{children:"活動辦法"}),c.jsxs(Ao,{children:["活動期間邀請親友成功投保國內外旅平險達指定筆數，",c.jsx(jg,{reverse:!0}),"即符合LINE POINTS抽獎資格。"]})]}),c.jsx(Re,{height:42}),c.jsx(I3,{}),c.jsx(Re,{height:42}),c.jsx(F3,{}),c.jsx(Re,{height:42}),c.jsx(D3,{}),c.jsx(Re,{height:45}),c.jsx(Jr,{}),c.jsx(Re,{height:54}),c.jsxs(ei,{children:[c.jsx(ti,{children:"得獎公告"}),c.jsx(Ao,{children:"得獎者將於2025/4/30前於本網站統一公告。"})]}),c.jsx(Re,{height:44}),c.jsx(Jr,{}),c.jsx(Re,{height:53}),c.jsx(ei,{children:c.jsx(ti,{children:"獎項說明"})}),c.jsx(Re,{height:42}),c.jsx($3,{}),c.jsx(Re,{height:42}),c.jsx(Rp,{title:"注意事項",isOpen:n,onClick:()=>{r(!n)},children:c.jsx(Np,{isPart2:!0})}),c.jsx(Re,{height:50}),c.jsx(Jr,{}),c.jsx(Re,{height:35}),c.jsxs(kg,{children:[c.jsx(Mn,{to:"/",children:c.jsx(Vt,{color:"blue",children:"旅行全球抽獎趣"})}),c.jsx(Mn,{to:"/mgm",children:c.jsx(Vt,{color:"blue",children:"分享全球樂透抽"})})]})]})})]})}const Pg=""+new URL("../logo.png",import.meta.url).href;function H3(){const[t,e]=z.useState(!1),n=Zx(),r=Us(),[i,o]=z.useState(r.hash||r.pathname);z.useEffect(()=>{window.scrollTo(0,0),o(r.hash||r.pathname)},[r]);const s=()=>{e(!t)},l=z.useCallback((u,f)=>{u.preventDefault(),e(!1);const d=window.location.pathname==="/"||window.location.pathname==="/index.html",p=()=>{const h=document.querySelector(f);if(h){const y=document.querySelector(".menu").offsetHeight,g=h.getBoundingClientRect().top+window.scrollY-y-60;window.scrollTo({top:g,behavior:"smooth"}),o(f)}else console.log("can not find target")};d?(window.history.pushState(null,"",f),p()):(n(`/${f}`),setTimeout(()=>{window.history.pushState(null,"",f),p()},200))},[n]),a=u=>i===u?"menu-text bg-c-orange":"menu-text";return c.jsxs(c.Fragment,{children:[c.jsx("header",{className:"menu justify-center bg-bg-yellow",children:c.jsxs("div",{className:"flex justify-between w-full px-6 max-w-[1500px]",children:[c.jsx("div",{className:"flex-shrink-0 ml-[3vw]",children:c.jsx("a",{href:"https://www.transglobe.com.tw/",target:"_blank",rel:"noopener noreferrer",children:c.jsx("img",{src:Pg,alt:"Logo",className:""})})}),c.jsxs("nav",{className:"flex space-x-7",children:[c.jsxs(Mn,{to:"/",className:`relative menu-text ${a("#sec1")}`,onClick:u=>l(u,"#sec1"),children:["跨年出國抽",c.jsx("p",{className:"color-changing-text absolute top-[-13%] right-[-2%] w-7 h-7 transfer-position-xy-1 flex items-center justify-center text-xs font-bold font-roboto transform rotate-12",children:"NEW"})]}),c.jsx("a",{href:"/",className:`menu-text ${a("#sec2")}`,onClick:u=>l(u,"#sec2"),children:"投保滿額抽"}),c.jsx("a",{href:"/",className:`menu-text ${a("#sec3")}`,onClick:u=>l(u,"#sec3"),children:"首次投保抽"}),c.jsx(Mn,{to:"/mgm",className:`menu-text ${a("/mgm")}`,children:"分享全球抽"}),c.jsx(Mn,{to:"/policy",className:`menu-text ${a("/policy")}`,children:"活動辦法"})]})]})}),c.jsxs("header",{className:`mobile-menu  xl:hidden ${t?"h-full":""}`,children:[c.jsx("div",{className:`flex-shrink-0 w-[30vw] ml-[3vw] mt-1 ${t?"hidden":"block"}`,children:c.jsx("a",{href:"https://www.transglobe.com.tw/",target:"_blank",rel:"noopener noreferrer",children:c.jsx("img",{src:Pg,alt:"Logo",className:""})})}),c.jsxs("button",{className:"absolute top-3 right-4 flex items-center justify-center",onClick:s,children:[c.jsx("img",{src:"./menu/menu-hamburger.svg",alt:"Open Menu",className:`h-12 w-12 transition-opacity duration-300 ${t?"opacity-0":"opacity-100"}`}),c.jsx("img",{src:"./menu/menu-close-sm.svg",alt:"Close Menu",className:`h-12 w-12 absolute transition-opacity duration-300 ${t?"opacity-100":"opacity-0"}`})]}),c.jsx("div",{className:"flex flex-col items-center justify-center w-[100vw]",children:c.jsx("nav",{className:`static flex flex-col items-center justify-center space-y-4 ${t?"":"hidden"}`,children:c.jsxs("nav",{className:"flex flex-col space-y-6 px-14",children:[c.jsxs("a",{href:"/",className:"relative mobile-text",onClick:u=>l(u,"#sec1"),children:["跨年出國抽",c.jsx("p",{className:"color-changing-text absolute top-[-13%] right-[-2%] w-5 h-7 transfer-position-xy-1 flex items-center justify-center text-xs font-bold font-roboto transform rotate-30",children:"NEW"})]}),c.jsx("a",{href:"/",className:"mobile-text",onClick:u=>l(u,"#sec2"),children:"投保滿額抽"}),c.jsx("a",{href:"/",className:"mobile-text",onClick:u=>l(u,"#sec3"),children:"首次投保抽"}),c.jsx(Mn,{to:"/mgm",className:"mobile-text",onClick:s,children:"分享全球抽"}),c.jsx(Mn,{to:"/policy",className:"mobile-text",onClick:s,children:"活動辦法"})]})})})]})]})}function Y3(){const[t,e]=z.useState(!1),n=()=>{e(!t)};return c.jsxs("footer",{children:[c.jsx("div",{className:"footer_top",children:c.jsxs("div",{className:"footer_inner",children:[c.jsxs("div",{className:"footer_link",children:[c.jsx("div",{className:"footer_title",children:"相關連結"}),c.jsx("div",{className:"style_pc",children:c.jsxs("ul",{children:[c.jsx("li",{children:c.jsx("a",{href:"https://www.transglobe.com.tw/",target:"_blank",children:"全球人壽官網"})}),c.jsx("li",{children:c.jsx("a",{href:"https://www.facebook.com/TGLlife/?fref=ts",className:"icon_footer_fb",target:"_blank",children:"全球人壽粉絲YA　"})}),c.jsx("li",{children:c.jsx("a",{href:"https://eservice.transglobe.com.tw/cs/Logon/Logon.xhtml",target:"_blank",children:"保戶專區"})}),c.jsx("li",{children:c.jsx("a",{href:"https://www.transglobe.com.tw/service-contact-location.html?",target:"_blank",children:"服務據點　"})}),c.jsx("li",{children:c.jsx("a",{href:"https://www.transglobe.com.tw/law-lawcom.html",target:"_blank",children:"電子商務自律規範主管機關連結"})}),c.jsx("li",{children:c.jsx("a",{href:"https://e-commerce.transglobe.com.tw/assets/tgl/pdf/TGLECContract.pdf",target:"_blank",children:"網路投保業務暨網路保險服務契約"})})]})}),c.jsxs("div",{className:"style_mb",children:[c.jsxs("ul",{children:[c.jsx("li",{children:c.jsx("a",{href:"http://www.transglobe.com.tw/transglobe-web",target:"_blank",children:"全球人壽官網"})}),c.jsx("li",{children:c.jsx("a",{href:"https://www.fsc.gov.tw/ch/index.jsp",target:"_blank",children:"主管機關連結"})})]}),c.jsxs("div",{className:"footer_more",children:[c.jsxs("div",{className:"footer_title btn_footer_more",children:["更多相關連結",c.jsx("svg",{className:"icon-footer-arrow",onClick:n,children:c.jsx("use",{"xlink:href":"images/icon-re.svg?svg=#ico-accor"})})]}),c.jsx("div",{className:`footer_more_content ${t?"active2":""}`,children:c.jsxs("ul",{children:[c.jsx("li",{children:c.jsx("a",{href:"https://www.facebook.com/TGLlife/?fref=ts",className:"icon_footer_fb",target:"_blank",children:"全球人壽粉絲YA　"})}),c.jsx("li",{children:c.jsx("a",{href:"https://eservice.transglobe.com.tw/cs/Logon/Logon.xhtml",target:"_blank",children:"保戶專區"})}),c.jsx("li",{children:c.jsx("a",{href:"https://www.transglobe.com.tw/service-contact-location.html?",target:"_blank",children:"服務據點　"})}),c.jsx("li",{children:c.jsx("a",{href:"https://www.transglobe.com.tw/law-lawcom.html",target:"_blank",children:"電子商務自律規範主管機關連結"})}),c.jsx("li",{children:c.jsx("a",{href:"https://e-commerce.transglobe.com.tw/assets/tgl/pdf/TGLECContract.pdf",target:"_blank",children:"網路投保業務暨網路保險服務契約"})})]})})]})]})]}),c.jsxs("div",{className:"footer_info",children:[c.jsx("div",{className:"footer_title",children:"聯絡我們"}),c.jsxs("ul",{children:[c.jsx("li",{className:"icon_footer_map",children:c.jsxs("span",{children:["台北市110信義區市民大道六段288號16樓",c.jsx("a",{href:"https://www.google.com/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E5%B8%82%E6%B0%91%E5%A4%A7%E9%81%93%E5%85%AD%E6%AE%B5288%E8%99%9F16%E6%A8%93&t=m&z=16",target:"_blank",className:"link_map",children:"地圖"})]})}),c.jsx("li",{className:"icon_footer_phone",children:"免付費服務專線：0800-000-662"})]})]})]})}),c.jsx("div",{className:"footer_bottom",children:c.jsx("div",{className:"footer_inner",children:c.jsx("span",{className:"copyright",children:"2024 ©本網站版權屬 全球人壽保險股份有限公司所有"})})})]})}const X3=j.img`
+`;function X3(){const[t,e]=z.useState(!1),[n,r]=z.useState(!1);return c.jsxs(W3,{children:[c.jsxs(wg,{children:[c.jsxs(Sg,{children:[c.jsx(H3,{children:"活動辦法"}),c.jsxs(kg,{children:[c.jsx(Vt,{onClick:()=>{const i=document.getElementById("sec1"),o=document.querySelector(".menu").offsetHeight,s=i.getBoundingClientRect().top+window.scrollY-o-60;window.scrollTo({top:s,behavior:"smooth"})},children:"旅行全球抽獎趣"}),c.jsx(Vt,{onClick:()=>{const i=document.getElementById("sec2"),o=document.querySelector(".menu").offsetHeight,s=i.getBoundingClientRect().top+window.scrollY-o-60;window.scrollTo({top:s,behavior:"smooth"})},children:"分享全球樂透抽"})]}),c.jsx(Jr,{}),c.jsxs(Tg,{id:"sec1",children:[c.jsx(Cg,{src:"./home/event-banner-title.png"}),c.jsx(Eg,{src:"./home/event-banner-airplane.png"})]}),c.jsxs(ei,{children:[c.jsx(ti,{children:"活動期間"}),c.jsx(Ao,{children:"2024/10/1-2025/1/31"})]}),c.jsx(Re,{height:32}),c.jsx(Jr,{}),c.jsx(Re,{height:32}),c.jsxs(ei,{children:[c.jsx(ti,{children:"活動辦法"}),c.jsxs(Ao,{children:["凡於活動期間內成功網路投保「國內外旅行平安險」，",c.jsx(jg,{reverse:!0}),"並達指定活動條件，即符合該項抽獎資格。"]})]}),c.jsx(Re,{height:83}),c.jsx(F3,{}),c.jsx(Re,{height:40}),c.jsx(Jr,{}),c.jsx(Re,{height:53}),c.jsxs(ei,{children:[c.jsx(ti,{children:"得獎公告"}),c.jsx(Ao,{children:"得獎者將於2025/4/30前於本網站統一公告。"})]}),c.jsx(Re,{height:44}),c.jsx(Jr,{}),c.jsx(Re,{height:53}),c.jsx(ei,{children:c.jsx(ti,{children:"獎項說明"})}),c.jsx(Re,{height:25}),c.jsx(D3,{}),c.jsx(Re,{height:40}),c.jsxs(Y3,{children:[c.jsx("div",{className:"title",children:"活動獎項發放說明"}),c.jsx("div",{className:"text",children:"本活動獎項採電子票券形式，將以Edenred之LINE「好禮即享券領券通知」的官方帳號發送通知型訊息予中獎者。若您無法接收到通知型訊息，活動小組將另發送好禮即享券簡訊通知。"})]}),c.jsx(Re,{height:58}),c.jsx(Rp,{title:"注意事項",isOpen:t,onClick:()=>e(!t),children:c.jsx(Np,{})})]}),c.jsx(V3,{src:"./policy/flower.svg",alt:""})]}),c.jsx(wg,{bg:"#FED430",children:c.jsxs(Sg,{id:"sec2",children:[c.jsxs(Tg,{id:"sec1",children:[c.jsx(Cg,{src:"./mgm/mgm-title.png"}),c.jsx(Eg,{src:"./mgm/mgm-title-p.png"})]}),c.jsxs(ei,{children:[c.jsx(ti,{children:"活動期間"}),c.jsx(Ao,{children:"2024/10/1-2025/1/31"})]}),c.jsx(Re,{height:32}),c.jsx(Jr,{}),c.jsx(Re,{height:32}),c.jsxs(ei,{children:[c.jsx(ti,{children:"活動辦法"}),c.jsxs(Ao,{children:["活動期間邀請親友成功投保國內外旅平險達指定筆數，",c.jsx(jg,{reverse:!0}),"即符合LINE POINTS抽獎資格。"]})]}),c.jsx(Re,{height:42}),c.jsx($3,{}),c.jsx(Re,{height:42}),c.jsx(A3,{}),c.jsx(Re,{height:42}),c.jsx(B3,{}),c.jsx(Re,{height:45}),c.jsx(Jr,{}),c.jsx(Re,{height:54}),c.jsxs(ei,{children:[c.jsx(ti,{children:"得獎公告"}),c.jsx(Ao,{children:"得獎者將於2025/4/30前於本網站統一公告。"})]}),c.jsx(Re,{height:44}),c.jsx(Jr,{}),c.jsx(Re,{height:53}),c.jsx(ei,{children:c.jsx(ti,{children:"獎項說明"})}),c.jsx(Re,{height:42}),c.jsx(U3,{}),c.jsx(Re,{height:42}),c.jsx(Rp,{title:"注意事項",isOpen:n,onClick:()=>{r(!n)},children:c.jsx(Np,{isPart2:!0})}),c.jsx(Re,{height:50}),c.jsx(Jr,{}),c.jsx(Re,{height:35}),c.jsxs(kg,{children:[c.jsx(Mn,{to:"/",children:c.jsx(Vt,{color:"blue",children:"旅行全球抽獎趣"})}),c.jsx(Mn,{to:"/mgm",children:c.jsx(Vt,{color:"blue",children:"分享全球樂透抽"})})]})]})})]})}const Pg=""+new URL("../logo.png",import.meta.url).href;function G3(){const[t,e]=z.useState(!1),n=Zx(),r=Us(),[i,o]=z.useState(r.hash||r.pathname);z.useEffect(()=>{window.scrollTo(0,0),o(r.hash||r.pathname)},[r]);const s=()=>{e(!t)},l=z.useCallback((u,f)=>{u.preventDefault(),e(!1);const d=window.location.pathname==="/"||window.location.pathname==="/index.html",p=()=>{const h=document.querySelector(f);if(h){const y=document.querySelector(".menu").offsetHeight,g=h.getBoundingClientRect().top+window.scrollY-y-60;window.scrollTo({top:g,behavior:"smooth"}),o(f)}else console.log("can not find target")};d?(window.history.pushState(null,"",f),p()):(n(`/${f}`),setTimeout(()=>{window.history.pushState(null,"",f),p()},200))},[n]),a=u=>i===u?"menu-text bg-c-orange":"menu-text";return c.jsxs(c.Fragment,{children:[c.jsx("header",{className:"menu justify-center bg-bg-yellow",children:c.jsxs("div",{className:"flex justify-between w-full px-6 max-w-[1500px]",children:[c.jsx("div",{className:"flex-shrink-0 ml-[3vw]",children:c.jsx("a",{href:"https://www.transglobe.com.tw/",target:"_blank",rel:"noopener noreferrer",children:c.jsx("img",{src:Pg,alt:"Logo",className:""})})}),c.jsxs("nav",{className:"flex space-x-7",children:[c.jsxs(Mn,{to:"/",className:`relative menu-text ${a("#sec1")}`,onClick:u=>l(u,"#sec1"),children:["跨年出國抽",c.jsx("p",{className:"color-changing-text absolute top-[-13%] right-[-2%] w-7 h-7 transfer-position-xy-1 flex items-center justify-center text-xs font-bold font-roboto transform rotate-12",children:"NEW"})]}),c.jsx("a",{href:"/",className:`menu-text ${a("#sec2")}`,onClick:u=>l(u,"#sec2"),children:"投保滿額抽"}),c.jsx("a",{href:"/",className:`menu-text ${a("#sec3")}`,onClick:u=>l(u,"#sec3"),children:"首次投保抽"}),c.jsx(Mn,{to:"/mgm",className:`menu-text ${a("/mgm")}`,children:"分享全球抽"}),c.jsx(Mn,{to:"/policy",className:`menu-text ${a("/policy")}`,children:"活動辦法"})]})]})}),c.jsxs("header",{className:`mobile-menu  xl:hidden ${t?"h-full":""}`,children:[c.jsx("div",{className:`flex-shrink-0 w-[30vw] ml-[3vw] mt-1 ${t?"hidden":"block"}`,children:c.jsx("a",{href:"https://www.transglobe.com.tw/",target:"_blank",rel:"noopener noreferrer",children:c.jsx("img",{src:Pg,alt:"Logo",className:""})})}),c.jsxs("button",{className:"absolute top-3 right-4 flex items-center justify-center",onClick:s,children:[c.jsx("img",{src:"./menu/menu-hamburger.svg",alt:"Open Menu",className:`h-12 w-12 transition-opacity duration-300 ${t?"opacity-0":"opacity-100"}`}),c.jsx("img",{src:"./menu/menu-close-sm.svg",alt:"Close Menu",className:`h-12 w-12 absolute transition-opacity duration-300 ${t?"opacity-100":"opacity-0"}`})]}),c.jsx("div",{className:"flex flex-col items-center justify-center w-[100vw]",children:c.jsx("nav",{className:`static flex flex-col items-center justify-center space-y-4 ${t?"":"hidden"}`,children:c.jsxs("nav",{className:"flex flex-col space-y-6 px-14",children:[c.jsxs("a",{href:"/",className:"relative mobile-text",onClick:u=>l(u,"#sec1"),children:["跨年出國抽",c.jsx("p",{className:"color-changing-text absolute top-[-13%] right-[-2%] w-5 h-7 transfer-position-xy-1 flex items-center justify-center text-xs font-bold font-roboto transform rotate-30",children:"NEW"})]}),c.jsx("a",{href:"/",className:"mobile-text",onClick:u=>l(u,"#sec2"),children:"投保滿額抽"}),c.jsx("a",{href:"/",className:"mobile-text",onClick:u=>l(u,"#sec3"),children:"首次投保抽"}),c.jsx(Mn,{to:"/mgm",className:"mobile-text",onClick:s,children:"分享全球抽"}),c.jsx(Mn,{to:"/policy",className:"mobile-text",onClick:s,children:"活動辦法"})]})})})]})]})}function Q3(){const[t,e]=z.useState(!1),n=()=>{e(!t)};return c.jsxs("footer",{children:[c.jsx("div",{className:"footer_top",children:c.jsxs("div",{className:"footer_inner",children:[c.jsxs("div",{className:"footer_link",children:[c.jsx("div",{className:"footer_title",children:"相關連結"}),c.jsx("div",{className:"style_pc",children:c.jsxs("ul",{children:[c.jsx("li",{children:c.jsx("a",{href:"https://www.transglobe.com.tw/",target:"_blank",children:"全球人壽官網"})}),c.jsx("li",{children:c.jsx("a",{href:"https://www.facebook.com/TGLlife/?fref=ts",className:"icon_footer_fb",target:"_blank",children:"全球人壽粉絲YA　"})}),c.jsx("li",{children:c.jsx("a",{href:"https://eservice.transglobe.com.tw/cs/Logon/Logon.xhtml",target:"_blank",children:"保戶專區"})}),c.jsx("li",{children:c.jsx("a",{href:"https://www.transglobe.com.tw/service-contact-location.html?",target:"_blank",children:"服務據點　"})}),c.jsx("li",{children:c.jsx("a",{href:"https://www.transglobe.com.tw/law-lawcom.html",target:"_blank",children:"電子商務自律規範主管機關連結"})}),c.jsx("li",{children:c.jsx("a",{href:"https://e-commerce.transglobe.com.tw/assets/tgl/pdf/TGLECContract.pdf",target:"_blank",children:"網路投保業務暨網路保險服務契約"})})]})}),c.jsxs("div",{className:"style_mb",children:[c.jsxs("ul",{children:[c.jsx("li",{children:c.jsx("a",{href:"http://www.transglobe.com.tw/transglobe-web",target:"_blank",children:"全球人壽官網"})}),c.jsx("li",{children:c.jsx("a",{href:"https://www.fsc.gov.tw/ch/index.jsp",target:"_blank",children:"主管機關連結"})})]}),c.jsxs("div",{className:"footer_more",children:[c.jsxs("div",{className:"footer_title btn_footer_more",children:["更多相關連結",c.jsx("svg",{className:"icon-footer-arrow",onClick:n,children:c.jsx("use",{"xlink:href":"images/icon-re.svg?svg=#ico-accor"})})]}),c.jsx("div",{className:`footer_more_content ${t?"active2":""}`,children:c.jsxs("ul",{children:[c.jsx("li",{children:c.jsx("a",{href:"https://www.facebook.com/TGLlife/?fref=ts",className:"icon_footer_fb",target:"_blank",children:"全球人壽粉絲YA　"})}),c.jsx("li",{children:c.jsx("a",{href:"https://eservice.transglobe.com.tw/cs/Logon/Logon.xhtml",target:"_blank",children:"保戶專區"})}),c.jsx("li",{children:c.jsx("a",{href:"https://www.transglobe.com.tw/service-contact-location.html?",target:"_blank",children:"服務據點　"})}),c.jsx("li",{children:c.jsx("a",{href:"https://www.transglobe.com.tw/law-lawcom.html",target:"_blank",children:"電子商務自律規範主管機關連結"})}),c.jsx("li",{children:c.jsx("a",{href:"https://e-commerce.transglobe.com.tw/assets/tgl/pdf/TGLECContract.pdf",target:"_blank",children:"網路投保業務暨網路保險服務契約"})})]})})]})]})]}),c.jsxs("div",{className:"footer_info",children:[c.jsx("div",{className:"footer_title",children:"聯絡我們"}),c.jsxs("ul",{children:[c.jsx("li",{className:"icon_footer_map",children:c.jsxs("span",{children:["台北市110信義區市民大道六段288號16樓",c.jsx("a",{href:"https://www.google.com/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E5%B8%82%E6%B0%91%E5%A4%A7%E9%81%93%E5%85%AD%E6%AE%B5288%E8%99%9F16%E6%A8%93&t=m&z=16",target:"_blank",className:"link_map",children:"地圖"})]})}),c.jsx("li",{className:"icon_footer_phone",children:"免付費服務專線：0800-000-662"})]})]})]})}),c.jsx("div",{className:"footer_bottom",children:c.jsx("div",{className:"footer_inner",children:c.jsx("span",{className:"copyright",children:"2024 ©本網站版權屬 全球人壽保險股份有限公司所有"})})})]})}const K3=j.img`
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -1767,4 +1777,4 @@ PERFORMANCE OF THIS SOFTWARE.
   @media (max-width: 1301px) {
     width: 50px;
   }
-`;function G3(){const e=window.location.hostname==="siaochi.github.io"?"/travel-web":"/",[n,r]=z.useState(!1),i=()=>{window.scrollTo({top:0,behavior:"smooth"})};return z.useEffect(()=>{window.addEventListener("scroll",()=>{window.scrollY>500?r(!0):r(!1)})},[]),c.jsxs(bk,{basename:e,children:[c.jsx(H3,{}),c.jsxs(Ek,{children:[c.jsx(wu,{path:"/",element:c.jsx(QT,{})}),c.jsx(wu,{path:"/mgm",element:c.jsx(E3,{})}),c.jsx(wu,{path:"/policy",element:c.jsx(V3,{})})]}),c.jsx(Y3,{}),c.jsx(X3,{src:"./top-btn.svg",onClick:i,$show:n})]})}Ux(document.getElementById("root")).render(c.jsx(z.StrictMode,{children:c.jsx(G3,{})}));
+`;function q3(){const e=window.location.hostname==="siaochi.github.io"?"/travel-web":"/",[n,r]=z.useState(!1),i=()=>{window.scrollTo({top:0,behavior:"smooth"})};return z.useEffect(()=>{window.addEventListener("scroll",()=>{window.scrollY>500?r(!0):r(!1)})},[]),c.jsxs(bk,{basename:e,children:[c.jsx(G3,{}),c.jsxs(Ek,{children:[c.jsx(wu,{path:"/",element:c.jsx(KT,{})}),c.jsx(wu,{path:"/mgm",element:c.jsx(P3,{})}),c.jsx(wu,{path:"/policy",element:c.jsx(X3,{})})]}),c.jsx(Q3,{}),c.jsx(K3,{src:"./top-btn.svg",onClick:i,$show:n})]})}Ux(document.getElementById("root")).render(c.jsx(z.StrictMode,{children:c.jsx(q3,{})}));
