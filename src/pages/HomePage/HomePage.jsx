@@ -232,7 +232,7 @@ function HomePage() {
             <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
 			<MobileYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-mobile.svg" />
             <IPadYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-ipad.svg" />
-			<LargeYellowTrapezoid src=".home//reach-insure-amount-event-trapezoid-large.svg" />
+			<LargeYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-large.svg" />
 			<Container>
 				<EventBanner />
 				<NewYearEvent />

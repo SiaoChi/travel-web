@@ -160,7 +160,7 @@ function ActionList() {
 							活動期間於本公司網路投保首次成功投保者*，不限該筆旅平險保費金額，即享「200元全聯禮券」抽獎機會乙次（共抽200名，每人限獲獎乙次）。
 						</Note>
 						<Note highlight lineHeight={30}>
-							註：「首次成功投保者」係指自註冊後從未<span className="text-c-red">網路</span>投保<span className="text-c-red">本公司</span>任一險種之網路投保會員，且於活動期間成功投保旅平險為其首筆保單。
+							註：「首次成功投保者」係指自註冊後從未網路投保<span className="text-c-red">本公司</span>任一險種之網路投保會員，且於活動期間成功投保旅平險為其首筆保單。
 						</Note>
 					</div>
 				</ItemWrapper>
