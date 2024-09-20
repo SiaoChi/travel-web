@@ -166,8 +166,6 @@ const EventBanner = () => {
 
 	return (
 		<Section>
-			{/* <YellowPolygon src="./home/home-polygon.svg" /> */}
-			{/* <BgFlowers src="./home/event-banner-flower.png" /> */}
 			<LineOne src="./home/shadow-line1.svg" />
             <MobileLineOne src="./home/shadow-line1-mobile.svg" />
             <MobileLineTwo src="./home/shadow-line2-mobile.svg" />

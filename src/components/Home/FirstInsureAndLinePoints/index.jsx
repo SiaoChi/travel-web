@@ -287,13 +287,13 @@ const EnglishTextTwo = styled(EnglishText)`
     text-align: left;
     font-family: 'Roboto';
     @media (max-width: 1301px) {
-        top: 790px;
+        top: 800px;
         left: 70px;
     }
     @media (max-width: 428px) {
-        top: 790px;
-        left: 50px;
-    }
+        top: 860px;
+        left: 60px;
+    };
 `
 
 const FirstInsureAndLinePoints = () => {
@@ -344,15 +344,11 @@ const FirstInsureAndLinePoints = () => {
             <Desc ref={fadeInFromLeft}>
                 <strong>2024/10/1~2025/1/31期間，</strong><br/>
                 <strong><span>首次</span>成功<span className="text-c-red">網路投保</span><span>「國內外旅平險」</span></strong><br/>
-                （限從<span className="text-c-red">網路</span>投保全球人壽任一險種者）
+                （限從未網路投保全球人壽任一險種者）
             </Desc>
-            
-            {/* <Italy src="./home/first-insure-event-italy.svg" /> */}
-            {/* <BlueBackground src="./home/line-points-blue-background.svg" /> */}
-            {/* <MobileBlueBackground src="./home/line-points-blue-background-mobile.svg" /> */}
 
-            <People ref={fadeInFromBottom} src="./home/line-points-people.svg" className="event-content" id="img3" />
-            <MobilePeople ref={fadeInFromBottom} src="./home/line-points-people-mobile.svg"  className="event-content" id="img4" />
+            <People ref={fadeInFromBottom} src="./home/line-points-people.png" className="event-content" id="img3" />
+            <MobilePeople ref={fadeInFromBottom} src="./home/line-points-people-mobile.png"  className="event-content" id="img4" />
 
             <EnglishTextTwo ref={fadeInFromLeft}>LINE<br/>POINTS</EnglishTextTwo>
 

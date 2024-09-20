@@ -12,7 +12,7 @@ const Wrap = styled.div`
   justify-content: center;
   overflow: hidden;
   position: relative;
-  z-index: -2;
+  z-index: 0;
 `;
 
 const Container = styled.div`
@@ -156,6 +156,9 @@ const IPadBlueBackground = styled.img`
     @media (min-width:570px) and (max-width: 1300px) {
         display: block;
     }
+    @media (min-width: 990px) and (max-width: 1300px) {
+        content: url("./home/line-points-blue-background-ipad-h.svg");
+    }
 `
 
 const BlueBackground = styled.img`
@@ -164,7 +167,7 @@ const BlueBackground = styled.img`
     width: 100%;
     display: none;
     z-index: -1;
-    @media (max-width: 1600px) and (min-width: 1302px) {
+    @media (max-width: 1600px) and (min-width: 1301px) {
         display: block;
     }
 `;
@@ -229,7 +232,7 @@ function HomePage() {
             <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
 			<MobileYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-mobile.svg" />
             <IPadYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-ipad.svg" />
-			<LargeYellowTrapezoid src=".home//reach-insure-amount-event-trapezoid-large.svg" />
+			<LargeYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-large.svg" />
 			<Container>
 				<EventBanner />
 				<NewYearEvent />
