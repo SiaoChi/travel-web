@@ -12,7 +12,7 @@ const Wrap = styled.div`
   justify-content: center;
   overflow: hidden;
   position: relative;
-  z-index: -2;
+  z-index: 0;
 `;
 
 const Container = styled.div`
