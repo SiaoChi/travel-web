@@ -367,10 +367,6 @@ const MgmContentThree = styled.div`
 `;
 
 const People = styled.div`
-    position: absolute;
-    top: 1800px;
-    left: 50%;
-    transform: translateX(-50%);
     width: 821px;  
     height: 683px;
     background: url('./mgm/mgm-people-and-frame.svg') no-repeat center center;
@@ -378,21 +374,28 @@ const People = styled.div`
     pointer-events: none;
     z-index: 1;
     @media (max-width: 1300px) {
-        left: 54%;
-        top: 1500px;
         width: 359px;
         height: 597px;
         background: url('./mgm/mgm-people-and-frame-mobile.svg') no-repeat center center;
     }
-    @media (max-width: 800px) {
-      left: 51%;
+`;
+
+const PeopleWrapper = styled.div`
+    position: absolute;
+    top: 1800px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @media (max-width: 1300px) {
+        top: 1500px;
     }
 `;
 
 const ButtonContainer = styled.div`
-    position: absolute;
-    top: 2290px;
-    left: 40%;
     display: flex;
     justify-content: center;
     width: 294px;
@@ -402,19 +405,30 @@ const ButtonContainer = styled.div`
     }
     @media (max-width: 1300px) {
         width: 229px;
-        top: 1900px;
-        left: 28%;
     }
     @media (max-width: 800px) {
         width: 229px;
-        top: 1900px;
-        left: 24%;
     }
      @media (max-width: 400px) {
         width: 229px;
-        top: 1900px;
-        left: 21%;
     }
+`;
+
+const ButtonWrapper = styled.div`
+  position: absolute;
+  top: 2290px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  @media (max-width: 1300px) {
+      top: 1900px;
+  }
+  @media (max-width: 800px) {
+      top: 1900px;
+  }
+    @media (max-width: 400px) {
+      top: 1900px;
+  }
 `;
 
 const ActionDesc = styled(Desc)`
@@ -553,12 +567,17 @@ const MgmPage = () => {
 
         <BackgroundBuilding />
 
-				<People className="mgm-content" />
-        <ButtonContainer ref={fadeInFromBottom}>
-          <a target="_blank" href="https://e-commerce.transglobe.com.tw/member/missionActivities/etamgm?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_etamgm&utm_term=2024q4&utm_content=missionActivities">
-            <Button  color="red">立即推薦親友</Button>
-          </a>
-        </ButtonContainer>
+        <PeopleWrapper>
+          <People className="mgm-content" />
+        </PeopleWrapper>
+
+        <ButtonWrapper>
+          <ButtonContainer ref={fadeInFromBottom}>
+              <a target="_blank" href="https://e-commerce.transglobe.com.tw/member/missionActivities/etamgm?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_etamgm&utm_term=2024q4&utm_content=missionActivities">
+              <Button  color="red">立即推薦親友</Button>
+            </a>
+          </ButtonContainer>
+        </ButtonWrapper>
 
         <DesktopPart>
             <ActionDesc>
