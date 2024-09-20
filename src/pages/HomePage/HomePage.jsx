@@ -220,6 +220,7 @@ function HomePage() {
             clearTimeout(timeout);
             timeout = setTimeout(() => {
                 verticalLineRect = verticalLine.getBoundingClientRect();
+                if (fly.style.position === "absolute") return;
                 fly.style.left = `${verticalLineRect.x}px`;
             }, 250);
         });
