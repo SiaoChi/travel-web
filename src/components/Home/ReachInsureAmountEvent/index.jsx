@@ -14,16 +14,6 @@ const Section = styled.section`
     }
 `
 
-const MobileYellowTrapezoid = styled.img`
-    position: absolute;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 440px;
-    @media (min-width: 1301px) {
-        display: none;
-    }
-`
 
 const Flowers = styled.img`
     position: absolute;
@@ -156,7 +146,7 @@ const EventImgTwo = styled.img`
     right: 60px;
     @media (max-width: 1430px) {
         width: 515px;
-        right: 10%;
+        right: 16%;
     }
     @media (max-width: 1301px) {
         display: none;
@@ -195,10 +185,16 @@ const ButtonWrapperTwo = styled.div`
     right: 320px;
     z-index: 10;
     width: 289px;
-    @media (min-width: 1301px) and (max-width: 1400px) {
+     @media (min-width: 1380px) and (max-width: 1430px) {
         width: 280px;
         top: 920px;
-        right: 24%;
+        right: 28%;
+        opacity: 0;
+    }
+     @media (min-width: 1301px) and (max-width: 1379px) {
+        width: 280px;
+        top: 920px;
+        right: 30%;
         opacity: 0;
     }
     @media (max-width: 1300px) {
@@ -224,7 +220,7 @@ const ReachInsureAmountEvent = () => {
  
     return (
         <Section>
-            <Temple ref={fadeInFromLeft} id="sec2" src="./home/reach-insure-amount-event-temple.svg" />
+            <Temple ref={fadeInFromLeft} id="sec2" src="./home/reach-insure-amount-event-temple.png" />
             <Mountain src="./home/reach-insure-amount-event-mountain.svg" />
 
             <Title ref={fadeInFromLeft}>

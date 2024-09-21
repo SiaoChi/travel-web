@@ -17,6 +17,7 @@ const Video = styled.video`
     top: 0;
     right: 50px;
     width: 760px;
+    z-index: 0;
     @media (max-width: 1301px) {
         display: none;
     }
@@ -24,7 +25,16 @@ const Video = styled.video`
 
 const MobileVideo = styled.video`
     display: none;
+    z-index: 0;
+      &:hover, &:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
     @media (max-width: 1301px) {
+      outline: none;
+        box-shadow: none;
+        border: none;
+        pointer-events: none; 
         display: block;
         position: absolute;
         top: 0;

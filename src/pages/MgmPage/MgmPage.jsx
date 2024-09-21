@@ -169,9 +169,15 @@ const Video = styled.video`
   box-shadow: none;
   border: none;
   pointer-events: none;
+    &:hover, &:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+  }
   @media (max-width: 1300px) {
     align-self: center;
     position: static;
+    display: none;
   }
 `;
 
