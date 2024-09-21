@@ -8,13 +8,14 @@ const Section = styled.section`
     position: relative;
     height: 730px;
     @media (max-width: 1300px) and (min-width: 1000px) {
-        height: 600px;
+        height: 700px;
         width: 800px;
-        border: 2px solid gray; 
         left: 50%;
         transform: translateX(-50%);
+        margin-top: 80px;
     }
     @media (max-width: 999px) {
+        margin-top: unset;
         width: 414px;
         left: 50%;
         transform: translateX(-50%);
@@ -34,9 +35,9 @@ const Title = styled.div`
         height: 60px;
     }
     @media (max-width: 1300px) and (min-width: 1000px) {
-        left: 10%;
+        left: 6%;
         top: 120px;
-        width: 60%;
+        width: 55%;
     }
     @media (max-width: 999px) {
         top: 0px;
@@ -62,7 +63,7 @@ const Desc = styled.div`
     }
     @media (max-width: 1300px) and (min-width: 1000px) {
         left: 10%;
-        top: 350px;
+        top: 390px;
         font-size: 18px;
     }
     @media (max-width: 999px) {
@@ -108,8 +109,8 @@ const Fireworks = styled.img`
     opacity: 0;
     @media (max-width: 1301px) {
         top:50px;
-        left: 2%;
-        width: 60%
+        left: 0%;
+        width: 55%
     }
     @media (max-width: 999px) {
         top: -60px;
@@ -165,7 +166,7 @@ const EnglishTitlePicture2 = styled.img`
     z-index: 1;
     @media (max-width: 1301px) {
         width: 250px;
-        top: 160px;
+        top: 220px;
         right: 0;
     }
     @media (max-width: 999px) {
@@ -187,7 +188,7 @@ const EventImg = styled.img`
 
 const MobileEventImg = styled.img`
     position: absolute;
-    top: 280px;
+    top: 340px;
     width: 414px;
     opacity: 0;
     right:0;
@@ -207,7 +208,7 @@ const Surprise = styled.img`
     right: 560px;
      z-index: 2;
     @media (max-width: 1301px) {
-        top: 260px;
+        top: 310px;
         right: 290px;
         width: 104px;
     }
@@ -229,7 +230,7 @@ const ButtonWrapper = styled.div`
     opacity: 0;
     @media (max-width: 1300px) and (min-width: 1000px) {
         right: 12%;
-        bottom: 40px;
+        bottom: 75px;
         width: 220px;
     }
     @media (max-width: 999px) {

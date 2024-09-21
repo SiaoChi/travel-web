@@ -85,7 +85,7 @@ const YellowPolygon = styled.img`
 		max-width: 100%;
     }
     @media (max-width: 999px) {
-        display: none;
+        top: 680px;
     }
 `;
 
@@ -117,7 +117,7 @@ const MobileYellowTrapezoid = styled.img`
 
 const IPadYellowTrapezoid = styled.img`
     position: absolute;
-    top: 1400px;
+    top: 1250px;
     left: 0;
     width: 100%;
     z-index: -1;
@@ -247,7 +247,7 @@ function HomePage() {
             {/* 黃色梯形 */}
             <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
 			<MobileYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-mobile.svg" />
-            <IPadYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-ipad.svg" />
+            <IPadYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
 			<LargeYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-large.svg" />
 			<Container>
 				<EventBanner />

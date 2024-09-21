@@ -5,7 +5,6 @@ import { useAnimations } from "../../Animation/useAnimations";
 const Section = styled.section`
     position: relative;
     height: 1127px;
-    border: 2px solid black;
     @media (max-width: 999px) {
         overflow: hidden;
         height: 1390px;
@@ -66,14 +65,13 @@ const Mountain = styled.img`
     width: 700px;
     @media (max-width: 1301px) {
         width: 428px;
-        top: 380px;
+        top: 180px;
         right: 0;      
     }
     @media (max-width: 999px) {
         width: 300px;
         top: 300px;
-        left: 5%;
-        transform: translateX(-40%);
+        right: 0;
     }
 `
 

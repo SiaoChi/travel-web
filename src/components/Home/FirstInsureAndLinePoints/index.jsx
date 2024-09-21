@@ -8,22 +8,30 @@ import { useAnimations } from "../../Animation/useAnimations";
 const Section = styled.section`
     position: relative;
     height: 1429px;
-    @media (max-width: 1301px) {
+    @media (max-width: 999px) {
         height: 1529px;
         width: 440px;
         left: 50%;
         transform: translateX(-50%);
+    }
+    @media (min-width: 1000px) and (max-width: 1300px) {
+        height: 1270px;
+        width: 800px;
+        margin: 0 auto;
     }
     @media (min-width: 450px) and (max-width: 576px) {
         width: 575px;
     }
 `
 
-
 const Tower = styled.img`
     position: absolute;
     left: 51px;
-    @media (max-width: 1301px) {
+    @media (min-width: 1000px) and (max-width: 1300px) {
+        width: 450px;
+        left: 0%;
+    }
+    @media (max-width: 999px) {
         top: -100px;
         left: 4%;
         width: 380px;
@@ -34,25 +42,38 @@ const Tower = styled.img`
     }
 `
 
-
 const EventImg = styled.img`
     position: absolute;
     top: 198px;
     right: 35px;
-    @media (max-width: 1301px) {
+    @media (min-width: 1000px) and (max-width: 1300px) {
+        display: none;
+    }
+    @media (max-width: 999px) {
         display: none;
     }
 `
 
 const MobileEventImg = styled.img`
-    position: absolute;
-    top: 260px;
-    left: 15%;
-    @media (min-width: 1301px) {
-        display: none;
+    display: none;
+    @media (max-width: 1300px) {
+        display: block;
+        position: absolute;
+        top: 260px;
+        right: 0;
     }
-    @media (min-width: 450px) and (max-width: 576px) {
+    @media (min-width: 1000px) and (max-width: 1300px) {
+        left: unset;
+        right: 0;
+    }
+    @media (min-width: 800px) and (max-width: 1000px) {
+        left: 10%;
+    }
+    @media (min-width: 382px) and (max-width: 800px) {
         left: 20%;
+    }
+    @media (max-width: 381px) {
+        left: 15%;
     }
 `
 
@@ -63,20 +84,28 @@ const ButtonWrapperOne = styled.div`
     z-index: 10;
     width: 289px;
     opacity: 0;
-    @media (max-width: 1301px) {
+    @media (min-width: 1000px) and (max-width: 1300px) {
+        right: 9%;
+        width: 250px;
+        top: 465px;
+    }
+    @media (max-width: 999px) {
         width: 220px;
         top: 470px;
-        left: 23%;
+        left: 17%;
     }
-    @media (min-width: 450px) and (max-width: 576px) {
+    @media (min-width: 382px) and (max-width: 576px) {
         left: 26%;
+    }
+    @media (max-width: 381px) {
+        left: 20%;
     }
 `
 
 const People = styled.img`
     z-index: 10;
     opacity: 0;
-    @media (max-width: 1300px) {
+    @media (max-width: 999px) {
         display: none;
     }
 `
@@ -87,7 +116,10 @@ const PeopleWrapper = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
-    @media (max-width: 1300px) {
+    @media (min-width: 1000px) and (max-width: 1300px) {
+        bottom: 150px;
+    }
+    @media (max-width: 999px) {
         bottom: 600px;
     }
 `
@@ -97,7 +129,7 @@ const MobilePeople = styled.img`
     width: 80%;
     opacity: 0;
     z-index: 11;
-    @media (min-width: 1301px) {
+    @media (min-width: 1000px) {
         display: none;
     }
     @media (min-width: 450px) and (max-width: 576px) {
@@ -112,7 +144,10 @@ const ButtonWrapperTwo = styled.div`
     translate: -50% 0;
     z-index: 11;
     width: 289px;
-    @media (max-width: 1301px) {
+    @media (min-width: 1000px) and (max-width: 1300px) {
+        bottom: 190px;
+    }
+    @media (max-width: 999px) {
         width: 220px;
         bottom: 168px;
     }
@@ -125,7 +160,10 @@ const ButtonWrapperThree = styled.div`
     translate: -50% 0;
     z-index: 10;
     width: 289px;
-    @media (max-width: 1301px) {
+    @media (min-width: 1000px) and (max-width: 1300px) {
+        bottom: 70px;
+    }
+    @media (max-width: 999px) {
         width: 220px;
         bottom: 30px;
     }
@@ -138,7 +176,10 @@ const MoreRewardTitle = styled.img`
     translate: -50% 0;
     height: 50px;
     z-index: 11;
-    @media (max-width: 1301px) {
+    @media (min-width: 1000px) and (max-width: 1300px) {
+        bottom: 300px;
+    }
+    @media (max-width: 999px) {
         bottom: 350px;
         height: 40px;
     }
@@ -154,7 +195,11 @@ const MoreRewardDesc = styled.p`
     font-weight: bold;
     text-align: center;
     z-index: 11;
-    @media (max-width: 1301px) {
+    @media (min-width: 1000px) and (max-width: 1300px) {
+        bottom: 260px;
+        width: 430px;
+    }
+    @media (max-width: 999px) {
         bottom: 280px;
         height: 40px;
         width: 280px;
@@ -165,7 +210,8 @@ const Flower = styled.img`
     position: absolute;
     top: 50px;
     left: 150px;
-    @media (max-width: 1301px) {
+    z-index: -1;
+    @media (max-width: 999px) {
         display: none;
     }
 `
@@ -175,7 +221,7 @@ const MobileFlower = styled.img`
     top: -100px;
     left: 50%;
     transform: translateX(-50%);
-    @media (min-width: 1301px) {
+    @media (min-width: 1000px) {
         display: none;
     }
 `
@@ -191,13 +237,20 @@ const Title = styled.div`
     > img {
         height: 60px;
     }
-    @media (max-width: 1301px) {
+    @media (max-width: 999px) {
         top: -40px;
         left: 14%;
         transform: translateX(-46%);
         width: 320px;
          > img {
             height: 40px;
+        }
+    }
+    @media (min-width: 1000px) and (max-width: 1300px) {
+        left: 6%;
+        top: 60px;
+        > img {
+            height: 55px;
         }
     }
     @media (min-width: 450px) and (max-width: 576px) {
@@ -219,7 +272,12 @@ const Desc = styled.div`
     > strong > span {
         color: #2496F0;
     }
-    @media (max-width: 1301px) {
+    @media (min-width: 1000px) and (max-width: 1300px) {
+        top: 260px;
+        left: 5%;
+        font-size: 16px;
+    }
+    @media (max-width: 999px) {
         top: 120px;
         left: 14%;
         transform: translateX(-42%);
@@ -238,7 +296,11 @@ const EnglishTitlePicture4 = styled.img`
     top: 580px;
     right: 6%;
     width: 304px;
-    @media (max-width: 1301px) {
+    @media (min-width: 1000px) and (max-width: 1300px) {
+        top: 560px;
+        width: 250px;
+    }
+    @media (max-width: 999px) {
         width: 195px;
         top: 580px;
         right: 12%;
@@ -251,53 +313,16 @@ const EnglishTitlePicture5 = styled.img`
     left: 114px;
     width: 254px;
     z-index: 20;
-    @media (max-width: 1301px) {
+    @media (min-width: 1000px) and (max-width: 1300px) {
+        top: 740px;
+        width: 200px;
+        left: 0%;
+    }
+    @media (max-width: 999px) {
         width: 150px;
         top: 840px;
         left: 12%;
     }
-`
-
-const EnglishText = styled.div`
-    font-size: 65px;
-    line-height: 65px;
-    font-weight: bold;
-    color: #FED430;
-    z-index: 10;
-    font-family: 'Roboto';
-    @media (max-width: 1301px) {
-        left: 20%;
-        font-size: 40px;
-        line-height: 40px;
-        min-width: 250px;
-    }
-`
-
-const EnglishTextOne = styled(EnglishText)`
-    position: absolute;
-    top: 580px;
-    right: 85px;
-    text-align: right;
-    font-family: 'Roboto';
-    @media (max-width: 380px) {
-        right:80px;
-    }
-`
-
-const EnglishTextTwo = styled(EnglishText)`
-    position: absolute;
-    top: 740px;
-    left: 114px;
-    text-align: left;
-    font-family: 'Roboto';
-    @media (max-width: 1301px) {
-        top: 800px;
-        left: 70px;
-    }
-    @media (max-width: 428px) {
-        top: 860px;
-        left: 60px;
-    };
 `
 
 const FirstInsureAndLinePoints = () => {

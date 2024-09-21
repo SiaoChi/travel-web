@@ -4,9 +4,7 @@ import { useEffect, useState } from "react";
 const Section = styled.section`
     position: relative;
     height: 660px;
-    border: 2px solid gray; 
 
-    
     @media (max-width: 1300px) {
         height: 450px;
     }
@@ -27,8 +25,8 @@ const Video = styled.video`
     clip-path: inset(1px 1px);
     @media (max-width: 1300px) and (min-width: 1000px) {
         width: 450px;
-        right: 0;
-        top: 50px;
+        right: -4%;
+        top: 80px;
     }
     @media (max-width: 999px) {
         display: none;
@@ -156,7 +154,7 @@ const EnglishTitlePicture1 = styled.img`
     @media (max-width: 1300px) and (min-width: 1000px) {
         width: 85%;
         margin-left: 0;
-        top: 415px;
+        top: 430px;
     }
     @media (max-width: 999px) {
         display: none;
