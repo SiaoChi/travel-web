@@ -256,26 +256,6 @@ const EnglishTitlePictureMobile = styled.img`
   }
 `;
 
-// const EnglishTitle = styled.p`
-//     position: absolute;
-//     top: 471px;
-//     left: 112px;
-//     z-index: 1;
-//     font-size: 65px;
-//     line-height: 65px;
-//     font-weight: bold;
-//     letter-spacing: 2px;
-//     color: #2496F0;
-//     font-family: 'Roboto';
-//     @media (max-width: 1300px) {
-//       font-size: 40px;
-//       line-height: 40px;
-//       top: 660px;
-//       left: 20px;
-//       width: 337px;
-//     }
-// `;
-
 const Br = styled.br`
   display: ${(props) => (props.reverse ? "block" : "none")};
   @media (max-width: 1300px) {
@@ -380,18 +360,21 @@ const MgmContentThree = styled.div`
 `;
 
 const People = styled.div`
-    width: 821px;  
+    width: 821px;
     height: 683px;
     background: url('./mgm/mgm-people-and-frame.svg') no-repeat center center;
-    background-size: cover;
+    background-size: contain; 
+    object-fit: contain;  
     pointer-events: none;
     z-index: 1;
     @media (max-width: 1300px) {
-        width: 359px;
-        height: 597px;
-        background: url('./mgm/mgm-people-and-frame-mobile.svg') no-repeat center center;
+        width: 409px;
+        height: 601px;
+        background: url('./mgm/mgm-people-and-frame-mobile.png') no-repeat center center;
+        background-size: contain; 
     }
 `;
+
 
 const PeopleWrapper = styled.div`
     position: absolute;
@@ -405,6 +388,8 @@ const PeopleWrapper = styled.div`
     justify-content: center;
     @media (max-width: 1300px) {
         top: 1490px;
+        width: 409px; 
+        height: 601px;
     }
 `;
 

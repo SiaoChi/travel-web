@@ -307,9 +307,8 @@ export function Receiver() {
 			<div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
 				<Note>
 					不限單筆保費金額，該筆保單即享「50點LINE
-					POINTS好禮即享券」抽獎機會乙次
+					POINTS好禮即享券」抽獎機會乙次（共抽300名，每人限獲獎乙次）。
 				</Note>
-				<Note>（共抽300名，每人限獲獎乙次）。</Note>
 				<Note highlight>
 					註：被邀請人投保時須填入「邀請人推薦碼」資訊（不可為本人推薦碼），雙方方符合抽獎資格。
 				</Note>
