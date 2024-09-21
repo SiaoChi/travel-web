@@ -40,7 +40,7 @@ const Container = styled.div`
   position: relative;
   height: 2780px;
   @media (max-width: 1300px) {
-    width: 430px;
+    width: 415px;
     height: 2500px;
   }
 `;
@@ -226,25 +226,53 @@ const Desc = styled.div`
     }
 `;
 
-const EnglishTitle = styled.p`
-    position: absolute;
-    top: 471px;
-    left: 112px;
-    z-index: 1;
-    font-size: 65px;
-    line-height: 65px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #2496F0;
-    font-family: 'Roboto';
-    @media (max-width: 1300px) {
-      font-size: 40px;
-      line-height: 40px;
-      top: 660px;
-      left: 20px;
-      width: 337px;
-    }
+const EnglishTitlePicture = styled.img`
+  position: absolute;
+  top: 475px;
+  left: 112px;
+  z-index: 2;
+  width: 754px;
+  height: auto;
+  object-fit: contain; 
+  @media (max-width: 1300px) {
+    display: none;
+  }
 `;
+
+const EnglishTitlePictureMobile = styled.img`
+  display: none;
+  position: absolute;
+  top: 475px;
+  left: 112px;
+  z-index: 2;
+  top: 668px;
+  left: 20px;
+  width: 337px;
+  object-fit: contain; 
+  @media (max-width: 1300px) {
+    display: block;
+  }
+`;
+
+// const EnglishTitle = styled.p`
+//     position: absolute;
+//     top: 471px;
+//     left: 112px;
+//     z-index: 1;
+//     font-size: 65px;
+//     line-height: 65px;
+//     font-weight: bold;
+//     letter-spacing: 2px;
+//     color: #2496F0;
+//     font-family: 'Roboto';
+//     @media (max-width: 1300px) {
+//       font-size: 40px;
+//       line-height: 40px;
+//       top: 660px;
+//       left: 20px;
+//       width: 337px;
+//     }
+// `;
 
 const Br = styled.br`
   display: ${(props) => (props.reverse ? "block" : "none")};
@@ -284,86 +312,69 @@ const LinePointsText = styled.img`
     }
 `;
 
+const MgmContentWrapper = styled.div`
+  position: absolute;
+  top: 900px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 974px;
+  height: 900px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 2px;
+  max-width: 1008px;
+  @media (max-width: 1300px) {
+    top:950px;
+    width: 409px;
+    height: 530px;
+
+  }
+`;
+
 const MgmContentOne = styled.div`
-    position: absolute;
-    top: 900px;
-    left: 18%;
     z-index: 1;
-    width: 974px;
-    height: 263px;
-    background: url('./mgm/mgm-content1.svg') no-repeat center center;
+    width: 1008px;
+    height: 307px;
+    background: url('./mgm/mgm-content1.png') no-repeat center center;
     background-size: cover;
+
     @media (max-width: 1300px) {
-      left: 5%;
-      top: 950px;
-      width: 404px;
-      height: 207px;
-      background: url('./mgm/mgm-content1-mobile.svg') no-repeat center center;
-    }
-    @media (max-width: 400px) {
-      width: 390px;
-      left: -1%;
+      width: 409px;
+      background: url('./mgm/mgm-content1-mobile.png') no-repeat center center;
       background-size: contain;
-    }
-    @media (max-width: 370px) {
-      width: 390px;
-      left: -2%;
-      background-size: contain;
-    }
+    }    
 `;
 
 const MgmContentTwo = styled.div`
-    position: absolute;
-    top: 1163px;
-    left: 18%;
-    width: 1012px;
-    height: 308px;
+    width: 1008px;
+    height: 307px;
     z-index: 1;
-    background: url('./mgm/mgm-content2.svg') no-repeat center center;
+    background: url('./mgm/mgm-content2.png') no-repeat center center;
     background-size: cover;
+    margin-top: -50px;
     @media (max-width: 1300px) {
-      left: 5%;
-      top: 1136px;
+      background: url('./mgm/mgm-content2-mobile.png') no-repeat center center;
       width: 409px;
-      height: 187px;
-      background: url('./mgm/mgm-content2-mobile.svg') no-repeat center center;
-    }
-     @media (max-width: 400px) {
-      width: 390px;
-      left: -1%;
       background-size: contain;
     }  
-    @media (max-width: 370px) {
-      left: -2%;
-      background-size: contain;
-    }
 `;
 
 const MgmContentThree = styled.div`
-    position: absolute;
-    top: 1463px;
-    left: 18%;
-    width: 929px;
-    height: 299px;
+    width: 1008px;
+    height: 307px;
     z-index: 1;
-    background: url('./mgm/mgm-content3.svg') no-repeat center center;
+    background: url('./mgm/mgm-content3.png') no-repeat center center;
     background-size: cover;
-    @media (max-width: 1300px) {
-      top: 1300px;
-      left: 4%;
-      width: 414px;
-      height: 189px;
-      background: url('./mgm/mgm-content3-mobile.svg') no-repeat center center;
-    }
-     @media (max-width: 400px) {
-      width: 390px;
-      left: -1%;
+     margin-top:-30px;
+     @media (max-width: 1300px) {
+      width: 409px;
+      margin-top:-35px;
+      background: url('./mgm/mgm-content3-mobile.png') no-repeat center center;
       background-size: contain;
     }  
-    @media (max-width: 380px) {
-      width: 380px;
-      background-size: contain;
-    }
 `;
 
 const People = styled.div`
@@ -391,7 +402,7 @@ const PeopleWrapper = styled.div`
     display: flex;
     justify-content: center;
     @media (max-width: 1300px) {
-        top: 1500px;
+        top: 1490px;
     }
 `;
 
@@ -421,13 +432,7 @@ const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
   @media (max-width: 1300px) {
-      top: 1900px;
-  }
-  @media (max-width: 800px) {
-      top: 1900px;
-  }
-    @media (max-width: 400px) {
-      top: 1900px;
+      top: 1880px;
   }
 `;
 
@@ -545,20 +550,19 @@ const MgmPage = () => {
 						快樂<span>+1+1+1+1+1+1+1+1+1</span>
 					</p>
 				</Desc>
-				<EnglishTitle>
-					COLLECT
-					<Br reverse /> A LOT OF LINE POINTS
-				</EnglishTitle>
-
-				<MobileContentFlower src="./mgm/mgm-points-and-flower-mobile.svg" />
+        <EnglishTitlePicture src="./mgm/english-title.png" alt="English Title" />
+        <EnglishTitlePictureMobile src="./mgm/english-title-mobile.png" alt="English Title" />
+        <MobileContentFlower src="./mgm/mgm-points-and-flower-mobile.svg" />
 				<ContentDesc>
 					<p>2024/10/1~2025/1/31</p>
 					<p>成功邀請親友投保旅平險，達指定筆數</p>
 				</ContentDesc>
 				<LinePointsText src="./mgm/mgm-line-points-text.svg" />
+        <MgmContentWrapper>
           <MgmContentOne className="mgm-content" />
           <MgmContentTwo className="mgm-content" />
           <MgmContentThree className="mgm-content" />
+        </MgmContentWrapper>
         <DesktopPart>
 					{/* <BannerFlower src="./mgm/mgm-banner-flower.svg" /> */}
 					<ContentFlower src="./mgm/mgm-info-flower.svg" />

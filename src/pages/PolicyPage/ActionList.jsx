@@ -127,9 +127,7 @@ function ActionList() {
 					>
 						<SmallItem marginLeft="-50px">1</SmallItem>
 						<Note lineHeight={30}>
-							單筆保費滿200元，該筆保單即享「500元好禮即享券」抽獎機會乙次
-							<br />
-							（共抽100名，每人獲獎次數不限）。
+							單筆保費滿200元，該筆保單即享「500元好禮即享券」抽獎機會乙次（共抽100名，每人獲獎次數不限）。
 						</Note>
 					</div>
 					<div
@@ -138,9 +136,7 @@ function ActionList() {
 						<SmallItem marginLeft="-50px">2</SmallItem>
 						<div>
 							<Note lineHeight={30}>
-								單筆保費滿500元，該筆保單即享「星宇航空東京來回機票」抽獎機會乙次
-								<br />
-								（價值20,000元旅遊商品兌換券乙組，共抽5名，每人限獲獎乙次）。
+								單筆保費滿500元，該筆保單即享「星宇航空東京來回機票」抽獎機會乙次（價值20,000元旅遊商品兌換券乙組，共抽5名，每人限獲獎乙次）。
 							</Note>
 							<Note highlight lineHeight={30}>
 								註：上述活動採擇優最高門檻計，每筆保單享乙個獎項抽獎機會一次。
