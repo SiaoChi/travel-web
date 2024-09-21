@@ -115,7 +115,7 @@ const ContentPoint = styled.img`
   z-index: 1;
 
   @media (max-width: 1300px) and (min-width: 1000px) {
-    // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
+    width:80%;
   }
 
   @media (max-width: 999px) {
@@ -202,6 +202,59 @@ const Buttons = styled.div`
     }
 `;
 
+const MobileSubVideoWrapper = styled.div`
+  display: none;
+  position: absolute;
+  top: 20px;
+  width: 422px;
+  aspect-ratio: 422 / 327;
+  z-index: 0;
+  left:50%;
+  transform: translateX(-50%);  
+  @media (max-width: 999px) {
+    display: flex;
+    position: relative;
+  }
+`;
+
+const MobileKvPeople = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 422px;
+  height: 327px;
+  z-index: 0;
+  @media (max-width: 999px) {
+    display: block;
+  }
+`;
+
+const MobileKvFlower = styled.img`
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 422px;
+  height: 327px;
+  z-index: -1;
+  @media (max-width: 999px) {
+    display: block;
+  }
+`;
+
+const MobileKvHouse = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 422px;
+  object-fit: contain;
+  background-size: contain;
+  z-index: 0;
+  @media (max-width: 999px) {
+    display: block;
+  }
+`;
+
 const Video = styled.video`
   position: absolute;
   top: 0;
@@ -217,8 +270,6 @@ const Video = styled.video`
   }
 
   @media (max-width: 999px) {
-    align-self: center;
-    position: static;
     display: none;
   }
 `;
@@ -377,7 +428,7 @@ const LinePointsText = styled.img`
     left: 50%;
     transform: translateX(-50%);
     width: 387px;
-    z-index: 1;
+    z-index: 2;
 
     @media (max-width: 1300px) and (min-width: 1000px) {
       top: 670px;
@@ -404,7 +455,6 @@ const MgmContentWrapper = styled.div`
   align-items: center;
   gap: 2px;
   max-width: 1008px;
-  border: 2px solid black;
 
 
   @media (max-width: 1300px) and (min-width: 1000px) {
@@ -426,7 +476,6 @@ const MgmContentOne = styled.div`
     height: 307px;
     background: url('./mgm/mgm-content1.png') no-repeat center center;
     background-size: cover;
-     border: 2px solid black;
 
     @media (max-width: 1300px) and (min-width: 1000px) {
       background-size: contain;
@@ -566,57 +615,6 @@ const ButtonWrapper = styled.div`
   }
 `;
 
-const ActionDesc = styled(Desc)`
-    font-size: 20px;
-    top: 2110px;
-    left: 50%;
-    transform: translateX(-50%);
-    letter-spacing: 1px;
-    z-index:1;
-
-    @media (max-width: 1300px) and (min-width: 1000px) {
-      top: 1560px;
-    }
-
-    @media (max-width: 999px) {
-      display: none;
-    }
-`;
-
-const ActionLinePoints = styled.img`
-    position: absolute;
-    top: 2160px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 717px;
-    z-index:1;
-
-    @media (max-width: 1300px) and (min-width: 1000px) {
-      // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
-    }
-
-    @media (max-width: 999px) {
-      display: none;
-    }
-`;
-
-const BottomDesc = styled(Desc)`
-    font-size: 16px;
-    font-weight: 400;
-    top: 2380px;
-    left: 50%;
-    transform: translateX(-50%);
-    line-height: 25px;
-    letter-spacing: 1px;
-
-    @media (max-width: 1300px) and (min-width: 1000px) {
-      // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
-    }
-
-    @media (max-width: 999px) {
-      display: none;
-    }
-`;
 
 const DesktopPart = styled.div`
   @media (max-width: 1300px) and (min-width: 1000px) {
@@ -666,10 +664,15 @@ const IpadBuilding = styled.img`
     left: 0;
     height: 100%;
   }
+
+  @media (max-width: 500px) {
+    display: block;
+    left: 0;
+  }
 `;
 
 const MgmPage = () => {
-  const {fadeInFromBottom}= useAnimations();
+  const {fadeInFromBottom, fadeInEnlarge, fadeInFromLeft}= useAnimations();
 	const [isBlue, setIsBlue] = useState(true);
 
 	useGSAP(() => {
@@ -700,7 +703,13 @@ const MgmPage = () => {
 		<Wrap>
        <YellowBackground />
 			<Container>
-				<Video src="./mgm/mgm-banner-video-mobile.mp4" autoPlay muted playsInline />
+        <MobileSubVideoWrapper>
+          <MobileKvPeople ref={fadeInFromBottom} src="./mgm/mb-kv-ppl.png" />
+          <MobileKvFlower ref={fadeInEnlarge} src="./mgm/mb-kv-flower.png" />
+          <MobileKvHouse ref={fadeInFromLeft} src="./mgm/mb-kv-house.png" />
+        </MobileSubVideoWrapper>
+          <Video src="./mgm/mgm-banner-video-mobile.mp4" autoPlay muted playsInline />
+       
 				<BannerTitle src="./mgm/mgm-title.png" />
 				<BannerTitlePoint src="./mgm/mgm-title-p.png" />
 				<Desc isBlue={isBlue}>
@@ -723,7 +732,6 @@ const MgmPage = () => {
           <MgmContentThree className="mgm-content" />
         </MgmContentWrapper>
         <DesktopPart>
-					{/* <BannerFlower src="./mgm/mgm-banner-flower.svg" /> */}
 					<ContentFlower src="./mgm/mgm-info-flower.svg" />
 					<ContentPoint src="./mgm/mgm-content-p-point.svg" />
 				</DesktopPart>

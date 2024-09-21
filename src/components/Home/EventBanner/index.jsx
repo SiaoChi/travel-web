@@ -6,7 +6,7 @@ const Section = styled.section`
     height: 660px;
 
     @media (max-width: 1300px) {
-        height: 450px;
+        height: 440px;
     }
     @media (max-width: 999px) {
         height: 900px;
@@ -24,9 +24,9 @@ const Video = styled.video`
     z-index: -1;
     clip-path: inset(1px 1px);
     @media (max-width: 1300px) and (min-width: 1000px) {
-        width: 450px;
-        right: -4%;
-        top: 80px;
+        width: 500px;
+        right: -8%;
+        top: 50px;
     }
     @media (max-width: 999px) {
         display: none;
@@ -53,7 +53,7 @@ const BannerTitle = styled.div`
         margin: 0;
         position: absolute;
         top: 0;
-        width: 400px;
+        width: 370px;
         left: 0;
     }
     @media (max-width: 999px) {
@@ -128,9 +128,10 @@ const Desc = styled.div`
     @media (max-width: 1300px) and (min-width: 1000px) {
         margin: 0;
         position: absolute;
-        top: 300px;
+        top: 280px;
         width: 50%;
         left: 0;
+        font-size: 22px;
     }   
     @media (max-width: 999px) {
         margin: 0;

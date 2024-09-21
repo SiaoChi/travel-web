@@ -240,7 +240,7 @@ const ButtonWrapper = styled.div`
 `;
 
 const NewYearEvent = () => {
-    const { fadeIn , fadeInFromLeft, fadeInAndPulse , fadeInFromBottom, btnFadeInFromBottom } = useAnimations();
+    const { fadeInEnlarge , fadeInFromLeft, fadeInAndPulse , fadeInFromBottom, btnFadeInFromBottom } = useAnimations();
 
     const sectionRef = useRef(null);
 
@@ -262,7 +262,7 @@ const NewYearEvent = () => {
 
 	return (
 		<Section ref={sectionRef}>
-			<Fireworks ref={fadeIn} id="sec1" src="./home/new-year-event-fire.png" />
+			<Fireworks ref={fadeInEnlarge} id="sec1" src="./home/new-year-event-fire.png" />
 			<LineOne src="./home/shadow-line1.svg" />
 			<LineTwo src="./home/shadow-line2.svg" />
 			<MobileLine src="./home/shadow-line-mobile.svg" />

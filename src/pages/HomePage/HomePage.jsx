@@ -251,7 +251,7 @@ function HomePage() {
 			<LargeYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-large.svg" />
 			<Container>
 				<EventBanner />
-				<NewYearEvent />
+				{/* <NewYearEvent /> */}
 				<ReachInsureAmountEvent />
 				<FirstInsureAndLinePoints />
 				<VerticalLine id="vertical-line">
