@@ -14,6 +14,7 @@ const Wrap = styled.div`
   overflow: hidden;
   position: relative; 
   z-index: 0;
+
   @media (max-width: 1300px) {
     padding-top: 65px;
   }
@@ -28,7 +29,9 @@ const BottomBlueBg = styled.div`
   height: 211px;
   background-color: #2496F0;
   z-index: 1;
-  @media (max-width: 1300px) {
+
+
+  @media (max-width: 999px) {
      width: 100%;
      height: 400px;
   }
@@ -39,7 +42,13 @@ const Container = styled.div`
   max-width: 1500px;
   position: relative;
   height: 2780px;
-  @media (max-width: 1300px) {
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    width: 800px;
+    height: 2180px;
+  }
+
+  @media (max-width: 999px) {
     width: 415px;
     height: 2500px;
   }
@@ -55,7 +64,12 @@ const YellowBackground = styled.div`
   background: url('./mgm/mgm-trapezoid.png') no-repeat center center;
   background-size: cover;
   z-index: 1;
-  @media (max-width: 1300px) {
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
+  }
+
+  @media (max-width: 999px) {
     top: 530px;
     aspect-ratio: 410 / 700;
   }
@@ -67,7 +81,12 @@ const ContentFlower = styled.img`
   left: 60px;
   width: 1300px;
   z-index: 1;
-  @media (max-width: 1300px) {
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
+  }
+
+  @media (max-width: 999px) {
     display: none;
   }
 `;
@@ -78,7 +97,12 @@ const MobileContentFlower = styled.img`
   left: 25px;
   width: 373px;
     z-index: 1;
-  @media (min-width: 1300px) {
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
+  }
+
+  @media (min-width: 999px) {
     display: none;
   }
 `;
@@ -89,7 +113,12 @@ const ContentPoint = styled.img`
   left: 78px;
   width: 1360px;
   z-index: 1;
-  @media (max-width: 1300px) {
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
+  }
+
+  @media (max-width: 999px) {
     display: none;
   }
 `;
@@ -104,11 +133,18 @@ const BackgroundBuilding = styled.div`
   height: 353px;
   background: url('./mgm/mgm-building.svg') no-repeat center center;
   z-index: 1;
-  @media (max-width: 1300px) {
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+   bottom: 400px;
+  }
+
+
+  @media (max-width: 999px) {
     width: 414px;
     height: 218px;
     bottom: -20px;
     background-size: cover;
+
   }
 `;
 
@@ -125,7 +161,8 @@ const DeskBlueBackgroundBuilding = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 2;
-  @media (max-width: 1300px) {
+
+  @media (max-width: 999px) {
     bottom: 0;
     height: 400px;
     width: 100vw;
@@ -134,6 +171,7 @@ const DeskBlueBackgroundBuilding = styled.div`
     background:none;
     left: 53%;
   }
+
   @media (max-width: 800px) {
     bottom: 0;
     height: 400px;
@@ -151,7 +189,12 @@ const Buttons = styled.div`
     > a {
       width: 100%;
     }
-    @media (max-width: 1300px) {
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
+    }
+
+    @media (max-width: 999px) {
         flex-direction: column;
         gap: 29px;
         width: 294px;
@@ -166,7 +209,14 @@ const Video = styled.video`
   width: 610px;
   z-index: 0;
   clip-path: inset(1px 1px);
-  @media (max-width: 1300px) {
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+  top:40px;  
+  right: 0;
+    width: 400px;
+  }
+
+  @media (max-width: 999px) {
     align-self: center;
     position: static;
     display: none;
@@ -180,7 +230,14 @@ const BannerTitle = styled.img`
     width: 500px;
     z-index: 1; 
     animation: fadeIn 1s ease-in-out backwards;
-    @media (max-width: 1300px) {
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      left: 0;
+      top: 60px;
+      width: 50%;
+    }
+
+    @media (max-width: 999px) {
         width: 354px;
         top: 340px;
         left: 7%;
@@ -195,7 +252,14 @@ const BannerTitlePoint = styled.img`
     animation: fadeIn 1s ease-in-out backwards;
     animation-delay: .5s;
     z-index: 1;
-    @media (max-width: 1300px) {
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      left: 0;
+      top: 60px;
+      width: 50%;
+    }
+
+    @media (max-width: 999px) {
         width: 354px;
         top: 340px;
         left: 7%;
@@ -218,7 +282,14 @@ const Desc = styled.div`
     > p > span {
         color:  ${(props) => (props.isBlue ? "#2496F0" : "#FF837E")};
     }
-    @media (max-width: 1300px) {
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      left: 0;
+      top: 300px;
+      width: 50%;
+    }
+
+    @media (max-width: 999px) {
         top: 530px;
         left: 0px;
         font-size: 20px;
@@ -236,7 +307,14 @@ const EnglishTitlePicture = styled.img`
   width: 754px;
   height: auto;
   object-fit: contain; 
-  @media (max-width: 1300px) {
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    top: 455px;
+    width: 80%;
+    left: 0;
+  }
+
+  @media (max-width: 999px) {
     display: none;
   }
 `;
@@ -251,14 +329,20 @@ const EnglishTitlePictureMobile = styled.img`
   left: 20px;
   width: 337px;
   object-fit: contain; 
-  @media (max-width: 1300px) {
+
+  @media (max-width: 999px) {
     display: block;
   }
 `;
 
 const Br = styled.br`
   display: ${(props) => (props.reverse ? "block" : "none")};
-  @media (max-width: 1300px) {
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
+  }
+
+  @media (max-width: 999px) {
     display: ${(props) => (props.reverse ? "none" : "block")};
   }
 `;
@@ -269,7 +353,13 @@ const ContentDesc = styled(Desc)`
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    @media (max-width: 1300px) {
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      top: 600px;
+      width: 90%;
+    }
+
+    @media (max-width: 999px) {
       top: 780px;
       font-size: 20px;
       height: fit-content;
@@ -288,7 +378,12 @@ const LinePointsText = styled.img`
     transform: translateX(-50%);
     width: 387px;
     z-index: 1;
-    @media (max-width: 1300px) {
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      top: 670px;
+    }
+
+    @media (max-width: 999px) {
       top: 850px;
       width: 340px;
     }
@@ -306,13 +401,22 @@ const MgmContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: start;
+  align-items: center;
   gap: 2px;
   max-width: 1008px;
-  @media (max-width: 1300px) {
+  border: 2px solid black;
+
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    width: 600px;
+    height: 500px;
+    top:750px
+  }
+
+  @media (max-width: 999px) {
     top:950px;
     width: 409px;
     height: 530px;
-
   }
 `;
 
@@ -322,8 +426,14 @@ const MgmContentOne = styled.div`
     height: 307px;
     background: url('./mgm/mgm-content1.png') no-repeat center center;
     background-size: cover;
+     border: 2px solid black;
 
-    @media (max-width: 1300px) {
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      background-size: contain;
+      width: 80%;
+    }
+
+    @media (max-width: 999px) {
       width: 409px;
       background: url('./mgm/mgm-content1-mobile.png') no-repeat center center;
       background-size: contain;
@@ -337,7 +447,13 @@ const MgmContentTwo = styled.div`
     background: url('./mgm/mgm-content2.png') no-repeat center center;
     background-size: cover;
     margin-top: -50px;
-    @media (max-width: 1300px) {
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      background-size: contain;
+      width: 80%;
+    }
+
+    @media (max-width: 999px) {
       background: url('./mgm/mgm-content2-mobile.png') no-repeat center center;
       width: 409px;
       background-size: contain;
@@ -351,7 +467,13 @@ const MgmContentThree = styled.div`
     background: url('./mgm/mgm-content3.png') no-repeat center center;
     background-size: cover;
      margin-top:-30px;
-     @media (max-width: 1300px) {
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      background-size: contain;
+      width: 80%;
+    }
+
+    @media (max-width: 999px) {
       width: 409px;
       margin-top:-35px;
       background: url('./mgm/mgm-content3-mobile.png') no-repeat center center;
@@ -362,12 +484,17 @@ const MgmContentThree = styled.div`
 const People = styled.div`
     width: 821px;
     height: 683px;
-    background: url('./mgm/mgm-people-and-frame.svg') no-repeat center center;
+    background: url('./mgm/mgm-people-and-frame.png') no-repeat center center;
     background-size: contain; 
     object-fit: contain;  
     pointer-events: none;
     z-index: 1;
-    @media (max-width: 1300px) {
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
+    }
+
+    @media (max-width: 999px) {
         width: 409px;
         height: 601px;
         background: url('./mgm/mgm-people-and-frame-mobile.png') no-repeat center center;
@@ -386,7 +513,12 @@ const PeopleWrapper = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
-    @media (max-width: 1300px) {
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      top: 1250px;
+    }
+
+    @media (max-width: 999px) {
         top: 1490px;
         width: 409px; 
         height: 601px;
@@ -401,9 +533,15 @@ const ButtonContainer = styled.div`
     > a {
       width: 100%;
     }
-    @media (max-width: 1300px) {
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
+    }
+
+    @media (max-width: 999px) {
         width: 229px;
     }
+
     @media (max-width: 800px) {
         width: 229px;
     }
@@ -418,7 +556,12 @@ const ButtonWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  @media (max-width: 1300px) {
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+     top: 1730px;
+  }
+
+  @media (max-width: 999px) {
       top: 1880px;
   }
 `;
@@ -430,6 +573,14 @@ const ActionDesc = styled(Desc)`
     transform: translateX(-50%);
     letter-spacing: 1px;
     z-index:1;
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      top: 1560px;
+    }
+
+    @media (max-width: 999px) {
+      display: none;
+    }
 `;
 
 const ActionLinePoints = styled.img`
@@ -439,6 +590,14 @@ const ActionLinePoints = styled.img`
     transform: translateX(-50%);
     width: 717px;
     z-index:1;
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
+    }
+
+    @media (max-width: 999px) {
+      display: none;
+    }
 `;
 
 const BottomDesc = styled(Desc)`
@@ -449,10 +608,22 @@ const BottomDesc = styled(Desc)`
     transform: translateX(-50%);
     line-height: 25px;
     letter-spacing: 1px;
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
+    }
+
+    @media (max-width: 999px) {
+      display: none;
+    }
 `;
 
 const DesktopPart = styled.div`
-  @media (max-width: 1300px) {
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
+  }
+
+  @media (max-width: 999px) {
       display: none;
   }
 `;
@@ -469,12 +640,12 @@ const Building = styled.img`
   object-fit: contain;
   object-position: bottom;
   left: 30%;
-    @media (max-width: 500px) {
-       display:block;  
-       width: 100%;
-       left: 0;
-    }
-  
+
+  @media (max-width: 1000px) {
+    display: hidden;
+    width: 100%;
+    left: 0;
+  }
 `;
 
 const IpadBuilding = styled.img`
@@ -484,16 +655,17 @@ const IpadBuilding = styled.img`
   left: 0;
   height: 50%;
   object-fit: cover;
-  z-index: 0;
+  z-index: -1;
   object-fit: contain;
   object-position: bottom;
   left: 30%;
-    @media (min-width: 501px) and (max-width: 1301px) {
-       display:block;  
-       width: 100%;
-       left: 0;
-    }
-  
+
+  @media (min-width: 501px) and (max-width: 1300px) {
+    display: block;  
+    width: 100%;
+    left: 0;
+    height: 100%;
+  }
 `;
 
 const MgmPage = () => {
@@ -570,7 +742,7 @@ const MgmPage = () => {
           </ButtonContainer>
         </ButtonWrapper>
 
-        <DesktopPart>
+        {/* <DesktopPart>
             <ActionDesc>
                 <p>只要親友點選「你的推薦連結」成功投保</p>
             </ActionDesc>
@@ -579,7 +751,7 @@ const MgmPage = () => {
                 <p>點擊上方按鈕後，註冊或登入取得邀請碼</p>
                 <p>就能分享給親友，一起抽點數！</p>
             </BottomDesc>
-        </DesktopPart>
+        </DesktopPart> */}
 
 				<DeskBlueBackgroundBuilding>
           <Buttons>
