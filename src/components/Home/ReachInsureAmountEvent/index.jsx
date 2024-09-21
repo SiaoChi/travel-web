@@ -122,26 +122,19 @@ const Desc = styled.div`
     }
 `
 
-const EnglishText = styled.div`
+const EnglishTitlePicture3 = styled.img`
     position: absolute;
     top: 200px;
     right: 80px;
-    font-size: 65px;
-    line-height: 65px;
-    font-weight: bold;
-    color: #2496F0;
-    text-align: right;
-    font-family: 'Roboto';
+    width: 268px;
+    height: auto;
+    object-fit: contain; 
     @media (max-width: 1301px) {
+        width: 160px;
         top: 420px;
-        left: 20%;
-        transform: translateX(-40%);
-        font-size: 40px;
-        line-height: 40px;
-        min-width: 300px;
+        right: 12%;
     }
 `
-
 
 const EventImgOne = styled.img`
     position: absolute;
@@ -231,8 +224,6 @@ const ReachInsureAmountEvent = () => {
  
     return (
         <Section>
-            {/* <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" /> */}
-            {/* <MobileYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-mobile.svg" /> */}
             <Temple ref={fadeInFromLeft} id="sec2" src="./home/reach-insure-amount-event-temple.svg" />
             <Mountain src="./home/reach-insure-amount-event-mountain.svg" />
 
@@ -245,8 +236,8 @@ const ReachInsureAmountEvent = () => {
                 成功網路投保<span>「國內外旅平險」</span>，單筆保費滿額即可抽！
             </Desc>
 
-            <EnglishText ref={fadeInFromBottom}>TRAVEL<br/>JAPAN<br/>TOKYO</EnglishText>
-
+            {/* <EnglishText ref={fadeInFromBottom}>TRAVEL<br/>JAPAN<br/>TOKYO</EnglishText> */}
+            <EnglishTitlePicture3 src="./home/english-title3.png" />
             <EventImgOne ref={fadeInFromBottom} src="./home/reach-insure-amount-event1.svg" id="img1" />
             <MobileEventImgOne ref={fadeInFromBottom} src="./home/reach-insure-amount-event1-mobile.svg"  id="img2" />
             <ButtonWrapperOne ref={btnFadeInFromBottom}>

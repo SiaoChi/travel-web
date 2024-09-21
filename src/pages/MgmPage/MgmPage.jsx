@@ -165,6 +165,10 @@ const Video = styled.video`
   right: 150px;
   width: 610px;
   z-index: 0;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  pointer-events: none;
   @media (max-width: 1300px) {
     align-self: center;
     position: static;

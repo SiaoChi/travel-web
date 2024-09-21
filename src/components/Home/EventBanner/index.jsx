@@ -113,24 +113,25 @@ const Desc = styled.div`
     }
 `;
 
-const EnglishTitle = styled.p`
+const EnglishTitlePicture1 = styled.img`
     position: relative;
-    z-index: 1;
-    font-size: 65px;
-    line-height: 65px;
     margin-left: 74px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #2496F0;
-    font-family: 'Roboto';
-    @media (max-width: 1301px) {
-        font-size: 40px;
-        line-height: 45px;
-        margin: 0;
+    width: 850px;
+    height: auto;
+    object-fit: contain; 
+    @media (max-width: 1300px) {
+        display: none;
+    }
+`;
+
+const EnglishTitlePictureMobile1 = styled.img`
+    display: none;
+    @media (max-width: 1300px) {
+        display: block;
         position: absolute;
         top: 679px;
-        width: 354px;
-        left: 8%
+        width: 320px;
+        left: 10%;
     }
 `;
 
@@ -182,10 +183,8 @@ const EventBanner = () => {
 					驚喜<span>多多多多多多</span>到滿出來！
 				</p>
 			</Desc>
-			<EnglishTitle>
-				TRAVEL
-				<br />A TRANSGLOBE JOURNEY
-			</EnglishTitle>
+            <EnglishTitlePicture1 src="./home/english-title1.png" />
+            <EnglishTitlePictureMobile1 src="./home/english-title1-mobile.png" />
 		</Section>
 	);
 };

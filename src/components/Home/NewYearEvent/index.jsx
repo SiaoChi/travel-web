@@ -131,23 +131,17 @@ const MobileLine = styled.img`
     }
 `;
 
-const EnglishText = styled.div`
+const EnglishTitlePicture2 = styled.img`
     position: absolute;
     top: 100px;
     right: 41px;
-    font-size: 65px;
-    line-height: 65px;
-    font-weight: bold;
-    color: #FED430;
-    text-align: right;
-    font-family: 'Roboto';
-    opacity: 0;
+    width: 350px;
+    height: auto;
+    object-fit: contain; 
     @media (max-width: 1301px) {
+        width: 212px;
         top: 260px;
-        left: 15%;
-        font-size: 40px;
-        line-height: 40px;
-        min-width: 300px;
+        right: 12%;
     }
 `;
 
@@ -237,13 +231,7 @@ const NewYearEvent = () => {
 				成功網路投保<span>「國外旅平險」</span>
 			</Desc>
 
-			<EnglishText ref={fadeInFromBottom}>
-				HAPPY
-				<br />
-				NEW YEAR
-				<br />
-				2025
-			</EnglishText>
+            <EnglishTitlePicture2 src="./home/english-title2.png" />
 			<EventImg ref={fadeInFromBottom} src="./home/new-year-event.svg" />
 			<MobileEventImg ref={fadeInFromBottom} src="./home/new-year-event-mobile.svg" />
             <Surprise ref={fadeInAndPulse} src="./home/new-year-event-surprise.svg" />

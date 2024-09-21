@@ -19,29 +19,6 @@ const Section = styled.section`
     }
 `
 
-const Italy = styled.img`
-    display: none;
-    @media (max-width: 1301px) {
-        display: block;
-        position: absolute;
-        top: 620px;
-        left: 10%;
-        width: 294px;
-    }
-`
-
-
-const MobileBlueBackground = styled.img`
-    position: absolute;
-    bottom: -25px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 440px;
-    @media (min-width: 1301px) {
-        display: none;
-    }
-
-`
 
 const Tower = styled.img`
     position: absolute;
@@ -256,6 +233,31 @@ const Desc = styled.div`
     }
 `
 
+const EnglishTitlePicture4 = styled.img`
+    position: absolute;
+    top: 580px;
+    right: 6%;
+    width: 304px;
+    @media (max-width: 1301px) {
+        width: 195px;
+        top: 580px;
+        right: 12%;
+    }
+`
+
+const EnglishTitlePicture5 = styled.img`
+    position: absolute;
+    top: 740px;
+    left: 114px;
+    width: 254px;
+    z-index: 20;
+    @media (max-width: 1301px) {
+        width: 150px;
+        top: 840px;
+        left: 12%;
+    }
+`
+
 const EnglishText = styled.div`
     font-size: 65px;
     line-height: 65px;
@@ -337,7 +339,9 @@ const FirstInsureAndLinePoints = () => {
 				    <Button color="blue" height="60px">投保立即抽</Button>
                 </a>
 			</ButtonWrapperOne>
-            <EnglishTextOne ref={fadeInFromBottom}>PX MART<br/>COUPON</EnglishTextOne>
+            <EnglishTitlePicture4 src="./home/english-title4.png" />
+            <EnglishTitlePicture5 src="./home/english-title5.png" />
+            {/* <EnglishTextOne ref={fadeInFromBottom}>PX MART<br/>COUPON</EnglishTextOne> */}
 
             <Title ref={fadeInFromLeft}>
                 <img src='./home/first-insure-event-title.svg' />
@@ -354,7 +358,7 @@ const FirstInsureAndLinePoints = () => {
                 <MobilePeople ref={fadeInFromBottom} src="./home/line-points-people-mobile.png"  className="event-content" id="img4" />
             </PeopleWrapper>
 
-            <EnglishTextTwo ref={fadeInFromLeft}>LINE<br/>POINTS</EnglishTextTwo>
+            {/* <EnglishTextTwo ref={fadeInFromLeft}>LINE<br/>POINTS</EnglishTextTwo> */}
 
             <MoreRewardTitle src="./home/line-points-event-title.svg" />
             <MoreRewardDesc>快推薦好友，就有機會獲得 LINE POINTS 喔！</MoreRewardDesc>
