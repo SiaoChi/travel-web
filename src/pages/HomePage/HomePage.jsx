@@ -242,16 +242,16 @@ function HomePage() {
 	return (
 		<Wrap>
             {/* 橘色三角形 */}
-			<YellowPolygon src="./home/home-polygon.svg" />
+			<YellowPolygon src="./home/home-polygon.svg" alt="yellow polygon" />
 
             {/* 黃色梯形 */}
-            <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
-			<MobileYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-mobile.svg" />
-            <IPadYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
-			<LargeYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-large.svg" />
+            <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" alt="yellow trapezoid" />
+			<MobileYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-mobile.svg" alt="mobile yellow trapezoid" />
+            <IPadYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" alt="ipad yellow trapezoid" />
+			<LargeYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-large.svg" alt="large yellow trapezoid" />
 			<Container>
 				<EventBanner />
-				{/* <NewYearEvent /> */}
+				<NewYearEvent />
 				<ReachInsureAmountEvent />
 				<FirstInsureAndLinePoints />
 				<VerticalLine id="vertical-line">
@@ -261,10 +261,10 @@ function HomePage() {
 			</Container>
 
             {/* 藍色背景 */}
-			 <BlueBackground src="./home/home-blue-bg-3.svg" />
-			 <IPadBlueBackground src="./home/line-points-blue-background-ipad.svg" />
-			 <LargeBlueBackground src="./home/home-blue-lg-bg-3.svg" />
-			 <MobileBlueBackground src="./home/line-points-blue-background-mobile.svg" /> 
+			 <BlueBackground src="./home/home-blue-bg-3.svg" alt="blue background" />
+			 <IPadBlueBackground src="./home/line-points-blue-background-ipad.svg" alt="ipad blue background" />
+			 <LargeBlueBackground src="./home/home-blue-lg-bg-3.svg" alt="large blue background" />
+			 <MobileBlueBackground src="./home/line-points-blue-background-mobile.svg" alt="mobile blue background" /> 
 		</Wrap>
 	);
 }

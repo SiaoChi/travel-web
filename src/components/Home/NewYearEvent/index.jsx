@@ -1,7 +1,5 @@
-import { useRef } from "react";
 import styled from "styled-components";
 import Button from "../../Button/Button";
-import { gsap, useGSAP } from "../../../gsap";
 import { useAnimations } from "../../Animation/useAnimations";
 
 const Section = styled.section`
@@ -163,15 +161,15 @@ const EnglishTitlePicture2 = styled.img`
     width: 350px;
     height: auto;
     object-fit: contain; 
-    z-index: 1;
+    z-index: 0;
     @media (max-width: 1301px) {
         width: 250px;
         top: 220px;
         right: 0;
     }
     @media (max-width: 999px) {
-        width: 212px;
-        top: 260px;
+        width: 200px;
+        top: 270px;
         right: 12%;
     }
 `;
@@ -240,36 +238,17 @@ const ButtonWrapper = styled.div`
 `;
 
 const NewYearEvent = () => {
-    const { fadeInEnlarge , fadeInFromLeft, fadeInAndPulse , fadeInFromBottom, btnFadeInFromBottom } = useAnimations();
-
-    const sectionRef = useRef(null);
-
-    useGSAP(() => {
-        gsap.utils.toArray(".event-content").forEach((content) => {
-			gsap.from(content, {
-				scale: 0.2,
-				opacity: 0,
-				duration: 1,
-				ease: "power3.out",
-				scrollTrigger: {
-					trigger: content,
-					start: "top 80%",
-					toggleActions: "play none none none",
-				},
-			});
-		});
-    }, { scope: sectionRef });
+    const { fadeInEnlarge , fadeInFromLeft, fadeInFromRight,fadeInAndPulse , fadeInFromBottom, btnFadeInFromBottom } = useAnimations();
 
 	return (
-		<Section ref={sectionRef}>
-			<Fireworks ref={fadeInEnlarge} id="sec1" src="./home/new-year-event-fire.png" />
-			<LineOne src="./home/shadow-line1.svg" />
-			<LineTwo src="./home/shadow-line2.svg" />
-			<MobileLine src="./home/shadow-line-mobile.svg" />
+		<Section>
+			<Fireworks ref={fadeInEnlarge} id="sec1" src="./home/new-year-event-fire.png" alt="fireworks" />
+			<LineOne src="./home/shadow-line1.svg" alt="line one" />
+			<LineTwo src="./home/shadow-line2.svg" alt="line two" />
 
 			<Title ref={fadeInFromLeft}>
-				<img src="./home/new-year-event-title.svg" />
-				<img src="./home/common-title-lottery.svg" />
+				<img src="./home/new-year-event-title.svg" alt="title" />
+				<img src="./home/common-title-lottery.svg" alt="common title lottery" />
 			</Title>
 			<Desc ref={fadeInFromLeft}>
 				<span>2024/12/15-2025/1/20</span>期間，
@@ -277,17 +256,17 @@ const NewYearEvent = () => {
 				成功網路投保<span>「國外旅平險」</span>
 			</Desc>
 
-            <EnglishTitlePicture2 src="./home/english-title2.png" />
-			<EventImg ref={fadeInFromBottom} src="./home/new-year-event.svg" />
-			<MobileEventImg ref={fadeInFromBottom} src="./home/new-year-event-mobile.svg" />
-            <Surprise ref={fadeInAndPulse} src="./home/new-year-event-surprise.png" />
+            <EnglishTitlePicture2 ref={fadeInFromRight} src="./home/english-title2.png" alt="english title" />
+			<EventImg ref={fadeInFromBottom} src="./home/new-year-event.svg" alt="event" />
+			<MobileEventImg ref={fadeInFromBottom} src="./home/new-year-event-mobile.svg" alt="mobile event" />
+            <Surprise ref={fadeInAndPulse} src="./home/new-year-event-surprise.png" alt="surprise" />
 			<ButtonWrapper ref={btnFadeInFromBottom}>
                 <a target="_blank" href="https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_newyear&utm_term=2024q4&utm_content=eta">
-				    <Button color="blue" height="60px">投保立即抽</Button>
+				    <Button color="blue" height="60px" alt="投保立即抽">投保立即抽</Button>
                 </a>
 			</ButtonWrapper>
-			<Flowers src="./home/new-year-event-flower.svg" />
-			<MobileFlowers src="./home/new-year-event-flower-mobile.svg" />
+			<Flowers src="./home/new-year-event-flower.svg" alt="flower" />
+			<MobileFlowers src="./home/new-year-event-flower-mobile.svg" alt="mobile flower" />
 		</Section>
 	);
 };

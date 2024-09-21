@@ -224,6 +224,7 @@ const MobileKvPeople = styled.img`
   width: 422px;
   height: 327px;
   z-index: 0;
+  opacity: 0;
   @media (max-width: 999px) {
     display: block;
   }
@@ -237,6 +238,7 @@ const MobileKvFlower = styled.img`
   width: 422px;
   height: 327px;
   z-index: -1;
+  opacity: 0;
   @media (max-width: 999px) {
     display: block;
   }
@@ -250,6 +252,7 @@ const MobileKvHouse = styled.img`
   object-fit: contain;
   background-size: contain;
   z-index: 0;
+  opacity: 0;
   @media (max-width: 999px) {
     display: block;
   }
@@ -257,16 +260,16 @@ const MobileKvHouse = styled.img`
 
 const Video = styled.video`
   position: absolute;
-  top: 0;
+  top: 50px;
   right: 150px;
-  width: 610px;
+  width: 650px;
   z-index: 0;
   clip-path: inset(1px 1px);
 
   @media (max-width: 1300px) and (min-width: 1000px) {
-  top:40px;  
-  right: 0;
-  width: 400px;
+  top:60px;  
+  right: -5%;
+  width: 450px;
   }
 
   @media (max-width: 999px) {
@@ -374,11 +377,10 @@ const EnglishTitlePictureMobile = styled.img`
   display: none;
   position: absolute;
   top: 475px;
-  left: 112px;
+  left: 10%;
   z-index: 2;
   top: 668px;
-  left: 20px;
-  width: 337px;
+  width: 270px;
   object-fit: contain; 
 
   @media (max-width: 999px) {
@@ -453,9 +455,7 @@ const MgmContentWrapper = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  gap: 2px;
   max-width: 1008px;
-
 
   @media (max-width: 1300px) and (min-width: 1000px) {
     width: 700px;
@@ -465,7 +465,8 @@ const MgmContentWrapper = styled.div`
 
   @media (max-width: 999px) {
     top:950px;
-    width: 409px;
+    min-width: 350px;
+    width: 400px;
     height: 530px;
   }
 `;
@@ -483,7 +484,7 @@ const MgmContentOne = styled.div`
     }
 
     @media (max-width: 999px) {
-      width: 409px;
+      width: 95%;
       background: url('./mgm/mgm-content1-mobile.png') no-repeat center center;
       background-size: contain;
     }    
@@ -504,7 +505,7 @@ const MgmContentTwo = styled.div`
 
     @media (max-width: 999px) {
       background: url('./mgm/mgm-content2-mobile.png') no-repeat center center;
-      width: 409px;
+      width: 95%;
       background-size: contain;
     }  
 `;
@@ -523,8 +524,8 @@ const MgmContentThree = styled.div`
     }
 
     @media (max-width: 999px) {
-      width: 409px;
-      margin-top:-35px;
+      width: 95%;
+      margin-top:-40px;
       background: url('./mgm/mgm-content3-mobile.png') no-repeat center center;
       background-size: contain;
     }  
@@ -539,12 +540,9 @@ const People = styled.div`
     pointer-events: none;
     z-index: 1;
 
-    @media (max-width: 1300px) and (min-width: 1000px) {
-      // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
-    }
 
     @media (max-width: 999px) {
-        width: 409px;
+        width: 95%;
         height: 601px;
         background: url('./mgm/mgm-people-and-frame-mobile.png') no-repeat center center;
         background-size: contain; 
@@ -672,7 +670,7 @@ const IpadBuilding = styled.img`
 `;
 
 const MgmPage = () => {
-  const {fadeInFromBottom, fadeInEnlarge, fadeInFromLeft}= useAnimations();
+  const {fadeInFromBottom, fadeInEnlarge, fadeInFromLeft, fadeInFromRight}= useAnimations();
 	const [isBlue, setIsBlue] = useState(true);
 
 	useGSAP(() => {
@@ -704,14 +702,14 @@ const MgmPage = () => {
        <YellowBackground />
 			<Container>
         <MobileSubVideoWrapper>
-          <MobileKvPeople ref={fadeInFromBottom} src="./mgm/mb-kv-ppl.png" />
-          <MobileKvFlower ref={fadeInEnlarge} src="./mgm/mb-kv-flower.png" />
-          <MobileKvHouse ref={fadeInFromLeft} src="./mgm/mb-kv-house.png" />
+          <MobileKvPeople ref={fadeInFromRight} src="./mgm/mb-kv-ppl.png" alt="mobile kv people" />
+          <MobileKvFlower ref={fadeInEnlarge} src="./mgm/mb-kv-flower.png" alt="mobile kv flower" />
+          <MobileKvHouse ref={fadeInFromLeft} src="./mgm/mb-kv-house.png" alt="mobile kv house" />
         </MobileSubVideoWrapper>
-          <Video src="./mgm/mgm-banner-video-mobile.mp4" autoPlay muted playsInline />
+          <Video src="./mgm/mgm-banner-video-desktop.mp4" autoPlay muted playsInline />
        
-				<BannerTitle src="./mgm/mgm-title.png" />
-				<BannerTitlePoint src="./mgm/mgm-title-p.png" />
+				<BannerTitle src="./mgm/mgm-title.png" alt="mgm title" />
+				<BannerTitlePoint src="./mgm/mgm-title-p.png" alt="mgm title point" />
 				<Desc isBlue={isBlue}>
 					<p>推薦好友全球旅平險</p>
 					<p>
@@ -720,39 +718,39 @@ const MgmPage = () => {
 				</Desc>
         <EnglishTitlePicture src="./mgm/english-title.png" alt="English Title" />
         <EnglishTitlePictureMobile src="./mgm/english-title-mobile.png" alt="English Title" />
-        <MobileContentFlower src="./mgm/mgm-points-and-flower-mobile.svg" />
+        <MobileContentFlower src="./mgm/mgm-points-and-flower-mobile.svg" alt="mobile content flower" />
 				<ContentDesc>
 					<p>2024/10/1~2025/1/31</p>
 					<p>成功邀請親友投保旅平險，達指定筆數</p>
 				</ContentDesc>
-				<LinePointsText src="./mgm/mgm-line-points-text.svg" />
+				<LinePointsText src="./mgm/mgm-line-points-text.svg" alt="line points text" />
         <MgmContentWrapper>
           <MgmContentOne className="mgm-content" />
           <MgmContentTwo className="mgm-content" />
           <MgmContentThree className="mgm-content" />
         </MgmContentWrapper>
         <DesktopPart>
-					<ContentFlower src="./mgm/mgm-info-flower.svg" />
-					<ContentPoint src="./mgm/mgm-content-p-point.svg" />
+					<ContentFlower src="./mgm/mgm-info-flower.svg" alt="content flower" />
+					<ContentPoint src="./mgm/mgm-content-p-point.svg" alt="content point" />
 				</DesktopPart>
 
         <BackgroundBuilding />
 
         <PeopleWrapper>
-          <People className="mgm-content" />
+          <People className="mgm-content" alt="people" />
         </PeopleWrapper>
 
         <ButtonWrapper>
           <ButtonContainer ref={fadeInFromBottom}>
               <a target="_blank" href="https://e-commerce.transglobe.com.tw/member/missionActivities/etamgm?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_etamgm&utm_term=2024q4&utm_content=missionActivities">
-              <Button  color="red">立即推薦親友</Button>
+              <Button  color="red" alt="立即推薦親友">立即推薦親友</Button>
             </a>
           </ButtonContainer>
         </ButtonWrapper>
 				<DeskBlueBackgroundBuilding>
           <Buttons>
               <a target="_blank" href="https://e-commerce.transglobe.com.tw/member/missionActivities?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_mgmsearch&utm_term=2024q4&utm_content=missionActivities">
-                  <Button color="yellow" height="82px">
+                  <Button color="yellow" height="82px" alt="推薦好友 成功筆數查詢">
                   推薦好友 <Br reverse />
                   成功筆數查詢
                   </Button>
@@ -766,10 +764,10 @@ const MgmPage = () => {
                   window.scrollTo({top: y, behavior: 'smooth'});
                 }}
               >
-                <Button color="yellow"  height="82px">參加更多抽獎</Button>
+                <Button color="yellow"  height="82px" alt="參加更多抽獎">參加更多抽獎</Button>
               </HashLink>
               <Link to="/policy">
-                <Button color="white" hoverBgColor="#FF837E"  height="82px">活動辦法</Button>
+                <Button color="white" hoverBgColor="#FF837E"  height="82px" alt="活動辦法">活動辦法</Button>
               </Link>
           </Buttons>
           <Building src="./mgm/mgm-building-mb.svg" />

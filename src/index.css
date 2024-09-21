@@ -105,10 +105,10 @@
   opacity: 0;
 }
 
-@keyframes fadeInFromLeft {
+@keyframes fadeInFromRight {
   0% {
     opacity: 0;
-    transform: translateX(-50%);
+    transform: translateX(50%);
     visibility: hidden;
   }
    100% {
@@ -117,10 +117,10 @@
   }
 }
 
-.fade-in-from-left {
-  animation: fadeInFromLeft 1s ease-out forwards;
+.fade-in-from-right {
+  animation: fadeInFromRight 1s ease-out forwards;
   opacity: 0; 
-  transform: translateY(-100%); 
+  transform: translateX(100%); 
 }
 
 .transfer-position-xy-1{
@@ -157,3 +157,20 @@
   animation: fadeInAndPulse 3s ease-in-out 1s forwards;
 }
 
+@keyframes fadeInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+    visibility: hidden;
+  }
+   100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-from-left {
+  animation: fadeInFromLeft 1s ease-out forwards;
+  opacity: 0; 
+  transform: translateY(-100%); 
+}

@@ -69,7 +69,10 @@ const MobileEventImg = styled.img`
     @media (min-width: 800px) and (max-width: 1000px) {
         left: 10%;
     }
-    @media (min-width: 382px) and (max-width: 800px) {
+    @media (min-width: 576px) and (max-width: 800px) {
+        left: 10%;
+    }
+    @media (max-width: 575px) {
         left: 20%;
     }
     @media (max-width: 381px) {
@@ -98,7 +101,7 @@ const ButtonWrapperOne = styled.div`
         left: 26%;
     }
     @media (max-width: 381px) {
-        left: 20%;
+        left: 23%;
     }
 `
 
@@ -326,7 +329,7 @@ const EnglishTitlePicture5 = styled.img`
 `
 
 const FirstInsureAndLinePoints = () => {
-    const { fadeInFromBottom, fadeInFromLeft, btnFadeInFromBottom} = useAnimations();
+    const { fadeInFromBottom, fadeInFromLeft, btnFadeInFromBottom,fadeInFromRight} = useAnimations();
     const sectionRef = useRef(null);
 
     useGSAP(() => {
@@ -364,8 +367,8 @@ const FirstInsureAndLinePoints = () => {
 				    <Button color="blue" height="60px">投保立即抽</Button>
                 </a>
 			</ButtonWrapperOne>
-            <EnglishTitlePicture4 src="./home/english-title4.png" />
-            <EnglishTitlePicture5 src="./home/english-title5.png" />
+            <EnglishTitlePicture4 ref={fadeInFromRight} src="./home/english-title4.png" />
+            <EnglishTitlePicture5 ref={fadeInFromLeft} src="./home/english-title5.png" />
             {/* <EnglishTextOne ref={fadeInFromBottom}>PX MART<br/>COUPON</EnglishTextOne> */}
 
             <Title ref={fadeInFromLeft}>
@@ -382,8 +385,6 @@ const FirstInsureAndLinePoints = () => {
                 <People ref={fadeInFromBottom} src="./home/line-points-people.png" className="event-content" id="img3" />
                 <MobilePeople ref={fadeInFromBottom} src="./home/line-points-people-mobile.png"  className="event-content" id="img4" />
             </PeopleWrapper>
-
-            {/* <EnglishTextTwo ref={fadeInFromLeft}>LINE<br/>POINTS</EnglishTextTwo> */}
 
             <MoreRewardTitle src="./home/line-points-event-title.svg" />
             <MoreRewardDesc>快推薦好友，就有機會獲得 LINE POINTS 喔！</MoreRewardDesc>

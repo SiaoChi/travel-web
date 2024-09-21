@@ -149,7 +149,7 @@ const EnglishTitlePicture3 = styled.img`
         right: 0%;
     }
     @media (max-width: 999px) {
-        width: 160px;
+        width: 150px;
         top: 420px;
         right: 12%;
     }
@@ -266,7 +266,7 @@ const MobileEventImgTwo = styled.img`
 const LINK = "https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_domestic%26foreign&utm_term=2024q4&utm_content=eta"
 
 const ReachInsureAmountEvent = () => {
-    const { fadeInFromBottom, fadeInFromLeft, btnFadeInFromBottom } = useAnimations();
+    const { fadeInFromBottom, fadeInFromLeft, btnFadeInFromBottom ,fadeInFromRight} = useAnimations();
  
     return (
         <Section>
@@ -282,8 +282,7 @@ const ReachInsureAmountEvent = () => {
                 成功網路投保<span>「國內外旅平險」</span>，單筆保費滿額即可抽！
             </Desc>
 
-            {/* <EnglishText ref={fadeInFromBottom}>TRAVEL<br/>JAPAN<br/>TOKYO</EnglishText> */}
-            <EnglishTitlePicture3 src="./home/english-title3.png" />
+            <EnglishTitlePicture3 ref={fadeInFromRight}  src="./home/english-title3.png" />
             <EventImgOne ref={fadeInFromBottom} src="./home/reach-insure-amount-event1.svg" id="img1" />
             <MobileEventImgOne ref={fadeInFromBottom} src="./home/reach-insure-amount-event1-mobile.svg"  id="img2" />
             <ButtonWrapperOne ref={btnFadeInFromBottom}>

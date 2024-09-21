@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { useEffect, useState } from "react";
+import { useAnimations } from "../../Animation/useAnimations";
 
 const Section = styled.section`
     position: relative;
@@ -33,11 +34,66 @@ const Video = styled.video`
     }
 `;
 
+const MobileSubVideoWrapper = styled.div`
+  display: none;
+  position: absolute;
+  top: 20px;
+  width: 422px;
+  aspect-ratio: 422 / 327;
+  z-index: 0;
+  @media (max-width: 999px) {
+    display: flex;
+    position: relative;
+    width: 95%;
+  }
+`;
+
+const MobileKvCase = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  opacity: 0;
+  @media (max-width: 999px) {
+    display: block;
+  }
+`;
+
+const MobileKvFlower = styled.img`
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+ width: 100%;
+  z-index: -1;
+  opacity: 0;
+  @media (max-width: 999px) {
+    display: block;
+  }
+`;
+
+const MobileKvFlight = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+width: 100%;
+  object-fit: contain;
+  background-size: contain;
+  z-index: 0;
+  opacity: 0;
+  @media (max-width: 999px) {
+    display: block;
+  }
+`;
+
+
+
 const MobileVideo = styled.video`
     display: none;
     z-index: 0;
     @media (max-width: 999px) {
-        display: block;
+        display:none;
         position: absolute;
         top: 0;
         left: 50%;
@@ -168,7 +224,7 @@ const EnglishTitlePictureMobile1 = styled.img`
      display: block;
         position: absolute;
         top: 679px;
-        width: 320px;
+        width: 300px;
         left: 10%;
     }
 `;
@@ -182,7 +238,7 @@ const MobileLineTwo = styled.img`
 `;
 
 const EventBanner = () => {
-    
+    const {fadeInFromBottom, fadeInEnlarge,fadeInFromLeft, fadeInFromRight} = useAnimations();
 	const [isBlue, setIsBlue] = useState(true);
 
 	useEffect(() => {
@@ -195,11 +251,12 @@ const EventBanner = () => {
 
 	return (
 		<Section>
-            <MobileLineOne src="./home/shadow-line1-mobile.svg" />
-            <MobileLineTwo src="./home/shadow-line2-mobile.svg" />
             <Video src="./home/event-banner-video-desktop.mp4" autoPlay muted playsInline preload="auto" />
-            <MobileVideo src="./home/event-banner-video-mobile.mp4" poster="./home/event-banner-mobile.jpg.jpg" autoPlay muted playsInline preload="auto" />
-
+            <MobileSubVideoWrapper>
+                <MobileKvCase ref={fadeInFromBottom} src="./home/mb-kv-case.png" />
+                <MobileKvFlower ref={fadeInEnlarge} src="./home/mb-kv-flower.png" />
+                <MobileKvFlight ref={fadeInFromRight} src="./home/mb-kv-flight.png" />
+            </MobileSubVideoWrapper>
 			<BannerTitle>
 				<TitleText src="./home/event-banner-title.png" />
 				<TitleAirplaine src="./home/event-banner-airplane.png" />
@@ -210,8 +267,8 @@ const EventBanner = () => {
 					驚喜<span>多多多多多多</span>到滿出來！
 				</p>
 			</Desc>
-            <EnglishTitlePicture1 src="./home/english-title1.png" />
-            <EnglishTitlePictureMobile1 src="./home/english-title1-mobile.png" />
+            <EnglishTitlePicture1 ref={fadeInFromLeft} src="./home/english-title1.png" alt="english title" />
+            <EnglishTitlePictureMobile1 ref={fadeInFromLeft} src="./home/english-title1-mobile.png" alt="mobile english title" />
 		</Section>
 	);
 };
