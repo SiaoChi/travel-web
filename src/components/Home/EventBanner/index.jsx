@@ -1,10 +1,15 @@
 import styled, { keyframes } from "styled-components";
 import { useEffect, useState } from "react";
+import { useAnimations } from "../../Animation/useAnimations";
 
 const Section = styled.section`
     position: relative;
     height: 660px;
-    @media (max-width: 1301px) {
+
+    @media (max-width: 1300px) {
+        height: 440px;
+    }
+    @media (max-width: 999px) {
         height: 900px;
         width: 414px;
         left: 50%;
@@ -17,15 +22,78 @@ const Video = styled.video`
     top: 0;
     right: 50px;
     width: 760px;
-    @media (max-width: 1301px) {
+    z-index: -1;
+    clip-path: inset(1px 1px);
+    @media (max-width: 1300px) and (min-width: 1000px) {
+        width: 500px;
+        right: -8%;
+        top: 50px;
+    }
+    @media (max-width: 999px) {
         display: none;
     }
 `;
 
+const MobileSubVideoWrapper = styled.div`
+  display: none;
+  position: absolute;
+  top: 20px;
+  width: 422px;
+  aspect-ratio: 422 / 327;
+  z-index: 0;
+  @media (max-width: 999px) {
+    display: flex;
+    position: relative;
+    width: 95%;
+  }
+`;
+
+const MobileKvCase = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  opacity: 0;
+  @media (max-width: 999px) {
+    display: block;
+  }
+`;
+
+const MobileKvFlower = styled.img`
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+ width: 100%;
+  z-index: -1;
+  opacity: 0;
+  @media (max-width: 999px) {
+    display: block;
+  }
+`;
+
+const MobileKvFlight = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+width: 100%;
+  object-fit: contain;
+  background-size: contain;
+  z-index: 0;
+  opacity: 0;
+  @media (max-width: 999px) {
+    display: block;
+  }
+`;
+
+
+
 const MobileVideo = styled.video`
     display: none;
-    @media (max-width: 1301px) {
-        display: block;
+    z-index: 0;
+    @media (max-width: 999px) {
+        display:none;
         position: absolute;
         top: 0;
         left: 50%;
@@ -37,7 +105,14 @@ const MobileVideo = styled.video`
 const BannerTitle = styled.div`
     position: relative;
     margin: 20px 0px 20px 91px;
-    @media (max-width: 1301px) {
+    @media (max-width: 1300px) and (min-width: 1000px) {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        width: 370px;
+        left: 0;
+    }
+    @media (max-width: 999px) {
         margin: 0;
         position: absolute;
         top: 255px;
@@ -71,6 +146,9 @@ const TitleText = styled.img`
     padding-top: 70px;
     width: 486px;
     animation: ${zoomInAnimation} 1s ease-in-out backwards;
+    @media (max-width: 1300px) and (min-width: 1000px) {
+        
+    }
 `;
 
 const TitleAirplaine = styled.img`
@@ -81,8 +159,10 @@ const TitleAirplaine = styled.img`
     animation: ${fadeIn} 1s ease-in-out backwards;
     animation-delay: .5s;
     @media (max-width: 1300px) {
-        top: 65px;
-        left: 0px;
+        width: 530px;
+        margin: 60px 15px 10px 0px;
+        top: 0;
+        left: 10px;
     }
 `;
 
@@ -97,10 +177,19 @@ const Desc = styled.div`
     letter-spacing: 4px;
     font-size: 25px;
     font-weight: bold;
+    z-index: 10;
     > p > span {
         color: ${(props) => (props.$isBlue ? "#2496F0" : "#FF837E")};
     }
-    @media (max-width: 1301px) {
+    @media (max-width: 1300px) and (min-width: 1000px) {
+        margin: 0;
+        position: absolute;
+        top: 280px;
+        width: 50%;
+        left: 0;
+        font-size: 22px;
+    }   
+    @media (max-width: 999px) {
         margin: 0;
         position: absolute;
         top: 529px;
@@ -113,34 +202,30 @@ const Desc = styled.div`
     }
 `;
 
-const EnglishTitle = styled.p`
+const EnglishTitlePicture1 = styled.img`
     position: relative;
-    z-index: 1;
-    font-size: 65px;
-    line-height: 65px;
     margin-left: 74px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #2496F0;
-    font-family: 'Roboto';
-    @media (max-width: 1301px) {
-        font-size: 40px;
-        line-height: 45px;
-        margin: 0;
-        position: absolute;
-        top: 679px;
-        width: 354px;
-        left: 8%
+    width: 850px;
+    height: auto;
+    object-fit: contain; 
+    @media (max-width: 1300px) and (min-width: 1000px) {
+        width: 85%;
+        margin-left: 0;
+        top: 430px;
+    }
+    @media (max-width: 999px) {
+        display: none;
     }
 `;
 
-const LineOne = styled.img`
-    position: absolute;
-    top: 308px;
-    left: 364px;
-    width: 343px;
-    @media (max-width: 1301px) {
-        display: none;
+const EnglishTitlePictureMobile1 = styled.img`
+    display: none;
+    @media (max-width: 999px) {
+     display: block;
+        position: absolute;
+        top: 679px;
+        width: 300px;
+        left: 10%;
     }
 `;
 
@@ -153,7 +238,7 @@ const MobileLineTwo = styled.img`
 `;
 
 const EventBanner = () => {
-    
+    const {fadeInFromBottom, fadeInEnlarge,fadeInFromLeft, fadeInFromRight} = useAnimations();
 	const [isBlue, setIsBlue] = useState(true);
 
 	useEffect(() => {
@@ -166,12 +251,12 @@ const EventBanner = () => {
 
 	return (
 		<Section>
-			<LineOne src="./home/shadow-line1.svg" />
-            <MobileLineOne src="./home/shadow-line1-mobile.svg" />
-            <MobileLineTwo src="./home/shadow-line2-mobile.svg" />
             <Video src="./home/event-banner-video-desktop.mp4" autoPlay muted playsInline preload="auto" />
-            <MobileVideo src="./home/event-banner-video-mobile.mp4" poster="./home/event-banner-mobile.jpg.jpg" autoPlay muted playsInline preload="auto" />
-
+            <MobileSubVideoWrapper>
+                <MobileKvCase ref={fadeInFromBottom} src="./home/mb-kv-case.png" />
+                <MobileKvFlower ref={fadeInEnlarge} src="./home/mb-kv-flower.png" />
+                <MobileKvFlight ref={fadeInFromRight} src="./home/mb-kv-flight.png" />
+            </MobileSubVideoWrapper>
 			<BannerTitle>
 				<TitleText src="./home/event-banner-title.png" />
 				<TitleAirplaine src="./home/event-banner-airplane.png" />
@@ -182,10 +267,8 @@ const EventBanner = () => {
 					驚喜<span>多多多多多多</span>到滿出來！
 				</p>
 			</Desc>
-			<EnglishTitle>
-				TRAVEL
-				<br />A TRANSGLOBE JOURNEY
-			</EnglishTitle>
+            <EnglishTitlePicture1 ref={fadeInFromLeft} src="./home/english-title1.png" alt="english title" />
+            <EnglishTitlePictureMobile1 ref={fadeInFromLeft} src="./home/english-title1-mobile.png" alt="mobile english title" />
 		</Section>
 	);
 };

@@ -20,6 +20,9 @@ const Container = styled.div`
   max-width: 1500px;
   position: relative;
   z-index: 0;
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    max-width: 800px;
+  }
 `;
 
 
@@ -65,7 +68,7 @@ const Pointer = styled.div`
 
 const YellowPolygon = styled.img`
     position: absolute;
-    top: 200px;
+    top: 240px;
     left: 0;
     width:1180px;
 	z-index: 0;
@@ -76,10 +79,13 @@ const YellowPolygon = styled.img`
     }
 
     @media (max-width: 1301px) {
-        top: 617px;
+        top: 330px;
         left: 0;
         width: 480px;
 		max-width: 100%;
+    }
+    @media (max-width: 999px) {
+        top: 680px;
     }
 `;
 
@@ -111,7 +117,7 @@ const MobileYellowTrapezoid = styled.img`
 
 const IPadYellowTrapezoid = styled.img`
     position: absolute;
-    top: 1400px;
+    top: 1250px;
     left: 0;
     width: 100%;
     z-index: -1;
@@ -189,7 +195,8 @@ function HomePage() {
 
 	useEffect(() => {
 		const verticalLine = document.getElementById("vertical-line");
-		const verticalLineRect = verticalLine.getBoundingClientRect();
+        const { y: originY } = verticalLine.getBoundingClientRect();
+		let verticalLineRect = verticalLine.getBoundingClientRect();
 		const fly = document.getElementById("fly");
 		const pointer = document.getElementById("pointer");
 		const pointerRect = pointer.getBoundingClientRect();
@@ -200,7 +207,7 @@ function HomePage() {
 		fly.style.left = `${verticalLineRect.x}px`;
 		
 		const handleScroll = () => {
-			const current = window.scrollY + verticalLineRect.top;
+			const current = window.scrollY + originY;
 			if (current > end) {
 				fly.style.position = 'absolute';
 				fly.style.top = 'calc(100% - 50px)';
@@ -209,11 +216,20 @@ function HomePage() {
 			}
 			if (current < end + 50) {
 				fly.style.position = 'fixed';
-				fly.style.top = `${verticalLineRect.y - 50}px`;
+				fly.style.top = `${originY - 50}px`;
 				fly.style.left = `${verticalLineRect.x}px`;
 			}
 		};
 
+        let timeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                verticalLineRect = verticalLine.getBoundingClientRect();
+                if (fly.style.position === "absolute") return;
+                fly.style.left = `${verticalLineRect.x}px`;
+            }, 250);
+        });
 		window.addEventListener('scroll', handleScroll);
 
 		handleScroll();
@@ -226,13 +242,13 @@ function HomePage() {
 	return (
 		<Wrap>
             {/* 橘色三角形 */}
-			<YellowPolygon src="./home/home-polygon.svg" />
+			<YellowPolygon src="./home/home-polygon.svg" alt="yellow polygon" />
 
             {/* 黃色梯形 */}
-            <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
-			<MobileYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-mobile.svg" />
-            <IPadYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-ipad.svg" />
-			<LargeYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-large.svg" />
+      <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" alt="yellow trapezoid" />
+			<MobileYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-mobile.svg" alt="mobile yellow trapezoid" />
+      <IPadYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" alt="ipad yellow trapezoid" />
+			<LargeYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-large.svg" alt="large yellow trapezoid" />
 			<Container>
 				<EventBanner />
 				<NewYearEvent />
@@ -245,10 +261,10 @@ function HomePage() {
 			</Container>
 
             {/* 藍色背景 */}
-			 <BlueBackground src="./home/home-blue-bg-3.svg" />
-			 <IPadBlueBackground src="./home/line-points-blue-background-ipad.svg" />
-			 <LargeBlueBackground src="./home/home-blue-lg-bg-3.svg" />
-			 <MobileBlueBackground src="./home/line-points-blue-background-mobile.svg" /> 
+			 <BlueBackground src="./home/home-blue-bg-3.svg" alt="blue background" />
+			 <IPadBlueBackground src="./home/line-points-blue-background-ipad.svg" alt="ipad blue background" />
+			 <LargeBlueBackground src="./home/home-blue-lg-bg-3.svg" alt="large blue background" />
+			 <MobileBlueBackground src="./home/line-points-blue-background-mobile.svg" alt="mobile blue background" /> 
 		</Wrap>
 	);
 }
