@@ -65,7 +65,7 @@ const Pointer = styled.div`
 
 const YellowPolygon = styled.img`
     position: absolute;
-    top: 200px;
+    top: 240px;
     left: 0;
     width:1180px;
 	z-index: 0;

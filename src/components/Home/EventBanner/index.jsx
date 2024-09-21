@@ -17,7 +17,7 @@ const Video = styled.video`
     top: 0;
     right: 50px;
     width: 760px;
-    z-index: 0;
+    z-index: -1;
     clip-path: inset(1px 1px);
     @media (max-width: 1301px) {
         display: none;
@@ -100,6 +100,7 @@ const Desc = styled.div`
     letter-spacing: 4px;
     font-size: 25px;
     font-weight: bold;
+    z-index: 10;
     > p > span {
         color: ${(props) => (props.$isBlue ? "#2496F0" : "#FF837E")};
     }
@@ -138,15 +139,6 @@ const EnglishTitlePictureMobile1 = styled.img`
     }
 `;
 
-const LineOne = styled.img`
-    position: absolute;
-    top: 308px;
-    left: 364px;
-    width: 343px;
-    @media (max-width: 1301px) {
-        display: none;
-    }
-`;
 
 const MobileLineOne = styled.img`
     display: none;
@@ -170,7 +162,6 @@ const EventBanner = () => {
 
 	return (
 		<Section>
-			<LineOne src="./home/shadow-line1.svg" />
             <MobileLineOne src="./home/shadow-line1-mobile.svg" />
             <MobileLineTwo src="./home/shadow-line2-mobile.svg" />
             <Video src="./home/event-banner-video-desktop.mp4" autoPlay muted playsInline preload="auto" />
