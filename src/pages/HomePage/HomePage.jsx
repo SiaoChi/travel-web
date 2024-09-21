@@ -245,9 +245,9 @@ function HomePage() {
 			<YellowPolygon src="./home/home-polygon.svg" alt="yellow polygon" />
 
             {/* 黃色梯形 */}
-            <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" alt="yellow trapezoid" />
+      <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" alt="yellow trapezoid" />
 			<MobileYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-mobile.svg" alt="mobile yellow trapezoid" />
-            <IPadYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" alt="ipad yellow trapezoid" />
+      <IPadYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" alt="ipad yellow trapezoid" />
 			<LargeYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-large.svg" alt="large yellow trapezoid" />
 			<Container>
 				<EventBanner />
