@@ -5,15 +5,17 @@ import { useAnimations } from "../../Animation/useAnimations";
 const Section = styled.section`
     position: relative;
     height: 1127px;
-    @media (max-width: 1301px) {
+    border: 2px solid black;
+    @media (max-width: 999px) {
         overflow: hidden;
         height: 1390px;
         width: 440px;
         left: 50%;
         transform: translateX(-50%);
     }
+    @media (min-width: 1000px) and (max-width: 1300px) {
+        height: 800px;
 `
-
 
 const Flowers = styled.img`
     position: absolute;
@@ -22,7 +24,10 @@ const Flowers = styled.img`
     left: 100px;
     width: 95%;
     height: 940px;
-    @media (max-width: 1301px) {
+    @media (min-width: 1000px) and (max-width: 1300px) {
+        width: 800px;
+    }
+    @media (max-width: 999px) {
         display: none;
     }
 `
@@ -34,7 +39,7 @@ const MobileFlowers = styled.img`
     left: 50%;
     transform: translateX(-50%);
     width: 387;
-    @media (min-width: 1301px) {
+    @media (min-width: 1000px) {
         display: none;
     }
 `
@@ -45,8 +50,8 @@ const Temple = styled.img`
     width: 678px;
     @media (max-width: 1301px) {
         top: 80px;
-        left: 4%;
-        width: 430px;
+        left: 0%;
+        width: 500px;
     }
     @media (max-width: 381px) {
         width: 380px;
@@ -62,7 +67,12 @@ const Mountain = styled.img`
     @media (max-width: 1301px) {
         width: 428px;
         top: 380px;
-        left: 45%;
+        right: 0;      
+    }
+    @media (max-width: 999px) {
+        width: 300px;
+        top: 300px;
+        left: 5%;
         transform: translateX(-40%);
     }
 `
@@ -79,6 +89,12 @@ const Title = styled.div`
         height: 60px;
     }
     @media (max-width: 1301px) {
+        top: 100px;
+        left: 5%;
+        transform: translateX(-46%);
+        width: 90%;
+    }
+    @media (max-width: 999px) {
         top: 100px;
         left: 14%;
         transform: translateX(-46%);
@@ -102,6 +118,15 @@ const Desc = styled.div`
         color: #2496F0;
     }
     @media (max-width: 1301px) {
+        top: 280px;
+        left: 5%;
+        transform: translateX(-48%);
+        font-size: 20px;
+        line-height: 35px;
+        letter-spacing: 1px;
+        width: 520px;
+    }
+    @media (max-width: 999px) {
         top: 260px;
         left: 14%;
         transform: translateX(-48%);
@@ -119,7 +144,13 @@ const EnglishTitlePicture3 = styled.img`
     width: 268px;
     height: auto;
     object-fit: contain; 
+    z-index: 10;
     @media (max-width: 1301px) {
+        width: 25%;
+        top: 130px;
+        right: 0%;
+    }
+    @media (max-width: 999px) {
         width: 160px;
         top: 420px;
         right: 12%;
@@ -137,6 +168,7 @@ const EventImgOne = styled.img`
     @media (max-width: 1301px) {
         display: none;
     }
+
     
 `
 
@@ -155,10 +187,15 @@ const EventImgTwo = styled.img`
 
 const MobileEventImgOne = styled.img`
     position: absolute;
-    top: 520px;
+    top: 380px;
     left: 5%;
     @media (min-width: 1301px) {
         display: none;
+    }
+    @media (max-width: 999px) {
+    position: absolute;
+    top: 520px;
+    left: 5%;
     }
 `
 
@@ -172,6 +209,12 @@ const ButtonWrapperOne = styled.div`
         left: 225px;
     }
     @media (max-width: 1301px) {
+        width: 220px;
+        top: 640px;
+        left: 15%;
+        opacity: 0;
+    }
+    @media (max-width: 999px) {
         width: 220px;
         top: 790px;
         left: 23%;
@@ -199,6 +242,11 @@ const ButtonWrapperTwo = styled.div`
     }
     @media (max-width: 1300px) {
         width: 220px;
+        top: 640px;
+        right: 13%;
+    }
+    @media (max-width: 999px) {
+        width: 220px;
         top: 1150px;
         left: 23%;
     }
@@ -206,10 +254,14 @@ const ButtonWrapperTwo = styled.div`
 
 const MobileEventImgTwo = styled.img`
     position: absolute;
-    top: 860px;
-    left: 15%;
+    top: 355px;
+    right: 2%;
     @media (min-width: 1301px) {
         display: none;
+    }
+    @media (max-width: 999px) {
+        top: 860px;
+        left: 15%;
     }
 `
 

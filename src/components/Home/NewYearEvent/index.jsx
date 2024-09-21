@@ -7,7 +7,14 @@ import { useAnimations } from "../../Animation/useAnimations";
 const Section = styled.section`
     position: relative;
     height: 730px;
-    @media (max-width: 1301px) {
+    @media (max-width: 1300px) and (min-width: 1000px) {
+        height: 600px;
+        width: 800px;
+        border: 2px solid gray; 
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @media (max-width: 999px) {
         width: 414px;
         left: 50%;
         transform: translateX(-50%);
@@ -26,7 +33,12 @@ const Title = styled.div`
     > img {
         height: 60px;
     }
-    @media (max-width: 1301px) {
+    @media (max-width: 1300px) and (min-width: 1000px) {
+        left: 10%;
+        top: 120px;
+        width: 60%;
+    }
+    @media (max-width: 999px) {
         top: 0px;
         left: 14%;
         transform: translateX(-46%);
@@ -48,7 +60,12 @@ const Desc = styled.div`
     > span {
         color: #2496F0;
     }
-    @media (max-width: 1301px) {
+    @media (max-width: 1300px) and (min-width: 1000px) {
+        left: 10%;
+        top: 350px;
+        font-size: 18px;
+    }
+    @media (max-width: 999px) {
         top: 160px;
         left: 14%;
         transform: translateX(-46%);
@@ -65,7 +82,8 @@ const Flowers = styled.img`
     left: 40px;
     width: 1500px;
     height: 800px;
-    @media (max-width: 1301px) {
+    z-index: 0;
+    @media (max-width: 1300px) {
         display: none;
     }
 `;
@@ -76,7 +94,8 @@ const MobileFlowers = styled.img`
     left: 50%;
     transform: translateX(-40%);
     width: 299px;
-    @media (min-width: 1301px) {
+    z-index: 0;
+    @media (min-width:999px) {
         display: none;
     }
 `;
@@ -88,9 +107,14 @@ const Fireworks = styled.img`
     width: 584px;
     opacity: 0;
     @media (max-width: 1301px) {
+        top:50px;
+        left: 2%;
+        width: 60%
+    }
+    @media (max-width: 999px) {
         top: -60px;
         left: 3%;
-        width: 400px;
+        width: 95%;
     }
     @media (max-width: 381px) {
         left: -2%;
@@ -120,7 +144,7 @@ const LineTwo = styled.img`
 
 const MobileLine = styled.img`
     display: none;
-    @media (max-width: 1301px) {
+    @media (max-width: 1000px) {
         display: block;
         position: absolute;
         top: 400px;
@@ -138,7 +162,13 @@ const EnglishTitlePicture2 = styled.img`
     width: 350px;
     height: auto;
     object-fit: contain; 
+    z-index: 1;
     @media (max-width: 1301px) {
+        width: 250px;
+        top: 160px;
+        right: 0;
+    }
+    @media (max-width: 999px) {
         width: 212px;
         top: 260px;
         right: 12%;
@@ -157,28 +187,38 @@ const EventImg = styled.img`
 
 const MobileEventImg = styled.img`
     position: absolute;
-    top: 370px;
+    top: 280px;
     width: 414px;
     opacity: 0;
+    right:0;
+     z-index: 1;
     @media (min-width: 1301px) {
         display: none;
     }
+    @media (max-width: 999px) {
+        top: 370px;
+        width: 414px;
+    }
 `;
-
 
 const Surprise = styled.img`
     position: absolute;
     bottom: 350px;
     right: 560px;
+     z-index: 2;
     @media (max-width: 1301px) {
+        top: 260px;
+        right: 290px;
+        width: 104px;
+    }
+    @media (max-width: 999px) {
         top: 330px;
         left: 27px;
         bottom: unset;
         right: unset;
         width: 104px;
     }
-`
-
+`;
 
 const ButtonWrapper = styled.div`
     position: absolute;
@@ -187,7 +227,12 @@ const ButtonWrapper = styled.div`
     z-index: 10;
     width: 289px;
     opacity: 0;
-    @media (max-width: 1301px) {
+    @media (max-width: 1300px) and (min-width: 1000px) {
+        right: 12%;
+        bottom: 40px;
+        width: 220px;
+    }
+    @media (max-width: 999px) {
         width: 220px;
         left: 24%;
     }

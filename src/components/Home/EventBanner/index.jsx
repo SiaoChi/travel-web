@@ -4,7 +4,13 @@ import { useEffect, useState } from "react";
 const Section = styled.section`
     position: relative;
     height: 660px;
-    @media (max-width: 1301px) {
+    border: 2px solid gray; 
+
+    
+    @media (max-width: 1300px) {
+        height: 450px;
+    }
+    @media (max-width: 999px) {
         height: 900px;
         width: 414px;
         left: 50%;
@@ -19,7 +25,12 @@ const Video = styled.video`
     width: 760px;
     z-index: -1;
     clip-path: inset(1px 1px);
-    @media (max-width: 1301px) {
+    @media (max-width: 1300px) and (min-width: 1000px) {
+        width: 450px;
+        right: 0;
+        top: 50px;
+    }
+    @media (max-width: 999px) {
         display: none;
     }
 `;
@@ -27,7 +38,7 @@ const Video = styled.video`
 const MobileVideo = styled.video`
     display: none;
     z-index: 0;
-    @media (max-width: 1301px) {
+    @media (max-width: 999px) {
         display: block;
         position: absolute;
         top: 0;
@@ -40,7 +51,14 @@ const MobileVideo = styled.video`
 const BannerTitle = styled.div`
     position: relative;
     margin: 20px 0px 20px 91px;
-    @media (max-width: 1301px) {
+    @media (max-width: 1300px) and (min-width: 1000px) {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        width: 400px;
+        left: 0;
+    }
+    @media (max-width: 999px) {
         margin: 0;
         position: absolute;
         top: 255px;
@@ -74,6 +92,9 @@ const TitleText = styled.img`
     padding-top: 70px;
     width: 486px;
     animation: ${zoomInAnimation} 1s ease-in-out backwards;
+    @media (max-width: 1300px) and (min-width: 1000px) {
+        
+    }
 `;
 
 const TitleAirplaine = styled.img`
@@ -84,8 +105,10 @@ const TitleAirplaine = styled.img`
     animation: ${fadeIn} 1s ease-in-out backwards;
     animation-delay: .5s;
     @media (max-width: 1300px) {
-        top: 65px;
-        left: 0px;
+        width: 530px;
+        margin: 60px 15px 10px 0px;
+        top: 0;
+        left: 10px;
     }
 `;
 
@@ -104,7 +127,14 @@ const Desc = styled.div`
     > p > span {
         color: ${(props) => (props.$isBlue ? "#2496F0" : "#FF837E")};
     }
-    @media (max-width: 1301px) {
+    @media (max-width: 1300px) and (min-width: 1000px) {
+        margin: 0;
+        position: absolute;
+        top: 300px;
+        width: 50%;
+        left: 0;
+    }   
+    @media (max-width: 999px) {
         margin: 0;
         position: absolute;
         top: 529px;
@@ -123,22 +153,26 @@ const EnglishTitlePicture1 = styled.img`
     width: 850px;
     height: auto;
     object-fit: contain; 
-    @media (max-width: 1300px) {
+    @media (max-width: 1300px) and (min-width: 1000px) {
+        width: 85%;
+        margin-left: 0;
+        top: 415px;
+    }
+    @media (max-width: 999px) {
         display: none;
     }
 `;
 
 const EnglishTitlePictureMobile1 = styled.img`
     display: none;
-    @media (max-width: 1300px) {
-        display: block;
+    @media (max-width: 999px) {
+     display: block;
         position: absolute;
         top: 679px;
         width: 320px;
         left: 10%;
     }
 `;
-
 
 const MobileLineOne = styled.img`
     display: none;

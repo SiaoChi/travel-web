@@ -213,7 +213,7 @@ const Video = styled.video`
   @media (max-width: 1300px) and (min-width: 1000px) {
   top:40px;  
   right: 0;
-    width: 400px;
+  width: 400px;
   }
 
   @media (max-width: 999px) {
@@ -309,7 +309,7 @@ const EnglishTitlePicture = styled.img`
   object-fit: contain; 
 
   @media (max-width: 1300px) and (min-width: 1000px) {
-    top: 455px;
+    top: 430px;
     width: 80%;
     left: 0;
   }
@@ -741,18 +741,6 @@ const MgmPage = () => {
             </a>
           </ButtonContainer>
         </ButtonWrapper>
-
-        {/* <DesktopPart>
-            <ActionDesc>
-                <p>只要親友點選「你的推薦連結」成功投保</p>
-            </ActionDesc>
-            <ActionLinePoints src="./mgm/mgm-bottom-info-title.svg" />
-            <BottomDesc>
-                <p>點擊上方按鈕後，註冊或登入取得邀請碼</p>
-                <p>就能分享給親友，一起抽點數！</p>
-            </BottomDesc>
-        </DesktopPart> */}
-
 				<DeskBlueBackgroundBuilding>
           <Buttons>
               <a target="_blank" href="https://e-commerce.transglobe.com.tw/member/missionActivities?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_mgmsearch&utm_term=2024q4&utm_content=missionActivities">

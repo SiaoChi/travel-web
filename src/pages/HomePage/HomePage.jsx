@@ -20,6 +20,9 @@ const Container = styled.div`
   max-width: 1500px;
   position: relative;
   z-index: 0;
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    max-width: 800px;
+  }
 `;
 
 
@@ -76,10 +79,13 @@ const YellowPolygon = styled.img`
     }
 
     @media (max-width: 1301px) {
-        top: 617px;
+        top: 330px;
         left: 0;
         width: 480px;
 		max-width: 100%;
+    }
+    @media (max-width: 999px) {
+        display: none;
     }
 `;
 
