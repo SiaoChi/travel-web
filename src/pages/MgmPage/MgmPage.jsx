@@ -14,6 +14,7 @@ const Wrap = styled.div`
   overflow: hidden;
   position: relative; 
   z-index: 0;
+
   @media (max-width: 1300px) {
     padding-top: 65px;
   }
@@ -28,7 +29,9 @@ const BottomBlueBg = styled.div`
   height: 211px;
   background-color: #2496F0;
   z-index: 1;
-  @media (max-width: 1300px) {
+
+
+  @media (max-width: 999px) {
      width: 100%;
      height: 400px;
   }
@@ -39,8 +42,14 @@ const Container = styled.div`
   max-width: 1500px;
   position: relative;
   height: 2780px;
-  @media (max-width: 1300px) {
-    width: 430px;
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    width: 800px;
+    height: 2180px;
+  }
+
+  @media (max-width: 999px) {
+    width: 415px;
     height: 2500px;
   }
 `;
@@ -55,7 +64,12 @@ const YellowBackground = styled.div`
   background: url('./mgm/mgm-trapezoid.png') no-repeat center center;
   background-size: cover;
   z-index: 1;
-  @media (max-width: 1300px) {
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
+  }
+
+  @media (max-width: 999px) {
     top: 530px;
     aspect-ratio: 410 / 700;
   }
@@ -67,7 +81,12 @@ const ContentFlower = styled.img`
   left: 60px;
   width: 1300px;
   z-index: 1;
-  @media (max-width: 1300px) {
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
+  }
+
+  @media (max-width: 999px) {
     display: none;
   }
 `;
@@ -78,7 +97,12 @@ const MobileContentFlower = styled.img`
   left: 25px;
   width: 373px;
     z-index: 1;
-  @media (min-width: 1300px) {
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
+  }
+
+  @media (min-width: 999px) {
     display: none;
   }
 `;
@@ -89,7 +113,12 @@ const ContentPoint = styled.img`
   left: 78px;
   width: 1360px;
   z-index: 1;
-  @media (max-width: 1300px) {
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    width:80%;
+  }
+
+  @media (max-width: 999px) {
     display: none;
   }
 `;
@@ -104,11 +133,18 @@ const BackgroundBuilding = styled.div`
   height: 353px;
   background: url('./mgm/mgm-building.svg') no-repeat center center;
   z-index: 1;
-  @media (max-width: 1300px) {
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+   bottom: 400px;
+  }
+
+
+  @media (max-width: 999px) {
     width: 414px;
     height: 218px;
     bottom: -20px;
     background-size: cover;
+
   }
 `;
 
@@ -125,7 +161,8 @@ const DeskBlueBackgroundBuilding = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 2;
-  @media (max-width: 1300px) {
+
+  @media (max-width: 999px) {
     bottom: 0;
     height: 400px;
     width: 100vw;
@@ -134,6 +171,7 @@ const DeskBlueBackgroundBuilding = styled.div`
     background:none;
     left: 53%;
   }
+
   @media (max-width: 800px) {
     bottom: 0;
     height: 400px;
@@ -151,7 +189,12 @@ const Buttons = styled.div`
     > a {
       width: 100%;
     }
-    @media (max-width: 1300px) {
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
+    }
+
+    @media (max-width: 999px) {
         flex-direction: column;
         gap: 29px;
         width: 294px;
@@ -159,15 +202,78 @@ const Buttons = styled.div`
     }
 `;
 
-const Video = styled.video`
+const MobileSubVideoWrapper = styled.div`
+  display: none;
+  position: absolute;
+  top: 20px;
+  width: 422px;
+  aspect-ratio: 422 / 327;
+  z-index: 0;
+  left:50%;
+  transform: translateX(-50%);  
+  @media (max-width: 999px) {
+    display: flex;
+    position: relative;
+  }
+`;
+
+const MobileKvPeople = styled.img`
   position: absolute;
   top: 0;
-  right: 150px;
-  width: 610px;
+  left: 0;
+  width: 422px;
+  height: 327px;
   z-index: 0;
-  @media (max-width: 1300px) {
-    align-self: center;
-    position: static;
+  opacity: 0;
+  @media (max-width: 999px) {
+    display: block;
+  }
+`;
+
+const MobileKvFlower = styled.img`
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 422px;
+  height: 327px;
+  z-index: -1;
+  opacity: 0;
+  @media (max-width: 999px) {
+    display: block;
+  }
+`;
+
+const MobileKvHouse = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 422px;
+  object-fit: contain;
+  background-size: contain;
+  z-index: 0;
+  opacity: 0;
+  @media (max-width: 999px) {
+    display: block;
+  }
+`;
+
+const Video = styled.video`
+  position: absolute;
+  top: 50px;
+  right: 150px;
+  width: 650px;
+  z-index: 0;
+  clip-path: inset(1px 1px);
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+  top:60px;  
+  right: -5%;
+  width: 450px;
+  }
+
+  @media (max-width: 999px) {
+    display: none;
   }
 `;
 
@@ -178,7 +284,14 @@ const BannerTitle = styled.img`
     width: 500px;
     z-index: 1; 
     animation: fadeIn 1s ease-in-out backwards;
-    @media (max-width: 1300px) {
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      left: 0;
+      top: 60px;
+      width: 50%;
+    }
+
+    @media (max-width: 999px) {
         width: 354px;
         top: 340px;
         left: 7%;
@@ -193,7 +306,14 @@ const BannerTitlePoint = styled.img`
     animation: fadeIn 1s ease-in-out backwards;
     animation-delay: .5s;
     z-index: 1;
-    @media (max-width: 1300px) {
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      left: 0;
+      top: 60px;
+      width: 50%;
+    }
+
+    @media (max-width: 999px) {
         width: 354px;
         top: 340px;
         left: 7%;
@@ -216,7 +336,14 @@ const Desc = styled.div`
     > p > span {
         color:  ${(props) => (props.isBlue ? "#2496F0" : "#FF837E")};
     }
-    @media (max-width: 1300px) {
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      left: 0;
+      top: 300px;
+      width: 50%;
+    }
+
+    @media (max-width: 999px) {
         top: 530px;
         left: 0px;
         font-size: 20px;
@@ -226,29 +353,49 @@ const Desc = styled.div`
     }
 `;
 
-const EnglishTitle = styled.p`
-    position: absolute;
-    top: 471px;
-    left: 112px;
-    z-index: 1;
-    font-size: 65px;
-    line-height: 65px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #2496F0;
-    font-family: 'Roboto';
-    @media (max-width: 1300px) {
-      font-size: 40px;
-      line-height: 40px;
-      top: 660px;
-      left: 20px;
-      width: 337px;
-    }
+const EnglishTitlePicture = styled.img`
+  position: absolute;
+  top: 475px;
+  left: 112px;
+  z-index: 2;
+  width: 754px;
+  height: auto;
+  object-fit: contain; 
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    top: 430px;
+    width: 80%;
+    left: 0;
+  }
+
+  @media (max-width: 999px) {
+    display: none;
+  }
+`;
+
+const EnglishTitlePictureMobile = styled.img`
+  display: none;
+  position: absolute;
+  top: 475px;
+  left: 10%;
+  z-index: 2;
+  top: 668px;
+  width: 270px;
+  object-fit: contain; 
+
+  @media (max-width: 999px) {
+    display: block;
+  }
 `;
 
 const Br = styled.br`
   display: ${(props) => (props.reverse ? "block" : "none")};
-  @media (max-width: 1300px) {
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
+  }
+
+  @media (max-width: 999px) {
     display: ${(props) => (props.reverse ? "none" : "block")};
   }
 `;
@@ -259,7 +406,13 @@ const ContentDesc = styled(Desc)`
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    @media (max-width: 1300px) {
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      top: 600px;
+      width: 90%;
+    }
+
+    @media (max-width: 999px) {
       top: 780px;
       font-size: 20px;
       height: fit-content;
@@ -277,122 +430,149 @@ const LinePointsText = styled.img`
     left: 50%;
     transform: translateX(-50%);
     width: 387px;
-    z-index: 1;
-    @media (max-width: 1300px) {
+    z-index: 2;
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      top: 670px;
+    }
+
+    @media (max-width: 999px) {
       top: 850px;
       width: 340px;
     }
 `;
 
+const MgmContentWrapper = styled.div`
+  position: absolute;
+  top: 900px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 974px;
+  height: 900px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  max-width: 1008px;
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    width: 700px;
+    height: 500px;
+    top:750px
+  }
+
+  @media (max-width: 999px) {
+    top:950px;
+    min-width: 350px;
+    width: 400px;
+    height: 530px;
+  }
+`;
+
 const MgmContentOne = styled.div`
-    position: absolute;
-    top: 900px;
-    left: 18%;
     z-index: 1;
-    width: 974px;
-    height: 263px;
-    background: url('./mgm/mgm-content1.svg') no-repeat center center;
+    width: 1008px;
+    height: 307px;
+    background: url('./mgm/mgm-content1.png') no-repeat center center;
     background-size: cover;
-    @media (max-width: 1300px) {
-      left: 5%;
-      top: 950px;
-      width: 404px;
-      height: 207px;
-      background: url('./mgm/mgm-content1-mobile.svg') no-repeat center center;
-    }
-    @media (max-width: 400px) {
-      width: 390px;
-      left: -1%;
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
       background-size: contain;
+      width: 80%;
     }
-    @media (max-width: 370px) {
-      width: 390px;
-      left: -2%;
+
+    @media (max-width: 999px) {
+      width: 95%;
+      background: url('./mgm/mgm-content1-mobile.png') no-repeat center center;
       background-size: contain;
-    }
+    }    
 `;
 
 const MgmContentTwo = styled.div`
-    position: absolute;
-    top: 1163px;
-    left: 18%;
-    width: 1012px;
-    height: 308px;
+    width: 1008px;
+    height: 307px;
     z-index: 1;
-    background: url('./mgm/mgm-content2.svg') no-repeat center center;
+    background: url('./mgm/mgm-content2.png') no-repeat center center;
     background-size: cover;
-    @media (max-width: 1300px) {
-      left: 5%;
-      top: 1136px;
-      width: 409px;
-      height: 187px;
-      background: url('./mgm/mgm-content2-mobile.svg') no-repeat center center;
+    margin-top: -50px;
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      background-size: contain;
+      width: 80%;
     }
-     @media (max-width: 400px) {
-      width: 390px;
-      left: -1%;
+
+    @media (max-width: 999px) {
+      background: url('./mgm/mgm-content2-mobile.png') no-repeat center center;
+      width: 95%;
       background-size: contain;
     }  
-    @media (max-width: 370px) {
-      left: -2%;
-      background-size: contain;
-    }
 `;
 
 const MgmContentThree = styled.div`
-    position: absolute;
-    top: 1463px;
-    left: 18%;
-    width: 929px;
-    height: 299px;
+    width: 1008px;
+    height: 307px;
     z-index: 1;
-    background: url('./mgm/mgm-content3.svg') no-repeat center center;
+    background: url('./mgm/mgm-content3.png') no-repeat center center;
     background-size: cover;
-    @media (max-width: 1300px) {
-      top: 1300px;
-      left: 4%;
-      width: 414px;
-      height: 189px;
-      background: url('./mgm/mgm-content3-mobile.svg') no-repeat center center;
+     margin-top:-30px;
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      background-size: contain;
+      width: 80%;
     }
-     @media (max-width: 400px) {
-      width: 390px;
-      left: -1%;
+
+    @media (max-width: 999px) {
+      width: 95%;
+      margin-top:-40px;
+      background: url('./mgm/mgm-content3-mobile.png') no-repeat center center;
       background-size: contain;
     }  
-    @media (max-width: 380px) {
-      width: 380px;
-      background-size: contain;
-    }
 `;
 
 const People = styled.div`
+    width: 821px;
+    height: 683px;
+    background: url('./mgm/mgm-people-and-frame.png') no-repeat center center;
+    background-size: contain; 
+    object-fit: contain;  
+    pointer-events: none;
+    z-index: 1;
+
+
+    @media (max-width: 999px) {
+        width: 95%;
+        height: 601px;
+        background: url('./mgm/mgm-people-and-frame-mobile.png') no-repeat center center;
+        background-size: contain; 
+    }
+`;
+
+
+const PeopleWrapper = styled.div`
     position: absolute;
     top: 1800px;
     left: 50%;
     transform: translateX(-50%);
-    width: 821px;  
-    height: 683px;
-    background: url('./mgm/mgm-people-and-frame.svg') no-repeat center center;
-    background-size: cover;
     pointer-events: none;
     z-index: 1;
-    @media (max-width: 1300px) {
-        left: 54%;
-        top: 1500px;
-        width: 359px;
-        height: 597px;
-        background: url('./mgm/mgm-people-and-frame-mobile.svg') no-repeat center center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      top: 1250px;
     }
-    @media (max-width: 800px) {
-      left: 51%;
+
+    @media (max-width: 999px) {
+        top: 1490px;
+        width: 409px; 
+        height: 601px;
     }
 `;
 
 const ButtonContainer = styled.div`
-    position: absolute;
-    top: 2290px;
-    left: 40%;
     display: flex;
     justify-content: center;
     width: 294px;
@@ -400,53 +580,46 @@ const ButtonContainer = styled.div`
     > a {
       width: 100%;
     }
-    @media (max-width: 1300px) {
-        width: 229px;
-        top: 1900px;
-        left: 28%;
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
     }
+
+    @media (max-width: 999px) {
+        width: 229px;
+    }
+
     @media (max-width: 800px) {
         width: 229px;
-        top: 1900px;
-        left: 24%;
     }
      @media (max-width: 400px) {
         width: 229px;
-        top: 1900px;
-        left: 21%;
     }
 `;
 
-const ActionDesc = styled(Desc)`
-    font-size: 20px;
-    top: 2110px;
-    left: 50%;
-    transform: translateX(-50%);
-    letter-spacing: 1px;
-    z-index:1;
+const ButtonWrapper = styled.div`
+  position: absolute;
+  top: 2290px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 1300px) and (min-width: 1000px) {
+     top: 1730px;
+  }
+
+  @media (max-width: 999px) {
+      top: 1880px;
+  }
 `;
 
-const ActionLinePoints = styled.img`
-    position: absolute;
-    top: 2160px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 717px;
-    z-index:1;
-`;
-
-const BottomDesc = styled(Desc)`
-    font-size: 16px;
-    font-weight: 400;
-    top: 2380px;
-    left: 50%;
-    transform: translateX(-50%);
-    line-height: 25px;
-    letter-spacing: 1px;
-`;
 
 const DesktopPart = styled.div`
-  @media (max-width: 1300px) {
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
+  }
+
+  @media (max-width: 999px) {
       display: none;
   }
 `;
@@ -463,12 +636,12 @@ const Building = styled.img`
   object-fit: contain;
   object-position: bottom;
   left: 30%;
-    @media (max-width: 500px) {
-       display:block;  
-       width: 100%;
-       left: 0;
-    }
-  
+
+  @media (max-width: 1000px) {
+    display: hidden;
+    width: 100%;
+    left: 0;
+  }
 `;
 
 const IpadBuilding = styled.img`
@@ -478,20 +651,26 @@ const IpadBuilding = styled.img`
   left: 0;
   height: 50%;
   object-fit: cover;
-  z-index: 0;
+  z-index: -1;
   object-fit: contain;
   object-position: bottom;
   left: 30%;
-    @media (min-width: 501px) and (max-width: 1301px) {
-       display:block;  
-       width: 100%;
-       left: 0;
-    }
-  
+
+  @media (min-width: 501px) and (max-width: 1300px) {
+    display: block;  
+    width: 100%;
+    left: 0;
+    height: 100%;
+  }
+
+  @media (max-width: 500px) {
+    display: block;
+    left: 0;
+  }
 `;
 
 const MgmPage = () => {
-  const {fadeInFromBottom}= useAnimations();
+  const {fadeInFromBottom, fadeInEnlarge, fadeInFromLeft, fadeInFromRight}= useAnimations();
 	const [isBlue, setIsBlue] = useState(true);
 
 	useGSAP(() => {
@@ -522,59 +701,56 @@ const MgmPage = () => {
 		<Wrap>
        <YellowBackground />
 			<Container>
-				<Video src="./mgm/mgm-banner-video-mobile.mp4" autoPlay muted playsInline />
-				<BannerTitle src="./mgm/mgm-title.png" />
-				<BannerTitlePoint src="./mgm/mgm-title-p.png" />
+        <MobileSubVideoWrapper>
+          <MobileKvPeople ref={fadeInFromRight} src="./mgm/mb-kv-ppl.png" alt="mobile kv people" />
+          <MobileKvFlower ref={fadeInEnlarge} src="./mgm/mb-kv-flower.png" alt="mobile kv flower" />
+          <MobileKvHouse ref={fadeInFromLeft} src="./mgm/mb-kv-house.png" alt="mobile kv house" />
+        </MobileSubVideoWrapper>
+          <Video src="./mgm/mgm-banner-video-desktop.mp4" autoPlay muted playsInline />
+       
+				<BannerTitle src="./mgm/mgm-title.png" alt="mgm title" />
+				<BannerTitlePoint src="./mgm/mgm-title-p.png" alt="mgm title point" />
 				<Desc isBlue={isBlue}>
 					<p>推薦好友全球旅平險</p>
 					<p>
 						快樂<span>+1+1+1+1+1+1+1+1+1</span>
 					</p>
 				</Desc>
-				<EnglishTitle>
-					COLLECT
-					<Br reverse /> A LOT OF LINE POINTS
-				</EnglishTitle>
-
-				<MobileContentFlower src="./mgm/mgm-points-and-flower-mobile.svg" />
+        <EnglishTitlePicture src="./mgm/english-title.png" alt="English Title" />
+        <EnglishTitlePictureMobile src="./mgm/english-title-mobile.png" alt="English Title" />
+        <MobileContentFlower src="./mgm/mgm-points-and-flower-mobile.svg" alt="mobile content flower" />
 				<ContentDesc>
 					<p>2024/10/1~2025/1/31</p>
 					<p>成功邀請親友投保旅平險，達指定筆數</p>
 				</ContentDesc>
-				<LinePointsText src="./mgm/mgm-line-points-text.svg" />
+				<LinePointsText src="./mgm/mgm-line-points-text.svg" alt="line points text" />
+        <MgmContentWrapper>
           <MgmContentOne className="mgm-content" />
           <MgmContentTwo className="mgm-content" />
           <MgmContentThree className="mgm-content" />
+        </MgmContentWrapper>
         <DesktopPart>
-					{/* <BannerFlower src="./mgm/mgm-banner-flower.svg" /> */}
-					<ContentFlower src="./mgm/mgm-info-flower.svg" />
-					<ContentPoint src="./mgm/mgm-content-p-point.svg" />
+					<ContentFlower src="./mgm/mgm-info-flower.svg" alt="content flower" />
+					<ContentPoint src="./mgm/mgm-content-p-point.svg" alt="content point" />
 				</DesktopPart>
 
         <BackgroundBuilding />
 
-				<People className="mgm-content" />
-        <ButtonContainer ref={fadeInFromBottom}>
-          <a target="_blank" href="https://e-commerce.transglobe.com.tw/member/missionActivities/etamgm?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_etamgm&utm_term=2024q4&utm_content=missionActivities">
-            <Button  color="red">立即推薦親友</Button>
-          </a>
-        </ButtonContainer>
+        <PeopleWrapper>
+          <People className="mgm-content" alt="people" />
+        </PeopleWrapper>
 
-        <DesktopPart>
-            <ActionDesc>
-                <p>只要親友點選「你的推薦連結」成功投保</p>
-            </ActionDesc>
-            <ActionLinePoints src="./mgm/mgm-bottom-info-title.svg" />
-            <BottomDesc>
-                <p>點擊上方按鈕後，註冊或登入取得邀請碼</p>
-                <p>就能分享給親友，一起抽點數！</p>
-            </BottomDesc>
-        </DesktopPart>
-
+        <ButtonWrapper>
+          <ButtonContainer ref={fadeInFromBottom}>
+              <a target="_blank" href="https://e-commerce.transglobe.com.tw/member/missionActivities/etamgm?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_etamgm&utm_term=2024q4&utm_content=missionActivities">
+              <Button  color="red" alt="立即推薦親友">立即推薦親友</Button>
+            </a>
+          </ButtonContainer>
+        </ButtonWrapper>
 				<DeskBlueBackgroundBuilding>
           <Buttons>
               <a target="_blank" href="https://e-commerce.transglobe.com.tw/member/missionActivities?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_mgmsearch&utm_term=2024q4&utm_content=missionActivities">
-                  <Button color="yellow" height="82px">
+                  <Button color="yellow" height="82px" alt="推薦好友 成功筆數查詢">
                   推薦好友 <Br reverse />
                   成功筆數查詢
                   </Button>
@@ -588,10 +764,10 @@ const MgmPage = () => {
                   window.scrollTo({top: y, behavior: 'smooth'});
                 }}
               >
-                <Button color="yellow"  height="82px">參加更多抽獎</Button>
+                <Button color="yellow"  height="82px" alt="參加更多抽獎">參加更多抽獎</Button>
               </HashLink>
               <Link to="/policy">
-                <Button color="white" hoverBgColor="#FF837E"  height="82px">活動辦法</Button>
+                <Button color="white" hoverBgColor="#FF837E"  height="82px" alt="活動辦法">活動辦法</Button>
               </Link>
           </Buttons>
           <Building src="./mgm/mgm-building-mb.svg" />

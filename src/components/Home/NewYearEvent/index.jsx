@@ -1,13 +1,19 @@
-import { useRef } from "react";
 import styled from "styled-components";
 import Button from "../../Button/Button";
-import { gsap, useGSAP } from "../../../gsap";
 import { useAnimations } from "../../Animation/useAnimations";
 
 const Section = styled.section`
     position: relative;
     height: 730px;
-    @media (max-width: 1301px) {
+    @media (max-width: 1300px) and (min-width: 1000px) {
+        height: 700px;
+        width: 800px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 80px;
+    }
+    @media (max-width: 999px) {
+        margin-top: unset;
         width: 414px;
         left: 50%;
         transform: translateX(-50%);
@@ -26,7 +32,12 @@ const Title = styled.div`
     > img {
         height: 60px;
     }
-    @media (max-width: 1301px) {
+    @media (max-width: 1300px) and (min-width: 1000px) {
+        left: 6%;
+        top: 120px;
+        width: 55%;
+    }
+    @media (max-width: 999px) {
         top: 0px;
         left: 14%;
         transform: translateX(-46%);
@@ -48,7 +59,12 @@ const Desc = styled.div`
     > span {
         color: #2496F0;
     }
-    @media (max-width: 1301px) {
+    @media (max-width: 1300px) and (min-width: 1000px) {
+        left: 10%;
+        top: 390px;
+        font-size: 18px;
+    }
+    @media (max-width: 999px) {
         top: 160px;
         left: 14%;
         transform: translateX(-46%);
@@ -65,7 +81,8 @@ const Flowers = styled.img`
     left: 40px;
     width: 1500px;
     height: 800px;
-    @media (max-width: 1301px) {
+    z-index: 0;
+    @media (max-width: 1300px) {
         display: none;
     }
 `;
@@ -76,7 +93,8 @@ const MobileFlowers = styled.img`
     left: 50%;
     transform: translateX(-40%);
     width: 299px;
-    @media (min-width: 1301px) {
+    z-index: 0;
+    @media (min-width:999px) {
         display: none;
     }
 `;
@@ -88,9 +106,14 @@ const Fireworks = styled.img`
     width: 584px;
     opacity: 0;
     @media (max-width: 1301px) {
+        top:50px;
+        left: 0%;
+        width: 55%
+    }
+    @media (max-width: 999px) {
         top: -60px;
         left: 3%;
-        width: 400px;
+        width: 95%;
     }
     @media (max-width: 381px) {
         left: -2%;
@@ -120,7 +143,7 @@ const LineTwo = styled.img`
 
 const MobileLine = styled.img`
     display: none;
-    @media (max-width: 1301px) {
+    @media (max-width: 1000px) {
         display: block;
         position: absolute;
         top: 400px;
@@ -131,23 +154,23 @@ const MobileLine = styled.img`
     }
 `;
 
-const EnglishText = styled.div`
+const EnglishTitlePicture2 = styled.img`
     position: absolute;
     top: 100px;
     right: 41px;
-    font-size: 65px;
-    line-height: 65px;
-    font-weight: bold;
-    color: #FED430;
-    text-align: right;
-    font-family: 'Roboto';
-    opacity: 0;
+    width: 350px;
+    height: auto;
+    object-fit: contain; 
+    z-index: 0;
     @media (max-width: 1301px) {
-        top: 260px;
-        left: 15%;
-        font-size: 40px;
-        line-height: 40px;
-        min-width: 300px;
+        width: 250px;
+        top: 220px;
+        right: 0;
+    }
+    @media (max-width: 999px) {
+        width: 200px;
+        top: 270px;
+        right: 12%;
     }
 `;
 
@@ -163,28 +186,38 @@ const EventImg = styled.img`
 
 const MobileEventImg = styled.img`
     position: absolute;
-    top: 370px;
+    top: 340px;
     width: 414px;
     opacity: 0;
+    right:0;
+     z-index: 1;
     @media (min-width: 1301px) {
         display: none;
     }
+    @media (max-width: 999px) {
+        top: 370px;
+        width: 414px;
+    }
 `;
-
 
 const Surprise = styled.img`
     position: absolute;
     bottom: 350px;
     right: 560px;
+     z-index: 2;
     @media (max-width: 1301px) {
+        top: 310px;
+        right: 290px;
+        width: 104px;
+    }
+    @media (max-width: 999px) {
         top: 330px;
         left: 27px;
         bottom: unset;
         right: unset;
         width: 104px;
     }
-`
-
+`;
 
 const ButtonWrapper = styled.div`
     position: absolute;
@@ -193,43 +226,29 @@ const ButtonWrapper = styled.div`
     z-index: 10;
     width: 289px;
     opacity: 0;
-    @media (max-width: 1301px) {
+    @media (max-width: 1300px) and (min-width: 1000px) {
+        right: 12%;
+        bottom: 75px;
+        width: 220px;
+    }
+    @media (max-width: 999px) {
         width: 220px;
         left: 24%;
     }
 `;
 
 const NewYearEvent = () => {
-    const { fadeIn , fadeInFromLeft, fadeInAndPulse , fadeInFromBottom, btnFadeInFromBottom } = useAnimations();
-
-    const sectionRef = useRef(null);
-
-    useGSAP(() => {
-        gsap.utils.toArray(".event-content").forEach((content) => {
-			gsap.from(content, {
-				scale: 0.2,
-				opacity: 0,
-				duration: 1,
-				ease: "power3.out",
-				scrollTrigger: {
-					trigger: content,
-					start: "top 80%",
-					toggleActions: "play none none none",
-				},
-			});
-		});
-    }, { scope: sectionRef });
+    const { fadeInEnlarge , fadeInFromLeft, fadeInFromRight,fadeInAndPulse , fadeInFromBottom, btnFadeInFromBottom } = useAnimations();
 
 	return (
-		<Section ref={sectionRef}>
-			<Fireworks ref={fadeIn} id="sec1" src="./home/new-year-event-fire.png" />
-			<LineOne src="./home/shadow-line1.svg" />
-			<LineTwo src="./home/shadow-line2.svg" />
-			<MobileLine src="./home/shadow-line-mobile.svg" />
+		<Section>
+			<Fireworks ref={fadeInEnlarge} id="sec1" src="./home/new-year-event-fire.png" alt="fireworks" />
+			<LineOne src="./home/shadow-line1.svg" alt="line one" />
+			<LineTwo src="./home/shadow-line2.svg" alt="line two" />
 
 			<Title ref={fadeInFromLeft}>
-				<img src="./home/new-year-event-title.svg" />
-				<img src="./home/common-title-lottery.svg" />
+				<img src="./home/new-year-event-title.svg" alt="title" />
+				<img src="./home/common-title-lottery.svg" alt="common title lottery" />
 			</Title>
 			<Desc ref={fadeInFromLeft}>
 				<span>2024/12/15-2025/1/20</span>期間，
@@ -237,23 +256,17 @@ const NewYearEvent = () => {
 				成功網路投保<span>「國外旅平險」</span>
 			</Desc>
 
-			<EnglishText ref={fadeInFromBottom}>
-				HAPPY
-				<br />
-				NEW YEAR
-				<br />
-				2025
-			</EnglishText>
-			<EventImg ref={fadeInFromBottom} src="./home/new-year-event.svg" />
-			<MobileEventImg ref={fadeInFromBottom} src="./home/new-year-event-mobile.svg" />
-            <Surprise ref={fadeInAndPulse} src="./home/new-year-event-surprise.svg" />
+            <EnglishTitlePicture2 ref={fadeInFromRight} src="./home/english-title2.png" alt="english title" />
+			<EventImg ref={fadeInFromBottom} src="./home/new-year-event.svg" alt="event" />
+			<MobileEventImg ref={fadeInFromBottom} src="./home/new-year-event-mobile.svg" alt="mobile event" />
+            <Surprise ref={fadeInAndPulse} src="./home/new-year-event-surprise.png" alt="surprise" />
 			<ButtonWrapper ref={btnFadeInFromBottom}>
                 <a target="_blank" href="https://e-commerce.transglobe.com.tw/product/eta?utm_source=ec_eventpage&utm_medium=button&utm_campaign=ec_eventpage_transglobe-journey_newyear&utm_term=2024q4&utm_content=eta">
-				    <Button color="blue" height="60px">投保立即抽</Button>
+				    <Button color="blue" height="60px" alt="投保立即抽">投保立即抽</Button>
                 </a>
 			</ButtonWrapper>
-			<Flowers src="./home/new-year-event-flower.svg" />
-			<MobileFlowers src="./home/new-year-event-flower-mobile.svg" />
+			<Flowers src="./home/new-year-event-flower.svg" alt="flower" />
+			<MobileFlowers src="./home/new-year-event-flower-mobile.svg" alt="mobile flower" />
 		</Section>
 	);
 };
