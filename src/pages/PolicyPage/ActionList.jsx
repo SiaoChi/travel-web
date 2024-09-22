@@ -192,8 +192,7 @@ export const AwardList = () => {
 					<Title>投保滿額抽獎趣</Title>
 				</div>
 				<Flex style={{ marginBottom: "20px" }}>
-					<SubTitle>500元好禮即享券</SubTitle>
-					<Note lineHeight={20}>（無效期餘額型）</Note>
+					<SubTitle>500元好禮即享券<span className="text-[1rem] font-light lg:text-[1.25rem]">（無效期餘額型）</span></SubTitle>
 				</Flex>
 				<Note>
 					可分次抵用。五大品牌擇一使用，一旦選定品牌，限全額度單一品牌兌換使用。
@@ -209,10 +208,7 @@ export const AwardList = () => {
 				}}
 			>
 				<Flex>
-					<SubTitle>星宇航空東京來回機票</SubTitle>
-					<Note lineHeight={20}>
-						（以ezfly 優惠碼形式提供「價值20,000元旅遊兌換券」）
-					</Note>
+					<SubTitle>星宇航空東京來回機票<span className="text-[1rem] font-light lg:text-[1.25rem]">   （以ezfly 優惠碼形式提供「價值20,000元旅遊兌換券」）</span></SubTitle>
 				</Flex>
 				<div style={{ marginTop: "20px" }}>
 					<div style={{ display: "flex", alignItems: "baseline", gap: "20px" }}>
