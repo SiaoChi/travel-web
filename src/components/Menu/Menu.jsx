@@ -85,7 +85,7 @@ function Menu() {
             >
               跨年出國抽
               {/* NEW 標籤效果保留 */}
-              <p className="color-changing-text absolute top-[-13%] right-[-2%] w-7 h-7 transfer-position-xy-1 flex items-center justify-center text-xs font-bold font-roboto transform rotate-12">NEW</p>
+              <img src="./menu/new.gif" alt="NEW" className="absolute top-[-10%] right-0 w-7  transform translate-x-1 translate-y-1 rotate-12"/>
             </Link>        
             <a href="/" className={`menu-text ${getMenuItemClass('#sec2')}`} onClick={(e) => handleMenuItemClick(e, '#sec2')}>投保滿額抽</a>
             <a href="/" className={`menu-text ${getMenuItemClass('#sec3')}`} onClick={(e) => handleMenuItemClick(e, '#sec3')}>首次投保抽</a>
@@ -127,7 +127,7 @@ function Menu() {
              <nav className="flex flex-col space-y-6 px-14">
               <a href="/" className="relative mobile-text" onClick={(e) => handleMenuItemClick(e, '#sec1')}>
                 跨年出國抽
-                <p className="color-changing-text absolute top-[-13%] right-[-2%] w-5 h-7 transfer-position-xy-1 flex items-center justify-center text-xs font-bold font-roboto transform rotate-30">NEW</p>
+              <img src="./menu/new.gif" alt="NEW" className="absolute top-[-10%] right-0 w-7  transform translate-x-1 translate-y-1 rotate-12"/>
               </a>        
               <a href="/" className="mobile-text" onClick={(e) => handleMenuItemClick(e, '#sec2')}>投保滿額抽</a>
               <a href="/" className="mobile-text" onClick={(e) => handleMenuItemClick(e, '#sec3')}>首次投保抽</a>

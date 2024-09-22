@@ -20,6 +20,9 @@ const Container = styled.div`
   max-width: 1500px;
   position: relative;
   z-index: 0;
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    max-width: 800px;
+  }
 `;
 
 
@@ -65,7 +68,7 @@ const Pointer = styled.div`
 
 const YellowPolygon = styled.img`
     position: absolute;
-    top: 200px;
+    top: 240px;
     left: 0;
     width:1180px;
 	z-index: 0;
@@ -76,10 +79,13 @@ const YellowPolygon = styled.img`
     }
 
     @media (max-width: 1301px) {
-        top: 617px;
+        top: 330px;
         left: 0;
         width: 480px;
 		max-width: 100%;
+    }
+    @media (max-width: 999px) {
+        top: 680px;
     }
 `;
 
@@ -111,7 +117,7 @@ const MobileYellowTrapezoid = styled.img`
 
 const IPadYellowTrapezoid = styled.img`
     position: absolute;
-    top: 1400px;
+    top: 1250px;
     left: 0;
     width: 100%;
     z-index: -1;
@@ -239,9 +245,9 @@ function HomePage() {
 			<YellowPolygon src="./home/home-polygon.svg" />
 
             {/* 黃色梯形 */}
-            <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
+            <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" al />
 			<MobileYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-mobile.svg" />
-            <IPadYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-ipad.svg" />
+            <IPadYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
 			<LargeYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-large.svg" />
 			<Container>
 				<EventBanner />
@@ -255,10 +261,10 @@ function HomePage() {
 			</Container>
 
             {/* 藍色背景 */}
-			 <BlueBackground src="./home/home-blue-bg-3.svg" />
-			 <IPadBlueBackground src="./home/line-points-blue-background-ipad.svg" />
-			 <LargeBlueBackground src="./home/home-blue-lg-bg-3.svg" />
-			 <MobileBlueBackground src="./home/line-points-blue-background-mobile.svg" /> 
+			 <BlueBackground src="./home/home-blue-bg-3.svg" alt="blue background" />
+			 <IPadBlueBackground src="./home/line-points-blue-background-ipad.svg" alt="ipad blue background" />
+			 <LargeBlueBackground src="./home/home-blue-lg-bg-3.svg" alt="large blue background" />
+			 <MobileBlueBackground src="./home/line-points-blue-background-mobile.svg" alt="mobile blue background" /> 
 		</Wrap>
 	);
 }

@@ -8,6 +8,7 @@ export function useAnimations() {
     fadeInFromTop: useIntersectionObserver({ animationClass: 'fade-in-from-top' }),
     fadeInFromBottom: useIntersectionObserver({ animationClass: 'fade-in-from-bottom' }),
     fadeInAndPulse: useIntersectionObserver({ animationClass: 'fade-in-and-pulse' }),
+    fadeInEnlarge: useIntersectionObserver({ animationClass: 'fade-in-enlarge' }),
     btnFadeInFromBottom: useIntersectionObserver({ animationClass: 'btn-fade-in-from-bottom' })
   };
 }

@@ -127,9 +127,7 @@ function ActionList() {
 					>
 						<SmallItem marginLeft="-50px">1</SmallItem>
 						<Note lineHeight={30}>
-							單筆保費滿200元，該筆保單即享「500元好禮即享券」抽獎機會乙次
-							<br />
-							（共抽100名，每人獲獎次數不限）。
+							單筆保費滿200元，該筆保單即享「500元好禮即享券」抽獎機會乙次（共抽100名，每人獲獎次數不限）。
 						</Note>
 					</div>
 					<div
@@ -138,9 +136,7 @@ function ActionList() {
 						<SmallItem marginLeft="-50px">2</SmallItem>
 						<div>
 							<Note lineHeight={30}>
-								單筆保費滿500元，該筆保單即享「星宇航空東京來回機票」抽獎機會乙次
-								<br />
-								（價值20,000元旅遊商品兌換券乙組，共抽5名，每人限獲獎乙次）。
+								單筆保費滿500元，該筆保單即享「星宇航空東京來回機票」抽獎機會乙次（價值20,000元旅遊商品兌換券乙組，共抽5名，每人限獲獎乙次）。
 							</Note>
 							<Note highlight lineHeight={30}>
 								註：上述活動採擇優最高門檻計，每筆保單享乙個獎項抽獎機會一次。
@@ -196,8 +192,7 @@ export const AwardList = () => {
 					<Title>投保滿額抽獎趣</Title>
 				</div>
 				<Flex style={{ marginBottom: "20px" }}>
-					<SubTitle>500元好禮即享券</SubTitle>
-					<Note lineHeight={20}>（無效期餘額型）</Note>
+					<SubTitle>500元好禮即享券<span className="text-[1rem] font-light lg:text-[1.25rem]">（無效期餘額型）</span></SubTitle>
 				</Flex>
 				<Note>
 					可分次抵用。五大品牌擇一使用，一旦選定品牌，限全額度單一品牌兌換使用。
@@ -213,10 +208,7 @@ export const AwardList = () => {
 				}}
 			>
 				<Flex>
-					<SubTitle>星宇航空東京來回機票</SubTitle>
-					<Note lineHeight={20}>
-						（以ezfly 優惠碼形式提供「價值20,000元旅遊兌換券」）
-					</Note>
+					<SubTitle>星宇航空東京來回機票<span className="text-[1rem] font-light lg:text-[1.25rem]">   （以ezfly 優惠碼形式提供「價值20,000元旅遊兌換券」）</span></SubTitle>
 				</Flex>
 				<div style={{ marginTop: "20px" }}>
 					<div style={{ display: "flex", alignItems: "baseline", gap: "20px" }}>
@@ -311,9 +303,8 @@ export function Receiver() {
 			<div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
 				<Note>
 					不限單筆保費金額，該筆保單即享「50點LINE
-					POINTS好禮即享券」抽獎機會乙次
+					POINTS好禮即享券」抽獎機會乙次（共抽300名，每人限獲獎乙次）。
 				</Note>
-				<Note>（共抽300名，每人限獲獎乙次）。</Note>
 				<Note highlight>
 					註：被邀請人投保時須填入「邀請人推薦碼」資訊（不可為本人推薦碼），雙方方符合抽獎資格。
 				</Note>
