@@ -97,7 +97,7 @@ function Menu() {
       </header>
 
       {/* 手機版 Menu */}
-      <header className={`mobile-menu  xl:hidden ${isMenuOpen ? 'h-full' : ''}`}>
+      <header className={`mobile-menu lg:hidden ${isMenuOpen ? 'h-full' : ''}`}>
           <div className={`flex-shrink-0 w-[30vw] ml-[3vw] mt-1 ${isMenuOpen ? 'hidden' : 'block'}`}>
             <a href="https://www.transglobe.com.tw/" target="_blank" rel="noopener noreferrer">
               <img src={logo} alt="Logo" className="" />
