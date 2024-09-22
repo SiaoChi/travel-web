@@ -117,7 +117,7 @@ const MobileYellowTrapezoid = styled.img`
 
 const IPadYellowTrapezoid = styled.img`
     position: absolute;
-    top: 620px;
+    top: 22%;
     left: 0;
     width: 100%;
     z-index: -1;
@@ -129,7 +129,7 @@ const IPadYellowTrapezoid = styled.img`
 
 const LargeYellowTrapezoid = styled.img`
     position: absolute;
-    top: 920px;
+    top: 27%;
     left: 0;
     width: 100%;
     height: auto;
