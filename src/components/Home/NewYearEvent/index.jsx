@@ -60,9 +60,9 @@ const Desc = styled.div`
         color: #2496F0;
     }
     @media (max-width: 1300px) and (min-width: 1000px) {
-        left: 10%;
-        top: 390px;
-        font-size: 18px;
+        left: 6%;
+        top: 420px;
+        font-size: 20px;
     }
     @media (max-width: 999px) {
         top: 160px;
@@ -141,18 +141,6 @@ const LineTwo = styled.img`
     }
 `;
 
-const MobileLine = styled.img`
-    display: none;
-    @media (max-width: 1000px) {
-        display: block;
-        position: absolute;
-        top: 400px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 414px;
-        
-    }
-`;
 
 const EnglishTitlePicture2 = styled.img`
     position: absolute;
