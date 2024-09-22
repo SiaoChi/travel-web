@@ -54,22 +54,17 @@ const Container = styled.div`
   }
 `;
 
-const YellowBackground = styled.div`
+const YellowTrapezoidBackground = styled.img`
   position: absolute;
   top: 427px;
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
   aspect-ratio: 1640 / 1260;
-  background: url('./mgm/mgm-trapezoid.png') no-repeat center center;
   background-size: cover;
   z-index: 1;
 
-  @media (max-width: 1300px) and (min-width: 1000px) {
-    // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
-  }
-
-  @media (max-width: 999px) {
+  @media (max-width: 1024px) {
     top: 530px;
     aspect-ratio: 410 / 700;
   }
@@ -83,7 +78,8 @@ const ContentFlower = styled.img`
   z-index: 1;
 
   @media (max-width: 1300px) and (min-width: 1000px) {
-    // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
+    top: 700px;
+    width: 80%;
   }
 
   @media (max-width: 999px) {
@@ -99,7 +95,7 @@ const MobileContentFlower = styled.img`
     z-index: 1;
 
   @media (max-width: 1300px) and (min-width: 1000px) {
-    // 如果需要，在這裡添加 1000px - 1300px 範圍的樣式
+    display: none;
   }
 
   @media (min-width: 999px) {
@@ -699,7 +695,7 @@ const MgmPage = () => {
 
 	return (
 		<Wrap>
-       <YellowBackground />
+       <YellowTrapezoidBackground src="./mgm/mgm-trapezoid.png" alt="yellow background"/>
 			<Container>
         <MobileSubVideoWrapper>
           <MobileKvPeople ref={fadeInFromRight} src="./mgm/mb-kv-ppl.png" alt="mobile kv people" />
