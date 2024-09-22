@@ -104,7 +104,7 @@ const YellowTrapezoid = styled.img`
 
 const MobileYellowTrapezoid = styled.img`
     position: absolute;
-    top: 1480px;
+    top: 840px;
     left: 0;
     width: 100%;
     height: auto;
@@ -117,7 +117,7 @@ const MobileYellowTrapezoid = styled.img`
 
 const IPadYellowTrapezoid = styled.img`
     position: absolute;
-    top: 1250px;
+    top: 620px;
     left: 0;
     width: 100%;
     z-index: -1;
@@ -129,12 +129,12 @@ const IPadYellowTrapezoid = styled.img`
 
 const LargeYellowTrapezoid = styled.img`
     position: absolute;
-    top: 1480px;
+    top: 920px;
     left: 0;
     width: 100%;
     height: auto;
     display: block;
-    z-index: 0;
+    z-index: -1;
 
     @media (max-width: 1301px) {
         display: none;
@@ -245,13 +245,13 @@ function HomePage() {
 			<YellowPolygon src="./home/home-polygon.svg" />
 
             {/* 黃色梯形 */}
-            <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" al />
+            {/* <YellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" al /> */}
 			<MobileYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-mobile.svg" />
             <IPadYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid.svg" />
 			<LargeYellowTrapezoid src="./home/reach-insure-amount-event-trapezoid-large.svg" />
 			<Container>
 				<EventBanner />
-				<NewYearEvent />
+				{/* <NewYearEvent /> */}
 				<ReachInsureAmountEvent />
 				<FirstInsureAndLinePoints />
 				<VerticalLine id="vertical-line">

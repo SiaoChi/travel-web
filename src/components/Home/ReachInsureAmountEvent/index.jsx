@@ -14,6 +14,7 @@ const Section = styled.section`
     }
     @media (min-width: 1000px) and (max-width: 1300px) {
         height: 800px;
+        margin-top:130px;
 `
 
 const Flowers = styled.img`
