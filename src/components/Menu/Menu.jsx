@@ -127,7 +127,7 @@ function Menu() {
              <nav className="flex flex-col space-y-6 px-14">
               <a href="/" className="relative mobile-text" onClick={(e) => handleMenuItemClick(e, '#sec1')}>
                 跨年出國抽
-                <p className="color-changing-text absolute top-[-13%] right-[-2%] w-5 h-7 transfer-position-xy-1 flex items-center justify-center text-xs font-bold font-roboto transform rotate-30">NEW</p>
+                <p translate="no" className="color-changing-text absolute top-[-13%] right-[-2%] w-5 h-7 transfer-position-xy-1 flex items-center justify-center text-xs font-bold font-roboto transform rotate-30 new-tag">NEW</p>
               </a>        
               <a href="/" className="mobile-text" onClick={(e) => handleMenuItemClick(e, '#sec2')}>投保滿額抽</a>
               <a href="/" className="mobile-text" onClick={(e) => handleMenuItemClick(e, '#sec3')}>首次投保抽</a>
