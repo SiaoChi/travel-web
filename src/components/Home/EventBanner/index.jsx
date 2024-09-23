@@ -44,7 +44,8 @@ const MobileSubVideoWrapper = styled.div`
   @media (max-width: 999px) {
     display: flex;
     position: relative;
-    width: 95%;
+    width: 97%;
+    height:97%;
   }
 `;
 
