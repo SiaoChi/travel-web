@@ -47,6 +47,7 @@ const Temple = styled.img`
     top: 170px;
     left: 62px;
     width: 678px;
+    opacity:0;
     @media (max-width: 1301px) {
         top: 80px;
         left: 0%;
@@ -143,6 +144,7 @@ const EnglishTitlePicture3 = styled.img`
     height: auto;
     object-fit: contain; 
     z-index: 10;
+    opacity: 0;
     @media (max-width: 1301px) {
         width: 25%;
         top: 130px;
@@ -187,6 +189,7 @@ const MobileEventImgOne = styled.img`
     position: absolute;
     top: 380px;
     left: 5%;
+    opacity:0;
     @media (min-width: 1301px) {
         display: none;
     }
@@ -203,6 +206,7 @@ const ButtonWrapperOne = styled.div`
     left: 280px;
     z-index: 10;
     width: 289px;
+    opacity:0;
     @media (max-width: 1430px) {
         left: 225px;
     }
@@ -226,6 +230,7 @@ const ButtonWrapperTwo = styled.div`
     right: 320px;
     z-index: 10;
     width: 289px;
+    opacity:0;
      @media (min-width: 1380px) and (max-width: 1430px) {
         width: 280px;
         top: 920px;
@@ -254,6 +259,7 @@ const MobileEventImgTwo = styled.img`
     position: absolute;
     top: 355px;
     right: 2%;
+    opacity:0;
     @media (min-width: 1301px) {
         display: none;
     }

@@ -150,6 +150,7 @@ const EnglishTitlePicture2 = styled.img`
     height: auto;
     object-fit: contain; 
     z-index: 0;
+    opacity: 0;
     @media (max-width: 1301px) {
         width: 250px;
         top: 220px;

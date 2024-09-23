@@ -357,6 +357,7 @@ const EnglishTitlePicture = styled.img`
   width: 754px;
   height: auto;
   object-fit: contain; 
+  opacity:0;
 
   @media (max-width: 1300px) and (min-width: 1000px) {
     top: 430px;
@@ -378,6 +379,7 @@ const EnglishTitlePictureMobile = styled.img`
   top: 668px;
   width: 270px;
   object-fit: contain; 
+  opacity:0;
 
   @media (max-width: 999px) {
     display: block;
@@ -712,8 +714,8 @@ const MgmPage = () => {
 						快樂<span>+1+1+1+1+1+1+1+1+1</span>
 					</p>
 				</Desc>
-        <EnglishTitlePicture src="./mgm/english-title.png" alt="English Title" />
-        <EnglishTitlePictureMobile src="./mgm/english-title-mobile.png" alt="English Title" />
+        <EnglishTitlePicture ref={fadeInFromLeft} src="./mgm/english-title.png" alt="English Title" />
+        <EnglishTitlePictureMobile ref={fadeInFromLeft} src="./mgm/english-title-mobile.png" alt="English Title" />
         <MobileContentFlower src="./mgm/mgm-points-and-flower-mobile.svg" alt="mobile content flower" />
 				<ContentDesc>
 					<p>2024/10/1~2025/1/31</p>
