@@ -50,9 +50,14 @@ const Temple = styled.img`
     width: 678px;
     opacity:0;
     @media (max-width: 1301px) {
-        top: 80px;
-        left: 0%;
-        width: 500px;
+      top: 80px;
+      left: 0%;
+      width: 480px;
+    }
+    @media (max-width: 1000px) {
+      top: 80px;
+      left: 5%;
+      width: 480px;
     }
     @media (max-width: 381px) {
         width: 380px;
