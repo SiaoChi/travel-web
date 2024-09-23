@@ -5,6 +5,7 @@ import { useAnimations } from "../../Animation/useAnimations";
 const Section = styled.section`
     position: relative;
     height: 1127px;
+    margin-top:100px;
     @media (max-width: 999px) {
         overflow: hidden;
         height: 1390px;
