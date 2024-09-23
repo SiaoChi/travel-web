@@ -33,8 +33,8 @@ const Tower = styled.img`
     }
     @media (max-width: 999px) {
         top: -100px;
-        left: 4%;
-        width: 380px;
+        left: 5%;
+        width: 400px;
     }
     @media (max-width: 381px) {
         width: 375px;
