@@ -22,7 +22,7 @@ const Video = styled.video`
     top: 0;
     right: 50px;
     width: 760px;
-    z-index: -1;
+    z-index: 1;
     clip-path: inset(1px 1px);
     @media (max-width: 1300px) and (min-width: 1000px) {
         width: 500px;
@@ -221,38 +221,47 @@ const EnglishTitlePictureMobile1 = styled.img`
 
 const EventBanner = () => {
     const {fadeInFromBottom, fadeInEnlarge,fadeInFromLeft, fadeInFromRight} = useAnimations();
-	const [isBlue, setIsBlue] = useState(true);
+    const [isBlue, setIsBlue] = useState(true);
 
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setIsBlue(!isBlue);
-		}, 1000);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIsBlue(!isBlue);
+        }, 1000);
 
-		return () => clearInterval(interval);
-	}, [isBlue]);
+        return () => clearInterval(interval);
+    }, [isBlue]);
 
-	return (
-		<Section>
-            <Video src="./home/event-banner-video-desktop.mp4" autoPlay muted playsInline preload="auto" />
+
+    return (
+        <Section>
+            <Video 
+                src="./home/event-banner-video-desktop.mp4" 
+                autoPlay 
+                muted 
+                playsInline 
+                preload="auto" 
+                poster="./home/kv-backup.jpg" 
+                
+            />
             <MobileSubVideoWrapper>
                 <MobileKvCase ref={fadeInFromBottom} src="./home/mb-kv-case.png" />
                 <MobileKvFlower ref={fadeInEnlarge} src="./home/mb-kv-flower.png" />
                 <MobileKvFlight ref={fadeInFromRight} src="./home/mb-kv-flight.png" />
             </MobileSubVideoWrapper>
-			<BannerTitle>
-				<TitleText src="./home/event-banner-title.png" />
-				<TitleAirplaine src="./home/event-banner-airplane.png" />
-			</BannerTitle>
-			<Desc $isBlue={isBlue}>
-				<p>投保全球旅平險</p>
-				<p>
-					驚喜<span>多多多多多多</span>到滿出來！
-				</p>
-			</Desc>
+            <BannerTitle>
+                <TitleText src="./home/event-banner-title.png" />
+                <TitleAirplaine src="./home/event-banner-airplane.png" />
+            </BannerTitle>
+            <Desc $isBlue={isBlue}>
+                <p>投保全球旅平險</p>
+                <p>
+                    驚喜<span>多多多多多多</span>到滿出來！
+                </p>
+            </Desc>
             <EnglishTitlePicture1 ref={fadeInFromLeft} src="./home/english-title1.png" alt="english title" />
             <EnglishTitlePictureMobile1 ref={fadeInFromLeft} src="./home/english-title1-mobile.png" alt="mobile english title" />
-		</Section>
-	);
+        </Section>
+    );
 };
 
 export default EventBanner;

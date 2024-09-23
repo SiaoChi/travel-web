@@ -704,7 +704,7 @@ const MgmPage = () => {
           <MobileKvFlower ref={fadeInEnlarge} src="./mgm/mb-kv-flower.png" alt="mobile kv flower" />
           <MobileKvHouse ref={fadeInFromLeft} src="./mgm/mb-kv-house.png" alt="mobile kv house" />
         </MobileSubVideoWrapper>
-          <Video src="./mgm/mgm-banner-video-desktop.mp4" autoPlay muted playsInline />
+          <Video poster="./mgm/mgm-kv-backup.png" src="./mgm/mgm-banner-video-desktop.mp4" autoPlay muted playsInline />
        
 				<BannerTitle src="./mgm/mgm-title.png" alt="mgm title" />
 				<BannerTitlePoint src="./mgm/mgm-title-p.png" alt="mgm title point" />
