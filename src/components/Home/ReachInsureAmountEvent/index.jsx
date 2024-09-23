@@ -5,13 +5,14 @@ import { useAnimations } from "../../Animation/useAnimations";
 const Section = styled.section`
     position: relative;
     height: 1127px;
-    margin-top:100px;
+    margin-top:85px;
     @media (max-width: 999px) {
         overflow: hidden;
         height: 1390px;
         width: 440px;
         left: 50%;
         transform: translateX(-50%);
+        margin-top:0px;
     }
     @media (min-width: 1000px) and (max-width: 1300px) {
         height: 800px;
