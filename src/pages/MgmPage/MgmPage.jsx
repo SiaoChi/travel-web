@@ -134,7 +134,6 @@ const BackgroundBuilding = styled.div`
    bottom: 400px;
   }
 
-
   @media (max-width: 999px) {
     width: 414px;
     height: 218px;
@@ -150,14 +149,17 @@ const DeskBlueBackgroundBuilding = styled.div`
   bottom: -20px;
   transform: translateX(-50%);
   left: 50%;
-  width: 100%;
+  width: 1371px;
   height: 278px;
-  background: url('./mgm/mgm-blue-building.svg') no-repeat center center;
+  background: url('./mgm/mgm-blue-building.png') no-repeat center center;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-size: cover;
   z-index: 2;
-
+  @media (max-width: 1300px) and (min-width: 1000px) {  
+    background:none;
+}
   @media (max-width: 999px) {
     bottom: 0;
     height: 400px;
@@ -704,7 +706,7 @@ const MgmPage = () => {
           <MobileKvFlower ref={fadeInEnlarge} src="./mgm/mb-kv-flower.png" alt="mobile kv flower" />
           <MobileKvHouse ref={fadeInFromLeft} src="./mgm/mb-kv-house.png" alt="mobile kv house" />
         </MobileSubVideoWrapper>
-          <Video src="./mgm/mgm-banner-video-desktop.mp4" autoPlay muted playsInline />
+          <Video poster="./mgm/mgm-kv-backup.png" src="./mgm/mgm-banner-video-desktop.mp4" autoPlay muted playsInline />
        
 				<BannerTitle src="./mgm/mgm-title.png" alt="mgm title" />
 				<BannerTitlePoint src="./mgm/mgm-title-p.png" alt="mgm title point" />

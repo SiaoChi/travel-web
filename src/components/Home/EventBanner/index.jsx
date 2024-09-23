@@ -22,7 +22,7 @@ const Video = styled.video`
     top: 0;
     right: 50px;
     width: 760px;
-    z-index: -1;
+    z-index: 1;
     clip-path: inset(1px 1px);
     @media (max-width: 1300px) and (min-width: 1000px) {
         width: 500px;
@@ -233,7 +233,7 @@ const EventBanner = () => {
 
 	return (
 		<Section>
-            <Video src="./home/event-banner-video-desktop.mp4" autoPlay muted playsInline preload="auto" />
+            <Video poster="./home/kv-backup.jpg" src="./home/event-banner-video-desktop.mp4" autoPlay muted playsInline preload="auto" />
             <MobileSubVideoWrapper>
                 <MobileKvCase ref={fadeInFromBottom} src="./home/mb-kv-case.png" />
                 <MobileKvFlower ref={fadeInEnlarge} src="./home/mb-kv-flower.png" />
