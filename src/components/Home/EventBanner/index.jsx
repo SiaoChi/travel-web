@@ -65,7 +65,7 @@ const MobileKvFlower = styled.img`
   position: absolute;
   top: 0;
   left: 0;
- width: 100%;
+  width: 100%;
   z-index: -1;
   opacity: 0;
   @media (max-width: 999px) {
@@ -87,20 +87,6 @@ width: 100%;
   }
 `;
 
-
-
-const MobileVideo = styled.video`
-    display: none;
-    z-index: 0;
-    @media (max-width: 999px) {
-        display:none;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 400px;
-    }
-`;
 
 const BannerTitle = styled.div`
     position: relative;
@@ -208,6 +194,7 @@ const EnglishTitlePicture1 = styled.img`
     width: 850px;
     height: auto;
     object-fit: contain; 
+    opacity: 0;
     @media (max-width: 1300px) and (min-width: 1000px) {
         width: 85%;
         margin-left: 0;
@@ -220,6 +207,7 @@ const EnglishTitlePicture1 = styled.img`
 
 const EnglishTitlePictureMobile1 = styled.img`
     display: none;
+    opacity: 0;
     @media (max-width: 999px) {
      display: block;
         position: absolute;
@@ -229,13 +217,6 @@ const EnglishTitlePictureMobile1 = styled.img`
     }
 `;
 
-const MobileLineOne = styled.img`
-    display: none;
-`;
-
-const MobileLineTwo = styled.img`
-    display: none;
-`;
 
 const EventBanner = () => {
     const {fadeInFromBottom, fadeInEnlarge,fadeInFromLeft, fadeInFromRight} = useAnimations();
