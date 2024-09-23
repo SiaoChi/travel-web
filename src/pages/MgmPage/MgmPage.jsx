@@ -752,14 +752,7 @@ const MgmPage = () => {
                   </Button>
               </a>
               {/* 此圖會跳頁會被NAVBAR蓋掉，所以先暴力解 */}
-              <HashLink 
-                to="/#sec2" 
-                scroll={(el) => {
-                  const yOffset = -80;
-                  const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
-                  window.scrollTo({top: y, behavior: 'smooth'});
-                }}
-              >
+              <HashLink to="/" >
                 <Button color="yellow"  height="82px" alt="參加更多抽獎">參加更多抽獎</Button>
               </HashLink>
               <Link to="/policy">

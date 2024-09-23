@@ -149,7 +149,6 @@ function ActionList() {
 				<ItemWrapper>
 					<Flex>
 						<Title>首次投保抽獎趣</Title>
-						<Note lineHeight={20}>(僅限國外旅平險)</Note>
 					</Flex>
 					<div>
 						<Note lineHeight={30}>
