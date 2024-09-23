@@ -152,12 +152,15 @@ const DeskBlueBackgroundBuilding = styled.div`
   left: 50%;
   width: 100%;
   height: 278px;
-  background: url('./mgm/mgm-blue-building.svg') no-repeat center center;
+  background: url('./mgm/mgm-blue-building.png') no-repeat center center;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-size: cover;
   z-index: 2;
-
+  @media (max-width: 1300px) and (min-width: 1000px) {  
+    background:none;
+  }
   @media (max-width: 999px) {
     bottom: 0;
     height: 400px;
