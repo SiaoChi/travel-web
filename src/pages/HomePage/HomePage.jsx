@@ -189,56 +189,20 @@ const LargeBlueBackground = styled.img`
     }
 `;
 
-
+const NewVerticalLine = styled.img`
+  position: absolute;
+  height: 1862px;
+  width: 55px;
+  left: 105px;
+  top: 630px;
+  z-index: 10;
+  back-ground-color: red;
+	@media screen and (max-width: 1300px) {
+		display: none;
+	}
+`;
 
 function HomePage() {
-
-	useEffect(() => {
-		const verticalLine = document.getElementById("vertical-line");
-        const { y: originY } = verticalLine.getBoundingClientRect();
-		let verticalLineRect = verticalLine.getBoundingClientRect();
-		const fly = document.getElementById("fly");
-		const pointer = document.getElementById("pointer");
-		const pointerRect = pointer.getBoundingClientRect();
-
-		const end = pointerRect.y;
-		fly.style.position = 'fixed';
-		fly.style.top = `${verticalLineRect.y}px`;
-		fly.style.left = `${verticalLineRect.x}px`;
-		
-		const handleScroll = () => {
-			const current = window.scrollY + originY;
-			if (current > end) {
-				fly.style.position = 'absolute';
-				fly.style.top = 'calc(100% - 50px)';
-				fly.style.left = `${0}px`;
-				return;
-			}
-			if (current < end + 50) {
-				fly.style.position = 'fixed';
-				fly.style.top = `${originY - 50}px`;
-				fly.style.left = `${verticalLineRect.x}px`;
-			}
-		};
-
-        let timeout;
-        window.addEventListener('resize', () => {
-            clearTimeout(timeout);
-            timeout = setTimeout(() => {
-                verticalLineRect = verticalLine.getBoundingClientRect();
-                if (fly.style.position === "absolute") return;
-                fly.style.left = `${verticalLineRect.x}px`;
-            }, 250);
-        });
-		window.addEventListener('scroll', handleScroll);
-
-		handleScroll();
-
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	}, []);
-
 	return (
 		<Wrap>
             {/* 橘色三角形 */}
@@ -254,10 +218,7 @@ function HomePage() {
 				{/* <NewYearEvent /> */}
 				<ReachInsureAmountEvent />
 				<FirstInsureAndLinePoints />
-				<VerticalLine id="vertical-line">
-					<Fly id="fly" src="./home/home-fly.svg" />
-					<Pointer id="pointer" />
-				</VerticalLine>
+				<NewVerticalLine src='./verticalline-v1.svg' alt='verticalline' />
 			</Container>
 
             {/* 藍色背景 */}

@@ -240,7 +240,7 @@ const NewYearEvent = () => {
 				<img src="./home/common-title-lottery.svg" alt="common title lottery" />
 			</Title>
 			<Desc ref={fadeInFromLeft}>
-				<span>2024/12/15-2025/1/20</span>期間，
+				<span>2024/12/15-2025/1/20</span>期間
 				<br />
 				成功網路投保<span>「國外旅平險」</span>
 			</Desc>
