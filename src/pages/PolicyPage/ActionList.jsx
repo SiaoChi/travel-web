@@ -106,7 +106,7 @@ const SubTitle = styled.div`
 function ActionList() {
 	return (
 		<List>
-			<Item>
+			{/* <Item>
 				<ItemWrapper>
 					<Flex>
 						<Title>跨年出國抽獎趣</Title>
@@ -116,8 +116,8 @@ function ActionList() {
 						於2024/12/15-2025/1/20期間成功投保「國外旅平險」，不限單筆保費金額，可額外享「8,800元旅遊大紅包」加碼抽獎機會乙次（價值8,800元好禮即享券，共抽5名，每人限獲獎乙次）。
 					</Note>
 				</ItemWrapper>
-			</Item>
-			<Item>
+			</Item> */}
+			<Item className="mt-[-50px]">
 				<ItemWrapper>
 					<Flex>
 						<Title>投保滿額抽獎趣</Title>
@@ -149,7 +149,6 @@ function ActionList() {
 				<ItemWrapper>
 					<Flex>
 						<Title>首次投保抽獎趣</Title>
-						<Note lineHeight={20}>(僅限國外旅平險)</Note>
 					</Flex>
 					<div>
 						<Note lineHeight={30}>
@@ -168,7 +167,7 @@ function ActionList() {
 export const AwardList = () => {
 	return (
 		<div>
-			<div
+			{/* <div
 				style={{
 					paddingBottom: "40px",
 					borderBottom: "1px solid #000000",
@@ -186,8 +185,8 @@ export const AwardList = () => {
 					<br />
 					適用通路：全聯、王品集團、7-ELEVEN、全家、家樂福、大潤發、屈臣氏、特力集團、漢來美食通用券、遠東SOGO百貨、遠東百貨、遠東巨城購物中心、foodpanda、寶雅集團、漢神百貨/漢神巨蛋、瓦城集團、爭鮮集團、小北百貨、美廉社&三友藥妝通用、楓康超市。
 				</Note>
-			</div>
-			<div style={{ marginTop: "40px" }}>
+			</div> */}
+			<div style={{ marginTop: "10px" }}>
 				<div style={{ marginBottom: "30px" }}>
 					<Title>投保滿額抽獎趣</Title>
 				</div>

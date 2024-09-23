@@ -378,7 +378,7 @@ const FirstInsureAndLinePoints = () => {
                 <img src='./home/common-title-lottery.svg' />
             </Title>
             <Desc ref={fadeInFromLeft}>
-                <strong>2024/10/1~2025/1/31期間，</strong><br/>
+                <strong>2024/10/1~2025/1/31期間</strong><br/>
                 <strong><span>首次</span>成功<span className="text-c-red">網路投保</span><span>「國內外旅平險」</span></strong><br/>
                 （限從未網路投保全球人壽任一險種者）
             </Desc>

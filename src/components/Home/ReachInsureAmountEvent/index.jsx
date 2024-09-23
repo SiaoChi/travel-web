@@ -14,6 +14,7 @@ const Section = styled.section`
     }
     @media (min-width: 1000px) and (max-width: 1300px) {
         height: 800px;
+        margin-top:130px;
 `
 
 const Flowers = styled.img`
@@ -284,7 +285,7 @@ const ReachInsureAmountEvent = () => {
                 <img src='./home/common-title-lottery.svg' />
             </Title>
             <Desc ref={fadeInFromLeft}>
-                2024/10/1~2025/1/31期間，<br/>
+                2024/10/1~2025/1/31期間<br/>
                 成功網路投保<span>「國內外旅平險」</span>，單筆保費滿額即可抽！
             </Desc>
 
