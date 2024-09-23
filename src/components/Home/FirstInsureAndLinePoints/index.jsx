@@ -299,6 +299,7 @@ const EnglishTitlePicture4 = styled.img`
     top: 580px;
     right: 6%;
     width: 304px;
+    opacity: 0;
     @media (min-width: 1000px) and (max-width: 1300px) {
         top: 560px;
         width: 250px;
@@ -316,6 +317,7 @@ const EnglishTitlePicture5 = styled.img`
     left: 114px;
     width: 254px;
     z-index: 20;
+     opacity: 0;
     @media (min-width: 1000px) and (max-width: 1300px) {
         top: 740px;
         width: 200px;
