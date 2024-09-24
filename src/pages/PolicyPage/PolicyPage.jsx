@@ -274,7 +274,7 @@ function PolicyPage() {
 					<Description>
 						<Label>活動辦法</Label>
 						<Text>
-							活動期間邀請親友成功投保網路國內外旅平險達指定筆數，
+							活動期間邀請親友成功網路投保國內外旅平險達指定筆數，
 							<Br reverse />
 							即符合LINE POINTS抽獎資格。
 						</Text>
