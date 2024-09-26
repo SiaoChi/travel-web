@@ -256,13 +256,13 @@ function PolicyPage() {
 						<Details />
 					</Accordion>
 				</Container>
-				<Flower src="./policy/flower.svg" alt="" />
+				<Flower src="./policy-image/flower.svg" alt="" />
 			</Background>
 			<Background bg="#FED430">
 				<Container id="sec2">
 					<BannerWrapper id="sec1">
-						<TitleText src="./mgm/mgm-title.png" />
-						<TitleADecoration src="./mgm/mgm-title-p.png" />
+						<TitleText src="./mgm-image/mgm-title.png" />
+						<TitleADecoration src="./mgm-image/mgm-title-p.png" />
 					</BannerWrapper>
 					<Description>
 						<Label>活動期間</Label>

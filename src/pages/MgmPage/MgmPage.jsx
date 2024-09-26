@@ -127,7 +127,7 @@ const BackgroundBuilding = styled.div`
   transform: translateX(-50%);
   width: 1312px;
   height: 353px;
-  background: url('./mgm/mgm-building.svg') no-repeat center center;
+  background: url('./mgm-image/mgm-building.svg') no-repeat center center;
   z-index: 1;
 
   @media (max-width: 1300px) and (min-width: 1000px) {
@@ -152,7 +152,7 @@ const DeskBlueBackgroundBuilding = styled.div`
   left: 50%;
   width: 100%;
   height: 278px;
-  background: url('./mgm/mgm-blue-building.png') no-repeat center center;
+  background: url('./mgm-image/mgm-blue-building.png') no-repeat center center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -476,7 +476,7 @@ const MgmContentOne = styled.div`
     z-index: 1;
     width: 1008px;
     height: 307px;
-    background: url('./mgm/mgm-content1.png') no-repeat center center;
+    background: url('./mgm-image/mgm-content1.png') no-repeat center center;
     background-size: cover;
 
     @media (max-width: 1300px) and (min-width: 1000px) {
@@ -486,7 +486,7 @@ const MgmContentOne = styled.div`
 
     @media (max-width: 999px) {
       width: 95%;
-      background: url('./mgm/mgm-content1-mobile.png') no-repeat center center;
+      background: url('./mgm-image/mgm-content1-mobile.png') no-repeat center center;
       background-size: contain;
     }    
 `;
@@ -495,7 +495,7 @@ const MgmContentTwo = styled.div`
     width: 1008px;
     height: 307px;
     z-index: 1;
-    background: url('./mgm/mgm-content2.png') no-repeat center center;
+    background: url('./mgm-image/mgm-content2.png') no-repeat center center;
     background-size: cover;
     margin-top: -50px;
 
@@ -505,7 +505,7 @@ const MgmContentTwo = styled.div`
     }
 
     @media (max-width: 999px) {
-      background: url('./mgm/mgm-content2-mobile.png') no-repeat center center;
+      background: url('./mgm-image/mgm-content2-mobile.png') no-repeat center center;
       width: 95%;
       background-size: contain;
     }  
@@ -515,7 +515,7 @@ const MgmContentThree = styled.div`
     width: 1008px;
     height: 307px;
     z-index: 1;
-    background: url('./mgm/mgm-content3.png') no-repeat center center;
+    background: url('./mgm-image/mgm-content3.png') no-repeat center center;
     background-size: cover;
      margin-top:-30px;
 
@@ -527,7 +527,7 @@ const MgmContentThree = styled.div`
     @media (max-width: 999px) {
       width: 95%;
       margin-top:-40px;
-      background: url('./mgm/mgm-content3-mobile.png') no-repeat center center;
+      background: url('./mgm-image/mgm-content3-mobile.png') no-repeat center center;
       background-size: contain;
     }  
 `;
@@ -535,7 +535,7 @@ const MgmContentThree = styled.div`
 const People = styled.div`
     width: 821px;
     height: 683px;
-    background: url('./mgm/mgm-people-and-frame.png') no-repeat center center;
+    background: url('./mgm-image/mgm-people-and-frame.png') no-repeat center center;
     background-size: contain; 
     object-fit: contain;  
     pointer-events: none;
@@ -545,7 +545,7 @@ const People = styled.div`
     @media (max-width: 999px) {
         width: 95%;
         height: 601px;
-        background: url('./mgm/mgm-people-and-frame-mobile.png') no-repeat center center;
+        background: url('./mgm-image/mgm-people-and-frame-mobile.png') no-repeat center center;
         background-size: contain; 
     }
 `;
@@ -700,39 +700,39 @@ const MgmPage = () => {
 
 	return (
 		<Wrap>
-       <YellowTrapezoidBackground src="./mgm/mgm-trapezoid.png" alt="yellow background"/>
+       <YellowTrapezoidBackground src="./mgm-image/mgm-trapezoid.png" alt="yellow background"/>
 			<Container>
         <MobileSubVideoWrapper>
-          <MobileKvPeople ref={fadeInFromRight} src="./mgm/mb-kv-ppl.png" alt="mobile kv people" />
-          <MobileKvFlower ref={fadeInEnlarge} src="./mgm/mb-kv-flower.png" alt="mobile kv flower" />
-          <MobileKvHouse ref={fadeInFromLeft} src="./mgm/mb-kv-house.png" alt="mobile kv house" />
+          <MobileKvPeople ref={fadeInFromRight} src="./mgm-image/mb-kv-ppl.png" alt="mobile kv people" />
+          <MobileKvFlower ref={fadeInEnlarge} src="./mgm-image/mb-kv-flower.png" alt="mobile kv flower" />
+          <MobileKvHouse ref={fadeInFromLeft} src="./mgm-image/mb-kv-house.png" alt="mobile kv house" />
         </MobileSubVideoWrapper>
-          <Video poster="./mgm/mgm-kv-backup.png" src="./mgm/mgm-banner-video-desktop.mp4" autoPlay muted playsInline />
+          <Video poster="./mgm-image/mgm-kv-backup.png" src="./mgm-image/mgm-banner-video-desktop.mp4" autoPlay muted playsInline />
        
-				<BannerTitle src="./mgm/mgm-title.png" alt="mgm title" />
-				<BannerTitlePoint src="./mgm/mgm-title-p.png" alt="mgm title point" />
+				<BannerTitle src="./mgm-image/mgm-title.png" alt="mgm title" />
+				<BannerTitlePoint src="./mgm-image/mgm-title-p.png" alt="mgm title point" />
 				<Desc isBlue={isBlue}>
 					<p>推薦好友全球旅平險</p>
 					<p>
 						快樂<span>+1+1+1+1+1+1+1+1+1</span>
 					</p>
 				</Desc>
-        <EnglishTitlePicture ref={fadeInFromLeft} src="./mgm/english-title.png" alt="English Title" />
-        <EnglishTitlePictureMobile ref={fadeInFromLeft} src="./mgm/english-title-mobile.png" alt="English Title" />
-        <MobileContentFlower src="./mgm/mgm-points-and-flower-mobile.svg" alt="mobile content flower" />
+        <EnglishTitlePicture ref={fadeInFromLeft} src="./mgm-image/english-title.png" alt="English Title" />
+        <EnglishTitlePictureMobile ref={fadeInFromLeft} src="./mgm-image/english-title-mobile.png" alt="English Title" />
+        <MobileContentFlower src="./mgm-image/mgm-points-and-flower-mobile.svg" alt="mobile content flower" />
 				<ContentDesc>
 					<p>2024/10/1~2025/1/31</p>
 					<p>成功邀請親友投保旅平險，達指定筆數</p>
 				</ContentDesc>
-				<LinePointsText src="./mgm/mgm-line-points-text.svg" alt="line points text" />
+				<LinePointsText src="./mgm-image/mgm-line-points-text.svg" alt="line points text" />
         <MgmContentWrapper>
           <MgmContentOne className="mgm-content" />
           <MgmContentTwo className="mgm-content" />
           <MgmContentThree className="mgm-content" />
         </MgmContentWrapper>
         <DesktopPart>
-					<ContentFlower src="./mgm/mgm-info-flower.svg" alt="content flower" />
-					<ContentPoint src="./mgm/mgm-content-p-point.svg" alt="content point" />
+					<ContentFlower src="./mgm-image/mgm-info-flower.svg" alt="content flower" />
+					<ContentPoint src="./mgm-image/mgm-content-p-point.svg" alt="content point" />
 				</DesktopPart>
 
         <BackgroundBuilding />
@@ -764,8 +764,8 @@ const MgmPage = () => {
                 <Button color="white" hoverBgColor="#FF837E"  height="82px" alt="活動辦法">活動辦法</Button>
               </Link>
           </Buttons>
-          <Building src="./mgm/mgm-building-mb.svg" />
-          <IpadBuilding src="./mgm/mgm-building-ipad.svg" />
+          <Building src="./mgm-image/mgm-building-mb.svg" />
+          <IpadBuilding src="./mgm-image/mgm-building-ipad.svg" />
         </DeskBlueBackgroundBuilding>
 			</Container>
       <BottomBlueBg />
