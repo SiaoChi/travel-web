@@ -702,11 +702,11 @@ const MgmPage = () => {
        <YellowTrapezoidBackground src="./mgm-image/mgm-trapezoid.png" alt="yellow background"/>
 			<Container>
         <MobileSubVideoWrapper>
-          <MobileKvPeople ref={fadeInFromRight} src="./mgm/mb-kv-ppl.png" alt="mobile kv people" />
-          <MobileKvFlower ref={fadeInEnlarge} src="./mgm/mb-kv-flower.png" alt="mobile kv flower" />
-          <MobileKvHouse ref={fadeInFromLeft} src="./mgm/mb-kv-house.png" alt="mobile kv house" />
+          <MobileKvPeople ref={fadeInFromRight} src="./mgm-image/mb-kv-ppl.png" alt="mobile kv people" />
+          <MobileKvFlower ref={fadeInEnlarge} src="./mgm-image/mb-kv-flower.png" alt="mobile kv flower" />
+          <MobileKvHouse ref={fadeInFromLeft} src="./mgm-image/mb-kv-house.png" alt="mobile kv house" />
         </MobileSubVideoWrapper>
-          <Video poster="./mgm-image/mgm-kv-backup.png" src="./mgm/mgm-banner-video-desktop.mp4" autoPlay muted playsInline />
+          <Video poster="./mgm-image/mgm-kv-backup.png" src="./mgm-image/mgm-banner-video-desktop.mp4" autoPlay muted playsInline />
        
 				<BannerTitle src="./mgm-image/mgm-title.png" alt="mgm title" />
 				<BannerTitlePoint src="./mgm-image/mgm-title-p.png" alt="mgm title point" />
