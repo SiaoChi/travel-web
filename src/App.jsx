@@ -22,7 +22,7 @@ const ScrollTopBtn = styled.img`
 
 function App() {
   const isGithubPages = window.location.hostname === 'siaochi.github.io';
-  const basename = isGithubPages ? '/travel-web' : '/'; 
+  const basename = isGithubPages ? '/travel-web/' : ''; 
   const [showScrollTopBtn, setShowScrollTopBtn] = useState(false);
 
   const handleScrollTop = () => {
