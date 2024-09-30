@@ -27,45 +27,6 @@ const Container = styled.div`
 
 
 
-const VerticalLine = styled.div`
-  height: 2563px;
-  width: 1px;
-  position: absolute;
-  left: 112px;
-  top: 680px;
-  z-index: 10;
-	width: 50px;
-	border-left: 1px solid black;
-	@media screen and (max-width: 1300px) {
-		left: 30px;
-		top: 880px;
-		z-index: 0;
-		display: none;
-	}
-`;
-
-const Fly = styled.img`
-	width: 50px;
-	height: 50px;
-	position: absolute;
-	transform: translate(-50%, 0%);
-	will-change: transform;
-	@media screen and (max-width: 1300px) {
-		display: none;
-	}
-`;
-
-const Pointer = styled.div`
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	transform: translate(-50%, 0%);
-`;
-
-
 const YellowPolygon = styled.img`
     position: absolute;
     top: 240px;
