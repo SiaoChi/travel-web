@@ -22,8 +22,14 @@ const Video = styled.video`
     top: 0;
     right: 50px;
     width: 760px;
-    z-index: 1;
+    z-index: 0;
     clip-path: inset(1px 1px);
+
+    &[poster] {
+        object-fit: contain;
+        max-width:630px;
+    }
+
     @media (max-width: 1300px) and (min-width: 1000px) {
         width: 500px;
         right: -8%;
