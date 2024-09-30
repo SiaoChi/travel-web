@@ -544,7 +544,7 @@ const People = styled.div`
     @media (max-width: 999px) {
         width: 95%;
         height: 601px;
-        background: url('./mgm/mgm-people-and-frame-mobile.png') no-repeat center center;
+        background: url('./mgm-image/mgm-people-and-frame-mobile.png') no-repeat center center;
         background-size: contain; 
     }
 `;
