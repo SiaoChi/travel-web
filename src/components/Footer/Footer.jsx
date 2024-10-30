@@ -1,5 +1,5 @@
 import './Footer.css'
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 function Footer(){
       const [isActive, setIsActive] = useState(false);
