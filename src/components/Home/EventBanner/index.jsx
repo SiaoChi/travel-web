@@ -20,9 +20,9 @@ const Section = styled.section`
 const Video = styled.video`
     position: absolute;
     top: 0;
-    right: 50px;
-    width: 760px;
-    z-index: 1;
+    right: 100px;
+    width: 650px;
+    z-index: 0;
     clip-path: inset(1px 1px);
     @media (max-width: 1300px) and (min-width: 1000px) {
         width: 500px;
@@ -91,7 +91,7 @@ width: 100%;
 
 const BannerTitle = styled.div`
     position: relative;
-    margin: 20px 0px 20px 91px;
+    margin: 20px 0px 20px 120px;
     @media (max-width: 1300px) and (min-width: 1000px) {
         margin: 0;
         position: absolute;
@@ -158,7 +158,7 @@ const Desc = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 91px;
+    margin-left: 140px;
     margin-bottom: 40px;
     line-height: 35px;
     letter-spacing: 4px;

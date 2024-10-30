@@ -260,8 +260,8 @@ const MobileKvHouse = styled.img`
 const Video = styled.video`
   position: absolute;
   top: 50px;
-  right: 150px;
-  width: 650px;
+  right: 140px;
+  max-width: 630px;
   z-index: 0;
   clip-path: inset(1px 1px);
 
@@ -279,7 +279,7 @@ const Video = styled.video`
 const BannerTitle = styled.img`
     position: absolute;
     top: 50px;
-    left: 100px;
+    left: 120px;
     width: 500px;
     z-index: 1; 
     animation: fadeIn 1s ease-in-out backwards;
@@ -322,7 +322,7 @@ const BannerTitlePoint = styled.img`
 const Desc = styled.div`
     position: absolute;
     top: 320px;
-    left: 120px;
+    left: 140px;
     width: 456px;
     display: flex;
     flex-direction: column;
