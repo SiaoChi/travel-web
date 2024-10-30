@@ -8,7 +8,7 @@
       font-weight: 400;
     }
     footer .icon_fb {
-      background-image: url('./footer/icon_footer_fb.png');
+      background-image: url('https://e-commerce.transglobe.com.tw/activity/campaign-detail/birthday/img/icon_footer_fb.png');
       background-repeat: no-repeat;
       width: 26px;
       height: 26px;
@@ -96,7 +96,7 @@
     }
     .icon_footer_fb:before {
       content: "";
-      background-image: url('./footer/icon_footer_fb.png');
+      background-image: url('https://e-commerce.transglobe.com.tw/activity/campaign-detail/birthday/img/icon_footer_fb.png');
       background-repeat: no-repeat;
       width: 16px;
       height: 16px;
@@ -107,7 +107,7 @@
     }
     .icon_footer_map:before {
       content: "";
-      background-image: url('./footer/icon_footer_map.png');
+      background-image: url('https://e-commerce.transglobe.com.tw/activity/campaign-detail/birthday/img/icon_footer_map.png');
       background-repeat: no-repeat;
       width: 18px;
       height: 18px;
@@ -119,7 +119,7 @@
     }
     .icon_footer_phone:before {
       content: "";
-      background-image: url('./footer/icon_footer_phone.png');
+      background-image: url('https://e-commerce.transglobe.com.tw/activity/campaign-detail/birthday/img/icon_footer_phone.png');
       background-repeat: no-repeat;
       width: 18px;
       height: 18px;
